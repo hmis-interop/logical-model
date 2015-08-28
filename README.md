@@ -1,4 +1,4 @@
 logical-model
 =============
 
-HMIS Logical Model Code Reporsitory
+HMIS Logical Model Code Repository
