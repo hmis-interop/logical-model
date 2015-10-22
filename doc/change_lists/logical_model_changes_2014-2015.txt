@@ -13,7 +13,7 @@ CoC
 CommercialSexualExploitation
 * merged into the new YouthCriticalIssues renamed to ->EntryRHY
 ConnectionWithSOAR
-* renamed to ExitPATH
+* moved to ExitPATH
 Contact
 * new class
 * ContactDate added
