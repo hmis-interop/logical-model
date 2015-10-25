@@ -134,7 +134,7 @@ Site
 * same
 VeteranInfo
 * renamed to ClientVeteranInfo
-WorstHousingSituation
+WorstHousingSituation - missing, but still in Dictionary/CSV: https://github.com/hmis-interop/logical-model/issues/11
 * removed entirely
 YouthCriticalIssues
 * renamed to EntryRHY
@@ -146,7 +146,7 @@ General Comments:
 * We should go back to using “unique”, because ‘primary key’ is a relational database concept, and this could be implemented in ways other than a relational database, and unique is more general 
 
 
-* Put BaseMetaData and MetaData always at the bottom, since developers may scan for that/expect it there.
+* Put BaseMetaData and MetaData always at the bottom of the class, since developers may scan for that/expect it there.
 
 
 * Store model in the github repository, then previous versions can’t be lost and won’t need to be recovered
