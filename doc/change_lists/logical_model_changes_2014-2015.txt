@@ -57,15 +57,6 @@ EntryRHY
 * merged from ReferralSource
 * InformationDate removed
 * added SexualOrientation
-* HousingIssuesFam renamed to HousingIssuesFamilyMember
-* UnemploymentFam renamed to UnemploymentFamilyMember
-* MentalHealthIssuesFam renamed to MentalHealthIssuesFamilyMember
-* HealthIssuesFam renamed to HealthIssuesFamilyMember
-* PhysicalDisabilityFam renamed to PhysicalDisabilityFamilyMember
-* MentalDisabilityFam renamed to MentalDisabilityFamilyMember
-* SchoolEducationalIssuesFam renamed to SchoolEducationalIssuesFamilyMember
-* AbuseAndNeglectFam renamed to AbuseAndNeglectFamilyMember
-* AlcoholDrugAbuseFam renamed to AlcoholDrugAbuseFamilyMember
 * AskedOrForcedToExchangeForSexPastThreeMonths added
 * InsufficientIncome renamed to InsufficientIncomeToSupportYouth
 * FormerWardJuvenileJustice renamed to FormerlyAWardOfJuvenileJustice
