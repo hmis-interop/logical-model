@@ -89,7 +89,6 @@ FormerWardJuvenileJustice
 * removed/merged into the new EntryRHY class
 HealthInsurance
 * InformationDate class reference changed to simple date property 
-* StateHealthIns renamed to StateHealthInsAdults
 * OtherSource and OtherSourceIdentify added
 HealthStatus
 * InformationDate class reference changed to simple date property 
