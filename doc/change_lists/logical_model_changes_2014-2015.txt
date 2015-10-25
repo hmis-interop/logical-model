@@ -123,8 +123,8 @@ RHYBCPStatus
 SchoolStatus
 * removed entirely as a separate class and it is now just an element within new Education class
 Services
-* renamed to ServiceFAReferral 
-ServiceFAReferral
+* renamed to ServiceFAReferral - may be incorrect, see: https://github.com/hmis-interop/logical-model/issues/10
+ServiceFAReferral - may be incorrect, see: https://github.com/hmis-interop/logical-model/issues/10
 * DateProvided is now simply a date type, instead of a type of the InformationDate class
 * RecordType changed to ServiceCategory
 * FunderList added
