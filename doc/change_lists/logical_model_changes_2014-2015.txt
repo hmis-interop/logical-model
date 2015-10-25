@@ -89,7 +89,7 @@ FormerWardJuvenileJustice
 * removed/merged into the new EntryRHY class
 HealthInsurance
 * InformationDate class reference changed to simple date property 
-* OtherSource and OtherSourceIdentify added
+* OtherSource and OtherSourceIdentify added - This is a mistake? see https://github.com/hmis-interop/logical-model/issues/8
 HealthStatus
 * InformationDate class reference changed to simple date property 
 HousingAssessmentDisposition
