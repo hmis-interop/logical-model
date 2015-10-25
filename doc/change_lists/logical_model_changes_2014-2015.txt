@@ -62,8 +62,6 @@ EntryRHY
 * WorkplacePromiseDifference added [typo in Logical Model on this]
 * CoercedToContinueWork added
 * LaborExploitPastThreeMonths added
-
-
 EntrySSVF
 * new class, merging in PercentAMI and LastPermanentAddress classes
 * contained attributes are  now [0..1], whereas they were [1] before (since they were in separate classes that could be excluded)
