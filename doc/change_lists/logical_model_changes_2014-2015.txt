@@ -57,8 +57,6 @@ EntryRHY
 * merged from ReferralSource
 * InformationDate removed
 * added SexualOrientation
-* SexualOrientationGenderIDYouth renamed to SexualOrientationGenderIdentityYouth
-* SexualOrientationGenderIDFam renamed to SexualOrientationGenderIdentityFamilyMember
 * HousingIssuesFam renamed to HousingIssuesFamilyMember
 * UnemploymentFam renamed to UnemploymentFamilyMember
 * MentalHealthIssuesFam renamed to MentalHealthIssuesFamilyMember
