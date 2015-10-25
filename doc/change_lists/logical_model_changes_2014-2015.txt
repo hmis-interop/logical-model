@@ -58,13 +58,6 @@ EntryRHY
 * InformationDate removed
 * added SexualOrientation
 * AskedOrForcedToExchangeForSexPastThreeMonths added
-* InsufficientIncome renamed to InsufficientIncomeToSupportYouth
-* FormerWardJuvenileJustice renamed to FormerlyAWardOfJuvenileJustice
-* JuvenileJusticeYears renamed to YearsJuvenileJustice
-* JuvenileJusticeMonths renamed to MonthsJuvenileJustice
-* FormerWardChildWelfare renamed to FormerlyAWardOfChildWelfareFosterCare
-* ChildWelfareYears renamed to YearsChildWelfareFosterCare
-* ChildWelfareMonths renamed to MonthsChildWelfareFosterCare
 * WorkplaceViolenceThreat added
 * WorkplacePromiseDifference added [typo in Logical Model on this]
 * CoercedToContinueWork added
