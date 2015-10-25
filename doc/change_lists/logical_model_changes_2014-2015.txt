@@ -109,7 +109,7 @@ PathStatus
 PercentAMI
 * removed as a separate class and merged into EntrySSVF
 Project
-* ResidentialAffiliation removed from Project (it was a * pending change in 2014).
+* ResidentialAffiliation removed from Project. This is an error?  https://github.com/hmis-interop/logical-model/issues/9
 ProjectCoC 
 * eliminated in favor of adding the new CoC class
 ProjectCompletionStatus
