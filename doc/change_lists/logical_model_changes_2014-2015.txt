@@ -102,8 +102,6 @@ Inventory
 * Information Date removed
 LastGradeCompleted
 * removed entirely as a separate class and it is now just an element within new Education class
-MedicalAssistance
-* class and all subelements removed
 NonCashBenefits
 * same, except for InformationDate class to simple date property change
 Organization
