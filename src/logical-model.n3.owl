@@ -16,6 +16,10 @@
 #    Annotation properties
 #################################################################
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#id
+hmisowl:id rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.srdc.com.tr/ontmalizer#hasValue
 dtype:hasValue rdf:type owl:AnnotationProperty .
 
@@ -51,6 +55,10 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 #################################################################
 #    Datatypes
 #################################################################
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#string50
+hmis:string50 rdf:type rdfs:Datatype .
+
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#addressDataQualityDatatype
 hmisowl:addressDataQualityDatatype rdf:type rdfs:Datatype .
@@ -372,10 +380,6 @@ hmisowl:string250Datatype rdf:type rdfs:Datatype .
 hmisowl:string32Datatype rdf:type rdfs:Datatype .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#string50Datatype
-hmisowl:string50Datatype rdf:type rdfs:Datatype .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#subsidyInformationDatatype
 hmisowl:subsidyInformationDatatype rdf:type rdfs:Datatype .
 
@@ -438,10 +442,6 @@ xsd:ENTITIESDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/2001/XMLSchema#ENTITYDatatype
 xsd:ENTITYDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#IDDatatype
-xsd:IDDatatype rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2001/XMLSchema#IDREFDatatype
@@ -544,6 +544,10 @@ xsd:gYearMonthDatatype rdf:type rdfs:Datatype .
 xsd:hexBinaryDatatype rdf:type rdfs:Datatype .
 
 
+###  http://www.w3.org/2001/XMLSchema#id
+xsd:id rdf:type rdfs:Datatype .
+
+
 ###  http://www.w3.org/2001/XMLSchema#intDatatype
 xsd:intDatatype rdf:type rdfs:Datatype .
 
@@ -624,10 +628,6 @@ hmisowl:DisabilityResponse rdf:type owl:ObjectProperty .
 hmisowl:IndefiniteAndImpairsIndependence rdf:type owl:ObjectProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MiddleName
-hmisowl:MiddleName rdf:type owl:ObjectProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SSN
 hmisowl:SSN rdf:type owl:ObjectProperty .
 
@@ -673,6 +673,17 @@ hmisowl:hasFirstName rdf:type owl:ObjectProperty ;
 hmisowl:hasLastName rdf:type owl:ObjectProperty ;
                     rdfs:domain hmisowl:Client ;
                     rdfs:range hmisowl:LastName .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasMiddleName
+hmisowl:hasMiddleName rdf:type owl:ObjectProperty ;
+                      rdfs:domain hmisowl:Client ;
+                      rdfs:range hmisowl:MiddleName ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:hasMiddleName ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass hmisowl:MiddleName
+                                 ] .
 
 
 #################################################################
@@ -1440,7 +1451,9 @@ hmisowl:NameDataQuality rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NameSuffix
-hmisowl:NameSuffix rdf:type owl:DatatypeProperty .
+hmisowl:NameSuffix rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hmisowl:Client ;
+                   rdfs:range hmis:string50 .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NativeHIOtherPacific
@@ -2242,10 +2255,6 @@ hmisowl:BaseMetaData rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Client
 hmisowl:Client rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty hmisowl:MiddleName ;
-                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                               ] ,
-                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:SSN ;
                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                ] ,
@@ -2319,10 +2328,6 @@ hmisowl:Client rdf:type owl:Class ;
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:GenderNone ;
-                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty hmisowl:NameSuffix ;
                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                ] ,
                                [ rdf:type owl:Restriction ;
@@ -3137,7 +3142,9 @@ hmisowl:FAAmount rdf:type owl:Class .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FirstName
-hmisowl:FirstName rdf:type owl:Class .
+hmisowl:FirstName rdf:type owl:Class ;
+                  hmisowl:id "_3.01.1"^^xsd:id ;
+                  rdfs:comment "First"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Funder
@@ -3588,6 +3595,10 @@ hmisowl:MedicalAssistance rdf:type owl:Class ;
                                           ] .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MiddleName
+hmisowl:MiddleName rdf:type owl:Class .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MoveInDate
 hmisowl:MoveInDate rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -4016,9 +4027,15 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
                                              ] .
 
 
-[ xsd:pattern "[0-9]{6}"
+[ owl:maxCardinality "1"^^xsd:int
 ] .
 
+[ xsd:pattern "[A-Za-z0-9]{1,8}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
@@ -4026,6 +4043,69 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[A-Za-z]{2}-[0-9]{3}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:totalDigits 5
+ ] .
+
+[ xsd:maxLength "32"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0.001
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4061,39 +4141,6 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:maxLength "50"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxInclusive 999999
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:minInclusive 0
- ] .
-
-[ xsd:pattern "[2-9][0-9]{2}[2-9][0-9]{2}[0-9]{4}"
- ] .
-
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
@@ -4107,57 +4154,6 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxInclusive "11"^^xsd:positiveInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:fractionDigits 2
- ] .
-
-[ xsd:pattern "[0-9]{5}"
- ] .
-
-[ xsd:fractionDigits 3
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:minInclusive 0
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4181,115 +4177,28 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
 [ xsd:maxLength "100"
- ] .
-
-[ xsd:pattern "[A-Za-z0-9]{1,8}"
- ] .
-
-[ xsd:maxLength "250"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxLength "32"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[A-Za-z]{2}-[0-9]{3}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:totalDigits 5
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4307,7 +4216,7 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ owl:maxCardinality "1"^^xsd:int
+[ xsd:pattern "[0-9]{6}"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4325,19 +4234,13 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:minInclusive 0.001
- ] .
-
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
+[ xsd:pattern "(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\\-+)|([A-Za-z0-9]+\\.+)|([A-Za-z0-9]+\\++))*[A-Za-z0-9]+@((\\w+\\-+)|(\\w+\\.))*\\w{1,63}\\.[a-zA-Z]{2,6}"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4355,7 +4258,115 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:pattern "(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\\-+)|([A-Za-z0-9]+\\.+)|([A-Za-z0-9]+\\++))*[A-Za-z0-9]+@((\\w+\\-+)|(\\w+\\.))*\\w{1,63}\\.[a-zA-Z]{2,6}"
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxInclusive 999999
+ ] .
+
+[ xsd:pattern "[2-9][0-9]{2}[2-9][0-9]{2}[0-9]{4}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0
+ ] .
+
+[ xsd:maxLength "50"
+ ] .
+
+[ xsd:pattern "[0-9]{5}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:fractionDigits 2
+ ] .
+
+[ xsd:fractionDigits 3
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxInclusive "11"^^xsd:positiveInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxLength "250"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
