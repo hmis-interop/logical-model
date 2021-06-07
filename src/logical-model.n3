@@ -2130,10 +2130,6 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 :userID rdf:type owl:DatatypeProperty .
 
 
-###  http://www.w3.org/2001/XMLSchema#textContent
-xsd:textContent rdf:type owl:DatatypeProperty .
-
-
 #################################################################
 #    Classes
 #################################################################
@@ -2853,6 +2849,131 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                             owl:onProperty :SexualOrientationOther ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#EntrySSVF
+:EntrySSVF rdf:type owl:Class ;
+           rdfs:subClassOf :baseMetaData ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :EnrollmentID ;
+                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :EntrySSVFID ;
+                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :AddressDataQuality ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :AnnualPercentAMI ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :ClientLeaseHolder ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :CoCPrioritized ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :CriminalRecord ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :CurrentPregnant ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :DependentUnder6 ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :DisabledHoH ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :EvictionHistory ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :HH5Plus ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :HPScreeningScore ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :HoHLeasesHolder ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :IncarceratedAdult ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :LastPermanentCity ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :LastPermanentState ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :LastPermanentStreet ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :LastPermanentZIP ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :LiteralHomelessHistory ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :PercentAMI ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :PrisonDischarge ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :SexOffender ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :SingleParent ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :SubsidyAtRisk ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :TargetScreenReqd ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :ThresholdScore ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :TimeToHousingLoss ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :UrgentReferral ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :VAMCStation ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Event
@@ -3966,133 +4087,248 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                               ] .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#entrySSVF
-:entrySSVF rdf:type owl:Class ;
-           rdfs:subClassOf :baseMetaData ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :EnrollmentID ;
-                             owl:cardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :EntrySSVFID ;
-                             owl:cardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :AddressDataQuality ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :AnnualPercentAMI ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :ClientLeaseHolder ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :CoCPrioritized ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :CriminalRecord ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :CurrentPregnant ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :DependentUnder6 ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :DisabledHoH ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :EvictionHistory ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :HH5Plus ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :HPScreeningScore ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :HoHLeasesHolder ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :IncarceratedAdult ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :LastPermanentCity ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :LastPermanentState ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :LastPermanentStreet ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :LastPermanentZIP ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :LiteralHomelessHistory ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :PercentAMI ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :PrisonDischarge ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :SexOffender ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :SingleParent ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :SubsidyAtRisk ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :TargetScreenReqd ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :ThresholdScore ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :TimeToHousingLoss ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :UrgentReferral ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :VAMCStation ;
-                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                           ] .
-
-
 [ owl:maxCardinality "1"^^xsd:int
 ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxLength "32"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:fractionDigits 2
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[0-9]{1,5}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxInclusive 1500
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxLength "250"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxLength "100"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[A-Za-z0-9]{1,8}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxLength "50"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:totalDigits 5
+ ] .
+
+[ xsd:minInclusive 0.001
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[0-9]{1,2}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[A-Za-z]{2}-[0-9]{3}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\\-+)|([A-Za-z0-9]+\\.+)|([A-Za-z0-9]+\\++))*[A-Za-z0-9]+@((\\w+\\-+)|(\\w+\\.))*\\w{1,63}\\.[a-zA-Z]{2,6}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[0-9]{5}"
+ ] .
+
+[ xsd:fractionDigits 3
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[0-9]{6}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
 
 [ xsd:pattern "[0-9]{2}"
  ] .
@@ -4136,244 +4372,10 @@ xsd:textContent rdf:type owl:DatatypeProperty .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:pattern "(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\\-+)|([A-Za-z0-9]+\\.+)|([A-Za-z0-9]+\\++))*[A-Za-z0-9]+@((\\w+\\-+)|(\\w+\\.))*\\w{1,63}\\.[a-zA-Z]{2,6}"
- ] .
-
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[A-Za-z]{2}-[0-9]{3}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[0-9]{6}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[0-9]{5}"
- ] .
-
-[ xsd:fractionDigits 3
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:totalDigits 5
- ] .
-
-[ xsd:minInclusive 0.001
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxLength "50"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[0-9]{1,2}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxLength "100"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[A-Za-z0-9]{1,8}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:fractionDigits 2
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxLength "32"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxLength "250"
- ] .
-
-[ xsd:pattern "[0-9]{1,5}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxInclusive 1500
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:minInclusive 0
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4403,10 +4405,7 @@ xsd:textContent rdf:type owl:DatatypeProperty .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
+[ xsd:minInclusive 0
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4422,9 +4421,6 @@ xsd:textContent rdf:type owl:DatatypeProperty .
  ] .
 
 [ xsd:maxInclusive "11"^^xsd:positiveInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4820,12 +4816,12 @@ xsd:textContent rdf:type owl:DatatypeProperty .
 
 
 :assessmentDisposition_Enumeration dtype:hasValue :assessmentDisposition_7 ,
-                                                  :assessmentDisposition_6 ,
                                                   :assessmentDisposition_10 ,
-                                                  :assessmentDisposition_9 ,
+                                                  :assessmentDisposition_6 ,
                                                   :assessmentDisposition_11 ,
-                                                  :assessmentDisposition_12 ,
+                                                  :assessmentDisposition_9 ,
                                                   :assessmentDisposition_8 ,
+                                                  :assessmentDisposition_12 ,
                                                   :assessmentDisposition_99 ,
                                                   :assessmentDisposition_1 ,
                                                   :assessmentDisposition_13 ,
@@ -4931,13 +4927,13 @@ xsd:textContent rdf:type owl:DatatypeProperty .
 
 
 :cmExitReason_Enumeration dtype:hasValue :cmExitReason_8 ,
-                                         :cmExitReason_13 ,
                                          :cmExitReason_9 ,
-                                         :cmExitReason_6 ,
+                                         :cmExitReason_13 ,
                                          :cmExitReason_12 ,
-                                         :cmExitReason_7 ,
-                                         :cmExitReason_99 ,
+                                         :cmExitReason_6 ,
                                          :cmExitReason_11 ,
+                                         :cmExitReason_99 ,
+                                         :cmExitReason_7 ,
                                          :cmExitReason_4 ,
                                          :cmExitReason_10 ,
                                          :cmExitReason_5 ,
@@ -5006,8 +5002,8 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                             :currentEdStatus_0 ,
                                             :currentEdStatus_1 ,
                                             :currentEdStatus_2 ,
-                                            :currentEdStatus_99 ,
-                                            :currentEdStatus_3 .
+                                            :currentEdStatus_3 ,
+                                            :currentEdStatus_99 .
 
 
 :currentSchoolAttend_0 dtype:hasValue "0"^^xsd:unsignedInt .
@@ -5048,8 +5044,8 @@ xsd:textContent rdf:type owl:DatatypeProperty .
 :dependentUnder6_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 
-:dependentUnder6_Enumeration dtype:hasValue :dependentUnder6_0 ,
-                                            :dependentUnder6_99 ,
+:dependentUnder6_Enumeration dtype:hasValue :dependentUnder6_99 ,
+                                            :dependentUnder6_0 ,
                                             :dependentUnder6_1 ,
                                             :dependentUnder6_2 .
 
@@ -5116,8 +5112,8 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                             :dischargeStatus_4 ,
                                             :dischargeStatus_5 ,
                                             :dischargeStatus_2 ,
-                                            :dischargeStatus_1 ,
                                             :dischargeStatus_99 ,
+                                            :dischargeStatus_1 ,
                                             :dischargeStatus_8 ,
                                             :dischargeStatus_9 .
 
@@ -5274,18 +5270,18 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                       :eventType_15 ,
                                       :eventType_9 ,
                                       :eventType_18 ,
-                                      :eventType_8 ,
                                       :eventType_17 ,
+                                      :eventType_8 ,
                                       :eventType_5 ,
                                       :eventType_4 ,
                                       :eventType_7 ,
                                       :eventType_6 ,
                                       :eventType_10 ,
                                       :eventType_1 ,
-                                      :eventType_3 ,
                                       :eventType_12 ,
-                                      :eventType_11 ,
-                                      :eventType_2 .
+                                      :eventType_3 ,
+                                      :eventType_2 ,
+                                      :eventType_11 .
 
 
 :evictionHistory_0 dtype:hasValue "0"^^xsd:unsignedInt .
@@ -5483,44 +5479,44 @@ xsd:textContent rdf:type owl:DatatypeProperty .
 
 
 :federalPartnerProgramsAndComponents_Enumeration dtype:hasValue :federalPartnerProgramsAndComponents_8 ,
-                                                                :federalPartnerProgramsAndComponents_18 ,
                                                                 :federalPartnerProgramsAndComponents_6 ,
-                                                                :federalPartnerProgramsAndComponents_38 ,
-                                                                :federalPartnerProgramsAndComponents_4 ,
+                                                                :federalPartnerProgramsAndComponents_18 ,
                                                                 :federalPartnerProgramsAndComponents_16 ,
+                                                                :federalPartnerProgramsAndComponents_4 ,
+                                                                :federalPartnerProgramsAndComponents_38 ,
                                                                 :federalPartnerProgramsAndComponents_48 ,
                                                                 :federalPartnerProgramsAndComponents_26 ,
+                                                                :federalPartnerProgramsAndComponents_36 ,
                                                                 :federalPartnerProgramsAndComponents_2 ,
                                                                 :federalPartnerProgramsAndComponents_14 ,
-                                                                :federalPartnerProgramsAndComponents_36 ,
                                                                 :federalPartnerProgramsAndComponents_24 ,
                                                                 :federalPartnerProgramsAndComponents_46 ,
                                                                 :federalPartnerProgramsAndComponents_23 ,
                                                                 :federalPartnerProgramsAndComponents_45 ,
                                                                 :federalPartnerProgramsAndComponents_33 ,
                                                                 :federalPartnerProgramsAndComponents_11 ,
-                                                                :federalPartnerProgramsAndComponents_43 ,
                                                                 :federalPartnerProgramsAndComponents_21 ,
+                                                                :federalPartnerProgramsAndComponents_43 ,
                                                                 :federalPartnerProgramsAndComponents_41 ,
                                                                 :federalPartnerProgramsAndComponents_51 ,
                                                                 :federalPartnerProgramsAndComponents_1 ,
                                                                 :federalPartnerProgramsAndComponents_19 ,
                                                                 :federalPartnerProgramsAndComponents_9 ,
+                                                                :federalPartnerProgramsAndComponents_17 ,
                                                                 :federalPartnerProgramsAndComponents_7 ,
                                                                 :federalPartnerProgramsAndComponents_39 ,
-                                                                :federalPartnerProgramsAndComponents_17 ,
                                                                 :federalPartnerProgramsAndComponents_49 ,
                                                                 :federalPartnerProgramsAndComponents_27 ,
                                                                 :federalPartnerProgramsAndComponents_5 ,
                                                                 :federalPartnerProgramsAndComponents_37 ,
                                                                 :federalPartnerProgramsAndComponents_15 ,
-                                                                :federalPartnerProgramsAndComponents_47 ,
                                                                 :federalPartnerProgramsAndComponents_25 ,
+                                                                :federalPartnerProgramsAndComponents_47 ,
                                                                 :federalPartnerProgramsAndComponents_3 ,
                                                                 :federalPartnerProgramsAndComponents_35 ,
                                                                 :federalPartnerProgramsAndComponents_13 ,
-                                                                :federalPartnerProgramsAndComponents_34 ,
                                                                 :federalPartnerProgramsAndComponents_12 ,
+                                                                :federalPartnerProgramsAndComponents_34 ,
                                                                 :federalPartnerProgramsAndComponents_22 ,
                                                                 :federalPartnerProgramsAndComponents_44 ,
                                                                 :federalPartnerProgramsAndComponents_10 ,
@@ -5784,10 +5780,10 @@ xsd:textContent rdf:type owl:DatatypeProperty .
 
 
 :lastGradeCompletedSimple_Enumeration dtype:hasValue :lastGradeCompletedSimple_11 ,
-                                                     :lastGradeCompletedSimple_8 ,
                                                      :lastGradeCompletedSimple_99 ,
-                                                     :lastGradeCompletedSimple_12 ,
+                                                     :lastGradeCompletedSimple_8 ,
                                                      :lastGradeCompletedSimple_9 ,
+                                                     :lastGradeCompletedSimple_12 ,
                                                      :lastGradeCompletedSimple_10 ,
                                                      :lastGradeCompletedSimple_4 ,
                                                      :lastGradeCompletedSimple_5 ,
@@ -5831,9 +5827,9 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                          :lengthOfStay_5 ,
                                          :lengthOfStay_10 ,
                                          :lengthOfStay_8 ,
-                                         :lengthOfStay_99 ,
-                                         :lengthOfStay_9 ,
                                          :lengthOfStay_11 ,
+                                         :lengthOfStay_9 ,
+                                         :lengthOfStay_99 ,
                                          :lengthOfStay_2 ,
                                          :lengthOfStay_3 .
 
@@ -5978,16 +5974,16 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                             :livingSituation_4 ,
                                             :livingSituation_32 ,
                                             :livingSituation_10 ,
-                                            :livingSituation_2 ,
                                             :livingSituation_22 ,
+                                            :livingSituation_2 ,
                                             :livingSituation_12 ,
                                             :livingSituation_34 ,
                                             :livingSituation_30 ,
                                             :livingSituation_17 ,
                                             :livingSituation_29 ,
                                             :livingSituation_19 ,
-                                            :livingSituation_13 ,
                                             :livingSituation_35 ,
+                                            :livingSituation_13 ,
                                             :livingSituation_25 ,
                                             :livingSituation_9 ,
                                             :livingSituation_15 ,
@@ -5995,10 +5991,10 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                             :livingSituation_7 ,
                                             :livingSituation_27 ,
                                             :livingSituation_31 ,
-                                            :livingSituation_5 ,
                                             :livingSituation_21 ,
-                                            :livingSituation_11 ,
+                                            :livingSituation_5 ,
                                             :livingSituation_99 ,
+                                            :livingSituation_11 ,
                                             :livingSituation_33 ,
                                             :livingSituation_23 ,
                                             :livingSituation_3 ,
@@ -6009,8 +6005,8 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                             :livingSituation_8 ,
                                             :livingSituation_14 ,
                                             :livingSituation_36 ,
-                                            :livingSituation_26 ,
                                             :livingSituation_6 ,
+                                            :livingSituation_26 ,
                                             :livingSituation_16 .
 
 
@@ -6102,8 +6098,8 @@ xsd:textContent rdf:type owl:DatatypeProperty .
 
 :monthsHomelessPastThreeYears_Enumeration dtype:hasValue :monthsHomelessPastThreeYears_113 ,
                                                          :monthsHomelessPastThreeYears_102 ,
-                                                         :monthsHomelessPastThreeYears_101 ,
                                                          :monthsHomelessPastThreeYears_112 ,
+                                                         :monthsHomelessPastThreeYears_101 ,
                                                          :monthsHomelessPastThreeYears_104 ,
                                                          :monthsHomelessPastThreeYears_103 ,
                                                          :monthsHomelessPastThreeYears_111 ,
@@ -6112,8 +6108,8 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                                          :monthsHomelessPastThreeYears_106 ,
                                                          :monthsHomelessPastThreeYears_105 ,
                                                          :monthsHomelessPastThreeYears_99 ,
-                                                         :monthsHomelessPastThreeYears_108 ,
                                                          :monthsHomelessPastThreeYears_9 ,
+                                                         :monthsHomelessPastThreeYears_108 ,
                                                          :monthsHomelessPastThreeYears_8 ,
                                                          :monthsHomelessPastThreeYears_107 .
 
@@ -6157,8 +6153,8 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                                :mostRecentEdStatus_3 ,
                                                :mostRecentEdStatus_4 ,
                                                :mostRecentEdStatus_5 ,
-                                               :mostRecentEdStatus_6 ,
                                                :mostRecentEdStatus_99 ,
+                                               :mostRecentEdStatus_6 ,
                                                :mostRecentEdStatus_7 ,
                                                :mostRecentEdStatus_8 ,
                                                :mostRecentEdStatus_9 .
@@ -6365,12 +6361,12 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                         :projectType_7 ,
                                         :projectType_8 ,
                                         :projectType_9 ,
-                                        :projectType_12 ,
                                         :projectType_2 ,
-                                        :projectType_3 ,
+                                        :projectType_12 ,
                                         :projectType_11 ,
-                                        :projectType_4 ,
+                                        :projectType_3 ,
                                         :projectType_10 ,
+                                        :projectType_4 ,
                                         :projectType_1 ,
                                         :projectType_14 ,
                                         :projectType_13 .
@@ -6432,8 +6428,8 @@ xsd:textContent rdf:type owl:DatatypeProperty .
 :reasonNotInsuredOrAssisted_Enumeration dtype:hasValue :reasonNotInsuredOrAssisted_1 ,
                                                        :reasonNotInsuredOrAssisted_3 ,
                                                        :reasonNotInsuredOrAssisted_2 ,
-                                                       :reasonNotInsuredOrAssisted_99 ,
                                                        :reasonNotInsuredOrAssisted_9 ,
+                                                       :reasonNotInsuredOrAssisted_99 ,
                                                        :reasonNotInsuredOrAssisted_8 ,
                                                        :reasonNotInsuredOrAssisted_4 .
 
@@ -6476,8 +6472,8 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                        :recordType_142 ,
                                        :recordType_141 ,
                                        :recordType_152 ,
-                                       :recordType_200 ,
-                                       :recordType_300 .
+                                       :recordType_300 ,
+                                       :recordType_200 .
 
 
 :referralOutcome_1 dtype:hasValue "1"^^xsd:unsignedInt .
@@ -6561,14 +6557,14 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                            :referralSource_11 ,
                                            :referralSource_34 ,
                                            :referralSource_30 ,
-                                           :referralSource_39 ,
                                            :referralSource_1 ,
+                                           :referralSource_39 ,
                                            :referralSource_28 ,
                                            :referralSource_18 ,
                                            :referralSource_2 ,
                                            :referralSource_35 ,
-                                           :referralSource_7 ,
                                            :referralSource_37 ,
+                                           :referralSource_7 ,
                                            :referralSource_38 ,
                                            :referralSource_9 ,
                                            :referralSource_8 .
@@ -6788,18 +6784,18 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                   :state_VA ,
                                   :state_OK ,
                                   :state_NM ,
-                                  :state_HI ,
                                   :state_DE ,
+                                  :state_HI ,
                                   :state_PR ,
-                                  :state_IL ,
                                   :state_MP ,
+                                  :state_IL ,
                                   :state_MT ,
                                   :state_NV ,
                                   :state_AL ,
                                   :state_AP ,
                                   :state_VI ,
-                                  :state_PA ,
                                   :state_CT ,
+                                  :state_PA ,
                                   :state_AS ,
                                   :state_ND ,
                                   :state_NH ,
@@ -6815,10 +6811,10 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                   :state_CO ,
                                   :state_MA ,
                                   :state_NC ,
-                                  :state_ME ,
                                   :state_IA ,
-                                  :state_WA ,
+                                  :state_ME ,
                                   :state_AZ ,
+                                  :state_WA ,
                                   :state_GA ,
                                   :state_MI ,
                                   :state_CA ,
@@ -6828,8 +6824,8 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                   :state_OR ,
                                   :state_IN ,
                                   :state_FL ,
-                                  :state_WI ,
                                   :state_AR ,
+                                  :state_WI ,
                                   :state_SD ,
                                   :state_MD ,
                                   :state_OH ,
@@ -6837,12 +6833,12 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                   :state_ID ,
                                   :state_NJ ,
                                   :state_WY ,
-                                  :state_AE ,
                                   :state_UT ,
+                                  :state_AE ,
                                   :state_PW ,
                                   :state_TN ,
-                                  :state_GU ,
-                                  :state_KY .
+                                  :state_KY ,
+                                  :state_GU .
 
 
 :state_FL dtype:hasValue "FL" .
@@ -7552,31 +7548,31 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                         :vamcStation_589A7 ,
                                         :vamcStation_561 ,
                                         :vamcStation_557 ,
-                                        :vamcStation_666 ,
                                         :vamcStation_436 ,
+                                        :vamcStation_666 ,
                                         :vamcStation_678 ,
                                         :vamcStation_614 ,
-                                        :vamcStation_585 ,
                                         :vamcStation_630 ,
+                                        :vamcStation_585 ,
                                         :vamcStation_642 ,
                                         :vamcStation_521 ,
                                         :vamcStation_654 ,
                                         :vamcStation_626 ,
                                         :vamcStation_517 ,
                                         :vamcStation_529 ,
-                                        :vamcStation_693 ,
                                         :vamcStation_463 ,
+                                        :vamcStation_693 ,
                                         :vamcStation_568 ,
-                                        :vamcStation_99 ,
                                         :vamcStation_689 ,
+                                        :vamcStation_99 ,
                                         :vamcStation_556 ,
-                                        :vamcStation_504 ,
                                         :vamcStation_613 ,
+                                        :vamcStation_504 ,
                                         :vamcStation_459 ,
                                         :vamcStation_520 ,
                                         :vamcStation_596 ,
-                                        :vamcStation_653 ,
                                         :vamcStation_544 ,
+                                        :vamcStation_653 ,
                                         :vamcStation_605 ,
                                         :vamcStation_508 ,
                                         :vamcStation_629 ,
@@ -7584,52 +7580,52 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                         :vamcStation_660 ,
                                         :vamcStation_672 ,
                                         :vamcStation_644 ,
-                                        :vamcStation_402 ,
-                                        :vamcStation_523 ,
                                         :vamcStation_656 ,
-                                        :vamcStation_438 ,
+                                        :vamcStation_523 ,
+                                        :vamcStation_402 ,
                                         :vamcStation_668 ,
+                                        :vamcStation_438 ,
                                         :vamcStation_575 ,
                                         :vamcStation_442 ,
                                         :vamcStation_620 ,
                                         :vamcStation_632 ,
                                         :vamcStation_519 ,
                                         :vamcStation_589A6 ,
-                                        :vamcStation_562 ,
                                         :vamcStation_671 ,
+                                        :vamcStation_562 ,
                                         :vamcStation_550 ,
                                         :vamcStation_590 ,
-                                        :vamcStation_546 ,
                                         :vamcStation_655 ,
-                                        :vamcStation_667 ,
+                                        :vamcStation_546 ,
                                         :vamcStation_534 ,
+                                        :vamcStation_667 ,
                                         :vamcStation_679 ,
+                                        :vamcStation_558 ,
                                         :vamcStation_437 ,
                                         :vamcStation_603 ,
-                                        :vamcStation_558 ,
-                                        :vamcStation_586 ,
                                         :vamcStation_695 ,
+                                        :vamcStation_586 ,
                                         :vamcStation_740 ,
                                         :vamcStation_631 ,
                                         :vamcStation_598 ,
                                         :vamcStation_619 ,
-                                        :vamcStation_659 ,
                                         :vamcStation_657A5 ,
+                                        :vamcStation_659 ,
                                         :vamcStation_538 ,
                                         :vamcStation_607 ,
                                         :vamcStation_593 ,
-                                        :vamcStation_460 ,
                                         :vamcStation_581 ,
+                                        :vamcStation_460 ,
                                         :vamcStation_650 ,
-                                        :vamcStation_501 ,
                                         :vamcStation_589 ,
-                                        :vamcStation_646 ,
+                                        :vamcStation_501 ,
                                         :vamcStation_537 ,
+                                        :vamcStation_646 ,
                                         :vamcStation_658 ,
                                         :vamcStation_662 ,
                                         :vamcStation_553 ,
-                                        :vamcStation_674 ,
                                         :vamcStation_541 ,
+                                        :vamcStation_674 ,
                                         :vamcStation_610 ,
                                         :vamcStation_565 ,
                                         :vamcStation_528A5 ,
@@ -7642,8 +7638,8 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                         :vamcStation_540 ,
                                         :vamcStation_580 ,
                                         :vamcStation_512 ,
-                                        :vamcStation_657 ,
                                         :vamcStation_548 ,
+                                        :vamcStation_657 ,
                                         :vamcStation_564 ,
                                         :vamcStation_673 ,
                                         :vamcStation_552 ,
@@ -7656,13 +7652,13 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                         :vamcStation_692 ,
                                         :vamcStation_595 ,
                                         :vamcStation_583 ,
-                                        :vamcStation_688 ,
                                         :vamcStation_600 ,
+                                        :vamcStation_688 ,
                                         :vamcStation_612 ,
                                         :vamcStation_515 ,
-                                        :vamcStation_636 ,
                                         :vamcStation_757 ,
                                         :vamcStation_503 ,
+                                        :vamcStation_636 ,
                                         :vamcStation_531 ,
                                         :vamcStation_640 ,
                                         :vamcStation_652 ,
@@ -7671,18 +7667,18 @@ xsd:textContent rdf:type owl:DatatypeProperty .
                                         :vamcStation_608 ,
                                         :vamcStation_528A7 ,
                                         :vamcStation_459GE ,
-                                        :vamcStation_539 ,
                                         :vamcStation_648 ,
+                                        :vamcStation_539 ,
                                         :vamcStation_636A6 ,
                                         :vamcStation_691 ,
                                         :vamcStation_570 ,
                                         :vamcStation_502 ,
                                         :vamcStation_623 ,
                                         :vamcStation_578 ,
-                                        :vamcStation_526 ,
                                         :vamcStation_635 ,
-                                        :vamcStation_756 ,
+                                        :vamcStation_526 ,
                                         :vamcStation_405 ,
+                                        :vamcStation_756 ,
                                         :vamcStation_542 ,
                                         :vamcStation_663 ,
                                         :vamcStation_675 ,
