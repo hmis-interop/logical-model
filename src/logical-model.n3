@@ -2136,8 +2136,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Affiliation
 :Affiliation rdf:type owl:Class ;
-             rdfs:subClassOf :baseMetaData ,
-                             [ rdf:type owl:Restriction ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty :AffiliationID ;
                                owl:cardinality "1"^^xsd:nonNegativeInteger
                              ] ,
@@ -4126,25 +4125,13 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
 [ xsd:maxLength "32"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:fractionDigits 2
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4156,79 +4143,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxInclusive 1500
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxLength "250"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxLength "100"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[A-Za-z0-9]{1,8}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxLength "50"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:totalDigits 5
- ] .
-
-[ xsd:minInclusive 0.001
+[ xsd:fractionDigits 2
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4246,7 +4161,16 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:pattern "[0-9]{1,2}"
+[ xsd:maxInclusive "11"^^xsd:positiveInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4267,7 +4191,22 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:pattern "[A-Za-z]{2}-[0-9]{3}"
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4288,7 +4227,28 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:pattern "(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\\-+)|([A-Za-z0-9]+\\.+)|([A-Za-z0-9]+\\++))*[A-Za-z0-9]+@((\\w+\\-+)|(\\w+\\.))*\\w{1,63}\\.[a-zA-Z]{2,6}"
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[2-9][0-9]{2}[2-9][0-9]{2}[0-9]{4}"
+ ] .
+
+[ xsd:maxInclusive 999999
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4309,13 +4269,10 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:pattern "[0-9]{6}"
- ] .
-
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ owl:maxCardinality "1"^^xsd:int
+[ xsd:pattern "(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\\-+)|([A-Za-z0-9]+\\.+)|([A-Za-z0-9]+\\++))*[A-Za-z0-9]+@((\\w+\\-+)|(\\w+\\.))*\\w{1,63}\\.[a-zA-Z]{2,6}"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4357,6 +4314,69 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
+[ xsd:pattern "[0-9]{6}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[0-9]{1,2}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0.001
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:totalDigits 5
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[A-Za-z]{2}-[0-9]{3}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxInclusive 1500
+ ] .
+
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
@@ -4381,16 +4401,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:minInclusive 0
- ] .
-
-[ xsd:maxInclusive 999999
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[2-9][0-9]{2}[2-9][0-9]{2}[0-9]{4}"
+[ xsd:maxLength "250"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4402,10 +4413,13 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
+[ xsd:pattern "[A-Za-z0-9]{1,8}"
+ ] .
+
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:minInclusive 0
+[ xsd:maxLength "100"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4420,22 +4434,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:maxInclusive "11"^^xsd:positiveInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
+[ xsd:maxLength "50"
  ] .
 
 #################################################################
