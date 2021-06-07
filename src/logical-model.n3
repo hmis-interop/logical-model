@@ -2152,8 +2152,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Assessment
 :Assessment rdf:type owl:Class ;
-            rdfs:subClassOf :baseMetaData ,
-                            [ rdf:type owl:Restriction ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty :AssessmentDate ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ] ,
@@ -2189,8 +2188,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#AssessmentQuestions
 :AssessmentQuestions rdf:type owl:Class ;
-                     rdfs:subClassOf :baseMetaData ,
-                                     [ rdf:type owl:Restriction ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty :AssessmentAnswer ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
@@ -2226,8 +2224,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#AssessmentResults
 :AssessmentResults rdf:type owl:Class ;
-                   rdfs:subClassOf :baseMetaData ,
-                                   [ rdf:type owl:Restriction ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty :AssessmentID ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
@@ -2255,8 +2252,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Client
 :Client rdf:type owl:Class ;
-        rdfs:subClassOf :baseMetaData ,
-                        [ rdf:type owl:Restriction ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty :FirstName ;
                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
                         ] ,
@@ -2356,8 +2352,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#ClientVeteranInfo
 :ClientVeteranInfo rdf:type owl:Class ;
-                   rdfs:subClassOf :baseMetaData ,
-                                   [ rdf:type owl:Restriction ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty :ClientVeteranInfoID ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
@@ -2417,8 +2412,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#ConnectionWithSOAR
 :ConnectionWithSOAR rdf:type owl:Class ;
-                    rdfs:subClassOf :baseMetaData ,
-                                    [ rdf:type owl:Restriction ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty :ConnectionWithSOAR ;
                                       owl:cardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
@@ -2442,8 +2436,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#CurrentLivingSituation
 :CurrentLivingSituation rdf:type owl:Class ;
-                        rdfs:subClassOf :baseMetaData ,
-                                        [ rdf:type owl:Restriction ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
                                           owl:onProperty :CurrentLivingSitID ;
                                           owl:cardinality "1"^^xsd:nonNegativeInteger
                                         ] ,
@@ -2495,8 +2488,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#DateOfEngagement
 :DateOfEngagement rdf:type owl:Class ;
-                  rdfs:subClassOf :baseMetaData ,
-                                  [ rdf:type owl:Restriction ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty :DateOfEngagement ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
@@ -2512,8 +2504,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Disabilities
 :Disabilities rdf:type owl:Class ;
-              rdfs:subClassOf :baseMetaData ,
-                              [ rdf:type owl:Restriction ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :DisabilityResponse ;
                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                               ] ,
@@ -2573,8 +2564,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#DomesticViolence
 :DomesticViolence rdf:type owl:Class ;
-                  rdfs:subClassOf :baseMetaData ,
-                                  [ rdf:type owl:Restriction ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty :DomesticViolenceID ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
@@ -2606,8 +2596,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Education
 :Education rdf:type owl:Class ;
-           rdfs:subClassOf :baseMetaData ,
-                           [ rdf:type owl:Restriction ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :EducationID ;
                              owl:cardinality "1"^^xsd:nonNegativeInteger
                            ] ,
@@ -2635,8 +2624,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Employment
 :Employment rdf:type owl:Class ;
-            rdfs:subClassOf :baseMetaData ,
-                            [ rdf:type owl:Restriction ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty :Employed ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ] ,
@@ -2668,8 +2656,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Enrollment
 :Enrollment rdf:type owl:Class ;
-            rdfs:subClassOf :baseMetaData ,
-                            [ rdf:type owl:Restriction ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty :DisablingCondition ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ] ,
@@ -2729,8 +2716,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#EnrollmentCoC
 :EnrollmentCoC rdf:type owl:Class ;
-               rdfs:subClassOf :baseMetaData ,
-                               [ rdf:type owl:Restriction ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :CoCCode ;
                                  owl:cardinality "1"^^xsd:nonNegativeInteger
                                ] ,
@@ -2758,8 +2744,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#EntryRHSP
 :EntryRHSP rdf:type owl:Class ;
-           rdfs:subClassOf :baseMetaData ,
-                           [ rdf:type owl:Restriction ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :EnrollmentID ;
                              owl:cardinality "1"^^xsd:nonNegativeInteger
                            ] ,
@@ -2775,8 +2760,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#EntryRHY
 :EntryRHY rdf:type owl:Class ;
-          rdfs:subClassOf :baseMetaData ,
-                          [ rdf:type owl:Restriction ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :AlcoholDrugUseDisorderFam ;
                             owl:cardinality "1"^^xsd:nonNegativeInteger
                           ] ,
@@ -2852,8 +2836,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#EntrySSVF
 :EntrySSVF rdf:type owl:Class ;
-           rdfs:subClassOf :baseMetaData ,
-                           [ rdf:type owl:Restriction ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :EnrollmentID ;
                              owl:cardinality "1"^^xsd:nonNegativeInteger
                            ] ,
@@ -2977,8 +2960,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Event
 :Event rdf:type owl:Class ;
-       rdfs:subClassOf :baseMetaData ,
-                       [ rdf:type owl:Restriction ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
                          owl:onProperty :EnrollmentID ;
                          owl:cardinality "1"^^xsd:nonNegativeInteger
                        ] ,
@@ -3022,8 +3004,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Exit
 :Exit rdf:type owl:Class ;
-      rdfs:subClassOf :baseMetaData ,
-                      [ rdf:type owl:Restriction ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
                         owl:onProperty :Destination ;
                         owl:cardinality "1"^^xsd:nonNegativeInteger
                       ] ,
@@ -3047,8 +3028,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#ExitHousingAssessment
 :ExitHousingAssessment rdf:type owl:Class ;
-                       rdfs:subClassOf :baseMetaData ,
-                                       [ rdf:type owl:Restriction ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
                                          owl:onProperty :ExitHousingAssessmentID ;
                                          owl:cardinality "1"^^xsd:nonNegativeInteger
                                        ] ,
@@ -3068,8 +3048,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#ExitRHY
 :ExitRHY rdf:type owl:Class ;
-         rdfs:subClassOf :baseMetaData ,
-                         [ rdf:type owl:Restriction ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :CounselingReceived ;
                            owl:cardinality "1"^^xsd:nonNegativeInteger
                          ] ,
@@ -3173,8 +3152,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Funder
 :Funder rdf:type owl:Class ;
-        rdfs:subClassOf :baseMetaData ,
-                        [ rdf:type owl:Restriction ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty :Funder ;
                           owl:cardinality "1"^^xsd:nonNegativeInteger
                         ] ,
@@ -3206,8 +3184,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#HealthInsurance
 :HealthInsurance rdf:type owl:Class ;
-                 rdfs:subClassOf :baseMetaData ,
-                                 [ rdf:type owl:Restriction ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty :EnrollmentID ;
                                    owl:cardinality "1"^^xsd:nonNegativeInteger
                                  ] ,
@@ -3311,8 +3288,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#HealthStatus
 :HealthStatus rdf:type owl:Class ;
-              rdfs:subClassOf :baseMetaData ,
-                              [ rdf:type owl:Restriction ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :EnrollmentID ;
                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                               ] ,
@@ -3352,8 +3328,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#IncomeAndSources
 :IncomeAndSources rdf:type owl:Class ;
-                  rdfs:subClassOf :baseMetaData ,
-                                  [ rdf:type owl:Restriction ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty :Alimony ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
@@ -3505,8 +3480,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Inventory
 :Inventory rdf:type owl:Class ;
-           rdfs:subClassOf :baseMetaData ,
-                           [ rdf:type owl:Restriction ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :BedInventory ;
                              owl:cardinality "1"^^xsd:nonNegativeInteger
                            ] ,
@@ -3578,8 +3552,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#MedicalAssistance
 :MedicalAssistance rdf:type owl:Class ;
-                   rdfs:subClassOf :baseMetaData ,
-                                   [ rdf:type owl:Restriction ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty :ADAP ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
@@ -3623,8 +3596,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#MoveInDate
 :MoveInDate rdf:type owl:Class ;
-            rdfs:subClassOf :baseMetaData ,
-                            [ rdf:type owl:Restriction ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty :EnrollmentID ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ] ,
@@ -3640,8 +3612,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#NonCashBenefits
 :NonCashBenefits rdf:type owl:Class ;
-                 rdfs:subClassOf :baseMetaData ,
-                                 [ rdf:type owl:Restriction ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty :BenefitsFromAnySource ;
                                    owl:cardinality "1"^^xsd:nonNegativeInteger
                                  ] ,
@@ -3693,8 +3664,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Organization
 :Organization rdf:type owl:Class ;
-              rdfs:subClassOf :baseMetaData ,
-                              [ rdf:type owl:Restriction ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :OrganizationID ;
                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                               ] ,
@@ -3714,8 +3684,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#PathStatus
 :PathStatus rdf:type owl:Class ;
-            rdfs:subClassOf :baseMetaData ,
-                            [ rdf:type owl:Restriction ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty :ClientEnrolledInPATH ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ] ,
@@ -3739,8 +3708,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Project
 :Project rdf:type owl:Class ;
-         rdfs:subClassOf :baseMetaData ,
-                         [ rdf:type owl:Restriction ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :ContinuumProject ;
                            owl:cardinality "1"^^xsd:nonNegativeInteger
                          ] ,
@@ -3804,8 +3772,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#ProjectCoC
 :ProjectCoC rdf:type owl:Class ;
-            rdfs:subClassOf :baseMetaData ,
-                            [ rdf:type owl:Restriction ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty :CoCCode ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ] ,
@@ -3849,8 +3816,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#RhyAftercare
 :RhyAftercare rdf:type owl:Class ;
-              rdfs:subClassOf :baseMetaData ,
-                              [ rdf:type owl:Restriction ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :AftercareDate ;
                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                               ] ,
@@ -3886,8 +3852,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#RhyBCPStatus
 :RhyBCPStatus rdf:type owl:Class ;
-              rdfs:subClassOf :baseMetaData ,
-                              [ rdf:type owl:Restriction ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :DateOfBCPStatus ;
                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                               ] ,
@@ -3915,8 +3880,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#ServiceFAReferral
 :ServiceFAReferral rdf:type owl:Class ;
-                   rdfs:subClassOf :baseMetaData ,
-                                   [ rdf:type owl:Restriction ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty :TypeProvided ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
@@ -3960,8 +3924,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#User
 :User rdf:type owl:Class ;
-      rdfs:subClassOf :baseMetaData ,
-                      [ rdf:type owl:Restriction ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
                         owl:onProperty :UserID ;
                         owl:cardinality "1"^^xsd:nonNegativeInteger
                       ] ,
@@ -3981,8 +3944,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#VashExitReason
 :VashExitReason rdf:type owl:Class ;
-                rdfs:subClassOf :baseMetaData ,
-                                [ rdf:type owl:Restriction ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty :CMExitReason ;
                                   owl:cardinality "1"^^xsd:nonNegativeInteger
                                 ] ,
@@ -3998,8 +3960,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#Wellbeing
 :Wellbeing rdf:type owl:Class ;
-           rdfs:subClassOf :baseMetaData ,
-                           [ rdf:type owl:Restriction ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :EnrollmentID ;
                              owl:cardinality "1"^^xsd:nonNegativeInteger
                            ] ,
@@ -4035,8 +3996,7 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#YouthEducationStatus
 :YouthEducationStatus rdf:type owl:Class ;
-                      rdfs:subClassOf :baseMetaData ,
-                                      [ rdf:type owl:Restriction ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                         owl:onProperty :EnrollmentID ;
                                         owl:cardinality "1"^^xsd:nonNegativeInteger
                                       ] ,
