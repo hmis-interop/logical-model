@@ -642,14 +642,53 @@ hmisowl:SSN rdf:type owl:ObjectProperty .
 hmisowl:TypeProvided rdf:type owl:ObjectProperty .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasAssessment
+hmisowl:hasAssessment rdf:type owl:ObjectProperty .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasAssessmentQuestions
+hmisowl:hasAssessmentQuestions rdf:type owl:ObjectProperty ,
+                                        owl:AsymmetricProperty .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasAssessmentResults
+hmisowl:hasAssessmentResults rdf:type owl:ObjectProperty .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasBaseMetaData
 hmisowl:hasBaseMetaData rdf:type owl:ObjectProperty .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasClientVeteranInfo
+hmisowl:hasClientVeteranInfo rdf:type owl:ObjectProperty ;
+                             rdfs:domain hmisowl:Client ;
+                             rdfs:range hmisowl:ClientVeteranInfo .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasConnectionWithSOAR
+hmisowl:hasConnectionWithSOAR rdf:type owl:ObjectProperty .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasCurrentLivingSituation
+hmisowl:hasCurrentLivingSituation rdf:type owl:ObjectProperty .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasDateOfEngagement
+hmisowl:hasDateOfEngagement rdf:type owl:ObjectProperty ;
+                            rdfs:domain hmisowl:Enrollment ;
+                            rdfs:range hmisowl:DateOfEngagementClass .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasDisabilities
+hmisowl:hasDisabilities rdf:type owl:ObjectProperty .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasDomesticViolence
+hmisowl:hasDomesticViolence rdf:type owl:ObjectProperty .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasEnrollment
-hmisowl:hasEnrollment rdf:type owl:ObjectProperty ;
-                      rdfs:domain hmisowl:Client ;
-                      rdfs:range hmisowl:Enrollment .
+hmisowl:hasEnrollment rdf:type owl:ObjectProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasExit
@@ -690,6 +729,10 @@ hmisowl:hasMiddleName rdf:type owl:ObjectProperty ;
                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onClass hmisowl:MiddleName
                                  ] .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasProject
+hmisowl:hasProject rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -2141,6 +2184,14 @@ hmisowl:Affiliation rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Assessment
 hmisowl:Assessment rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasAssessmentQuestions ;
+                                     owl:allValuesFrom hmisowl:AssessmentQuestions
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasAssessmentResults ;
+                                     owl:allValuesFrom hmisowl:AssessmentResults
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:AssessmentDate ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
@@ -2171,7 +2222,9 @@ hmisowl:Assessment rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:PrioritizationStatus ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
-                                   ] .
+                                   ] ;
+                   owl:hasKey ( hmisowl:AssessmentID
+                              ) .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentQuestions
@@ -2261,7 +2314,19 @@ hmisowl:BaseMetaData rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Client
 hmisowl:Client rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:hasEnrollment ;
+                                 owl:someValuesFrom hmisowl:Enrollment
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:hasClientVeteranInfo ;
+                                 owl:minCardinality "0"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:SSN ;
+                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:hasClientVeteranInfo ;
                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                ] ,
                                [ rdf:type owl:Restriction ;
@@ -2345,10 +2410,6 @@ hmisowl:Client rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ClientVeteranInfo
 hmisowl:ClientVeteranInfo rdf:type owl:Class ;
                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                            owl:onProperty hmisowl:ClientVeteranInfoID ;
-                                            owl:cardinality "1"^^xsd:nonNegativeInteger
-                                          ] ,
-                                          [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:PersonalID ;
                                             owl:cardinality "1"^^xsd:nonNegativeInteger
                                           ] ,
@@ -2478,20 +2539,16 @@ hmisowl:CurrentLivingSituation rdf:type owl:Class ;
                                                ] .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DateOfEngagement
-hmisowl:DateOfEngagement rdf:type owl:Class ;
-                         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmisowl:DateOfEngagement ;
-                                           owl:cardinality "1"^^xsd:nonNegativeInteger
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmisowl:DateOfEngagementID ;
-                                           owl:cardinality "1"^^xsd:nonNegativeInteger
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmisowl:EnrollmentID ;
-                                           owl:cardinality "1"^^xsd:nonNegativeInteger
-                                         ] .
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DateOfEngagementClass
+hmisowl:DateOfEngagementClass rdf:type owl:Class ;
+                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty hmisowl:DateOfEngagementID ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty hmisowl:EnrollmentID ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Disabilities
@@ -2645,9 +2702,33 @@ hmisowl:Employment rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Enrollment
 hmisowl:Enrollment rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasAssessment ;
+                                     owl:someValuesFrom hmisowl:Assessment
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasConnectionWithSOAR ;
+                                     owl:someValuesFrom hmisowl:ConnectionWithSOAR
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasCurrentLivingSituation ;
+                                     owl:someValuesFrom hmisowl:CurrentLivingSituation
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasDisabilities ;
+                                     owl:someValuesFrom hmisowl:Disabilities
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasDomesticViolence ;
+                                     owl:someValuesFrom hmisowl:DomesticViolence
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:hasBaseMetaData ;
                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onClass hmisowl:BaseMetaData
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasDateOfEngagement ;
+                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:DisablingCondition ;
@@ -3676,6 +3757,10 @@ hmisowl:NonCashBenefits rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Organization
 hmisowl:Organization rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:hasProject ;
+                                       owl:someValuesFrom hmisowl:Project
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:OrganizationID ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
@@ -4036,9 +4121,6 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
 ] .
 
-[ xsd:pattern "[A-Za-z0-9]{1,8}"
- ] .
-
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
@@ -4052,66 +4134,6 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[A-Za-z]{2}-[0-9]{3}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:totalDigits 5
- ] .
-
-[ xsd:maxLength "32"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:minInclusive 0.001
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4121,45 +4143,6 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
  ] .
 
 [ xsd:pattern "[0-9]{1,2}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4198,6 +4181,42 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
+[ xsd:maxInclusive 999999
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[2-9][0-9]{2}[2-9][0-9]{2}[0-9]{4}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
@@ -4210,6 +4229,9 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
+[ xsd:pattern "(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\\-+)|([A-Za-z0-9]+\\.+)|([A-Za-z0-9]+\\++))*[A-Za-z0-9]+@((\\w+\\-+)|(\\w+\\.))*\\w{1,63}\\.[a-zA-Z]{2,6}"
+ ] .
+
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
@@ -4217,6 +4239,105 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
  ] .
 
 [ xsd:maxInclusive 1500
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:fractionDigits 3
+ ] .
+
+[ xsd:minInclusive 0
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:totalDigits 5
+ ] .
+
+[ xsd:maxLength "32"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[0-9]{5}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:fractionDigits 2
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxInclusive "11"^^xsd:positiveInteger
+ ] .
+
+[ xsd:pattern "[0-9]{2}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4246,13 +4367,7 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:pattern "(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\\-+)|([A-Za-z0-9]+\\.+)|([A-Za-z0-9]+\\++))*[A-Za-z0-9]+@((\\w+\\-+)|(\\w+\\.))*\\w{1,63}\\.[a-zA-Z]{2,6}"
- ] .
-
 [ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[0-9]{2}"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4273,7 +4388,16 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:minInclusive 0
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[A-Za-z0-9]{1,8}"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4288,79 +4412,7 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxInclusive 999999
- ] .
-
-[ xsd:pattern "[2-9][0-9]{2}[2-9][0-9]{2}[0-9]{4}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:minInclusive 0
- ] .
-
-[ xsd:maxLength "50"
- ] .
-
-[ xsd:pattern "[0-9]{5}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:fractionDigits 2
- ] .
-
-[ xsd:fractionDigits 3
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxInclusive "11"^^xsd:positiveInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
+[ xsd:pattern "[A-Za-z]{2}-[0-9]{3}"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4373,6 +4425,39 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0.001
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxLength "50"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4504,12 +4589,12 @@ hmis:assessmentDisposition_Enumeration dtype:hasValue hmis:assessmentDisposition
                                                       hmis:assessmentDisposition_6 ,
                                                       hmis:assessmentDisposition_11 ,
                                                       hmis:assessmentDisposition_9 ,
-                                                      hmis:assessmentDisposition_8 ,
                                                       hmis:assessmentDisposition_12 ,
+                                                      hmis:assessmentDisposition_8 ,
                                                       hmis:assessmentDisposition_99 ,
                                                       hmis:assessmentDisposition_1 ,
-                                                      hmis:assessmentDisposition_13 ,
                                                       hmis:assessmentDisposition_3 ,
+                                                      hmis:assessmentDisposition_13 ,
                                                       hmis:assessmentDisposition_14 ,
                                                       hmis:assessmentDisposition_2 ,
                                                       hmis:assessmentDisposition_5 ,
@@ -4613,11 +4698,11 @@ hmis:cmExitReason_99 dtype:hasValue "99"^^xsd:unsignedInt .
 hmis:cmExitReason_Enumeration dtype:hasValue hmis:cmExitReason_8 ,
                                              hmis:cmExitReason_9 ,
                                              hmis:cmExitReason_13 ,
-                                             hmis:cmExitReason_12 ,
                                              hmis:cmExitReason_6 ,
+                                             hmis:cmExitReason_12 ,
                                              hmis:cmExitReason_11 ,
-                                             hmis:cmExitReason_99 ,
                                              hmis:cmExitReason_7 ,
+                                             hmis:cmExitReason_99 ,
                                              hmis:cmExitReason_4 ,
                                              hmis:cmExitReason_10 ,
                                              hmis:cmExitReason_5 ,
@@ -4686,8 +4771,8 @@ hmis:currentEdStatus_Enumeration dtype:hasValue hmis:currentEdStatus_4 ,
                                                 hmis:currentEdStatus_0 ,
                                                 hmis:currentEdStatus_1 ,
                                                 hmis:currentEdStatus_2 ,
-                                                hmis:currentEdStatus_3 ,
-                                                hmis:currentEdStatus_99 .
+                                                hmis:currentEdStatus_99 ,
+                                                hmis:currentEdStatus_3 .
 
 
 hmis:currentSchoolAttend_0 dtype:hasValue "0"^^xsd:unsignedInt .
@@ -4728,8 +4813,8 @@ hmis:dependentUnder6_2 dtype:hasValue "2"^^xsd:unsignedInt .
 hmis:dependentUnder6_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 
-hmis:dependentUnder6_Enumeration dtype:hasValue hmis:dependentUnder6_99 ,
-                                                hmis:dependentUnder6_0 ,
+hmis:dependentUnder6_Enumeration dtype:hasValue hmis:dependentUnder6_0 ,
+                                                hmis:dependentUnder6_99 ,
                                                 hmis:dependentUnder6_1 ,
                                                 hmis:dependentUnder6_2 .
 
@@ -4796,8 +4881,8 @@ hmis:dischargeStatus_Enumeration dtype:hasValue hmis:dischargeStatus_6 ,
                                                 hmis:dischargeStatus_4 ,
                                                 hmis:dischargeStatus_5 ,
                                                 hmis:dischargeStatus_2 ,
-                                                hmis:dischargeStatus_99 ,
                                                 hmis:dischargeStatus_1 ,
+                                                hmis:dischargeStatus_99 ,
                                                 hmis:dischargeStatus_8 ,
                                                 hmis:dischargeStatus_9 .
 
@@ -4952,20 +5037,20 @@ hmis:eventType_Enumeration dtype:hasValue hmis:eventType_14 ,
                                           hmis:eventType_13 ,
                                           hmis:eventType_16 ,
                                           hmis:eventType_15 ,
-                                          hmis:eventType_9 ,
                                           hmis:eventType_18 ,
-                                          hmis:eventType_17 ,
+                                          hmis:eventType_9 ,
                                           hmis:eventType_8 ,
+                                          hmis:eventType_17 ,
                                           hmis:eventType_5 ,
                                           hmis:eventType_4 ,
                                           hmis:eventType_7 ,
                                           hmis:eventType_6 ,
                                           hmis:eventType_10 ,
                                           hmis:eventType_1 ,
-                                          hmis:eventType_12 ,
                                           hmis:eventType_3 ,
-                                          hmis:eventType_2 ,
-                                          hmis:eventType_11 .
+                                          hmis:eventType_12 ,
+                                          hmis:eventType_11 ,
+                                          hmis:eventType_2 .
 
 
 hmis:evictionHistory_0 dtype:hasValue "0"^^xsd:unsignedInt .
@@ -5168,13 +5253,13 @@ hmis:federalPartnerProgramsAndComponents_Enumeration dtype:hasValue hmis:federal
                                                                     hmis:federalPartnerProgramsAndComponents_16 ,
                                                                     hmis:federalPartnerProgramsAndComponents_4 ,
                                                                     hmis:federalPartnerProgramsAndComponents_38 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_48 ,
                                                                     hmis:federalPartnerProgramsAndComponents_26 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_36 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_48 ,
                                                                     hmis:federalPartnerProgramsAndComponents_2 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_36 ,
                                                                     hmis:federalPartnerProgramsAndComponents_14 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_24 ,
                                                                     hmis:federalPartnerProgramsAndComponents_46 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_24 ,
                                                                     hmis:federalPartnerProgramsAndComponents_23 ,
                                                                     hmis:federalPartnerProgramsAndComponents_45 ,
                                                                     hmis:federalPartnerProgramsAndComponents_33 ,
@@ -5186,19 +5271,19 @@ hmis:federalPartnerProgramsAndComponents_Enumeration dtype:hasValue hmis:federal
                                                                     hmis:federalPartnerProgramsAndComponents_1 ,
                                                                     hmis:federalPartnerProgramsAndComponents_19 ,
                                                                     hmis:federalPartnerProgramsAndComponents_9 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_17 ,
                                                                     hmis:federalPartnerProgramsAndComponents_7 ,
                                                                     hmis:federalPartnerProgramsAndComponents_39 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_49 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_17 ,
                                                                     hmis:federalPartnerProgramsAndComponents_27 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_5 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_37 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_49 ,
                                                                     hmis:federalPartnerProgramsAndComponents_15 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_25 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_37 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_5 ,
                                                                     hmis:federalPartnerProgramsAndComponents_47 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_3 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_25 ,
                                                                     hmis:federalPartnerProgramsAndComponents_35 ,
                                                                     hmis:federalPartnerProgramsAndComponents_13 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_3 ,
                                                                     hmis:federalPartnerProgramsAndComponents_12 ,
                                                                     hmis:federalPartnerProgramsAndComponents_34 ,
                                                                     hmis:federalPartnerProgramsAndComponents_22 ,
@@ -5206,8 +5291,8 @@ hmis:federalPartnerProgramsAndComponents_Enumeration dtype:hasValue hmis:federal
                                                                     hmis:federalPartnerProgramsAndComponents_10 ,
                                                                     hmis:federalPartnerProgramsAndComponents_20 ,
                                                                     hmis:federalPartnerProgramsAndComponents_42 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_52 ,
                                                                     hmis:federalPartnerProgramsAndComponents_30 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_52 ,
                                                                     hmis:federalPartnerProgramsAndComponents_40 ,
                                                                     hmis:federalPartnerProgramsAndComponents_50 .
 
@@ -5464,17 +5549,17 @@ hmis:lastGradeCompletedSimple_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 
 hmis:lastGradeCompletedSimple_Enumeration dtype:hasValue hmis:lastGradeCompletedSimple_11 ,
-                                                         hmis:lastGradeCompletedSimple_99 ,
                                                          hmis:lastGradeCompletedSimple_8 ,
-                                                         hmis:lastGradeCompletedSimple_9 ,
+                                                         hmis:lastGradeCompletedSimple_99 ,
                                                          hmis:lastGradeCompletedSimple_12 ,
+                                                         hmis:lastGradeCompletedSimple_9 ,
                                                          hmis:lastGradeCompletedSimple_10 ,
                                                          hmis:lastGradeCompletedSimple_4 ,
                                                          hmis:lastGradeCompletedSimple_5 ,
-                                                         hmis:lastGradeCompletedSimple_13 ,
                                                          hmis:lastGradeCompletedSimple_6 ,
-                                                         hmis:lastGradeCompletedSimple_7 ,
+                                                         hmis:lastGradeCompletedSimple_13 ,
                                                          hmis:lastGradeCompletedSimple_14 ,
+                                                         hmis:lastGradeCompletedSimple_7 ,
                                                          hmis:lastGradeCompletedSimple_1 ,
                                                          hmis:lastGradeCompletedSimple_2 ,
                                                          hmis:lastGradeCompletedSimple_3 .
@@ -5511,9 +5596,9 @@ hmis:lengthOfStay_Enumeration dtype:hasValue hmis:lengthOfStay_4 ,
                                              hmis:lengthOfStay_5 ,
                                              hmis:lengthOfStay_10 ,
                                              hmis:lengthOfStay_8 ,
+                                             hmis:lengthOfStay_99 ,
                                              hmis:lengthOfStay_11 ,
                                              hmis:lengthOfStay_9 ,
-                                             hmis:lengthOfStay_99 ,
                                              hmis:lengthOfStay_2 ,
                                              hmis:lengthOfStay_3 .
 
@@ -5654,29 +5739,29 @@ hmis:livingSituation_9 dtype:hasValue "9"^^xsd:unsignedInt .
 hmis:livingSituation_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 
-hmis:livingSituation_Enumeration dtype:hasValue hmis:livingSituation_20 ,
-                                                hmis:livingSituation_4 ,
-                                                hmis:livingSituation_32 ,
+hmis:livingSituation_Enumeration dtype:hasValue hmis:livingSituation_4 ,
+                                                hmis:livingSituation_20 ,
                                                 hmis:livingSituation_10 ,
-                                                hmis:livingSituation_22 ,
+                                                hmis:livingSituation_32 ,
                                                 hmis:livingSituation_2 ,
-                                                hmis:livingSituation_12 ,
+                                                hmis:livingSituation_22 ,
                                                 hmis:livingSituation_34 ,
+                                                hmis:livingSituation_12 ,
                                                 hmis:livingSituation_30 ,
                                                 hmis:livingSituation_17 ,
                                                 hmis:livingSituation_29 ,
                                                 hmis:livingSituation_19 ,
-                                                hmis:livingSituation_35 ,
                                                 hmis:livingSituation_13 ,
+                                                hmis:livingSituation_35 ,
                                                 hmis:livingSituation_25 ,
                                                 hmis:livingSituation_9 ,
-                                                hmis:livingSituation_15 ,
                                                 hmis:livingSituation_37 ,
-                                                hmis:livingSituation_7 ,
+                                                hmis:livingSituation_15 ,
                                                 hmis:livingSituation_27 ,
+                                                hmis:livingSituation_7 ,
                                                 hmis:livingSituation_31 ,
-                                                hmis:livingSituation_21 ,
                                                 hmis:livingSituation_5 ,
+                                                hmis:livingSituation_21 ,
                                                 hmis:livingSituation_99 ,
                                                 hmis:livingSituation_11 ,
                                                 hmis:livingSituation_33 ,
@@ -5689,8 +5774,8 @@ hmis:livingSituation_Enumeration dtype:hasValue hmis:livingSituation_20 ,
                                                 hmis:livingSituation_8 ,
                                                 hmis:livingSituation_14 ,
                                                 hmis:livingSituation_36 ,
-                                                hmis:livingSituation_6 ,
                                                 hmis:livingSituation_26 ,
+                                                hmis:livingSituation_6 ,
                                                 hmis:livingSituation_16 .
 
 
@@ -6045,8 +6130,8 @@ hmis:projectType_Enumeration dtype:hasValue hmis:projectType_6 ,
                                             hmis:projectType_7 ,
                                             hmis:projectType_8 ,
                                             hmis:projectType_9 ,
-                                            hmis:projectType_2 ,
                                             hmis:projectType_12 ,
+                                            hmis:projectType_2 ,
                                             hmis:projectType_11 ,
                                             hmis:projectType_3 ,
                                             hmis:projectType_10 ,
@@ -6154,8 +6239,8 @@ hmis:recordType_Enumeration dtype:hasValue hmis:recordType_151 ,
                                            hmis:recordType_210 ,
                                            hmis:recordType_143 ,
                                            hmis:recordType_142 ,
-                                           hmis:recordType_141 ,
                                            hmis:recordType_152 ,
+                                           hmis:recordType_141 ,
                                            hmis:recordType_300 ,
                                            hmis:recordType_200 .
 
@@ -6241,14 +6326,14 @@ hmis:referralSource_Enumeration dtype:hasValue hmis:referralSource_99 ,
                                                hmis:referralSource_11 ,
                                                hmis:referralSource_34 ,
                                                hmis:referralSource_30 ,
-                                               hmis:referralSource_1 ,
                                                hmis:referralSource_39 ,
+                                               hmis:referralSource_1 ,
                                                hmis:referralSource_28 ,
                                                hmis:referralSource_18 ,
                                                hmis:referralSource_2 ,
                                                hmis:referralSource_35 ,
-                                               hmis:referralSource_37 ,
                                                hmis:referralSource_7 ,
+                                               hmis:referralSource_37 ,
                                                hmis:referralSource_38 ,
                                                hmis:referralSource_9 ,
                                                hmis:referralSource_8 .
@@ -6272,8 +6357,8 @@ hmis:relationshipToHoH_5 dtype:hasValue "5"^^xsd:unsignedInt .
 hmis:relationshipToHoH_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 
-hmis:relationshipToHoH_Enumeration dtype:hasValue hmis:relationshipToHoH_1 ,
-                                                  hmis:relationshipToHoH_99 ,
+hmis:relationshipToHoH_Enumeration dtype:hasValue hmis:relationshipToHoH_99 ,
+                                                  hmis:relationshipToHoH_1 ,
                                                   hmis:relationshipToHoH_2 ,
                                                   hmis:relationshipToHoH_3 ,
                                                   hmis:relationshipToHoH_4 ,
@@ -6471,15 +6556,15 @@ hmis:state_Enumeration dtype:hasValue hmis:state_SC ,
                                       hmis:state_DE ,
                                       hmis:state_HI ,
                                       hmis:state_PR ,
-                                      hmis:state_MP ,
                                       hmis:state_IL ,
+                                      hmis:state_MP ,
                                       hmis:state_MT ,
                                       hmis:state_NV ,
                                       hmis:state_AL ,
                                       hmis:state_AP ,
                                       hmis:state_VI ,
-                                      hmis:state_CT ,
                                       hmis:state_PA ,
+                                      hmis:state_CT ,
                                       hmis:state_AS ,
                                       hmis:state_ND ,
                                       hmis:state_NH ,
@@ -6497,13 +6582,13 @@ hmis:state_Enumeration dtype:hasValue hmis:state_SC ,
                                       hmis:state_NC ,
                                       hmis:state_IA ,
                                       hmis:state_ME ,
-                                      hmis:state_AZ ,
                                       hmis:state_WA ,
+                                      hmis:state_AZ ,
                                       hmis:state_GA ,
                                       hmis:state_MI ,
                                       hmis:state_CA ,
-                                      hmis:state_DC ,
                                       hmis:state_TX ,
+                                      hmis:state_DC ,
                                       hmis:state_AA ,
                                       hmis:state_OR ,
                                       hmis:state_IN ,
@@ -6513,16 +6598,16 @@ hmis:state_Enumeration dtype:hasValue hmis:state_SC ,
                                       hmis:state_SD ,
                                       hmis:state_MD ,
                                       hmis:state_OH ,
-                                      hmis:state_MH ,
                                       hmis:state_ID ,
+                                      hmis:state_MH ,
                                       hmis:state_NJ ,
                                       hmis:state_WY ,
-                                      hmis:state_UT ,
                                       hmis:state_AE ,
+                                      hmis:state_UT ,
                                       hmis:state_PW ,
                                       hmis:state_TN ,
-                                      hmis:state_KY ,
-                                      hmis:state_GU .
+                                      hmis:state_GU ,
+                                      hmis:state_KY .
 
 
 hmis:state_FL dtype:hasValue "FL" .
@@ -6696,8 +6781,8 @@ hmis:subsidyInformation_99 dtype:hasValue "99"^^xsd:unsignedInt .
 hmis:subsidyInformation_Enumeration dtype:hasValue hmis:subsidyInformation_1 ,
                                                    hmis:subsidyInformation_3 ,
                                                    hmis:subsidyInformation_2 ,
-                                                   hmis:subsidyInformation_99 ,
                                                    hmis:subsidyInformation_11 ,
+                                                   hmis:subsidyInformation_99 ,
                                                    hmis:subsidyInformation_12 ,
                                                    hmis:subsidyInformation_4 .
 
@@ -7228,30 +7313,30 @@ hmis:vamcStation_99 dtype:hasValue "99" .
 hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_518 ,
                                             hmis:vamcStation_528A8 ,
-                                            hmis:vamcStation_573 ,
                                             hmis:vamcStation_589A7 ,
+                                            hmis:vamcStation_573 ,
                                             hmis:vamcStation_561 ,
-                                            hmis:vamcStation_557 ,
                                             hmis:vamcStation_436 ,
+                                            hmis:vamcStation_557 ,
                                             hmis:vamcStation_666 ,
                                             hmis:vamcStation_678 ,
                                             hmis:vamcStation_614 ,
-                                            hmis:vamcStation_630 ,
                                             hmis:vamcStation_585 ,
+                                            hmis:vamcStation_630 ,
                                             hmis:vamcStation_642 ,
-                                            hmis:vamcStation_521 ,
                                             hmis:vamcStation_654 ,
+                                            hmis:vamcStation_521 ,
                                             hmis:vamcStation_626 ,
                                             hmis:vamcStation_517 ,
                                             hmis:vamcStation_529 ,
-                                            hmis:vamcStation_463 ,
                                             hmis:vamcStation_693 ,
+                                            hmis:vamcStation_463 ,
                                             hmis:vamcStation_568 ,
-                                            hmis:vamcStation_689 ,
-                                            hmis:vamcStation_99 ,
                                             hmis:vamcStation_556 ,
-                                            hmis:vamcStation_613 ,
+                                            hmis:vamcStation_99 ,
+                                            hmis:vamcStation_689 ,
                                             hmis:vamcStation_504 ,
+                                            hmis:vamcStation_613 ,
                                             hmis:vamcStation_459 ,
                                             hmis:vamcStation_520 ,
                                             hmis:vamcStation_596 ,
@@ -7279,16 +7364,16 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_562 ,
                                             hmis:vamcStation_550 ,
                                             hmis:vamcStation_590 ,
-                                            hmis:vamcStation_655 ,
                                             hmis:vamcStation_546 ,
-                                            hmis:vamcStation_534 ,
+                                            hmis:vamcStation_655 ,
                                             hmis:vamcStation_667 ,
+                                            hmis:vamcStation_534 ,
                                             hmis:vamcStation_679 ,
                                             hmis:vamcStation_558 ,
-                                            hmis:vamcStation_437 ,
                                             hmis:vamcStation_603 ,
-                                            hmis:vamcStation_695 ,
+                                            hmis:vamcStation_437 ,
                                             hmis:vamcStation_586 ,
+                                            hmis:vamcStation_695 ,
                                             hmis:vamcStation_740 ,
                                             hmis:vamcStation_631 ,
                                             hmis:vamcStation_598 ,
@@ -7298,8 +7383,8 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_538 ,
                                             hmis:vamcStation_607 ,
                                             hmis:vamcStation_593 ,
-                                            hmis:vamcStation_581 ,
                                             hmis:vamcStation_460 ,
+                                            hmis:vamcStation_581 ,
                                             hmis:vamcStation_650 ,
                                             hmis:vamcStation_589 ,
                                             hmis:vamcStation_501 ,
@@ -7310,29 +7395,29 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_553 ,
                                             hmis:vamcStation_541 ,
                                             hmis:vamcStation_674 ,
-                                            hmis:vamcStation_610 ,
                                             hmis:vamcStation_565 ,
+                                            hmis:vamcStation_610 ,
                                             hmis:vamcStation_528A5 ,
                                             hmis:vamcStation_509 ,
                                             hmis:vamcStation_549 ,
                                             hmis:vamcStation_636A8 ,
-                                            hmis:vamcStation_657A4 ,
                                             hmis:vamcStation_618 ,
+                                            hmis:vamcStation_657A4 ,
                                             hmis:vamcStation_589A4 ,
                                             hmis:vamcStation_540 ,
                                             hmis:vamcStation_580 ,
                                             hmis:vamcStation_512 ,
-                                            hmis:vamcStation_548 ,
                                             hmis:vamcStation_657 ,
+                                            hmis:vamcStation_548 ,
                                             hmis:vamcStation_564 ,
                                             hmis:vamcStation_673 ,
                                             hmis:vamcStation_552 ,
                                             hmis:vamcStation_621 ,
                                             hmis:vamcStation_528A6 ,
-                                            hmis:vamcStation_637 ,
                                             hmis:vamcStation_528 ,
-                                            hmis:vamcStation_516 ,
+                                            hmis:vamcStation_637 ,
                                             hmis:vamcStation_649 ,
+                                            hmis:vamcStation_516 ,
                                             hmis:vamcStation_692 ,
                                             hmis:vamcStation_595 ,
                                             hmis:vamcStation_583 ,
@@ -7340,9 +7425,9 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_688 ,
                                             hmis:vamcStation_612 ,
                                             hmis:vamcStation_515 ,
+                                            hmis:vamcStation_636 ,
                                             hmis:vamcStation_757 ,
                                             hmis:vamcStation_503 ,
-                                            hmis:vamcStation_636 ,
                                             hmis:vamcStation_531 ,
                                             hmis:vamcStation_640 ,
                                             hmis:vamcStation_652 ,
@@ -7351,14 +7436,14 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_608 ,
                                             hmis:vamcStation_528A7 ,
                                             hmis:vamcStation_459GE ,
-                                            hmis:vamcStation_648 ,
                                             hmis:vamcStation_539 ,
+                                            hmis:vamcStation_648 ,
                                             hmis:vamcStation_636A6 ,
                                             hmis:vamcStation_691 ,
                                             hmis:vamcStation_570 ,
                                             hmis:vamcStation_502 ,
-                                            hmis:vamcStation_623 ,
                                             hmis:vamcStation_578 ,
+                                            hmis:vamcStation_623 ,
                                             hmis:vamcStation_635 ,
                                             hmis:vamcStation_526 ,
                                             hmis:vamcStation_405 ,
@@ -7366,8 +7451,8 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_542 ,
                                             hmis:vamcStation_663 ,
                                             hmis:vamcStation_675 ,
-                                            hmis:vamcStation_687 ,
-                                            hmis:vamcStation_554 .
+                                            hmis:vamcStation_554 ,
+                                            hmis:vamcStation_687 .
 
 
 hmis:viralLoadAvailable_0 dtype:hasValue "0"^^xsd:unsignedInt .
