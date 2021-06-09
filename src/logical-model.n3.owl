@@ -12,7 +12,9 @@
 
 <http://www.hudhdx.info/Resources/Vendors/FY2022/owl> rdf:type owl:Ontology ;
                                                        owl:versionIRI <http://www.hudhdx.info/Resources/Vendors/FY2022/owl/v0.0.1> ;
-                                                       dc:language "en-US"@en .
+                                                       dc:language "en-US"@en ;
+                                                       dc:title "HUD HMIS Logical Model"@en ;
+                                                       owl:versionInfo "FY2022v0.0.1"@en .
 
 #################################################################
 #    Annotation properties
@@ -20,6 +22,10 @@
 
 ###  http://purl.org/dc/elements/1.1/language
 dc:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#id
@@ -642,6 +648,12 @@ hmisowl:SSN rdf:type owl:ObjectProperty .
 hmisowl:TypeProvided rdf:type owl:ObjectProperty .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasAfilliation
+hmisowl:hasAfilliation rdf:type owl:ObjectProperty ;
+                       rdfs:domain hmisowl:Project ;
+                       rdfs:range hmisowl:Affiliation .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasAssessment
 hmisowl:hasAssessment rdf:type owl:ObjectProperty ;
                       rdfs:domain hmisowl:Enrollment ;
@@ -662,6 +674,12 @@ hmisowl:hasAssessmentResults rdf:type owl:ObjectProperty ;
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasBaseMetaData
 hmisowl:hasBaseMetaData rdf:type owl:ObjectProperty .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasClientEnrollment
+hmisowl:hasClientEnrollment rdf:type owl:ObjectProperty ;
+                            rdfs:domain hmisowl:Client ;
+                            rdfs:range hmisowl:Enrollment .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasClientVeteranInfo
@@ -706,12 +724,6 @@ hmisowl:hasEmployment rdf:type owl:ObjectProperty ;
                       rdfs:range hmisowl:Employment .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasEnrollment
-hmisowl:hasEnrollment rdf:type owl:ObjectProperty ;
-                      rdfs:domain hmisowl:Client ;
-                      rdfs:range hmisowl:Enrollment .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasEnrollmentCoC
 hmisowl:hasEnrollmentCoC rdf:type owl:ObjectProperty ;
                          rdfs:domain hmisowl:Enrollment ;
@@ -754,6 +766,12 @@ hmisowl:hasExitHousingAssessment rdf:type owl:ObjectProperty ;
                                  rdfs:range hmisowl:ExitHousingAssessment .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasExitRHY
+hmisowl:hasExitRHY rdf:type owl:ObjectProperty ;
+                   rdfs:domain hmisowl:Exit ;
+                   rdfs:range hmisowl:ExitRHY .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasFAAmount
 hmisowl:hasFAAmount rdf:type owl:ObjectProperty ;
                     rdfs:domain hmisowl:ServiceFAReferral ;
@@ -769,6 +787,12 @@ hmisowl:hasFAAmount rdf:type owl:ObjectProperty ;
 hmisowl:hasFirstName rdf:type owl:ObjectProperty ;
                      rdfs:domain hmisowl:Client ;
                      rdfs:range hmisowl:FirstName .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasFunder
+hmisowl:hasFunder rdf:type owl:ObjectProperty ;
+                  rdfs:domain hmisowl:Project ;
+                  rdfs:range hmisowl:Funder .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasHealthInsurance
@@ -787,6 +811,12 @@ hmisowl:hasHealthStatus rdf:type owl:ObjectProperty ;
 hmisowl:hasIncomeAndSources rdf:type owl:ObjectProperty ;
                             rdfs:domain hmisowl:Enrollment ;
                             rdfs:range hmisowl:IncomeAndSources .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasInventory
+hmisowl:hasInventory rdf:type owl:ObjectProperty ;
+                     rdfs:domain hmisowl:ProjectCoC ;
+                     rdfs:range hmisowl:Inventory .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasLastName
@@ -836,10 +866,28 @@ hmisowl:hasProject rdf:type owl:ObjectProperty ;
                    rdfs:range hmisowl:Project .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasProjectCoC
+hmisowl:hasProjectCoC rdf:type owl:ObjectProperty ;
+                      rdfs:domain hmisowl:Project ;
+                      rdfs:range hmisowl:ProjectCoC .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasProjectEnrollment
+hmisowl:hasProjectEnrollment rdf:type owl:ObjectProperty ;
+                             rdfs:domain hmisowl:Project ;
+                             rdfs:range hmisowl:Enrollment .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasRHYBCPStatus
 hmisowl:hasRHYBCPStatus rdf:type owl:ObjectProperty ;
                         rdfs:domain hmisowl:Enrollment ;
                         rdfs:range hmisowl:RhyBCPStatus .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasRhyAftercare
+hmisowl:hasRhyAftercare rdf:type owl:ObjectProperty ;
+                        rdfs:domain hmisowl:Exit ;
+                        rdfs:range hmisowl:RhyAftercare .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasServiceFAReferral
@@ -852,6 +900,12 @@ hmisowl:hasServiceFAReferral rdf:type owl:ObjectProperty ;
 hmisowl:hasWellBeing rdf:type owl:ObjectProperty ;
                      rdfs:domain hmisowl:Enrollment ;
                      rdfs:range hmisowl:Wellbeing .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasYouthEducationStatus
+hmisowl:hasYouthEducationStatus rdf:type owl:ObjectProperty ;
+                                rdfs:domain hmisowl:Enrollment ;
+                                rdfs:range hmisowl:YouthEducationStatus .
 
 
 #################################################################
@@ -2433,6 +2487,10 @@ hmisowl:BaseMetaData rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Client
 hmisowl:Client rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:hasClientEnrollment ;
+                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:hasClientVeteranInfo ;
                                  owl:minCardinality "0"^^xsd:nonNegativeInteger
                                ] ,
@@ -2838,6 +2896,10 @@ hmisowl:Enrollment rdf:type owl:Class ;
                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
                                    [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasYouthEducationStatus ;
+                                     owl:maxCardinality "2"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:DisablingCondition ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
@@ -3190,6 +3252,14 @@ hmisowl:Event rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Exit
 hmisowl:Exit rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty hmisowl:hasExitRHY ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty hmisowl:hasRhyAftercare ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty hmisowl:Destination ;
                                owl:cardinality "1"^^xsd:nonNegativeInteger
                              ] ,
@@ -3238,6 +3308,10 @@ hmisowl:ExitHousingAssessment rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ExitRHY
 hmisowl:ExitRHY rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:hasExitRHY ;
+                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:CounselingReceived ;
                                   owl:cardinality "1"^^xsd:nonNegativeInteger
                                 ] ,
@@ -3924,6 +3998,14 @@ hmisowl:PATHStatus rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Project
 hmisowl:Project rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:hasFunder ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:hasProjectCoC ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:ContinuumProject ;
                                   owl:cardinality "1"^^xsd:nonNegativeInteger
                                 ] ,
