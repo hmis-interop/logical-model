@@ -807,6 +807,12 @@ hmisowl:hasHealthStatus rdf:type owl:ObjectProperty ;
                         rdfs:range hmisowl:HealthStatus .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasHouseholdEnrollment
+hmisowl:hasHouseholdEnrollment rdf:type owl:ObjectProperty ;
+                               rdfs:domain hmisowl:Household ;
+                               rdfs:range hmisowl:Enrollment .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasIncomeAndSources
 hmisowl:hasIncomeAndSources rdf:type owl:ObjectProperty ;
                             rdfs:domain hmisowl:Enrollment ;
@@ -2341,6 +2347,11 @@ hmisowl:userID rdf:type owl:DatatypeProperty .
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Affiliation
 hmisowl:Affiliation rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty hmisowl:hasBaseMetaData ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass hmisowl:BaseMetaData
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty hmisowl:AffiliationID ;
                                       owl:cardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
@@ -2363,6 +2374,11 @@ hmisowl:Assessment rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:hasAssessmentResults ;
                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasBaseMetaData ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass hmisowl:BaseMetaData
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:AssessmentDate ;
@@ -2403,6 +2419,11 @@ hmisowl:Assessment rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentQuestions
 hmisowl:AssessmentQuestions rdf:type owl:Class ;
                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty hmisowl:hasBaseMetaData ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onClass hmisowl:BaseMetaData
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
                                               owl:onProperty hmisowl:AssessmentAnswer ;
                                               owl:cardinality "1"^^xsd:nonNegativeInteger
                                             ] ,
@@ -2439,6 +2460,11 @@ hmisowl:AssessmentQuestions rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentResults
 hmisowl:AssessmentResults rdf:type owl:Class ;
                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:hasBaseMetaData ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onClass hmisowl:BaseMetaData
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:AssessmentID ;
                                             owl:cardinality "1"^^xsd:nonNegativeInteger
                                           ] ,
@@ -2467,6 +2493,11 @@ hmisowl:AssessmentResults rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#BaseMetaData
 hmisowl:BaseMetaData rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:hasBaseMetaData ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass hmisowl:BaseMetaData
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:dateCreated ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
@@ -2493,6 +2524,11 @@ hmisowl:Client rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:hasClientVeteranInfo ;
                                  owl:minCardinality "0"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:hasBaseMetaData ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass hmisowl:BaseMetaData
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:SSN ;
@@ -2583,6 +2619,11 @@ hmisowl:Client rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ClientVeteranInfo
 hmisowl:ClientVeteranInfo rdf:type owl:Class ;
                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:hasBaseMetaData ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onClass hmisowl:BaseMetaData
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:PersonalID ;
                                             owl:cardinality "1"^^xsd:nonNegativeInteger
                                           ] ,
@@ -2639,6 +2680,11 @@ hmisowl:ClientVeteranInfo rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ConnectionWithSOAR
 hmisowl:ConnectionWithSOAR rdf:type owl:Class ;
                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty hmisowl:hasBaseMetaData ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass hmisowl:BaseMetaData
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
                                              owl:onProperty hmisowl:ConnectionWithSOAR ;
                                              owl:cardinality "1"^^xsd:nonNegativeInteger
                                            ] ,
@@ -2663,6 +2709,11 @@ hmisowl:ConnectionWithSOAR rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentLivingSituation
 hmisowl:CurrentLivingSituation rdf:type owl:Class ;
                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                 owl:onProperty hmisowl:hasBaseMetaData ;
+                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                 owl:onClass hmisowl:BaseMetaData
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
                                                  owl:onProperty hmisowl:CurrentLivingSitID ;
                                                  owl:cardinality "1"^^xsd:nonNegativeInteger
                                                ] ,
@@ -2715,6 +2766,11 @@ hmisowl:CurrentLivingSituation rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DateOfEngagementClass
 hmisowl:DateOfEngagementClass rdf:type owl:Class ;
                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty hmisowl:hasBaseMetaData ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onClass hmisowl:BaseMetaData
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty hmisowl:DateOfEngagementID ;
                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                                               ] ,
@@ -2729,6 +2785,11 @@ hmisowl:Disabilities rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:DisabilityResponse ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:hasBaseMetaData ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass hmisowl:BaseMetaData
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:DisabilitiesID ;
@@ -2783,6 +2844,11 @@ hmisowl:Disabilities rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DomesticViolence
 hmisowl:DomesticViolence rdf:type owl:Class ;
                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty hmisowl:hasBaseMetaData ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass hmisowl:BaseMetaData
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty hmisowl:DomesticViolenceID ;
                                            owl:cardinality "1"^^xsd:nonNegativeInteger
                                          ] ,
@@ -2815,6 +2881,11 @@ hmisowl:DomesticViolence rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Education
 hmisowl:Education rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:hasBaseMetaData ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass hmisowl:BaseMetaData
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:EducationID ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
@@ -2843,6 +2914,11 @@ hmisowl:Education rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Employment
 hmisowl:Employment rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasBaseMetaData ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass hmisowl:BaseMetaData
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:Employed ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
@@ -2960,6 +3036,11 @@ hmisowl:Enrollment rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EnrollmentCoC
 hmisowl:EnrollmentCoC rdf:type owl:Class ;
                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty hmisowl:hasBaseMetaData ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass hmisowl:BaseMetaData
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty hmisowl:CoCCode ;
                                         owl:cardinality "1"^^xsd:nonNegativeInteger
                                       ] ,
@@ -2988,6 +3069,11 @@ hmisowl:EnrollmentCoC rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EntryRHSP
 hmisowl:EntryRHSP rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:hasBaseMetaData ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass hmisowl:BaseMetaData
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:hasEntryRHSP ;
                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
@@ -3008,6 +3094,11 @@ hmisowl:EntryRHSP rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EntryRHY
 hmisowl:EntryRHY rdf:type owl:Class ;
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:hasBaseMetaData ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass hmisowl:BaseMetaData
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty hmisowl:AlcoholDrugUseDisorderFam ;
                                    owl:cardinality "1"^^xsd:nonNegativeInteger
                                  ] ,
@@ -3084,6 +3175,11 @@ hmisowl:EntryRHY rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EntrySSVF
 hmisowl:EntrySSVF rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:hasBaseMetaData ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass hmisowl:BaseMetaData
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:EnrollmentID ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
@@ -3208,6 +3304,11 @@ hmisowl:EntrySSVF rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Event
 hmisowl:Event rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty hmisowl:hasBaseMetaData ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass hmisowl:BaseMetaData
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty hmisowl:EnrollmentID ;
                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                               ] ,
@@ -3252,6 +3353,11 @@ hmisowl:Event rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Exit
 hmisowl:Exit rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty hmisowl:hasBaseMetaData ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass hmisowl:BaseMetaData
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty hmisowl:hasExitRHY ;
                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
                              ] ,
@@ -3284,6 +3390,11 @@ hmisowl:Exit rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ExitHousingAssessment
 hmisowl:ExitHousingAssessment rdf:type owl:Class ;
                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty hmisowl:hasBaseMetaData ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onClass hmisowl:BaseMetaData
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty hmisowl:hasExitHousingAssessment ;
                                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                               ] ,
@@ -3308,6 +3419,11 @@ hmisowl:ExitHousingAssessment rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ExitRHY
 hmisowl:ExitRHY rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:hasBaseMetaData ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass hmisowl:BaseMetaData
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:hasExitRHY ;
                                   owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                 ] ,
@@ -3426,6 +3542,11 @@ hmisowl:FirstName rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Funder
 hmisowl:Funder rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:hasBaseMetaData ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass hmisowl:BaseMetaData
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:Funder ;
                                  owl:cardinality "1"^^xsd:nonNegativeInteger
                                ] ,
@@ -3458,6 +3579,11 @@ hmisowl:Funder rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HealthInsurance
 hmisowl:HealthInsurance rdf:type owl:Class ;
                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:hasBaseMetaData ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass hmisowl:BaseMetaData
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
                                           owl:onProperty hmisowl:EnrollmentID ;
                                           owl:cardinality "1"^^xsd:nonNegativeInteger
                                         ] ,
@@ -3562,6 +3688,11 @@ hmisowl:HealthInsurance rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HealthStatus
 hmisowl:HealthStatus rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:hasBaseMetaData ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass hmisowl:BaseMetaData
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:EnrollmentID ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
@@ -3599,9 +3730,23 @@ hmisowl:HealthStatus rdf:type owl:Class ;
                                      ] .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Household
+hmisowl:Household rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:hasHouseholdEnrollment ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass hmisowl:Enrollment
+                                  ] .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#IncomeAndSources
 hmisowl:IncomeAndSources rdf:type owl:Class ;
                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty hmisowl:hasBaseMetaData ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass hmisowl:BaseMetaData
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty hmisowl:Alimony ;
                                            owl:cardinality "1"^^xsd:nonNegativeInteger
                                          ] ,
@@ -3754,6 +3899,11 @@ hmisowl:IncomeAndSources rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Inventory
 hmisowl:Inventory rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:hasBaseMetaData ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass hmisowl:BaseMetaData
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:BedInventory ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
@@ -3830,6 +3980,11 @@ hmisowl:LastName rdf:type owl:Class .
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MedicalAssistance
 hmisowl:MedicalAssistance rdf:type owl:Class ;
                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:hasBaseMetaData ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onClass hmisowl:BaseMetaData
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:ADAP ;
                                             owl:cardinality "1"^^xsd:nonNegativeInteger
                                           ] ,
@@ -3878,6 +4033,11 @@ hmisowl:MiddleName rdf:type owl:Class .
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MoveInDate
 hmisowl:MoveInDate rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasBaseMetaData ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass hmisowl:BaseMetaData
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:hasMoveInDate ;
                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
@@ -3898,6 +4058,11 @@ hmisowl:MoveInDate rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NonCashBenefits
 hmisowl:NonCashBenefits rdf:type owl:Class ;
                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:hasBaseMetaData ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass hmisowl:BaseMetaData
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
                                           owl:onProperty hmisowl:BenefitsFromAnySource ;
                                           owl:cardinality "1"^^xsd:nonNegativeInteger
                                         ] ,
@@ -3950,6 +4115,11 @@ hmisowl:NonCashBenefits rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Organization
 hmisowl:Organization rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:hasBaseMetaData ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass hmisowl:BaseMetaData
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:OrganizationID ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
@@ -3970,6 +4140,11 @@ hmisowl:Organization rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PATHStatus
 hmisowl:PATHStatus rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasBaseMetaData ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass hmisowl:BaseMetaData
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:hasPATHStatus ;
                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
@@ -4004,6 +4179,11 @@ hmisowl:Project rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:hasProjectCoC ;
                                   owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:hasBaseMetaData ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass hmisowl:BaseMetaData
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:ContinuumProject ;
@@ -4070,6 +4250,11 @@ hmisowl:Project rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ProjectCoC
 hmisowl:ProjectCoC rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:hasBaseMetaData ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass hmisowl:BaseMetaData
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:CoCCode ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
@@ -4114,6 +4299,11 @@ hmisowl:ProjectCoC rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#RhyAftercare
 hmisowl:RhyAftercare rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:hasBaseMetaData ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass hmisowl:BaseMetaData
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:AftercareDate ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
@@ -4150,6 +4340,11 @@ hmisowl:RhyAftercare rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#RhyBCPStatus
 hmisowl:RhyBCPStatus rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:hasBaseMetaData ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass hmisowl:BaseMetaData
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:hasRHYBCPStatus ;
                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
@@ -4184,6 +4379,11 @@ hmisowl:ServiceFAReferral rdf:type owl:Class ;
                           rdfs:subClassOf [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:TypeProvided ;
                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:hasBaseMetaData ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onClass hmisowl:BaseMetaData
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:DateProvided ;
@@ -4222,6 +4422,11 @@ hmisowl:ServiceFAReferral rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#User
 hmisowl:User rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty hmisowl:hasBaseMetaData ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass hmisowl:BaseMetaData
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty hmisowl:UserID ;
                                owl:cardinality "1"^^xsd:nonNegativeInteger
                              ] ,
@@ -4242,6 +4447,11 @@ hmisowl:User rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#VashExitReason
 hmisowl:VashExitReason rdf:type owl:Class ;
                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty hmisowl:hasBaseMetaData ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass hmisowl:BaseMetaData
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty hmisowl:CMExitReason ;
                                          owl:cardinality "1"^^xsd:nonNegativeInteger
                                        ] ,
@@ -4258,6 +4468,11 @@ hmisowl:VashExitReason rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Wellbeing
 hmisowl:Wellbeing rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:hasBaseMetaData ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass hmisowl:BaseMetaData
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:EnrollmentID ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
@@ -4294,6 +4509,11 @@ hmisowl:Wellbeing rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#YouthEducationStatus
 hmisowl:YouthEducationStatus rdf:type owl:Class ;
                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty hmisowl:hasBaseMetaData ;
+                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                               owl:onClass hmisowl:BaseMetaData
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
                                                owl:onProperty hmisowl:EnrollmentID ;
                                                owl:cardinality "1"^^xsd:nonNegativeInteger
                                              ] ,
