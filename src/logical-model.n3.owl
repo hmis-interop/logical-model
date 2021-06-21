@@ -278,8 +278,12 @@ hmisowl:monthsHomelessPastThreeYearsDatatype rdf:type rdfs:Datatype .
 hmisowl:mostRecentEdStatusDatatype rdf:type rdfs:Datatype .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#nameDataQualityDatatype
-hmisowl:nameDataQualityDatatype rdf:type rdfs:Datatype .
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#nameDataQuality
+hmisowl:nameDataQuality rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#nameHashingOption
+hmisowl:nameHashingOption rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#noYesDoesntKnowRefused
@@ -384,6 +388,10 @@ hmisowl:sourceTypeDatatype rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ssnDataQualityDatatype
 hmisowl:ssnDataQualityDatatype rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ssnHashingOption
+hmisowl:ssnHashingOption rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#stateDatatype
@@ -650,10 +658,6 @@ hmisowl:DisabilityResponse rdf:type owl:ObjectProperty .
 hmisowl:IndefiniteAndImpairsIndependence rdf:type owl:ObjectProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SSN
-hmisowl:SSN rdf:type owl:ObjectProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#TypeProvided
 hmisowl:TypeProvided rdf:type owl:ObjectProperty .
 
@@ -703,7 +707,7 @@ hmisowl:hasConnectionWithSOAR rdf:type owl:ObjectProperty ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasCurrentLivingSituation
 hmisowl:hasCurrentLivingSituation rdf:type owl:ObjectProperty ;
                                   rdfs:domain hmisowl:Enrollment ;
-                                  rdfs:range hmisowl:CurrentLivingSituation .
+                                  rdfs:range hmisowl:CurrentLivingSituationsClass .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasDateOfEngagement
@@ -789,12 +793,6 @@ hmisowl:hasFAAmount rdf:type owl:ObjectProperty ;
                                ] .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasFirstName
-hmisowl:hasFirstName rdf:type owl:ObjectProperty ;
-                     rdfs:domain hmisowl:Client ;
-                     rdfs:range hmisowl:FirstName .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasFunder
 hmisowl:hasFunder rdf:type owl:ObjectProperty ;
                   rdfs:domain hmisowl:Project ;
@@ -831,27 +829,10 @@ hmisowl:hasInventory rdf:type owl:ObjectProperty ;
                      rdfs:range hmisowl:Inventory .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasLastName
-hmisowl:hasLastName rdf:type owl:ObjectProperty ;
-                    rdfs:domain hmisowl:Client ;
-                    rdfs:range hmisowl:LastName .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasMedicalAssistance
 hmisowl:hasMedicalAssistance rdf:type owl:ObjectProperty ;
                              rdfs:domain hmisowl:Enrollment ;
                              rdfs:range hmisowl:MedicalAssistance .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasMiddleName
-hmisowl:hasMiddleName rdf:type owl:ObjectProperty ;
-                      rdfs:domain hmisowl:Client ;
-                      rdfs:range hmisowl:MiddleName ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty hmisowl:hasMiddleName ;
-                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                   owl:onClass hmisowl:MiddleName
-                                 ] .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#hasMoveInDate
@@ -1166,8 +1147,10 @@ hmisowl:CurrentLivingSitID rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentLivingSituation
 hmisowl:CurrentLivingSituation rdf:type owl:DatatypeProperty ;
-                               rdfs:domain hmisowl:CurrentLivingSituation ;
-                               rdfs:range hmisowl:livingSituation .
+                               rdfs:domain hmisowl:CurrentLivingSituationsClass ;
+                               rdfs:range hmisowl:livingSituation ;
+                               <http://purl.org/dc/terms/description> "Current Living Situation"^^xsd:string ;
+                               <http://purl.org/dc/terms/identifier> "4.12.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentPregnant
@@ -1214,11 +1197,11 @@ hmisowl:DateOfBCPStatus rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DateOfEngagement
-hmisowl:DateOfEngagement rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DateOfEngagementID
-hmisowl:DateOfEngagementID rdf:type owl:DatatypeProperty .
+hmisowl:DateOfEngagement rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:DateOfEngagementClass ;
+                         rdfs:range xsd:date ;
+                         <http://purl.org/dc/terms/description> "Date of Engagement"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "4.13.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DateOfStatus
@@ -1349,10 +1332,6 @@ hmisowl:EndDate rdf:type owl:DatatypeProperty .
 hmisowl:EnrollmentCoCID rdf:type owl:DatatypeProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EnrollmentID
-hmisowl:EnrollmentID rdf:type owl:DatatypeProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EntryDate
 hmisowl:EntryDate rdf:type owl:DatatypeProperty .
 
@@ -1423,6 +1402,14 @@ hmisowl:FeelingFrequency rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Female
 hmisowl:Female rdf:type owl:DatatypeProperty .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FirstName
+hmisowl:FirstName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain hmisowl:Client ;
+                  rdfs:range hmisowl:nameHashingOption ;
+                  <http://purl.org/dc/terms/description> "First"^^xsd:string ;
+                  <http://purl.org/dc/terms/identifier> "3.01.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FormerWardChildWelfare
@@ -1615,6 +1602,14 @@ hmisowl:LaborExploitPastThreeMonths rdf:type owl:DatatypeProperty .
 hmisowl:LastGradeCompleted rdf:type owl:DatatypeProperty .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LastName
+hmisowl:LastName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hmisowl:Client ;
+                 rdfs:range hmisowl:nameHashingOption ;
+                 <http://purl.org/dc/terms/description> "Last"^^xsd:string ;
+                 <http://purl.org/dc/terms/identifier> "3.01.3"^^xsd:string .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LastPermanentCity
 hmisowl:LastPermanentCity rdf:type owl:DatatypeProperty .
 
@@ -1633,7 +1628,7 @@ hmisowl:LastPermanentZIP rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LeaseOwn60Day
 hmisowl:LeaseOwn60Day rdf:type owl:DatatypeProperty ;
-                      rdfs:domain hmisowl:CurrentLivingSituation ;
+                      rdfs:domain hmisowl:CurrentLivingSituationsClass ;
                       rdfs:range hmisowl:noYesDoesntKnowRefused ;
                       <http://purl.org/dc/terms/description> "Has the client had a lease or ownership interest in a permanent housing unit in the last 60 days?"^^xsd:string ;
                       <http://purl.org/dc/terms/identifier> "4.12.D"^^xsd:string .
@@ -1641,7 +1636,7 @@ hmisowl:LeaseOwn60Day rdf:type owl:DatatypeProperty ;
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LeaveSituation14Days
 hmisowl:LeaveSituation14Days rdf:type owl:DatatypeProperty ;
-                             rdfs:domain hmisowl:CurrentLivingSituation ;
+                             rdfs:domain hmisowl:CurrentLivingSituationsClass ;
                              rdfs:range hmisowl:noYesDoesntKnowRefused ;
                              <http://purl.org/dc/terms/description> "Is client going to have to leave their current living situation within 14 days?"^^xsd:string ;
                              <http://purl.org/dc/terms/identifier> "4.12.A"^^xsd:string .
@@ -1669,7 +1664,7 @@ hmisowl:LocationCrisisOrPHHousing rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LocationDetails
 hmisowl:LocationDetails rdf:type owl:DatatypeProperty ;
-                        rdfs:domain hmisowl:CurrentLivingSituation ;
+                        rdfs:domain hmisowl:CurrentLivingSituationsClass ;
                         rdfs:range hmisowl:string250 .
 
 
@@ -1697,6 +1692,14 @@ hmisowl:MentalHealthIssuesFam rdf:type owl:DatatypeProperty .
 hmisowl:MentalHealthStatus rdf:type owl:DatatypeProperty .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MiddleName
+hmisowl:MiddleName rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hmisowl:Client ;
+                   rdfs:range hmisowl:nameHashingOption ;
+                   <http://purl.org/dc/terms/description> "Middle"^^xsd:string ;
+                   <http://purl.org/dc/terms/identifier> "3.01.2"^^xsd:string .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MilitaryBranch
 hmisowl:MilitaryBranch rdf:type owl:DatatypeProperty .
 
@@ -1719,7 +1722,7 @@ hmisowl:MoveInDateID rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MovedTwoOrMore
 hmisowl:MovedTwoOrMore rdf:type owl:DatatypeProperty ;
-                       rdfs:domain hmisowl:CurrentLivingSituation ;
+                       rdfs:domain hmisowl:CurrentLivingSituationsClass ;
                        rdfs:range hmisowl:noYesDoesntKnowRefused ;
                        <http://purl.org/dc/terms/description> "Has the client moved 2 or more times in the last 60 days?"^^xsd:string ;
                        <http://purl.org/dc/terms/identifier> "4.12.E"^^xsd:string .
@@ -1730,13 +1733,19 @@ hmisowl:MovingOnOtherType rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NameDataQuality
-hmisowl:NameDataQuality rdf:type owl:DatatypeProperty .
+hmisowl:NameDataQuality rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmisowl:Client ;
+                        rdfs:range hmisowl:nameDataQuality ;
+                        <http://purl.org/dc/terms/description> "Name Data Quality"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "3.01.5"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NameSuffix
 hmisowl:NameSuffix rdf:type owl:DatatypeProperty ;
                    rdfs:domain hmisowl:Client ;
-                   rdfs:range hmis:string50 .
+                   rdfs:range hmis:string50 ;
+                   <http://purl.org/dc/terms/description> "Suffix"^^xsd:string ;
+                   <http://purl.org/dc/terms/identifier> "3.01.4"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NativeHIOtherPacific
@@ -2021,7 +2030,7 @@ hmisowl:ResidentialAffiliation rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ResourcesToObtain
 hmisowl:ResourcesToObtain rdf:type owl:DatatypeProperty ;
-                          rdfs:domain hmisowl:CurrentLivingSituation ;
+                          rdfs:domain hmisowl:CurrentLivingSituationsClass ;
                           rdfs:range hmisowl:noYesDoesntKnowRefused ;
                           <http://purl.org/dc/terms/description> "Does individual or family have resources or support networks to obtain other permanent housing?"^^xsd:string ;
                           <http://purl.org/dc/terms/identifier> "4.12.C"^^xsd:string .
@@ -2065,6 +2074,15 @@ hmisowl:SSI rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SSIAmount
 hmisowl:SSIAmount rdf:type owl:DatatypeProperty .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SSN
+hmisowl:SSN rdf:type owl:DatatypeProperty ;
+            rdfs:domain hmisowl:Client ;
+            rdfs:range hmisowl:ssnHashingOption ;
+            <http://purl.org/dc/terms/description> "Social Security Number"^^xsd:string ,
+                                                   "Unknown SSN digits should be indicated with a lower case \"x\"."^^xsd:string ;
+            <http://purl.org/dc/terms/identifier> "3.02.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SSNDataQuality
@@ -2129,7 +2147,7 @@ hmisowl:SubTypeProvided rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SubsequentResidence
 hmisowl:SubsequentResidence rdf:type owl:DatatypeProperty ;
-                            rdfs:domain hmisowl:CurrentLivingSituation ;
+                            rdfs:domain hmisowl:CurrentLivingSituationsClass ;
                             rdfs:range hmisowl:noYesDoesntKnowRefused ;
                             <http://purl.org/dc/terms/description> "Has a subsequent residence been identified?"^^xsd:string ;
                             <http://purl.org/dc/terms/identifier> "4.12.B"^^xsd:string .
@@ -2281,7 +2299,7 @@ hmisowl:VashExitReasonID rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#VerifiedBy
 hmisowl:VerifiedBy rdf:type owl:DatatypeProperty ;
-                   rdfs:domain hmisowl:CurrentLivingSituation ;
+                   rdfs:domain hmisowl:CurrentLivingSituationsClass ;
                    rdfs:range hmis:string50 ;
                    <http://purl.org/dc/terms/description> "Living situation verified by [list of Continuum projects]"^^xsd:string ;
                    <http://purl.org/dc/terms/identifier> "4.12.3"^^xsd:string .
@@ -2403,7 +2421,7 @@ hmisowl:Affiliation rdf:type owl:Class ;
                                       owl:onDataRange xsd:dateTime
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty hmisowl:DateDeleted ;
+                                      owl:onProperty hmisowl:DateUpdated ;
                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                       owl:onDataRange xsd:dateTime
                                     ] ,
@@ -2414,6 +2432,16 @@ hmisowl:Affiliation rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty hmisowl:ResProjectID ;
                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty hmisowl:UserID ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange hmisowl:string32
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty hmisowl:DateDeleted ;
+                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:dateTime
                                     ] .
 
 
@@ -2445,13 +2473,9 @@ hmisowl:Assessment rdf:type owl:Class ;
                                      owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty hmisowl:DateDeleted ;
+                                     owl:onProperty hmisowl:DateUpdated ;
                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onDataRange xsd:dateTime
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty hmisowl:EnrollmentID ;
-                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:PersonalID ;
@@ -2460,6 +2484,16 @@ hmisowl:Assessment rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:PrioritizationStatus ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:UserID ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange hmisowl:string32
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:DateDeleted ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:dateTime
                                    ] ;
                    owl:hasKey ( hmisowl:AssessmentID
                               ) .
@@ -2494,12 +2528,18 @@ hmisowl:AssessmentQuestions rdf:type owl:Class ;
                                               owl:onDataRange xsd:dateTime
                                             ] ,
                                             [ rdf:type owl:Restriction ;
-                                              owl:onProperty hmisowl:EnrollmentID ;
-                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              owl:onProperty hmisowl:DateUpdated ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onDataRange xsd:dateTime
                                             ] ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty hmisowl:PersonalID ;
                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty hmisowl:UserID ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onDataRange hmisowl:string32
                                             ] ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty hmisowl:AssessmentQuestionGroup ;
@@ -2536,17 +2576,13 @@ hmisowl:AssessmentResults rdf:type owl:Class ;
                                             owl:onDataRange xsd:dateTime
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty hmisowl:EnrollmentID ;
-                                            owl:cardinality "1"^^xsd:nonNegativeInteger
-                                          ] ,
-                                          [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:PersonalID ;
                                             owl:cardinality "1"^^xsd:nonNegativeInteger
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:UserID ;
                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                            owl:onDataRange xsd:dateTime
+                                            owl:onDataRange hmisowl:string32
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:AssessmentResultType ;
@@ -2562,6 +2598,10 @@ hmisowl:AssessmentResults rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Client
 hmisowl:Client rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:hasClientVeteranInfo ;
+                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:AmIndAKNative ;
                                  owl:cardinality "1"^^xsd:nonNegativeInteger
                                ] ,
@@ -2583,6 +2623,11 @@ hmisowl:Client rdf:type owl:Class ;
                                  owl:onDataRange xsd:dateTime
                                ] ,
                                [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:DateUpdated ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:dateTime
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:Ethnicity ;
                                  owl:cardinality "1"^^xsd:nonNegativeInteger
                                ] ,
@@ -2600,7 +2645,8 @@ hmisowl:Client rdf:type owl:Class ;
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:NameDataQuality ;
-                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmisowl:nameDataQuality
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:NativeHIOtherPacific ;
@@ -2623,6 +2669,11 @@ hmisowl:Client rdf:type owl:Class ;
                                  owl:cardinality "1"^^xsd:nonNegativeInteger
                                ] ,
                                [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:UserID ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmisowl:string32
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:VeteranStatus ;
                                  owl:cardinality "1"^^xsd:nonNegativeInteger
                                ] ,
@@ -2640,12 +2691,37 @@ hmisowl:Client rdf:type owl:Class ;
                                  owl:onDataRange xsd:dateTime
                                ] ,
                                [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:FirstName ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmisowl:nameHashingOption
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:GenderNone ;
                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                ] ,
                                [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:LastName ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmisowl:nameHashingOption
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:MiddleName ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmisowl:nameHashingOption
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:NameSuffix ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:string50
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:RaceNone ;
                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:SSN ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmisowl:ssnHashingOption
                                ] .
 
 
@@ -2662,8 +2738,18 @@ hmisowl:ClientVeteranInfo rdf:type owl:Class ;
                                             owl:onDataRange xsd:dateTime
                                           ] ,
                                           [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:DateUpdated ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange xsd:dateTime
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:PersonalID ;
                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:UserID ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange hmisowl:string32
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:AfghanistanOEF ;
@@ -2740,22 +2826,48 @@ hmisowl:ConnectionWithSOAR rdf:type owl:Class ;
                                              owl:onDataRange xsd:dateTime
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty hmisowl:EnrollmentID ;
-                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                             owl:onProperty hmisowl:DateUpdated ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:dateTime
                                            ] ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty hmisowl:InformationDate ;
                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty hmisowl:UserID ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange hmisowl:string32
                                            ] .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentLivingSituation
-hmisowl:CurrentLivingSituation rdf:type owl:Class ;
-                               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                 owl:onProperty hmisowl:DateCreated ;
-                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange xsd:dateTime
-                                               ] .
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentLivingSituationsClass
+hmisowl:CurrentLivingSituationsClass rdf:type owl:Class ;
+                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty hmisowl:DateCreated ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onDataRange xsd:dateTime
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty hmisowl:DateUpdated ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onDataRange xsd:dateTime
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty hmisowl:InformationDate ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onDataRange xsd:date
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty hmisowl:UserID ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onDataRange hmisowl:string32
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty hmisowl:DateDeleted ;
+                                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onDataRange xsd:dateTime
+                                                     ] .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DateOfEngagementClass
@@ -2766,12 +2878,19 @@ hmisowl:DateOfEngagementClass rdf:type owl:Class ;
                                                 owl:onDataRange xsd:dateTime
                                               ] ,
                                               [ rdf:type owl:Restriction ;
-                                                owl:onProperty hmisowl:DateOfEngagementID ;
-                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                owl:onProperty hmisowl:DateUpdated ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange xsd:dateTime
                                               ] ,
                                               [ rdf:type owl:Restriction ;
-                                                owl:onProperty hmisowl:EnrollmentID ;
-                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                owl:onProperty hmisowl:UserID ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange hmisowl:string32
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty hmisowl:DateDeleted ;
+                                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange xsd:dateTime
                                               ] .
 
 
@@ -2787,6 +2906,11 @@ hmisowl:Disabilities rdf:type owl:Class ;
                                        owl:onDataRange xsd:dateTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:DateUpdated ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:dateTime
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:DisabilitiesID ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
@@ -2795,16 +2919,22 @@ hmisowl:Disabilities rdf:type owl:Class ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty hmisowl:EnrollmentID ;
-                                       owl:cardinality "1"^^xsd:nonNegativeInteger
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:InformationDate ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
                                      [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:UserID ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange hmisowl:string32
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:AntiRetroviral ;
                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:DateDeleted ;
+                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:dateTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:TCellCount ;
@@ -2844,11 +2974,12 @@ hmisowl:DomesticViolence rdf:type owl:Class ;
                                            owl:onDataRange xsd:dateTime
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmisowl:DomesticViolenceID ;
-                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                           owl:onProperty hmisowl:DateUpdated ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:dateTime
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmisowl:EnrollmentID ;
+                                           owl:onProperty hmisowl:DomesticViolenceID ;
                                            owl:cardinality "1"^^xsd:nonNegativeInteger
                                          ] ,
                                          [ rdf:type owl:Restriction ;
@@ -2856,8 +2987,18 @@ hmisowl:DomesticViolence rdf:type owl:Class ;
                                            owl:cardinality "1"^^xsd:nonNegativeInteger
                                          ] ,
                                          [ rdf:type owl:Restriction ;
+                                           owl:onProperty hmisowl:UserID ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange hmisowl:string32
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty hmisowl:CurrentlyFleeing ;
                                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty hmisowl:DateDeleted ;
+                                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:dateTime
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty hmisowl:DomesticViolenceVictim ;
@@ -2881,16 +3022,27 @@ hmisowl:Education rdf:type owl:Class ;
                                     owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty hmisowl:EducationID ;
-                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    owl:onProperty hmisowl:DateUpdated ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty hmisowl:EnrollmentID ;
+                                    owl:onProperty hmisowl:EducationID ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:InformationDate ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:UserID ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange hmisowl:string32
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:DateDeleted ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:LastGradeCompleted ;
@@ -2914,6 +3066,11 @@ hmisowl:Employment rdf:type owl:Class ;
                                      owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:DateUpdated ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:dateTime
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:Employed ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
@@ -2922,12 +3079,18 @@ hmisowl:Employment rdf:type owl:Class ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty hmisowl:EnrollmentID ;
+                                     owl:onProperty hmisowl:InformationDate ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty hmisowl:InformationDate ;
-                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                     owl:onProperty hmisowl:UserID ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange hmisowl:string32
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:DateDeleted ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:EmploymentType ;
@@ -2951,11 +3114,12 @@ hmisowl:Enrollment rdf:type owl:Class ;
                                      owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty hmisowl:DisablingCondition ;
-                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                     owl:onProperty hmisowl:DateUpdated ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty hmisowl:EnrollmentID ;
+                                     owl:onProperty hmisowl:DisablingCondition ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
                                    [ rdf:type owl:Restriction ;
@@ -2977,6 +3141,16 @@ hmisowl:Enrollment rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:RelationshipToHoH ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:UserID ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange hmisowl:string32
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:DateDeleted ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:DateToStreetESSH ;
@@ -3024,11 +3198,12 @@ hmisowl:EnrollmentCoC rdf:type owl:Class ;
                                         owl:onDataRange xsd:dateTime
                                       ] ,
                                       [ rdf:type owl:Restriction ;
-                                        owl:onProperty hmisowl:EnrollmentCoCID ;
-                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                        owl:onProperty hmisowl:DateUpdated ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:dateTime
                                       ] ,
                                       [ rdf:type owl:Restriction ;
-                                        owl:onProperty hmisowl:EnrollmentID ;
+                                        owl:onProperty hmisowl:EnrollmentCoCID ;
                                         owl:cardinality "1"^^xsd:nonNegativeInteger
                                       ] ,
                                       [ rdf:type owl:Restriction ;
@@ -3038,6 +3213,16 @@ hmisowl:EnrollmentCoC rdf:type owl:Class ;
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty hmisowl:InformationDate ;
                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty hmisowl:UserID ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange hmisowl:string32
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty hmisowl:DateDeleted ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:dateTime
                                       ] .
 
 
@@ -3049,16 +3234,27 @@ hmisowl:EntryRHSP rdf:type owl:Class ;
                                     owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty hmisowl:EnrollmentID ;
-                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    owl:onProperty hmisowl:DateUpdated ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:EntryRHSPID ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:UserID ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange hmisowl:string32
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:WorstHousingSituation ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:DateDeleted ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
                                   ] .
 
 
@@ -3074,8 +3270,9 @@ hmisowl:EntryRHY rdf:type owl:Class ;
                                    owl:onDataRange xsd:dateTime
                                  ] ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty hmisowl:EnrollmentID ;
-                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   owl:onProperty hmisowl:DateUpdated ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:dateTime
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty hmisowl:EntryRHYID ;
@@ -3114,6 +3311,11 @@ hmisowl:EntryRHY rdf:type owl:Class ;
                                    owl:cardinality "1"^^xsd:nonNegativeInteger
                                  ] ,
                                  [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:UserID ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange hmisowl:string32
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty hmisowl:ChildWelfareMonths ;
                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                  ] ,
@@ -3124,6 +3326,11 @@ hmisowl:EntryRHY rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty hmisowl:CountOutreachReferralApproaches ;
                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:DateDeleted ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:dateTime
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty hmisowl:JuvenileJusticeMonths ;
@@ -3151,12 +3358,18 @@ hmisowl:EntrySSVF rdf:type owl:Class ;
                                     owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty hmisowl:EnrollmentID ;
-                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    owl:onProperty hmisowl:DateUpdated ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:EntrySSVFID ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:UserID ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange hmisowl:string32
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:AddressDataQuality ;
@@ -3181,6 +3394,11 @@ hmisowl:EntrySSVF rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:CurrentPregnant ;
                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:DateDeleted ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:DependentUnder6 ;
@@ -3280,8 +3498,9 @@ hmisowl:Event rdf:type owl:Class ;
                                 owl:onDataRange xsd:dateTime
                               ] ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty hmisowl:EnrollmentID ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                owl:onProperty hmisowl:DateUpdated ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:dateTime
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty hmisowl:Event ;
@@ -3298,6 +3517,16 @@ hmisowl:Event rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty hmisowl:PersonalID ;
                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty hmisowl:UserID ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange hmisowl:string32
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty hmisowl:DateDeleted ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:dateTime
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty hmisowl:LocationCrisisOrPHHousing ;
@@ -3329,11 +3558,12 @@ hmisowl:Exit rdf:type owl:Class ;
                                owl:onDataRange xsd:dateTime
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty hmisowl:Destination ;
-                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                               owl:onProperty hmisowl:DateUpdated ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:dateTime
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty hmisowl:EnrollmentID ;
+                               owl:onProperty hmisowl:Destination ;
                                owl:cardinality "1"^^xsd:nonNegativeInteger
                              ] ,
                              [ rdf:type owl:Restriction ;
@@ -3345,6 +3575,16 @@ hmisowl:Exit rdf:type owl:Class ;
                                owl:cardinality "1"^^xsd:nonNegativeInteger
                              ] ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty hmisowl:UserID ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange hmisowl:string32
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty hmisowl:DateDeleted ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:dateTime
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty hmisowl:OtherDestination ;
                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
                              ] .
@@ -3354,6 +3594,11 @@ hmisowl:Exit rdf:type owl:Class ;
 hmisowl:ExitHousingAssessment rdf:type owl:Class ;
                               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                 owl:onProperty hmisowl:DateCreated ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange xsd:dateTime
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty hmisowl:DateUpdated ;
                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                 owl:onDataRange xsd:dateTime
                                               ] ,
@@ -3370,6 +3615,16 @@ hmisowl:ExitHousingAssessment rdf:type owl:Class ;
                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                                               ] ,
                                               [ rdf:type owl:Restriction ;
+                                                owl:onProperty hmisowl:UserID ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange hmisowl:string32
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty hmisowl:DateDeleted ;
+                                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange xsd:dateTime
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty hmisowl:SubsidyInformation ;
                                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                               ] .
@@ -3383,6 +3638,11 @@ hmisowl:ExitRHY rdf:type owl:Class ;
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:DateCreated ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:dateTime
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:DateUpdated ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:dateTime
                                 ] ,
@@ -3431,6 +3691,11 @@ hmisowl:ExitRHY rdf:type owl:Class ;
                                   owl:cardinality "1"^^xsd:nonNegativeInteger
                                 ] ,
                                 [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:UserID ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange hmisowl:string32
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:WorkPlaceViolenceThreats ;
                                   owl:cardinality "1"^^xsd:nonNegativeInteger
                                 ] ,
@@ -3449,6 +3714,11 @@ hmisowl:ExitRHY rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:CountOfExchangeForSex ;
                                   owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:DateDeleted ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:dateTime
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:EarlyExitReason ;
@@ -3485,18 +3755,38 @@ hmisowl:ExitRHY rdf:type owl:Class ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FAAmount
-hmisowl:FAAmount rdf:type owl:Class .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FirstName
-hmisowl:FirstName rdf:type owl:Class ;
-                  rdfs:comment "First"^^xsd:string .
+hmisowl:FAAmount rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:DateCreated ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:dateTime
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:DateUpdated ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:dateTime
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:UserID ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange hmisowl:string32
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:DateDeleted ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:dateTime
+                                 ] .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Funder
 hmisowl:Funder rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:DateCreated ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:dateTime
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:DateUpdated ;
                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange xsd:dateTime
                                ] ,
@@ -3521,6 +3811,16 @@ hmisowl:Funder rdf:type owl:Class ;
                                  owl:cardinality "1"^^xsd:nonNegativeInteger
                                ] ,
                                [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:UserID ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmisowl:string32
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:DateDeleted ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:dateTime
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:EndDate ;
                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                ] ,
@@ -3542,8 +3842,9 @@ hmisowl:HealthInsurance rdf:type owl:Class ;
                                           owl:onDataRange xsd:dateTime
                                         ] ,
                                         [ rdf:type owl:Restriction ;
-                                          owl:onProperty hmisowl:EnrollmentID ;
-                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                          owl:onProperty hmisowl:DateUpdated ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:dateTime
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty hmisowl:HealthInsuranceID ;
@@ -3554,8 +3855,18 @@ hmisowl:HealthInsurance rdf:type owl:Class ;
                                           owl:cardinality "1"^^xsd:nonNegativeInteger
                                         ] ,
                                         [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:UserID ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange hmisowl:string32
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
                                           owl:onProperty hmisowl:COBRA ;
                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:DateDeleted ;
+                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:dateTime
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty hmisowl:EmployerProvided ;
@@ -3651,8 +3962,9 @@ hmisowl:HealthStatus rdf:type owl:Class ;
                                        owl:onDataRange xsd:dateTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty hmisowl:EnrollmentID ;
-                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                       owl:onProperty hmisowl:DateUpdated ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:dateTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:HealthStatusID ;
@@ -3661,6 +3973,16 @@ hmisowl:HealthStatus rdf:type owl:Class ;
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:InformationDate ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:UserID ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange hmisowl:string32
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:DateDeleted ;
+                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:dateTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:DentalHealthStatus ;
@@ -3695,6 +4017,16 @@ hmisowl:Household rdf:type owl:Class ;
                                     owl:onProperty hmisowl:DateCreated ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange xsd:dateTime
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:DateUpdated ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:DateDeleted ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
                                   ] .
 
 
@@ -3718,11 +4050,12 @@ hmisowl:IncomeAndSources rdf:type owl:Class ;
                                            owl:onDataRange xsd:dateTime
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmisowl:Earned ;
-                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                           owl:onProperty hmisowl:DateUpdated ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:dateTime
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmisowl:EnrollmentID ;
+                                           owl:onProperty hmisowl:Earned ;
                                            owl:cardinality "1"^^xsd:nonNegativeInteger
                                          ] ,
                                          [ rdf:type owl:Restriction ;
@@ -3778,6 +4111,11 @@ hmisowl:IncomeAndSources rdf:type owl:Class ;
                                            owl:cardinality "1"^^xsd:nonNegativeInteger
                                          ] ,
                                          [ rdf:type owl:Restriction ;
+                                           owl:onProperty hmisowl:UserID ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange hmisowl:string32
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty hmisowl:VADisabilityNonService ;
                                            owl:cardinality "1"^^xsd:nonNegativeInteger
                                          ] ,
@@ -3796,6 +4134,11 @@ hmisowl:IncomeAndSources rdf:type owl:Class ;
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty hmisowl:ChildSupportAmount ;
                                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty hmisowl:DateDeleted ;
+                                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:dateTime
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty hmisowl:EarnedAmount ;
@@ -3871,6 +4214,11 @@ hmisowl:Inventory rdf:type owl:Class ;
                                     owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:DateUpdated ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:HouseholdType ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
@@ -3891,6 +4239,11 @@ hmisowl:Inventory rdf:type owl:Class ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:UserID ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange hmisowl:string32
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:Availability ;
                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
@@ -3905,6 +4258,11 @@ hmisowl:Inventory rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:CHYouthBedInventory ;
                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:DateDeleted ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:ESBedType ;
@@ -3932,10 +4290,6 @@ hmisowl:Inventory rdf:type owl:Class ;
                                   ] .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LastName
-hmisowl:LastName rdf:type owl:Class .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MedicalAssistance
 hmisowl:MedicalAssistance rdf:type owl:Class ;
                           rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -3952,8 +4306,9 @@ hmisowl:MedicalAssistance rdf:type owl:Class ;
                                             owl:onDataRange xsd:dateTime
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty hmisowl:EnrollmentID ;
-                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                            owl:onProperty hmisowl:DateUpdated ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange xsd:dateTime
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:HIVAIDSAssistance ;
@@ -3966,6 +4321,16 @@ hmisowl:MedicalAssistance rdf:type owl:Class ;
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:MedicalAssistanceID ;
                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:UserID ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange hmisowl:string32
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:DateDeleted ;
+                                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange xsd:dateTime
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:NoADAPReason ;
@@ -3985,10 +4350,6 @@ hmisowl:MedicalAssistance rdf:type owl:Class ;
                                           ] .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MiddleName
-hmisowl:MiddleName rdf:type owl:Class .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MoveInDate
 hmisowl:MoveInDate rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -3997,12 +4358,23 @@ hmisowl:MoveInDate rdf:type owl:Class ;
                                      owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty hmisowl:EnrollmentID ;
-                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                     owl:onProperty hmisowl:DateUpdated ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:MoveInDateID ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:UserID ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange hmisowl:string32
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:DateDeleted ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:MoveInDate ;
@@ -4026,8 +4398,9 @@ hmisowl:NonCashBenefits rdf:type owl:Class ;
                                           owl:onDataRange xsd:dateTime
                                         ] ,
                                         [ rdf:type owl:Restriction ;
-                                          owl:onProperty hmisowl:EnrollmentID ;
-                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                          owl:onProperty hmisowl:DateUpdated ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:dateTime
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty hmisowl:InformationDate ;
@@ -4058,8 +4431,18 @@ hmisowl:NonCashBenefits rdf:type owl:Class ;
                                           owl:cardinality "1"^^xsd:nonNegativeInteger
                                         ] ,
                                         [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:UserID ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange hmisowl:string32
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
                                           owl:onProperty hmisowl:WIC ;
                                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:DateDeleted ;
+                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:dateTime
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty hmisowl:OtherBenefitsSourceIdentify ;
@@ -4075,6 +4458,11 @@ hmisowl:Organization rdf:type owl:Class ;
                                        owl:onDataRange xsd:dateTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:DateUpdated ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:dateTime
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:OrganizationID ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
@@ -4083,8 +4471,18 @@ hmisowl:Organization rdf:type owl:Class ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
                                      [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:UserID ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange hmisowl:string32
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:VictimServiceProvider ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:DateDeleted ;
+                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:dateTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:OrganizationCommonName ;
@@ -4108,12 +4506,23 @@ hmisowl:PATHStatus rdf:type owl:Class ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty hmisowl:EnrollmentID ;
-                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                     owl:onProperty hmisowl:DateUpdated ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:PATHStatusID ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:UserID ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange hmisowl:string32
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:DateDeleted ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:ReasonNotEnrolled ;
@@ -4129,6 +4538,11 @@ hmisowl:Project rdf:type owl:Class ;
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:DateCreated ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:dateTime
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:DateUpdated ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:dateTime
                                 ] ,
@@ -4151,6 +4565,16 @@ hmisowl:Project rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:ProjectName ;
                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:UserID ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange hmisowl:string32
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:DateDeleted ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:dateTime
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:HOPWAMedAssistedLivingFac ;
@@ -4202,12 +4626,22 @@ hmisowl:ProjectCoC rdf:type owl:Class ;
                                      owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:DateUpdated ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:dateTime
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:InformationDate ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:ProjectID ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:UserID ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange hmisowl:string32
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:Address1 ;
@@ -4220,6 +4654,11 @@ hmisowl:ProjectCoC rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:City ;
                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:DateDeleted ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:dateTime
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:Geocode ;
@@ -4255,12 +4694,27 @@ hmisowl:RhyAftercare rdf:type owl:Class ;
                                        owl:onDataRange xsd:dateTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:DateUpdated ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:dateTime
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:ExitID ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:RhyAfterCareID ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:UserID ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange hmisowl:string32
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:DateDeleted ;
+                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:dateTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:EmailSocialMedia ;
@@ -4292,16 +4746,27 @@ hmisowl:RhyBCPStatus rdf:type owl:Class ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty hmisowl:EligibleForRHY ;
-                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                       owl:onProperty hmisowl:DateUpdated ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:dateTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty hmisowl:EnrollmentID ;
+                                       owl:onProperty hmisowl:EligibleForRHY ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:RHYBCPStatusID ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:UserID ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange hmisowl:string32
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:DateDeleted ;
+                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:dateTime
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:ReasonNoServices ;
@@ -4325,8 +4790,9 @@ hmisowl:ServiceFAReferral rdf:type owl:Class ;
                                             owl:cardinality "1"^^xsd:nonNegativeInteger
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty hmisowl:EnrollmentID ;
-                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                            owl:onProperty hmisowl:DateUpdated ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange xsd:dateTime
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:RecordType ;
@@ -4335,6 +4801,16 @@ hmisowl:ServiceFAReferral rdf:type owl:Class ;
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:ServiceFAReferralID ;
                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:UserID ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange hmisowl:string32
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:DateDeleted ;
+                                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange xsd:dateTime
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:MovingOnOtherType ;
@@ -4362,8 +4838,18 @@ hmisowl:User rdf:type owl:Class ;
                                owl:onDataRange xsd:dateTime
                              ] ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty hmisowl:DateUpdated ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:dateTime
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty hmisowl:UserID ;
                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty hmisowl:DateDeleted ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:dateTime
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty hmisowl:UserFirstName ;
@@ -4391,12 +4877,27 @@ hmisowl:VashExitReason rdf:type owl:Class ;
                                          owl:onDataRange xsd:dateTime
                                        ] ,
                                        [ rdf:type owl:Restriction ;
+                                         owl:onProperty hmisowl:DateUpdated ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:dateTime
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty hmisowl:ExitID ;
                                          owl:cardinality "1"^^xsd:nonNegativeInteger
                                        ] ,
                                        [ rdf:type owl:Restriction ;
+                                         owl:onProperty hmisowl:UserID ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange hmisowl:string32
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty hmisowl:VashExitReasonID ;
                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty hmisowl:DateDeleted ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:dateTime
                                        ] .
 
 
@@ -4412,12 +4913,18 @@ hmisowl:Wellbeing rdf:type owl:Class ;
                                     owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty hmisowl:EnrollmentID ;
-                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    owl:onProperty hmisowl:DateUpdated ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:InformationDate ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:UserID ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange hmisowl:string32
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:WellbeingID ;
@@ -4426,6 +4933,11 @@ hmisowl:Wellbeing rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:BounceBack ;
                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:DateDeleted ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:dateTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:FeelingFrequency ;
@@ -4453,12 +4965,18 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
                                                owl:onDataRange xsd:dateTime
                                              ] ,
                                              [ rdf:type owl:Restriction ;
-                                               owl:onProperty hmisowl:EnrollmentID ;
-                                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                                               owl:onProperty hmisowl:DateUpdated ;
+                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                               owl:onDataRange xsd:dateTime
                                              ] ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty hmisowl:InformationDate ;
                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty hmisowl:UserID ;
+                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                               owl:onDataRange hmisowl:string32
                                              ] ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty hmisowl:YouthEducationStatusID ;
@@ -4473,6 +4991,11 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
                                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                              ] ,
                                              [ rdf:type owl:Restriction ;
+                                               owl:onProperty hmisowl:DateDeleted ;
+                                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                               owl:onDataRange xsd:dateTime
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
                                                owl:onProperty hmisowl:MostRecentEdStatus ;
                                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                              ] .
@@ -4480,102 +5003,6 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 
 [ owl:maxCardinality "1"^^xsd:int
 ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[A-Za-z0-9]{1,8}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:minInclusive 0.001
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[A-Za-z]{2}-[0-9]{3}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxLength "250"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:minInclusive 0
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxInclusive 1500
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:fractionDigits 3
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
 
 [ owl:maxCardinality "1"^^xsd:int
  ] .
@@ -4616,13 +5043,7 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:pattern "[0-9]{2}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[0-9]{5}"
+[ xsd:pattern "[A-Za-z0-9]{1,8}"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4631,34 +5052,13 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ owl:maxCardinality "1"^^xsd:int
+[ xsd:maxLength "100"
  ] .
 
-[ xsd:maxLength "32"
+[ xsd:pattern "[2-9][0-9]{2}[2-9][0-9]{2}[0-9]{4}"
  ] .
 
-[ xsd:totalDigits 5
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[0-9]{6}"
+[ xsd:pattern "(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\\-+)|([A-Za-z0-9]+\\.+)|([A-Za-z0-9]+\\++))*[A-Za-z0-9]+@((\\w+\\-+)|(\\w+\\.))*\\w{1,63}\\.[a-zA-Z]{2,6}"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4689,30 +5089,6 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxInclusive "11"^^xsd:positiveInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:fractionDigits 2
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "[0-9]{1,5}"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4769,6 +5145,24 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
+[ xsd:fractionDigits 2
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[0-9]{1,5}"
+ ] .
+
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
@@ -4790,21 +5184,6 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
-[ xsd:maxLength "100"
- ] .
-
-[ xsd:pattern "[2-9][0-9]{2}[2-9][0-9]{2}[0-9]{4}"
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:pattern "(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\\-+)|([A-Za-z0-9]+\\.+)|([A-Za-z0-9]+\\++))*[A-Za-z0-9]+@((\\w+\\-+)|(\\w+\\.))*\\w{1,63}\\.[a-zA-Z]{2,6}"
- ] .
-
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
@@ -4814,7 +5193,151 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
+[ xsd:maxInclusive "11"^^xsd:positiveInteger
+ ] .
+
 [ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[0-9]{6}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[0-9]{2}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:pattern "[0-9]{5}"
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxLength "32"
+ ] .
+
+[ xsd:totalDigits 5
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0
+ ] .
+
+[ xsd:fractionDigits 3
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxInclusive 1500
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0.001
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxLength "250"
+ ] .
+
+[ xsd:pattern "[A-Za-z]{2}-[0-9]{3}"
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -4945,12 +5468,12 @@ hmis:assessmentDisposition_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 
 hmis:assessmentDisposition_Enumeration dtype:hasValue hmis:assessmentDisposition_7 ,
-                                                      hmis:assessmentDisposition_6 ,
                                                       hmis:assessmentDisposition_10 ,
+                                                      hmis:assessmentDisposition_6 ,
                                                       hmis:assessmentDisposition_11 ,
                                                       hmis:assessmentDisposition_9 ,
-                                                      hmis:assessmentDisposition_8 ,
                                                       hmis:assessmentDisposition_12 ,
+                                                      hmis:assessmentDisposition_8 ,
                                                       hmis:assessmentDisposition_99 ,
                                                       hmis:assessmentDisposition_1 ,
                                                       hmis:assessmentDisposition_13 ,
@@ -5063,8 +5586,8 @@ hmis:cmExitReason_Enumeration dtype:hasValue hmis:cmExitReason_8 ,
                                              hmis:cmExitReason_11 ,
                                              hmis:cmExitReason_99 ,
                                              hmis:cmExitReason_7 ,
-                                             hmis:cmExitReason_10 ,
                                              hmis:cmExitReason_4 ,
+                                             hmis:cmExitReason_10 ,
                                              hmis:cmExitReason_5 ,
                                              hmis:cmExitReason_2 ,
                                              hmis:cmExitReason_3 ,
@@ -5095,8 +5618,8 @@ hmis:countOfExchangeForSex_99 dtype:hasValue "99"^^xsd:unsignedInt .
 hmis:countOfExchangeForSex_Enumeration dtype:hasValue hmis:countOfExchangeForSex_2 ,
                                                       hmis:countOfExchangeForSex_3 ,
                                                       hmis:countOfExchangeForSex_1 ,
-                                                      hmis:countOfExchangeForSex_99 ,
                                                       hmis:countOfExchangeForSex_8 ,
+                                                      hmis:countOfExchangeForSex_99 ,
                                                       hmis:countOfExchangeForSex_9 ,
                                                       hmis:countOfExchangeForSex_4 .
 
@@ -5293,8 +5816,8 @@ hmis:earlyExitReason_99 dtype:hasValue "99"^^xsd:unsignedInt .
 hmis:earlyExitReason_Enumeration dtype:hasValue hmis:earlyExitReason_3 ,
                                                 hmis:earlyExitReason_2 ,
                                                 hmis:earlyExitReason_5 ,
-                                                hmis:earlyExitReason_99 ,
                                                 hmis:earlyExitReason_4 ,
+                                                hmis:earlyExitReason_99 ,
                                                 hmis:earlyExitReason_1 ,
                                                 hmis:earlyExitReason_6 .
 
@@ -5407,8 +5930,8 @@ hmis:eventType_Enumeration dtype:hasValue hmis:eventType_14 ,
                                           hmis:eventType_6 ,
                                           hmis:eventType_10 ,
                                           hmis:eventType_1 ,
-                                          hmis:eventType_12 ,
                                           hmis:eventType_3 ,
+                                          hmis:eventType_12 ,
                                           hmis:eventType_11 ,
                                           hmis:eventType_2 .
 
@@ -5608,44 +6131,44 @@ hmis:federalPartnerProgramsAndComponents_9 dtype:hasValue "9"^^xsd:unsignedInt .
 
 
 hmis:federalPartnerProgramsAndComponents_Enumeration dtype:hasValue hmis:federalPartnerProgramsAndComponents_8 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_18 ,
                                                                     hmis:federalPartnerProgramsAndComponents_6 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_18 ,
                                                                     hmis:federalPartnerProgramsAndComponents_4 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_38 ,
                                                                     hmis:federalPartnerProgramsAndComponents_16 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_26 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_38 ,
                                                                     hmis:federalPartnerProgramsAndComponents_48 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_26 ,
                                                                     hmis:federalPartnerProgramsAndComponents_2 ,
                                                                     hmis:federalPartnerProgramsAndComponents_14 ,
                                                                     hmis:federalPartnerProgramsAndComponents_36 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_24 ,
                                                                     hmis:federalPartnerProgramsAndComponents_46 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_24 ,
                                                                     hmis:federalPartnerProgramsAndComponents_45 ,
                                                                     hmis:federalPartnerProgramsAndComponents_23 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_11 ,
                                                                     hmis:federalPartnerProgramsAndComponents_33 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_21 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_11 ,
                                                                     hmis:federalPartnerProgramsAndComponents_43 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_21 ,
                                                                     hmis:federalPartnerProgramsAndComponents_41 ,
                                                                     hmis:federalPartnerProgramsAndComponents_51 ,
                                                                     hmis:federalPartnerProgramsAndComponents_1 ,
                                                                     hmis:federalPartnerProgramsAndComponents_9 ,
                                                                     hmis:federalPartnerProgramsAndComponents_19 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_7 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_17 ,
                                                                     hmis:federalPartnerProgramsAndComponents_39 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_17 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_7 ,
                                                                     hmis:federalPartnerProgramsAndComponents_49 ,
                                                                     hmis:federalPartnerProgramsAndComponents_27 ,
                                                                     hmis:federalPartnerProgramsAndComponents_15 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_5 ,
                                                                     hmis:federalPartnerProgramsAndComponents_37 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_25 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_5 ,
                                                                     hmis:federalPartnerProgramsAndComponents_47 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_25 ,
                                                                     hmis:federalPartnerProgramsAndComponents_13 ,
                                                                     hmis:federalPartnerProgramsAndComponents_3 ,
                                                                     hmis:federalPartnerProgramsAndComponents_35 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_34 ,
                                                                     hmis:federalPartnerProgramsAndComponents_12 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_34 ,
                                                                     hmis:federalPartnerProgramsAndComponents_44 ,
                                                                     hmis:federalPartnerProgramsAndComponents_22 ,
                                                                     hmis:federalPartnerProgramsAndComponents_10 ,
@@ -5908,18 +6431,18 @@ hmis:lastGradeCompletedSimple_9 dtype:hasValue "9"^^xsd:unsignedInt .
 hmis:lastGradeCompletedSimple_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 
-hmis:lastGradeCompletedSimple_Enumeration dtype:hasValue hmis:lastGradeCompletedSimple_11 ,
+hmis:lastGradeCompletedSimple_Enumeration dtype:hasValue hmis:lastGradeCompletedSimple_8 ,
                                                          hmis:lastGradeCompletedSimple_99 ,
-                                                         hmis:lastGradeCompletedSimple_8 ,
-                                                         hmis:lastGradeCompletedSimple_12 ,
+                                                         hmis:lastGradeCompletedSimple_11 ,
                                                          hmis:lastGradeCompletedSimple_9 ,
+                                                         hmis:lastGradeCompletedSimple_12 ,
                                                          hmis:lastGradeCompletedSimple_10 ,
                                                          hmis:lastGradeCompletedSimple_4 ,
                                                          hmis:lastGradeCompletedSimple_5 ,
-                                                         hmis:lastGradeCompletedSimple_6 ,
                                                          hmis:lastGradeCompletedSimple_13 ,
-                                                         hmis:lastGradeCompletedSimple_7 ,
+                                                         hmis:lastGradeCompletedSimple_6 ,
                                                          hmis:lastGradeCompletedSimple_14 ,
+                                                         hmis:lastGradeCompletedSimple_7 ,
                                                          hmis:lastGradeCompletedSimple_1 ,
                                                          hmis:lastGradeCompletedSimple_2 ,
                                                          hmis:lastGradeCompletedSimple_3 .
@@ -6103,37 +6626,37 @@ hmis:livingSituation_Enumeration dtype:hasValue hmis:livingSituation_20 ,
                                                 hmis:livingSituation_4 ,
                                                 hmis:livingSituation_32 ,
                                                 hmis:livingSituation_10 ,
-                                                hmis:livingSituation_2 ,
                                                 hmis:livingSituation_22 ,
-                                                hmis:livingSituation_12 ,
+                                                hmis:livingSituation_2 ,
                                                 hmis:livingSituation_34 ,
+                                                hmis:livingSituation_12 ,
                                                 hmis:livingSituation_30 ,
                                                 hmis:livingSituation_17 ,
                                                 hmis:livingSituation_29 ,
                                                 hmis:livingSituation_19 ,
                                                 hmis:livingSituation_13 ,
                                                 hmis:livingSituation_35 ,
-                                                hmis:livingSituation_9 ,
                                                 hmis:livingSituation_25 ,
-                                                hmis:livingSituation_15 ,
+                                                hmis:livingSituation_9 ,
                                                 hmis:livingSituation_37 ,
-                                                hmis:livingSituation_27 ,
+                                                hmis:livingSituation_15 ,
                                                 hmis:livingSituation_7 ,
+                                                hmis:livingSituation_27 ,
                                                 hmis:livingSituation_31 ,
                                                 hmis:livingSituation_21 ,
                                                 hmis:livingSituation_5 ,
                                                 hmis:livingSituation_33 ,
                                                 hmis:livingSituation_99 ,
                                                 hmis:livingSituation_11 ,
-                                                hmis:livingSituation_23 ,
                                                 hmis:livingSituation_3 ,
+                                                hmis:livingSituation_23 ,
                                                 hmis:livingSituation_1 ,
                                                 hmis:livingSituation_28 ,
                                                 hmis:livingSituation_18 ,
-                                                hmis:livingSituation_8 ,
                                                 hmis:livingSituation_24 ,
-                                                hmis:livingSituation_14 ,
+                                                hmis:livingSituation_8 ,
                                                 hmis:livingSituation_36 ,
+                                                hmis:livingSituation_14 ,
                                                 hmis:livingSituation_26 ,
                                                 hmis:livingSituation_6 ,
                                                 hmis:livingSituation_16 .
@@ -6227,8 +6750,8 @@ hmis:monthsHomelessPastThreeYears_99 dtype:hasValue "99"^^xsd:positiveInteger .
 
 hmis:monthsHomelessPastThreeYears_Enumeration dtype:hasValue hmis:monthsHomelessPastThreeYears_113 ,
                                                              hmis:monthsHomelessPastThreeYears_102 ,
-                                                             hmis:monthsHomelessPastThreeYears_101 ,
                                                              hmis:monthsHomelessPastThreeYears_112 ,
+                                                             hmis:monthsHomelessPastThreeYears_101 ,
                                                              hmis:monthsHomelessPastThreeYears_104 ,
                                                              hmis:monthsHomelessPastThreeYears_103 ,
                                                              hmis:monthsHomelessPastThreeYears_111 ,
@@ -6236,11 +6759,11 @@ hmis:monthsHomelessPastThreeYears_Enumeration dtype:hasValue hmis:monthsHomeless
                                                              hmis:monthsHomelessPastThreeYears_109 ,
                                                              hmis:monthsHomelessPastThreeYears_106 ,
                                                              hmis:monthsHomelessPastThreeYears_105 ,
-                                                             hmis:monthsHomelessPastThreeYears_99 ,
                                                              hmis:monthsHomelessPastThreeYears_108 ,
+                                                             hmis:monthsHomelessPastThreeYears_99 ,
                                                              hmis:monthsHomelessPastThreeYears_9 ,
-                                                             hmis:monthsHomelessPastThreeYears_8 ,
-                                                             hmis:monthsHomelessPastThreeYears_107 .
+                                                             hmis:monthsHomelessPastThreeYears_107 ,
+                                                             hmis:monthsHomelessPastThreeYears_8 .
 
 
 hmis:mostRecentEdStatus_0 dtype:hasValue "0"^^xsd:unsignedInt .
@@ -6494,8 +7017,8 @@ hmis:projectType_Enumeration dtype:hasValue hmis:projectType_6 ,
                                             hmis:projectType_2 ,
                                             hmis:projectType_11 ,
                                             hmis:projectType_3 ,
-                                            hmis:projectType_10 ,
                                             hmis:projectType_4 ,
+                                            hmis:projectType_10 ,
                                             hmis:projectType_1 ,
                                             hmis:projectType_14 ,
                                             hmis:projectType_13 .
@@ -6595,14 +7118,14 @@ hmis:recordType_300 dtype:hasValue "300"^^xsd:unsignedInt .
 
 hmis:recordType_Enumeration dtype:hasValue hmis:recordType_151 ,
                                            hmis:recordType_161 ,
-                                           hmis:recordType_210 ,
                                            hmis:recordType_144 ,
+                                           hmis:recordType_210 ,
                                            hmis:recordType_143 ,
                                            hmis:recordType_142 ,
-                                           hmis:recordType_141 ,
                                            hmis:recordType_152 ,
-                                           hmis:recordType_200 ,
-                                           hmis:recordType_300 .
+                                           hmis:recordType_141 ,
+                                           hmis:recordType_300 ,
+                                           hmis:recordType_200 .
 
 
 hmis:referralOutcome_1 dtype:hasValue "1"^^xsd:unsignedInt .
@@ -6687,13 +7210,13 @@ hmis:referralSource_Enumeration dtype:hasValue hmis:referralSource_11 ,
                                                hmis:referralSource_34 ,
                                                hmis:referralSource_30 ,
                                                hmis:referralSource_1 ,
-                                               hmis:referralSource_39 ,
                                                hmis:referralSource_28 ,
+                                               hmis:referralSource_39 ,
                                                hmis:referralSource_18 ,
                                                hmis:referralSource_2 ,
                                                hmis:referralSource_35 ,
-                                               hmis:referralSource_7 ,
                                                hmis:referralSource_37 ,
+                                               hmis:referralSource_7 ,
                                                hmis:referralSource_38 ,
                                                hmis:referralSource_9 ,
                                                hmis:referralSource_8 .
@@ -6717,8 +7240,8 @@ hmis:relationshipToHoH_5 dtype:hasValue "5"^^xsd:unsignedInt .
 hmis:relationshipToHoH_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 
-hmis:relationshipToHoH_Enumeration dtype:hasValue hmis:relationshipToHoH_1 ,
-                                                  hmis:relationshipToHoH_99 ,
+hmis:relationshipToHoH_Enumeration dtype:hasValue hmis:relationshipToHoH_99 ,
+                                                  hmis:relationshipToHoH_1 ,
                                                   hmis:relationshipToHoH_2 ,
                                                   hmis:relationshipToHoH_3 ,
                                                   hmis:relationshipToHoH_4 ,
@@ -6940,8 +7463,8 @@ hmis:state_Enumeration dtype:hasValue hmis:state_SC ,
                                       hmis:state_CO ,
                                       hmis:state_MA ,
                                       hmis:state_NC ,
-                                      hmis:state_IA ,
                                       hmis:state_ME ,
+                                      hmis:state_IA ,
                                       hmis:state_WA ,
                                       hmis:state_AZ ,
                                       hmis:state_GA ,
@@ -6966,8 +7489,8 @@ hmis:state_Enumeration dtype:hasValue hmis:state_SC ,
                                       hmis:state_AE ,
                                       hmis:state_PW ,
                                       hmis:state_TN ,
-                                      hmis:state_KY ,
-                                      hmis:state_GU .
+                                      hmis:state_GU ,
+                                      hmis:state_KY .
 
 
 hmis:state_FL dtype:hasValue "FL" .
@@ -7676,25 +8199,25 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_573 ,
                                             hmis:vamcStation_589A7 ,
                                             hmis:vamcStation_561 ,
-                                            hmis:vamcStation_666 ,
                                             hmis:vamcStation_557 ,
                                             hmis:vamcStation_436 ,
+                                            hmis:vamcStation_666 ,
                                             hmis:vamcStation_678 ,
                                             hmis:vamcStation_614 ,
-                                            hmis:vamcStation_630 ,
                                             hmis:vamcStation_585 ,
+                                            hmis:vamcStation_630 ,
                                             hmis:vamcStation_642 ,
                                             hmis:vamcStation_654 ,
                                             hmis:vamcStation_521 ,
-                                            hmis:vamcStation_626 ,
                                             hmis:vamcStation_517 ,
+                                            hmis:vamcStation_626 ,
                                             hmis:vamcStation_529 ,
                                             hmis:vamcStation_463 ,
                                             hmis:vamcStation_693 ,
                                             hmis:vamcStation_568 ,
+                                            hmis:vamcStation_99 ,
                                             hmis:vamcStation_689 ,
                                             hmis:vamcStation_556 ,
-                                            hmis:vamcStation_99 ,
                                             hmis:vamcStation_613 ,
                                             hmis:vamcStation_504 ,
                                             hmis:vamcStation_459 ,
@@ -7709,37 +8232,37 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_660 ,
                                             hmis:vamcStation_672 ,
                                             hmis:vamcStation_644 ,
-                                            hmis:vamcStation_656 ,
-                                            hmis:vamcStation_523 ,
                                             hmis:vamcStation_402 ,
-                                            hmis:vamcStation_668 ,
+                                            hmis:vamcStation_523 ,
+                                            hmis:vamcStation_656 ,
                                             hmis:vamcStation_438 ,
+                                            hmis:vamcStation_668 ,
                                             hmis:vamcStation_575 ,
                                             hmis:vamcStation_442 ,
                                             hmis:vamcStation_620 ,
                                             hmis:vamcStation_632 ,
                                             hmis:vamcStation_519 ,
                                             hmis:vamcStation_589A6 ,
-                                            hmis:vamcStation_562 ,
                                             hmis:vamcStation_671 ,
+                                            hmis:vamcStation_562 ,
                                             hmis:vamcStation_550 ,
                                             hmis:vamcStation_590 ,
-                                            hmis:vamcStation_546 ,
                                             hmis:vamcStation_655 ,
-                                            hmis:vamcStation_534 ,
+                                            hmis:vamcStation_546 ,
                                             hmis:vamcStation_667 ,
+                                            hmis:vamcStation_534 ,
                                             hmis:vamcStation_679 ,
+                                            hmis:vamcStation_558 ,
                                             hmis:vamcStation_437 ,
                                             hmis:vamcStation_603 ,
-                                            hmis:vamcStation_558 ,
                                             hmis:vamcStation_695 ,
                                             hmis:vamcStation_586 ,
                                             hmis:vamcStation_740 ,
                                             hmis:vamcStation_631 ,
                                             hmis:vamcStation_598 ,
                                             hmis:vamcStation_619 ,
-                                            hmis:vamcStation_657A5 ,
                                             hmis:vamcStation_659 ,
+                                            hmis:vamcStation_657A5 ,
                                             hmis:vamcStation_538 ,
                                             hmis:vamcStation_607 ,
                                             hmis:vamcStation_593 ,
@@ -7748,21 +8271,21 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_650 ,
                                             hmis:vamcStation_501 ,
                                             hmis:vamcStation_589 ,
-                                            hmis:vamcStation_537 ,
                                             hmis:vamcStation_646 ,
+                                            hmis:vamcStation_537 ,
                                             hmis:vamcStation_658 ,
-                                            hmis:vamcStation_553 ,
                                             hmis:vamcStation_662 ,
-                                            hmis:vamcStation_674 ,
+                                            hmis:vamcStation_553 ,
                                             hmis:vamcStation_541 ,
+                                            hmis:vamcStation_674 ,
                                             hmis:vamcStation_565 ,
                                             hmis:vamcStation_610 ,
                                             hmis:vamcStation_528A5 ,
                                             hmis:vamcStation_509 ,
-                                            hmis:vamcStation_636A8 ,
                                             hmis:vamcStation_549 ,
-                                            hmis:vamcStation_618 ,
+                                            hmis:vamcStation_636A8 ,
                                             hmis:vamcStation_657A4 ,
+                                            hmis:vamcStation_618 ,
                                             hmis:vamcStation_589A4 ,
                                             hmis:vamcStation_540 ,
                                             hmis:vamcStation_580 ,
@@ -7776,8 +8299,8 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_528A6 ,
                                             hmis:vamcStation_528 ,
                                             hmis:vamcStation_637 ,
-                                            hmis:vamcStation_649 ,
                                             hmis:vamcStation_516 ,
+                                            hmis:vamcStation_649 ,
                                             hmis:vamcStation_692 ,
                                             hmis:vamcStation_595 ,
                                             hmis:vamcStation_583 ,
@@ -7785,9 +8308,9 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_600 ,
                                             hmis:vamcStation_612 ,
                                             hmis:vamcStation_515 ,
-                                            hmis:vamcStation_503 ,
                                             hmis:vamcStation_757 ,
                                             hmis:vamcStation_636 ,
+                                            hmis:vamcStation_503 ,
                                             hmis:vamcStation_531 ,
                                             hmis:vamcStation_640 ,
                                             hmis:vamcStation_652 ,
@@ -7802,17 +8325,17 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_691 ,
                                             hmis:vamcStation_570 ,
                                             hmis:vamcStation_502 ,
-                                            hmis:vamcStation_623 ,
                                             hmis:vamcStation_578 ,
-                                            hmis:vamcStation_526 ,
+                                            hmis:vamcStation_623 ,
                                             hmis:vamcStation_756 ,
                                             hmis:vamcStation_635 ,
                                             hmis:vamcStation_405 ,
+                                            hmis:vamcStation_526 ,
                                             hmis:vamcStation_542 ,
                                             hmis:vamcStation_663 ,
                                             hmis:vamcStation_675 ,
-                                            hmis:vamcStation_687 ,
-                                            hmis:vamcStation_554 .
+                                            hmis:vamcStation_554 ,
+                                            hmis:vamcStation_687 .
 
 
 hmis:viralLoadAvailable_0 dtype:hasValue "0"^^xsd:unsignedInt .
@@ -7903,10 +8426,6 @@ hmis:whenOccurred_Enumeration dtype:hasValue hmis:whenOccurred_4 ,
                                              hmis:whenOccurred_9 ,
                                              hmis:whenOccurred_99 ,
                                              hmis:whenOccurred_1 .
-
-
-hmisowl:CurrentLivingSituation <http://purl.org/dc/terms/description> "Current Living Situation"^^xsd:string ;
-                               <http://purl.org/dc/terms/identifier> "4.12.2"^^xsd:string .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
