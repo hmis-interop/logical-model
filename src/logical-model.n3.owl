@@ -86,8 +86,36 @@ hmis:assessmentLevel rdf:type rdfs:Datatype .
 hmis:assessmentType rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#dataCollectionStage
+hmis:dataCollectionStage rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#disabilityResponseBase
+hmis:disabilityResponseBase rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#disabilityType
+hmis:disabilityType rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#dischargeStatus
+hmis:dischargeStatus rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#dobDataQuality
 hmis:dobDataQuality rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#ethnicity
+hmis:ethnicity rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#livingSituation
+hmis:livingSituation rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#militaryBranch
+hmis:militaryBranch rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#nameDataQuaility
@@ -98,8 +126,20 @@ hmis:nameDataQuaility rdf:type rdfs:Datatype .
 hmis:nameHashingOption rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesDoesntKnowRefused
+hmis:noYesDoesntKnowRefused rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing
+hmis:noYesMissing rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#prioritizationStatus
 hmis:prioritizationStatus rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#raceGenderNone
+hmis:raceGenderNone rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#ssnDataQuality
@@ -222,8 +262,8 @@ xsd:gMonthDatatype rdf:type rdfs:Datatype .
 xsd:gMonthDayDatatype rdf:type rdfs:Datatype .
 
 
-###  http://www.w3.org/2001/XMLSchema#gYearDatatype
-xsd:gYearDatatype rdf:type rdfs:Datatype .
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2001/XMLSchema#gYearMonthDatatype
@@ -311,7 +351,8 @@ xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 #################################################################
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DisabilityResponse
-hmisowl:DisabilityResponse rdf:type owl:ObjectProperty .
+hmisowl:DisabilityResponse rdf:type owl:ObjectProperty ;
+                           rdfs:domain hmisowl:Disabilities .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#IndefiniteAndImpairsIndependence
@@ -582,7 +623,11 @@ hmisowl:AddressDataQuality rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AfghanistanOEF
-hmisowl:AfghanistanOEF rdf:type owl:DatatypeProperty .
+hmisowl:AfghanistanOEF rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:ClientVeteranInfo ;
+                       rdfs:range hmis:noYesDoesntKnowRefused ;
+                       <http://purl.org/dc/terms/description> "Theatre of Operations: Afghanistan (Operation Enduring Freedom)"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "V1.7"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AftercareDate
@@ -606,7 +651,11 @@ hmisowl:AlimonyAmount rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AmIndAKNative
-hmisowl:AmIndAKNative rdf:type owl:DatatypeProperty .
+hmisowl:AmIndAKNative rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hmisowl:Client ;
+                      rdfs:range hmis:noYesMissing ;
+                      <http://purl.org/dc/terms/description> "American Indian, Alaska Native, or Indigenous"^^xsd:string ;
+                      <http://purl.org/dc/terms/identifier> "3.04.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AnnualPercentAMI
@@ -618,7 +667,11 @@ hmisowl:AntiRetroviral rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Asian
-hmisowl:Asian rdf:type owl:DatatypeProperty .
+hmisowl:Asian rdf:type owl:DatatypeProperty ;
+              rdfs:domain hmisowl:Client ;
+              rdfs:range hmis:noYesMissing ;
+              <http://purl.org/dc/terms/description> "Asian or Asian American"^^xsd:string ;
+              <http://purl.org/dc/terms/identifier> "3.04.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AskedOrForcedToExchangeForSex
@@ -632,7 +685,9 @@ hmisowl:AskedOrForcedToExchangeForSexPastThreeMonths rdf:type owl:DatatypeProper
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentAnswer
 hmisowl:AssessmentAnswer rdf:type owl:DatatypeProperty ;
                          rdfs:domain hmisowl:AssessmentQuestionClass ;
-                         rdfs:range hmis:string250 .
+                         rdfs:range hmis:string250 ;
+                         <http://purl.org/dc/terms/description> "Assessment answers - Local determination – responses to questions defined by community"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "4.19.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentDate
@@ -650,7 +705,9 @@ hmisowl:AssessmentID rdf:type owl:DatatypeProperty .
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentLevel
 hmisowl:AssessmentLevel rdf:type owl:DatatypeProperty ;
                         rdfs:domain hmisowl:Assessment ;
-                        rdfs:range hmis:assessmentLevel .
+                        rdfs:range hmis:assessmentLevel ;
+                        <http://purl.org/dc/terms/description> "Assessment Level"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "4.19.4"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentLocation
@@ -664,7 +721,9 @@ hmisowl:AssessmentLocation rdf:type owl:DatatypeProperty ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentQuestion
 hmisowl:AssessmentQuestion rdf:type owl:DatatypeProperty ;
                            rdfs:domain hmisowl:AssessmentQuestionClass ;
-                           rdfs:range hmis:string250 .
+                           rdfs:range hmis:string250 ;
+                           <http://purl.org/dc/terms/description> "Assessment questions – Local determination - as defined by the community"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "4.19.5"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentQuestionGroup
@@ -673,30 +732,27 @@ hmisowl:AssessmentQuestionGroup rdf:type owl:DatatypeProperty ;
                                 rdfs:range hmis:string250 .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentQuestionID
-hmisowl:AssessmentQuestionID rdf:type owl:DatatypeProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentQuestionOrder
 hmisowl:AssessmentQuestionOrder rdf:type owl:DatatypeProperty ;
                                 rdfs:domain hmisowl:AssessmentQuestionClass ;
-                                rdfs:range xsd:integer .
+                                rdfs:range xsd:integer ;
+                                <http://purl.org/dc/terms/description> "Locally determined"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentResult
 hmisowl:AssessmentResult rdf:type owl:DatatypeProperty ;
                          rdfs:domain hmisowl:AssessmentResultClass ;
-                         rdfs:range hmis:string250 .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentResultID
-hmisowl:AssessmentResultID rdf:type owl:DatatypeProperty .
+                         rdfs:range hmis:string250 ;
+                         <http://purl.org/dc/terms/description> "Assessment Result"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "4.19B"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentResultType
 hmisowl:AssessmentResultType rdf:type owl:DatatypeProperty ;
                              rdfs:domain hmisowl:AssessmentResultClass ;
-                             rdfs:range hmis:string250 .
+                             rdfs:range hmis:string250 ;
+                             <http://purl.org/dc/terms/description> "Assessment Result Type – Local determination - as defined by the community"^^xsd:string ;
+                             <http://purl.org/dc/terms/identifier> "4.19.6"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentType
@@ -720,7 +776,11 @@ hmisowl:BenefitsFromAnySource rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#BlackAfAmerican
-hmisowl:BlackAfAmerican rdf:type owl:DatatypeProperty .
+hmisowl:BlackAfAmerican rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmisowl:Client ;
+                        rdfs:range hmis:noYesMissing ;
+                        <http://purl.org/dc/terms/description> "Black, African American, or African"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "3.04.3"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#BounceBack
@@ -775,10 +835,6 @@ hmisowl:ClientEnrolledInPATH rdf:type owl:DatatypeProperty .
 hmisowl:ClientLeaseHolder rdf:type owl:DatatypeProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ClientVeteranInfoID
-hmisowl:ClientVeteranInfoID rdf:type owl:DatatypeProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CoCCode
 hmisowl:CoCCode rdf:type owl:DatatypeProperty .
 
@@ -792,11 +848,9 @@ hmisowl:CoercedToContinueWork rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ConnectionWithSOAR
-hmisowl:ConnectionWithSOAR rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ConnectionWithSOARID
-hmisowl:ConnectionWithSOARID rdf:type owl:DatatypeProperty .
+hmisowl:ConnectionWithSOAR rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:ConnectionWithSOAR ;
+                           rdfs:range hmis:noYesDoesntKnowRefused .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ContinuumProject
@@ -823,13 +877,10 @@ hmisowl:CriminalRecord rdf:type owl:DatatypeProperty .
 hmisowl:CurrentEdStatus rdf:type owl:DatatypeProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentLivingSitID
-hmisowl:CurrentLivingSitID rdf:type owl:DatatypeProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentLivingSituation
 hmisowl:CurrentLivingSituation rdf:type owl:DatatypeProperty ;
                                rdfs:domain hmisowl:CurrentLivingSituationClass ;
+                               rdfs:range xsd:boolean ;
                                <http://purl.org/dc/terms/description> "Current Living Situation"^^xsd:string ;
                                <http://purl.org/dc/terms/identifier> "4.12.2"^^xsd:string .
 
@@ -849,17 +900,23 @@ hmisowl:CurrentlyFleeing rdf:type owl:DatatypeProperty .
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DOB
 hmisowl:DOB rdf:type owl:DatatypeProperty ;
             rdfs:domain hmisowl:Client ;
-            rdfs:range xsd:date .
+            rdfs:range xsd:date ;
+            <http://purl.org/dc/terms/description> "Date of Birth"^^xsd:string ;
+            <http://purl.org/dc/terms/identifier> "3.03.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DOBDataQuality
 hmisowl:DOBDataQuality rdf:type owl:DatatypeProperty ;
                        rdfs:domain hmisowl:Client ;
-                       rdfs:range hmis:dobDataQuality .
+                       rdfs:range hmis:dobDataQuality ;
+                       <http://purl.org/dc/terms/description> "DOB Data Quality"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "3.03.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DataCollectionStage
-hmisowl:DataCollectionStage rdf:type owl:DatatypeProperty .
+hmisowl:DataCollectionStage rdf:type owl:DatatypeProperty ;
+                            <http://purl.org/dc/terms/description> "Data Collection Stage"^^xsd:string ;
+                            <http://purl.org/dc/terms/identifier> "5.03.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DateCreated
@@ -918,7 +975,11 @@ hmisowl:DependentUnder6 rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DesertStorm
-hmisowl:DesertStorm rdf:type owl:DatatypeProperty .
+hmisowl:DesertStorm rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:ClientVeteranInfo ;
+                    rdfs:range hmis:noYesDoesntKnowRefused ;
+                    <http://purl.org/dc/terms/description> "Theatre of Operations: Persian Gulf War (Operation Desert Storm)"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "V1.6"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Destination
@@ -933,12 +994,16 @@ hmisowl:DestinationSafeClient rdf:type owl:DatatypeProperty .
 hmisowl:DestinationSafeWorker rdf:type owl:DatatypeProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DisabilitiesID
-hmisowl:DisabilitiesID rdf:type owl:DatatypeProperty .
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DisabilityResponse
+hmisowl:DisabilityResponse rdf:type owl:DatatypeProperty ;
+                           rdfs:range hmis:disabilityResponseBase .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DisabilityType
-hmisowl:DisabilityType rdf:type owl:DatatypeProperty .
+hmisowl:DisabilityType rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:Disabilities ;
+                       rdfs:range hmis:disabilityType ;
+                       <http://purl.org/dc/terms/description> "The permissible values correspond to the decimal values of the corresponding disability types.  4.05 Physical Disability is \"5\" and 4.10 Substance Use Disorder is \"10\"."^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DisabledHoH
@@ -950,11 +1015,11 @@ hmisowl:DisablingCondition rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DischargeStatus
-hmisowl:DischargeStatus rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DomesticViolenceID
-hmisowl:DomesticViolenceID rdf:type owl:DatatypeProperty .
+hmisowl:DischargeStatus rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmisowl:ClientVeteranInfo ;
+                        rdfs:range hmis:dischargeStatus ;
+                        <http://purl.org/dc/terms/description> "Discharge Status"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "V1.12"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DomesticViolenceVictim
@@ -981,10 +1046,6 @@ hmisowl:Earned rdf:type owl:DatatypeProperty .
 hmisowl:EarnedAmount rdf:type owl:DatatypeProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EducationID
-hmisowl:EducationID rdf:type owl:DatatypeProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EligibleForRHY
 hmisowl:EligibleForRHY rdf:type owl:DatatypeProperty .
 
@@ -1001,40 +1062,24 @@ hmisowl:Employed rdf:type owl:DatatypeProperty .
 hmisowl:EmployerProvided rdf:type owl:DatatypeProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EmploymentID
-hmisowl:EmploymentID rdf:type owl:DatatypeProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EmploymentType
 hmisowl:EmploymentType rdf:type owl:DatatypeProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EndDate
-hmisowl:EndDate rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EnrollmentCoCID
-hmisowl:EnrollmentCoCID rdf:type owl:DatatypeProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EntryDate
-hmisowl:EntryDate rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EntryRHSPID
-hmisowl:EntryRHSPID rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EntryRHYID
-hmisowl:EntryRHYID rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EntrySSVFID
-hmisowl:EntrySSVFID rdf:type owl:DatatypeProperty .
+hmisowl:EntryDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain hmisowl:Enrollment ;
+                  rdfs:range xsd:date ;
+                  <http://purl.org/dc/terms/description> "Project Start Date"^^xsd:string ;
+                  <http://purl.org/dc/terms/identifier> "3.10.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Ethnicity
-hmisowl:Ethnicity rdf:type owl:DatatypeProperty .
+hmisowl:Ethnicity rdf:type owl:DatatypeProperty ;
+                  rdfs:domain hmisowl:Client ;
+                  rdfs:range hmis:ethnicity ;
+                  <http://purl.org/dc/terms/description> "Ethnicity"^^xsd:string ;
+                  <http://purl.org/dc/terms/identifier> "3.05.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Event
@@ -1043,10 +1088,6 @@ hmisowl:Event rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EventDate
 hmisowl:EventDate rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EventID
-hmisowl:EventID rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EvictionHistory
@@ -1065,18 +1106,6 @@ hmisowl:ExchangeForSexPastThreeMonths rdf:type owl:DatatypeProperty .
 hmisowl:ExitDate rdf:type owl:DatatypeProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ExitHousingAssessmentID
-hmisowl:ExitHousingAssessmentID rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ExitID
-hmisowl:ExitID rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ExitRHYID
-hmisowl:ExitRHYID rdf:type owl:DatatypeProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FamilyCounseling
 hmisowl:FamilyCounseling rdf:type owl:DatatypeProperty .
 
@@ -1086,7 +1115,11 @@ hmisowl:FeelingFrequency rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Female
-hmisowl:Female rdf:type owl:DatatypeProperty .
+hmisowl:Female rdf:type owl:DatatypeProperty ;
+               rdfs:domain hmisowl:Client ;
+               rdfs:range hmis:noYesMissing ;
+               <http://purl.org/dc/terms/description> "Female"^^xsd:string ;
+               <http://purl.org/dc/terms/identifier> "3.06.1.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FirstName
@@ -1109,10 +1142,6 @@ hmisowl:FormerWardJuvenileJustice rdf:type owl:DatatypeProperty .
 hmisowl:Funder rdf:type owl:DatatypeProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FunderID
-hmisowl:FunderID rdf:type owl:DatatypeProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#GA
 hmisowl:GA rdf:type owl:DatatypeProperty .
 
@@ -1122,11 +1151,19 @@ hmisowl:GAAmount rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#GenderNone
-hmisowl:GenderNone rdf:type owl:DatatypeProperty .
+hmisowl:GenderNone rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hmisowl:Client ;
+                   rdfs:range hmis:raceGenderNone ;
+                   <http://purl.org/dc/terms/description> "Gender None"^^xsd:string ;
+                   <http://purl.org/dc/terms/identifier> "3.06.1.6"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#GenderOther
-hmisowl:GenderOther rdf:type owl:DatatypeProperty .
+hmisowl:GenderOther rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:Client ;
+                    rdfs:range hmis:noYesMissing ;
+                    <http://purl.org/dc/terms/description> "A gender other than singularly female or male (e.g., non-binary, genderfluid, agender, culturally specific gender)"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "3.06.1.3"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#GeneralHealthStatus
@@ -1167,10 +1204,6 @@ hmisowl:HOPWAMedAssistedLivingFac rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HPScreeningScore
 hmisowl:HPScreeningScore rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HealthInsuranceID
-hmisowl:HealthInsuranceID rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HealthStatusID
@@ -1256,11 +1289,19 @@ hmisowl:InventoryStartDate rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#IraqOIF
-hmisowl:IraqOIF rdf:type owl:DatatypeProperty .
+hmisowl:IraqOIF rdf:type owl:DatatypeProperty ;
+                rdfs:domain hmisowl:ClientVeteranInfo ;
+                rdfs:range hmis:noYesDoesntKnowRefused ;
+                <http://purl.org/dc/terms/description> "Theatre of Operations: Iraq (Operation Iraqi Freedom)"^^xsd:string ;
+                <http://purl.org/dc/terms/identifier> "V1.8"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#IraqOND
-hmisowl:IraqOND rdf:type owl:DatatypeProperty .
+hmisowl:IraqOND rdf:type owl:DatatypeProperty ;
+                rdfs:domain hmisowl:ClientVeteranInfo ;
+                rdfs:range hmis:noYesDoesntKnowRefused ;
+                <http://purl.org/dc/terms/description> "Theatre of Operations: Iraq (Operation New Dawn)"^^xsd:string ;
+                <http://purl.org/dc/terms/identifier> "V1.9"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#JuvenileJusticeMonths
@@ -1272,7 +1313,11 @@ hmisowl:JuvenileJusticeYears rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#KoreanWar
-hmisowl:KoreanWar rdf:type owl:DatatypeProperty .
+hmisowl:KoreanWar rdf:type owl:DatatypeProperty ;
+                  rdfs:domain hmisowl:ClientVeteranInfo ;
+                  rdfs:range hmis:noYesDoesntKnowRefused ;
+                  <http://purl.org/dc/terms/description> "Theatre of Operations: Korean War"^^xsd:string ;
+                  <http://purl.org/dc/terms/identifier> "V1.4"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LOSUnderThreshold
@@ -1314,6 +1359,7 @@ hmisowl:LastPermanentZIP rdf:type owl:DatatypeProperty .
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LeaseOwn60Day
 hmisowl:LeaseOwn60Day rdf:type owl:DatatypeProperty ;
                       rdfs:domain hmisowl:CurrentLivingSituationClass ;
+                      rdfs:range hmis:noYesDoesntKnowRefused ;
                       <http://purl.org/dc/terms/description> "Has the client had a lease or ownership interest in a permanent housing unit in the last 60 days?"^^xsd:string ;
                       <http://purl.org/dc/terms/identifier> "4.12.D"^^xsd:string .
 
@@ -1321,6 +1367,7 @@ hmisowl:LeaseOwn60Day rdf:type owl:DatatypeProperty ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LeaveSituation14Days
 hmisowl:LeaveSituation14Days rdf:type owl:DatatypeProperty ;
                              rdfs:domain hmisowl:CurrentLivingSituationClass ;
+                             rdfs:range hmis:noYesDoesntKnowRefused ;
                              <http://purl.org/dc/terms/description> "Is client going to have to leave their current living situation within 14 days?"^^xsd:string ;
                              <http://purl.org/dc/terms/identifier> "4.12.A"^^xsd:string .
 
@@ -1347,11 +1394,18 @@ hmisowl:LocationCrisisOrPHHousing rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LocationDetails
 hmisowl:LocationDetails rdf:type owl:DatatypeProperty ;
-                        rdfs:domain hmisowl:CurrentLivingSituationClass .
+                        rdfs:domain hmisowl:CurrentLivingSituationClass ;
+                        rdfs:range hmis:string250 ;
+                        <http://purl.org/dc/terms/description> "Location details"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "4.12.4"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Male
-hmisowl:Male rdf:type owl:DatatypeProperty .
+hmisowl:Male rdf:type owl:DatatypeProperty ;
+             rdfs:domain hmisowl:Client ;
+             rdfs:range hmis:noYesMissing ;
+             <http://purl.org/dc/terms/description> "Male"^^xsd:string ;
+             <http://purl.org/dc/terms/identifier> "3.06.1.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Medicaid
@@ -1383,7 +1437,11 @@ hmisowl:MiddleName rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MilitaryBranch
-hmisowl:MilitaryBranch rdf:type owl:DatatypeProperty .
+hmisowl:MilitaryBranch rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:ClientVeteranInfo ;
+                       rdfs:range hmis:militaryBranch ;
+                       <http://purl.org/dc/terms/description> "Branch of the Military"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "V1.11"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MonthsHomelessPastThreeYears
@@ -1405,6 +1463,7 @@ hmisowl:MoveInDateID rdf:type owl:DatatypeProperty .
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MovedTwoOrMore
 hmisowl:MovedTwoOrMore rdf:type owl:DatatypeProperty ;
                        rdfs:domain hmisowl:CurrentLivingSituationClass ;
+                       rdfs:range hmis:noYesDoesntKnowRefused ;
                        <http://purl.org/dc/terms/description> "Has the client moved 2 or more times in the last 60 days?"^^xsd:string ;
                        <http://purl.org/dc/terms/identifier> "4.12.E"^^xsd:string .
 
@@ -1430,7 +1489,11 @@ hmisowl:NameSuffix rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NativeHIOtherPacific
-hmisowl:NativeHIOtherPacific rdf:type owl:DatatypeProperty .
+hmisowl:NativeHIOtherPacific rdf:type owl:DatatypeProperty ;
+                             rdfs:domain hmisowl:Client ;
+                             rdfs:range hmis:noYesMissing ;
+                             <http://purl.org/dc/terms/description> "Native Hawaiian or Pacific Islander"^^xsd:string ;
+                             <http://purl.org/dc/terms/identifier> "3.04.4"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoADAPReason
@@ -1554,7 +1617,11 @@ hmisowl:OtherTANF rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#OtherTheater
-hmisowl:OtherTheater rdf:type owl:DatatypeProperty .
+hmisowl:OtherTheater rdf:type owl:DatatypeProperty ;
+                     rdfs:domain hmisowl:ClientVeteranInfo ;
+                     rdfs:range hmis:noYesDoesntKnowRefused ;
+                     <http://purl.org/dc/terms/description> "Theatre of Operations: Other Peace-keeping Operations or Military Interventions (such as Lebanon, Panama, Somalia, Bosnia, Kosovo)"^^xsd:string ;
+                     <http://purl.org/dc/terms/identifier> "V1.10"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#OtherTypeProvided
@@ -1616,7 +1683,9 @@ hmisowl:PreviousStreetESSH rdf:type owl:DatatypeProperty .
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PrioritizationStatus
 hmisowl:PrioritizationStatus rdf:type owl:DatatypeProperty ;
                              rdfs:domain hmisowl:Assessment ;
-                             rdfs:range hmis:prioritizationStatus .
+                             rdfs:range hmis:prioritizationStatus ;
+                             <http://purl.org/dc/terms/description> "Prioritization Status"^^xsd:string ;
+                             <http://purl.org/dc/terms/identifier> "4.19.7"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PrisonDischarge
@@ -1660,7 +1729,11 @@ hmisowl:ProjectType rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Questioning
-hmisowl:Questioning rdf:type owl:DatatypeProperty .
+hmisowl:Questioning rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:Client ;
+                    rdfs:range hmis:noYesMissing ;
+                    <http://purl.org/dc/terms/description> "Questioning"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "3.06.1.5"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#RHYBCPStatusID
@@ -1668,7 +1741,11 @@ hmisowl:RHYBCPStatusID rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#RaceNone
-hmisowl:RaceNone rdf:type owl:DatatypeProperty .
+hmisowl:RaceNone rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hmisowl:Client ;
+                 rdfs:range hmis:raceGenderNone ;
+                 <http://purl.org/dc/terms/description> "Race None"^^xsd:string ;
+                 <http://purl.org/dc/terms/identifier> "3.04.6"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ReasonNoServices
@@ -1718,6 +1795,7 @@ hmisowl:ResidentialAffiliation rdf:type owl:DatatypeProperty .
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ResourcesToObtain
 hmisowl:ResourcesToObtain rdf:type owl:DatatypeProperty ;
                           rdfs:domain hmisowl:CurrentLivingSituationClass ;
+                          rdfs:range hmis:noYesDoesntKnowRefused ;
                           <http://purl.org/dc/terms/description> "Does individual or family have resources or support networks to obtain other permanent housing?"^^xsd:string ;
                           <http://purl.org/dc/terms/identifier> "4.12.C"^^xsd:string .
 
@@ -1774,7 +1852,9 @@ hmisowl:SSN rdf:type owl:DatatypeProperty ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SSNDataQuality
 hmisowl:SSNDataQuality rdf:type owl:DatatypeProperty ;
                        rdfs:domain hmisowl:Client ;
-                       rdfs:range hmis:ssnDataQuality .
+                       rdfs:range hmis:ssnDataQuality ;
+                       <http://purl.org/dc/terms/description> "SSN Data Quality"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "3.02.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SchoolStatus
@@ -1817,10 +1897,6 @@ hmisowl:SocSecRetirement rdf:type owl:DatatypeProperty .
 hmisowl:SocSecRetirementAmount rdf:type owl:DatatypeProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#StartDate
-hmisowl:StartDate rdf:type owl:DatatypeProperty .
-
-
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#State
 hmisowl:State rdf:type owl:DatatypeProperty .
 
@@ -1836,6 +1912,7 @@ hmisowl:SubTypeProvided rdf:type owl:DatatypeProperty .
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SubsequentResidence
 hmisowl:SubsequentResidence rdf:type owl:DatatypeProperty ;
                             rdfs:domain hmisowl:CurrentLivingSituationClass ;
+                            rdfs:range hmis:noYesDoesntKnowRefused ;
                             <http://purl.org/dc/terms/description> "Has a subsequent residence been identified?"^^xsd:string ;
                             <http://purl.org/dc/terms/identifier> "4.12.B"^^xsd:string .
 
@@ -1913,7 +1990,11 @@ hmisowl:TrackingMethod rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Transgender
-hmisowl:Transgender rdf:type owl:DatatypeProperty .
+hmisowl:Transgender rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:Client ;
+                    rdfs:range hmis:noYesMissing ;
+                    <http://purl.org/dc/terms/description> "Transgender"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "3.06.1.4"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Unemployment
@@ -1986,6 +2067,7 @@ hmisowl:VashExitReasonID rdf:type owl:DatatypeProperty .
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#VerifiedBy
 hmisowl:VerifiedBy rdf:type owl:DatatypeProperty ;
                    rdfs:domain hmisowl:CurrentLivingSituationClass ;
+                   rdfs:range hmis:string50 ;
                    <http://purl.org/dc/terms/description> "Living situation verified by [list of Continuum projects]"^^xsd:string ;
                    <http://purl.org/dc/terms/identifier> "4.12.3"^^xsd:string .
 
@@ -1995,7 +2077,10 @@ hmisowl:VetBedInventory rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#VeteranStatus
-hmisowl:VeteranStatus rdf:type owl:DatatypeProperty .
+hmisowl:VeteranStatus rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hmisowl:Client ;
+                      <http://purl.org/dc/terms/description> "Veteran Status"^^xsd:string ;
+                      <http://purl.org/dc/terms/identifier> "3.07.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#VictimServiceProvider
@@ -2003,7 +2088,11 @@ hmisowl:VictimServiceProvider rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#VietnamWar
-hmisowl:VietnamWar rdf:type owl:DatatypeProperty .
+hmisowl:VietnamWar rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hmisowl:ClientVeteranInfo ;
+                   rdfs:range hmis:noYesDoesntKnowRefused ;
+                   <http://purl.org/dc/terms/description> "Theatre of Operations: Vietnam War"^^xsd:string ;
+                   <http://purl.org/dc/terms/identifier> "V1.5"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ViralLoad
@@ -2031,7 +2120,11 @@ hmisowl:WhenOccurred rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#White
-hmisowl:White rdf:type owl:DatatypeProperty .
+hmisowl:White rdf:type owl:DatatypeProperty ;
+              rdfs:domain hmisowl:Client ;
+              rdfs:range hmis:noYesMissing ;
+              <http://purl.org/dc/terms/description> "White"^^xsd:string ;
+              <http://purl.org/dc/terms/identifier> "3.04.5"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#WorkPlaceViolenceThreats
@@ -2051,7 +2144,11 @@ hmisowl:WorkplacePromiseDifference rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#WorldWarII
-hmisowl:WorldWarII rdf:type owl:DatatypeProperty .
+hmisowl:WorldWarII rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hmisowl:ClientVeteranInfo ;
+                   rdfs:range hmis:noYesDoesntKnowRefused ;
+                   <http://purl.org/dc/terms/description> "Theatre of Operations: World War II"^^xsd:string ;
+                   <http://purl.org/dc/terms/identifier> "V1.3"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#WorstHousingSituation
@@ -2059,19 +2156,23 @@ hmisowl:WorstHousingSituation rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#YearEnteredService
-hmisowl:YearEnteredService rdf:type owl:DatatypeProperty .
+hmisowl:YearEnteredService rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:ClientVeteranInfo ;
+                           rdfs:range xsd:gYear ;
+                           <http://purl.org/dc/terms/description> "Year Entered Military Service (year)"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "V1.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#YearSeparated
-hmisowl:YearSeparated rdf:type owl:DatatypeProperty .
+hmisowl:YearSeparated rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hmisowl:ClientVeteranInfo ;
+                      rdfs:range xsd:gYear ;
+                      <http://purl.org/dc/terms/description> "Year Separated from Military Service (year)"^^xsd:string ;
+                      <http://purl.org/dc/terms/identifier> "V1.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#YouthBedInventory
 hmisowl:YouthBedInventory rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#YouthEducationStatusID
-hmisowl:YouthEducationStatusID rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#YouthVetBedInventory
@@ -2227,6 +2328,21 @@ hmisowl:Client rdf:type owl:Class ;
                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                ] ,
                                [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:AmIndAKNative ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:noYesMissing
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:Asian ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:noYesMissing
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:BlackAfAmerican ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:noYesMissing
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:DOBDataQuality ;
                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange hmis:dobDataQuality
@@ -2242,14 +2358,59 @@ hmisowl:Client rdf:type owl:Class ;
                                  owl:onDataRange xsd:dateTime
                                ] ,
                                [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:Ethnicity ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:ethnicity
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:Female ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:noYesMissing
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:GenderOther ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:noYesMissing
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:Male ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:noYesMissing
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:NameDataQuality ;
                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange hmis:string50
                                ] ,
                                [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:NativeHIOtherPacific ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:noYesMissing
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:Questioning ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:noYesMissing
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:SSNDataQuality ;
                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange hmis:ssnDataQuality
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:Transgender ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:noYesMissing
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:VeteranStatus ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:noYesDoesntKnowRefused
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:White ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:noYesMissing
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:DateDeleted ;
@@ -2280,6 +2441,16 @@ hmisowl:ClientVeteranInfo rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ConnectionWithSOAR
 hmisowl:ConnectionWithSOAR rdf:type owl:Class ;
                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty hmisowl:ConnectionWithSOAR ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange hmis:noYesDoesntKnowRefused
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty hmisowl:DataCollectionStage ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange hmis:dataCollectionStage
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
                                              owl:onProperty hmisowl:DateCreated ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:dateTime
@@ -2293,12 +2464,22 @@ hmisowl:ConnectionWithSOAR rdf:type owl:Class ;
                                              owl:onProperty hmisowl:DateUpdated ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:dateTime
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty hmisowl:InformationDate ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:date
                                            ] .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentLivingSituationClass
 hmisowl:CurrentLivingSituationClass rdf:type owl:Class ;
                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                      owl:onProperty hmisowl:CurrentLivingSituation ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onDataRange hmis:livingSituation
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
                                                       owl:onProperty hmisowl:DateCreated ;
                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                       owl:onDataRange xsd:dateTime
@@ -2328,6 +2509,11 @@ hmisowl:DateOfEngagementClass rdf:type owl:Class ;
                                                 owl:onDataRange xsd:dateTime
                                               ] ,
                                               [ rdf:type owl:Restriction ;
+                                                owl:onProperty hmisowl:DateOfEngagement ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange xsd:date
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty hmisowl:DateUpdated ;
                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                 owl:onDataRange xsd:dateTime
@@ -2350,6 +2536,16 @@ hmisowl:Disabilities rdf:type owl:Class ;
                                        owl:onProperty hmisowl:DateUpdated ;
                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                        owl:onDataRange xsd:dateTime
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:DisabilityResponse ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange hmis:disabilityResponseBase
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:DisabilityType ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange hmis:disabilityType
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:DateDeleted ;
@@ -2430,6 +2626,11 @@ hmisowl:Enrollment rdf:type owl:Class ;
                                      owl:onProperty hmisowl:DateUpdated ;
                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onDataRange xsd:dateTime
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:EntryDate ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:date
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:DateDeleted ;
@@ -3009,6 +3210,42 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
 [ xsd:maxInclusive 999999
  ] .
 
@@ -3021,7 +3258,181 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
 [ owl:maxCardinality "1"^^xsd:int
  ] .
 
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
 [ xsd:fractionDigits 2
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:totalDigits 5
+ ] .
+
+[ xsd:minInclusive 0
+ ] .
+
+[ xsd:fractionDigits 3
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0.001
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:maxInclusive 1500
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ xsd:minInclusive 0
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:int
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -3073,216 +3484,6 @@ hmisowl:YouthEducationStatus rdf:type owl:Class ;
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:minInclusive 0
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:totalDigits 5
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:minInclusive 0
- ] .
-
-[ xsd:fractionDigits 3
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:maxInclusive 1500
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ owl:maxCardinality "1"^^xsd:int
- ] .
-
-[ xsd:minInclusive 0.001
  ] .
 
 [ owl:maxCardinality "1"^^xsd:int
@@ -3422,18 +3623,18 @@ hmis:assessmentDisposition_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 
 hmis:assessmentDisposition_Enumeration dtype:hasValue hmis:assessmentDisposition_7 ,
-                                                      hmis:assessmentDisposition_10 ,
                                                       hmis:assessmentDisposition_6 ,
-                                                      hmis:assessmentDisposition_9 ,
+                                                      hmis:assessmentDisposition_10 ,
                                                       hmis:assessmentDisposition_11 ,
-                                                      hmis:assessmentDisposition_8 ,
+                                                      hmis:assessmentDisposition_9 ,
                                                       hmis:assessmentDisposition_12 ,
+                                                      hmis:assessmentDisposition_8 ,
                                                       hmis:assessmentDisposition_99 ,
                                                       hmis:assessmentDisposition_1 ,
                                                       hmis:assessmentDisposition_3 ,
                                                       hmis:assessmentDisposition_13 ,
-                                                      hmis:assessmentDisposition_14 ,
                                                       hmis:assessmentDisposition_2 ,
+                                                      hmis:assessmentDisposition_14 ,
                                                       hmis:assessmentDisposition_5 ,
                                                       hmis:assessmentDisposition_4 .
 
@@ -3535,8 +3736,8 @@ hmis:cmExitReason_99 dtype:hasValue "99"^^xsd:unsignedInt .
 hmis:cmExitReason_Enumeration dtype:hasValue hmis:cmExitReason_8 ,
                                              hmis:cmExitReason_9 ,
                                              hmis:cmExitReason_13 ,
-                                             hmis:cmExitReason_12 ,
                                              hmis:cmExitReason_6 ,
+                                             hmis:cmExitReason_12 ,
                                              hmis:cmExitReason_99 ,
                                              hmis:cmExitReason_11 ,
                                              hmis:cmExitReason_7 ,
@@ -3572,8 +3773,8 @@ hmis:countOfExchangeForSex_99 dtype:hasValue "99"^^xsd:unsignedInt .
 hmis:countOfExchangeForSex_Enumeration dtype:hasValue hmis:countOfExchangeForSex_2 ,
                                                       hmis:countOfExchangeForSex_3 ,
                                                       hmis:countOfExchangeForSex_1 ,
-                                                      hmis:countOfExchangeForSex_99 ,
                                                       hmis:countOfExchangeForSex_8 ,
+                                                      hmis:countOfExchangeForSex_99 ,
                                                       hmis:countOfExchangeForSex_9 ,
                                                       hmis:countOfExchangeForSex_4 .
 
@@ -3718,8 +3919,8 @@ hmis:dischargeStatus_Enumeration dtype:hasValue hmis:dischargeStatus_6 ,
                                                 hmis:dischargeStatus_4 ,
                                                 hmis:dischargeStatus_5 ,
                                                 hmis:dischargeStatus_2 ,
-                                                hmis:dischargeStatus_99 ,
                                                 hmis:dischargeStatus_1 ,
+                                                hmis:dischargeStatus_99 ,
                                                 hmis:dischargeStatus_8 ,
                                                 hmis:dischargeStatus_9 .
 
@@ -3770,8 +3971,8 @@ hmis:earlyExitReason_99 dtype:hasValue "99"^^xsd:unsignedInt .
 hmis:earlyExitReason_Enumeration dtype:hasValue hmis:earlyExitReason_3 ,
                                                 hmis:earlyExitReason_2 ,
                                                 hmis:earlyExitReason_5 ,
-                                                hmis:earlyExitReason_99 ,
                                                 hmis:earlyExitReason_4 ,
+                                                hmis:earlyExitReason_99 ,
                                                 hmis:earlyExitReason_1 ,
                                                 hmis:earlyExitReason_6 .
 
@@ -3882,8 +4083,8 @@ hmis:eventType_Enumeration dtype:hasValue hmis:eventType_14 ,
                                           hmis:eventType_4 ,
                                           hmis:eventType_7 ,
                                           hmis:eventType_6 ,
-                                          hmis:eventType_1 ,
                                           hmis:eventType_10 ,
+                                          hmis:eventType_1 ,
                                           hmis:eventType_12 ,
                                           hmis:eventType_3 ,
                                           hmis:eventType_11 ,
@@ -4064,20 +4265,20 @@ hmis:federalPartnerProgramsAndComponents_9 dtype:hasValue "9"^^xsd:unsignedInt .
 
 
 hmis:federalPartnerProgramsAndComponents_Enumeration dtype:hasValue hmis:federalPartnerProgramsAndComponents_8 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_18 ,
                                                                     hmis:federalPartnerProgramsAndComponents_6 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_16 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_18 ,
                                                                     hmis:federalPartnerProgramsAndComponents_38 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_16 ,
                                                                     hmis:federalPartnerProgramsAndComponents_4 ,
                                                                     hmis:federalPartnerProgramsAndComponents_48 ,
                                                                     hmis:federalPartnerProgramsAndComponents_26 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_14 ,
                                                                     hmis:federalPartnerProgramsAndComponents_36 ,
                                                                     hmis:federalPartnerProgramsAndComponents_2 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_14 ,
                                                                     hmis:federalPartnerProgramsAndComponents_46 ,
                                                                     hmis:federalPartnerProgramsAndComponents_24 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_23 ,
                                                                     hmis:federalPartnerProgramsAndComponents_45 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_23 ,
                                                                     hmis:federalPartnerProgramsAndComponents_11 ,
                                                                     hmis:federalPartnerProgramsAndComponents_33 ,
                                                                     hmis:federalPartnerProgramsAndComponents_21 ,
@@ -4087,18 +4288,18 @@ hmis:federalPartnerProgramsAndComponents_Enumeration dtype:hasValue hmis:federal
                                                                     hmis:federalPartnerProgramsAndComponents_1 ,
                                                                     hmis:federalPartnerProgramsAndComponents_9 ,
                                                                     hmis:federalPartnerProgramsAndComponents_19 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_39 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_7 ,
                                                                     hmis:federalPartnerProgramsAndComponents_17 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_27 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_7 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_39 ,
                                                                     hmis:federalPartnerProgramsAndComponents_49 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_5 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_27 ,
                                                                     hmis:federalPartnerProgramsAndComponents_37 ,
                                                                     hmis:federalPartnerProgramsAndComponents_15 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_25 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_5 ,
                                                                     hmis:federalPartnerProgramsAndComponents_47 ,
-                                                                    hmis:federalPartnerProgramsAndComponents_13 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_25 ,
                                                                     hmis:federalPartnerProgramsAndComponents_3 ,
+                                                                    hmis:federalPartnerProgramsAndComponents_13 ,
                                                                     hmis:federalPartnerProgramsAndComponents_35 ,
                                                                     hmis:federalPartnerProgramsAndComponents_34 ,
                                                                     hmis:federalPartnerProgramsAndComponents_12 ,
@@ -4365,15 +4566,15 @@ hmis:lastGradeCompletedSimple_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 
 hmis:lastGradeCompletedSimple_Enumeration dtype:hasValue hmis:lastGradeCompletedSimple_8 ,
-                                                         hmis:lastGradeCompletedSimple_99 ,
                                                          hmis:lastGradeCompletedSimple_11 ,
-                                                         hmis:lastGradeCompletedSimple_9 ,
+                                                         hmis:lastGradeCompletedSimple_99 ,
                                                          hmis:lastGradeCompletedSimple_12 ,
+                                                         hmis:lastGradeCompletedSimple_9 ,
                                                          hmis:lastGradeCompletedSimple_10 ,
                                                          hmis:lastGradeCompletedSimple_4 ,
                                                          hmis:lastGradeCompletedSimple_5 ,
-                                                         hmis:lastGradeCompletedSimple_13 ,
                                                          hmis:lastGradeCompletedSimple_6 ,
+                                                         hmis:lastGradeCompletedSimple_13 ,
                                                          hmis:lastGradeCompletedSimple_7 ,
                                                          hmis:lastGradeCompletedSimple_14 ,
                                                          hmis:lastGradeCompletedSimple_1 ,
@@ -4557,12 +4758,12 @@ hmis:livingSituation_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 hmis:livingSituation_Enumeration dtype:hasValue hmis:livingSituation_4 ,
                                                 hmis:livingSituation_20 ,
-                                                hmis:livingSituation_32 ,
                                                 hmis:livingSituation_10 ,
+                                                hmis:livingSituation_32 ,
                                                 hmis:livingSituation_22 ,
                                                 hmis:livingSituation_2 ,
-                                                hmis:livingSituation_12 ,
                                                 hmis:livingSituation_34 ,
+                                                hmis:livingSituation_12 ,
                                                 hmis:livingSituation_30 ,
                                                 hmis:livingSituation_17 ,
                                                 hmis:livingSituation_29 ,
@@ -4571,10 +4772,10 @@ hmis:livingSituation_Enumeration dtype:hasValue hmis:livingSituation_4 ,
                                                 hmis:livingSituation_35 ,
                                                 hmis:livingSituation_9 ,
                                                 hmis:livingSituation_25 ,
-                                                hmis:livingSituation_37 ,
                                                 hmis:livingSituation_15 ,
-                                                hmis:livingSituation_7 ,
+                                                hmis:livingSituation_37 ,
                                                 hmis:livingSituation_27 ,
+                                                hmis:livingSituation_7 ,
                                                 hmis:livingSituation_31 ,
                                                 hmis:livingSituation_21 ,
                                                 hmis:livingSituation_5 ,
@@ -4588,8 +4789,8 @@ hmis:livingSituation_Enumeration dtype:hasValue hmis:livingSituation_4 ,
                                                 hmis:livingSituation_18 ,
                                                 hmis:livingSituation_24 ,
                                                 hmis:livingSituation_8 ,
-                                                hmis:livingSituation_36 ,
                                                 hmis:livingSituation_14 ,
+                                                hmis:livingSituation_36 ,
                                                 hmis:livingSituation_26 ,
                                                 hmis:livingSituation_6 ,
                                                 hmis:livingSituation_16 .
@@ -4683,8 +4884,8 @@ hmis:monthsHomelessPastThreeYears_99 dtype:hasValue "99"^^xsd:positiveInteger .
 
 hmis:monthsHomelessPastThreeYears_Enumeration dtype:hasValue hmis:monthsHomelessPastThreeYears_102 ,
                                                              hmis:monthsHomelessPastThreeYears_113 ,
-                                                             hmis:monthsHomelessPastThreeYears_112 ,
                                                              hmis:monthsHomelessPastThreeYears_101 ,
+                                                             hmis:monthsHomelessPastThreeYears_112 ,
                                                              hmis:monthsHomelessPastThreeYears_104 ,
                                                              hmis:monthsHomelessPastThreeYears_103 ,
                                                              hmis:monthsHomelessPastThreeYears_111 ,
@@ -4692,11 +4893,11 @@ hmis:monthsHomelessPastThreeYears_Enumeration dtype:hasValue hmis:monthsHomeless
                                                              hmis:monthsHomelessPastThreeYears_109 ,
                                                              hmis:monthsHomelessPastThreeYears_106 ,
                                                              hmis:monthsHomelessPastThreeYears_105 ,
-                                                             hmis:monthsHomelessPastThreeYears_9 ,
-                                                             hmis:monthsHomelessPastThreeYears_108 ,
                                                              hmis:monthsHomelessPastThreeYears_99 ,
-                                                             hmis:monthsHomelessPastThreeYears_107 ,
-                                                             hmis:monthsHomelessPastThreeYears_8 .
+                                                             hmis:monthsHomelessPastThreeYears_108 ,
+                                                             hmis:monthsHomelessPastThreeYears_9 ,
+                                                             hmis:monthsHomelessPastThreeYears_8 ,
+                                                             hmis:monthsHomelessPastThreeYears_107 .
 
 
 hmis:mostRecentEdStatus_0 dtype:hasValue "0"^^xsd:unsignedInt .
@@ -4738,8 +4939,8 @@ hmis:mostRecentEdStatus_Enumeration dtype:hasValue hmis:mostRecentEdStatus_0 ,
                                                    hmis:mostRecentEdStatus_3 ,
                                                    hmis:mostRecentEdStatus_4 ,
                                                    hmis:mostRecentEdStatus_5 ,
-                                                   hmis:mostRecentEdStatus_6 ,
                                                    hmis:mostRecentEdStatus_99 ,
+                                                   hmis:mostRecentEdStatus_6 ,
                                                    hmis:mostRecentEdStatus_7 ,
                                                    hmis:mostRecentEdStatus_8 ,
                                                    hmis:mostRecentEdStatus_9 .
@@ -4782,8 +4983,8 @@ hmis:noYesDoesntKnowRefused_9 dtype:hasValue "9"^^xsd:unsignedInt .
 hmis:noYesDoesntKnowRefused_99 dtype:hasValue "99"^^xsd:unsignedInt .
 
 
-hmis:noYesDoesntKnowRefused_Enumeration dtype:hasValue hmis:noYesDoesntKnowRefused_99 ,
-                                                       hmis:noYesDoesntKnowRefused_0 ,
+hmis:noYesDoesntKnowRefused_Enumeration dtype:hasValue hmis:noYesDoesntKnowRefused_0 ,
+                                                       hmis:noYesDoesntKnowRefused_99 ,
                                                        hmis:noYesDoesntKnowRefused_1 ,
                                                        hmis:noYesDoesntKnowRefused_8 ,
                                                        hmis:noYesDoesntKnowRefused_9 .
@@ -4946,12 +5147,12 @@ hmis:projectType_Enumeration dtype:hasValue hmis:projectType_6 ,
                                             hmis:projectType_7 ,
                                             hmis:projectType_8 ,
                                             hmis:projectType_9 ,
-                                            hmis:projectType_2 ,
                                             hmis:projectType_12 ,
+                                            hmis:projectType_2 ,
                                             hmis:projectType_11 ,
                                             hmis:projectType_3 ,
-                                            hmis:projectType_4 ,
                                             hmis:projectType_10 ,
+                                            hmis:projectType_4 ,
                                             hmis:projectType_1 ,
                                             hmis:projectType_14 ,
                                             hmis:projectType_13 .
@@ -5057,8 +5258,8 @@ hmis:recordType_Enumeration dtype:hasValue hmis:recordType_151 ,
                                            hmis:recordType_142 ,
                                            hmis:recordType_152 ,
                                            hmis:recordType_141 ,
-                                           hmis:recordType_200 ,
-                                           hmis:recordType_300 .
+                                           hmis:recordType_300 ,
+                                           hmis:recordType_200 .
 
 
 hmis:referralOutcome_1 dtype:hasValue "1"^^xsd:unsignedInt .
@@ -5325,16 +5526,16 @@ hmis:ssnDataQuality_Enumeration dtype:hasValue hmis:ssnDataQuality_2 ,
 
 hmis:state_Enumeration dtype:hasValue hmis:state_SC ,
                                       hmis:state_LA ,
-                                      hmis:state_RI ,
                                       hmis:state_NE ,
+                                      hmis:state_RI ,
                                       hmis:state_VA ,
                                       hmis:state_OK ,
                                       hmis:state_NM ,
                                       hmis:state_DE ,
                                       hmis:state_HI ,
                                       hmis:state_PR ,
-                                      hmis:state_IL ,
                                       hmis:state_MP ,
+                                      hmis:state_IL ,
                                       hmis:state_MT ,
                                       hmis:state_NV ,
                                       hmis:state_AL ,
@@ -5357,21 +5558,21 @@ hmis:state_Enumeration dtype:hasValue hmis:state_SC ,
                                       hmis:state_CO ,
                                       hmis:state_MA ,
                                       hmis:state_NC ,
-                                      hmis:state_ME ,
                                       hmis:state_IA ,
+                                      hmis:state_ME ,
                                       hmis:state_AZ ,
                                       hmis:state_WA ,
                                       hmis:state_GA ,
                                       hmis:state_MI ,
                                       hmis:state_CA ,
-                                      hmis:state_TX ,
                                       hmis:state_DC ,
+                                      hmis:state_TX ,
                                       hmis:state_AA ,
                                       hmis:state_OR ,
                                       hmis:state_IN ,
                                       hmis:state_FL ,
-                                      hmis:state_AR ,
                                       hmis:state_WI ,
+                                      hmis:state_AR ,
                                       hmis:state_SD ,
                                       hmis:state_MD ,
                                       hmis:state_OH ,
@@ -5413,8 +5614,8 @@ hmis:subsidyInformation_Enumeration dtype:hasValue hmis:subsidyInformation_1 ,
                                                    hmis:subsidyInformation_2 ,
                                                    hmis:subsidyInformation_11 ,
                                                    hmis:subsidyInformation_99 ,
-                                                   hmis:subsidyInformation_12 ,
-                                                   hmis:subsidyInformation_4 .
+                                                   hmis:subsidyInformation_4 ,
+                                                   hmis:subsidyInformation_12 .
 
 
 hmis:tCellOrViralLoadSource_1 dtype:hasValue "1"^^xsd:unsignedInt .
@@ -5525,24 +5726,24 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_585 ,
                                             hmis:vamcStation_630 ,
                                             hmis:vamcStation_642 ,
-                                            hmis:vamcStation_654 ,
                                             hmis:vamcStation_521 ,
-                                            hmis:vamcStation_517 ,
+                                            hmis:vamcStation_654 ,
                                             hmis:vamcStation_626 ,
+                                            hmis:vamcStation_517 ,
                                             hmis:vamcStation_529 ,
-                                            hmis:vamcStation_463 ,
                                             hmis:vamcStation_693 ,
+                                            hmis:vamcStation_463 ,
                                             hmis:vamcStation_568 ,
+                                            hmis:vamcStation_689 ,
                                             hmis:vamcStation_556 ,
                                             hmis:vamcStation_99 ,
-                                            hmis:vamcStation_689 ,
                                             hmis:vamcStation_613 ,
                                             hmis:vamcStation_504 ,
                                             hmis:vamcStation_459 ,
                                             hmis:vamcStation_520 ,
                                             hmis:vamcStation_596 ,
-                                            hmis:vamcStation_653 ,
                                             hmis:vamcStation_544 ,
+                                            hmis:vamcStation_653 ,
                                             hmis:vamcStation_605 ,
                                             hmis:vamcStation_508 ,
                                             hmis:vamcStation_629 ,
@@ -5550,8 +5751,8 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_660 ,
                                             hmis:vamcStation_672 ,
                                             hmis:vamcStation_644 ,
-                                            hmis:vamcStation_402 ,
                                             hmis:vamcStation_523 ,
+                                            hmis:vamcStation_402 ,
                                             hmis:vamcStation_656 ,
                                             hmis:vamcStation_668 ,
                                             hmis:vamcStation_438 ,
@@ -5561,34 +5762,34 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_632 ,
                                             hmis:vamcStation_519 ,
                                             hmis:vamcStation_589A6 ,
-                                            hmis:vamcStation_671 ,
                                             hmis:vamcStation_562 ,
+                                            hmis:vamcStation_671 ,
                                             hmis:vamcStation_550 ,
                                             hmis:vamcStation_590 ,
                                             hmis:vamcStation_546 ,
                                             hmis:vamcStation_655 ,
-                                            hmis:vamcStation_534 ,
                                             hmis:vamcStation_667 ,
+                                            hmis:vamcStation_534 ,
                                             hmis:vamcStation_679 ,
                                             hmis:vamcStation_558 ,
-                                            hmis:vamcStation_603 ,
                                             hmis:vamcStation_437 ,
-                                            hmis:vamcStation_586 ,
+                                            hmis:vamcStation_603 ,
                                             hmis:vamcStation_695 ,
+                                            hmis:vamcStation_586 ,
                                             hmis:vamcStation_740 ,
                                             hmis:vamcStation_631 ,
                                             hmis:vamcStation_598 ,
                                             hmis:vamcStation_619 ,
-                                            hmis:vamcStation_657A5 ,
                                             hmis:vamcStation_659 ,
+                                            hmis:vamcStation_657A5 ,
                                             hmis:vamcStation_538 ,
                                             hmis:vamcStation_607 ,
                                             hmis:vamcStation_593 ,
                                             hmis:vamcStation_460 ,
                                             hmis:vamcStation_581 ,
                                             hmis:vamcStation_650 ,
-                                            hmis:vamcStation_589 ,
                                             hmis:vamcStation_501 ,
+                                            hmis:vamcStation_589 ,
                                             hmis:vamcStation_537 ,
                                             hmis:vamcStation_646 ,
                                             hmis:vamcStation_658 ,
@@ -5596,20 +5797,20 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_662 ,
                                             hmis:vamcStation_674 ,
                                             hmis:vamcStation_541 ,
-                                            hmis:vamcStation_610 ,
                                             hmis:vamcStation_565 ,
+                                            hmis:vamcStation_610 ,
                                             hmis:vamcStation_528A5 ,
                                             hmis:vamcStation_509 ,
-                                            hmis:vamcStation_636A8 ,
                                             hmis:vamcStation_549 ,
-                                            hmis:vamcStation_657A4 ,
+                                            hmis:vamcStation_636A8 ,
                                             hmis:vamcStation_618 ,
+                                            hmis:vamcStation_657A4 ,
                                             hmis:vamcStation_589A4 ,
                                             hmis:vamcStation_540 ,
                                             hmis:vamcStation_580 ,
                                             hmis:vamcStation_512 ,
-                                            hmis:vamcStation_548 ,
                                             hmis:vamcStation_657 ,
+                                            hmis:vamcStation_548 ,
                                             hmis:vamcStation_564 ,
                                             hmis:vamcStation_673 ,
                                             hmis:vamcStation_552 ,
@@ -5626,9 +5827,9 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_600 ,
                                             hmis:vamcStation_612 ,
                                             hmis:vamcStation_515 ,
+                                            hmis:vamcStation_757 ,
                                             hmis:vamcStation_503 ,
                                             hmis:vamcStation_636 ,
-                                            hmis:vamcStation_757 ,
                                             hmis:vamcStation_531 ,
                                             hmis:vamcStation_640 ,
                                             hmis:vamcStation_652 ,
@@ -5643,17 +5844,17 @@ hmis:vamcStation_Enumeration dtype:hasValue hmis:vamcStation_506 ,
                                             hmis:vamcStation_691 ,
                                             hmis:vamcStation_570 ,
                                             hmis:vamcStation_502 ,
-                                            hmis:vamcStation_578 ,
                                             hmis:vamcStation_623 ,
+                                            hmis:vamcStation_578 ,
                                             hmis:vamcStation_405 ,
+                                            hmis:vamcStation_756 ,
                                             hmis:vamcStation_635 ,
                                             hmis:vamcStation_526 ,
-                                            hmis:vamcStation_756 ,
                                             hmis:vamcStation_542 ,
                                             hmis:vamcStation_663 ,
                                             hmis:vamcStation_675 ,
-                                            hmis:vamcStation_554 ,
-                                            hmis:vamcStation_687 .
+                                            hmis:vamcStation_687 ,
+                                            hmis:vamcStation_554 .
 
 
 hmis:viralLoadAvailable_0 dtype:hasValue "0"^^xsd:unsignedInt .
@@ -5744,6 +5945,13 @@ hmis:whenOccurred_Enumeration dtype:hasValue hmis:whenOccurred_4 ,
                                              hmis:whenOccurred_9 ,
                                              hmis:whenOccurred_99 ,
                                              hmis:whenOccurred_1 .
+
+
+hmisowl:ConnectionWithSOAR <http://purl.org/dc/terms/identifier> "P4.1"^^xsd:string ;
+                           <http://purl.org/dc/terms/description> "Connection with SOAR"^^xsd:string .
+
+
+hmisowl:DisabilityResponse <http://purl.org/dc/terms/description> "See FY2022 HMIS Data Dictionary v1.4, Section 4.05-4.10, Response #2.  Permissable values vary depending on which disability type is declared.  The values are contained with \"Field and Response(s) 2\" within 4.5 through 4.10. In the instance document, the xsi:type of this element must be declared, and the type depends on the value within the sibling hmis:DisabilityType element.  See the example HUD_HMIS_Instance.xml file to see how this should appear.  Either xsi:type=\"hmis:disabilityResponse[insert type]\" or xsi:type=\"hmis:disabilityResponseSubstanceUseDisorder\"can be used."^^xsd:string .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
