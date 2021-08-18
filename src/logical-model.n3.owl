@@ -78,6 +78,14 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 #    Datatypes
 #################################################################
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#addressDataQuality
+hmis:addressDataQuality rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#annualPercentAMI
+hmis:annualPercentAMI rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#assessmentLevel
 hmis:assessmentLevel rdf:type rdfs:Datatype .
 
@@ -114,8 +122,20 @@ hmis:dobDataQuality rdf:type rdfs:Datatype .
 hmis:ethnicity rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#evictionHistory
+hmis:evictionHistory rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#incarceratedAdult
+hmis:incarceratedAdult rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#lengthOfStay
 hmis:lengthOfStay rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#literalHomelessHistory
+hmis:literalHomelessHistory rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#livingSituation
@@ -124,6 +144,10 @@ hmis:livingSituation rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#militaryBranch
 hmis:militaryBranch rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#months
+hmis:months rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#monthsHomelessPastThreeYears
@@ -144,6 +168,10 @@ hmis:noYesDoesntKnowRefused rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing
 hmis:noYesMissing rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#percentAMISimple
+hmis:percentAMISimple rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#prioritizationStatus
@@ -170,6 +198,10 @@ hmis:ssnDataQuality rdf:type rdfs:Datatype .
 hmis:ssnHashingOption rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#state
+hmis:state rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#string100
 hmis:string100 rdf:type rdfs:Datatype .
 
@@ -186,76 +218,28 @@ hmis:string32 rdf:type rdfs:Datatype .
 hmis:string50 rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#timeToHousingLoss
+hmis:timeToHousingLoss rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#timesHomelessPastThreeYears
 hmis:timesHomelessPastThreeYears rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#vamcStation
+hmis:vamcStation rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#zipCode
+hmis:zipCode rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#issuesYears
+hmisowl:issuesYears rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#sexualOrientation
 hmisowl:sexualOrientation rdf:type rdfs:Datatype .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#zipCodeDatatype
-hmisowl:zipCodeDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#ENTITIESDatatype
-xsd:ENTITIESDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#ENTITYDatatype
-xsd:ENTITYDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#IDREFDatatype
-xsd:IDREFDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#IDREFSDatatype
-xsd:IDREFSDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#NCNameDatatype
-xsd:NCNameDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#NMTOKENDatatype
-xsd:NMTOKENDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#NMTOKENSDatatype
-xsd:NMTOKENSDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#NOTATIONDatatype
-xsd:NOTATIONDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#NameDatatype
-xsd:NameDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#QNameDatatype
-xsd:QNameDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#anySimpleTypeDatatype
-xsd:anySimpleTypeDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#anyURIDatatype
-xsd:anyURIDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#base64BinaryDatatype
-xsd:base64BinaryDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#booleanDatatype
-xsd:booleanDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#byteDatatype
-xsd:byteDatatype rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2001/XMLSchema#date
@@ -270,112 +254,16 @@ xsd:dateTime rdf:type rdfs:Datatype .
 xsd:decimal rdf:type rdfs:Datatype .
 
 
-###  http://www.w3.org/2001/XMLSchema#doubleDatatype
-xsd:doubleDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#durationDatatype
-xsd:durationDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#floatDatatype
-xsd:floatDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#gDayDatatype
-xsd:gDayDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#gMonthDatatype
-xsd:gMonthDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#gMonthDayDatatype
-xsd:gMonthDayDatatype rdf:type rdfs:Datatype .
-
-
 ###  http://www.w3.org/2001/XMLSchema#gYear
 xsd:gYear rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#gYearMonthDatatype
-xsd:gYearMonthDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#hexBinaryDatatype
-xsd:hexBinaryDatatype rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2001/XMLSchema#id
 xsd:id rdf:type rdfs:Datatype .
 
 
-###  http://www.w3.org/2001/XMLSchema#intDatatype
-xsd:intDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#integerDatatype
-xsd:integerDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#languageDatatype
-xsd:languageDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#longDatatype
-xsd:longDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#negativeIntegerDatatype
-xsd:negativeIntegerDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#nonNegativeIntegerDatatype
-xsd:nonNegativeIntegerDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#nonPositiveIntegerDatatype
-xsd:nonPositiveIntegerDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#normalizedStringDatatype
-xsd:normalizedStringDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#positiveIntegerDatatype
-xsd:positiveIntegerDatatype rdf:type rdfs:Datatype .
-
-
 ###  http://www.w3.org/2001/XMLSchema#short
 xsd:short rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#stringDatatype
-xsd:stringDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#timeDatatype
-xsd:timeDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#tokenDatatype
-xsd:tokenDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#unsignedByteDatatype
-xsd:unsignedByteDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#unsignedIntDatatype
-xsd:unsignedIntDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#unsignedLongDatatype
-xsd:unsignedLongDatatype rdf:type rdfs:Datatype .
-
-
-###  http://www.w3.org/2001/XMLSchema#unsignedShortDatatype
-xsd:unsignedShortDatatype rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -651,7 +539,11 @@ hmisowl:Address2 rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AddressDataQuality
-hmisowl:AddressDataQuality rdf:type owl:DatatypeProperty .
+hmisowl:AddressDataQuality rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:EntrySSVF ;
+                           rdfs:range hmis:addressDataQuality ;
+                           <http://purl.org/dc/terms/description> "Address Data Quality"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "V5.5"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AfghanistanOEF
@@ -671,7 +563,11 @@ hmisowl:AftercareProvided rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AlcoholDrugUseDisorderFam
-hmisowl:AlcoholDrugUseDisorderFam rdf:type owl:DatatypeProperty .
+hmisowl:AlcoholDrugUseDisorderFam rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain hmisowl:EntryRHY ;
+                                  rdfs:range hmis:noYesMissing ;
+                                  <http://purl.org/dc/terms/description> "Alcohol or Substance Use Disorder - Family member"^^xsd:string ;
+                                  <http://purl.org/dc/terms/identifier> "R13.21"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Alimony
@@ -691,7 +587,11 @@ hmisowl:AmIndAKNative rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AnnualPercentAMI
-hmisowl:AnnualPercentAMI rdf:type owl:DatatypeProperty .
+hmisowl:AnnualPercentAMI rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:EntrySSVF ;
+                         rdfs:range hmis:annualPercentAMI ;
+                         <http://purl.org/dc/terms/description> "Current household income"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "V7.C"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AntiRetroviral
@@ -848,11 +748,19 @@ hmisowl:ChildSupportAmount rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ChildWelfareMonths
-hmisowl:ChildWelfareMonths rdf:type owl:DatatypeProperty .
+hmisowl:ChildWelfareMonths rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:EntryRHY ;
+                           rdfs:range hmis:months ;
+                           <http://purl.org/dc/terms/description> "Number of Months"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "R11.B"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ChildWelfareYears
-hmisowl:ChildWelfareYears rdf:type owl:DatatypeProperty .
+hmisowl:ChildWelfareYears rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:EntryRHY ;
+                          rdfs:range hmisowl:issuesYears ;
+                          <http://purl.org/dc/terms/description> "Number of Years"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "R11.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#City
@@ -864,7 +772,11 @@ hmisowl:ClientEnrolledInPATH rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ClientLeaseHolder
-hmisowl:ClientLeaseHolder rdf:type owl:DatatypeProperty .
+hmisowl:ClientLeaseHolder rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:EntrySSVF ;
+                          rdfs:range hmis:noYesMissing ;
+                          <http://purl.org/dc/terms/description> "Client is a current leaseholder."^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "V7.E"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CoCCode
@@ -909,7 +821,11 @@ hmisowl:CountOutreachReferralApproaches rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CriminalRecord
-hmisowl:CriminalRecord rdf:type owl:DatatypeProperty .
+hmisowl:CriminalRecord rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:EntrySSVF ;
+                       rdfs:range hmis:noYesMissing ;
+                       <http://purl.org/dc/terms/description> "Criminal record for arson, drug dealing or manufacture, or felony offense against persons or property (adults in household)"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "V7.I"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentEdStatus
@@ -1050,7 +966,11 @@ hmisowl:DisabilityType rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DisabledHoH
-hmisowl:DisabledHoH rdf:type owl:DatatypeProperty .
+hmisowl:DisabledHoH rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:EntrySSVF ;
+                    rdfs:range hmis:noYesMissing ;
+                    <http://purl.org/dc/terms/description> "Head of household with disabling condition (physical health, mental health, substance use) that directly affects ability to secure/maintain housing"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "V7.M"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DisablingCondition
@@ -1138,7 +1058,11 @@ hmisowl:EventDate rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EvictionHistory
-hmisowl:EvictionHistory rdf:type owl:DatatypeProperty .
+hmisowl:EvictionHistory rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmisowl:EntrySSVF ;
+                        rdfs:range hmis:evictionHistory ;
+                        <http://purl.org/dc/terms/description> "Rental Evictions within the past 7 years"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "V7.H"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ExchangeForSex
@@ -1178,11 +1102,19 @@ hmisowl:FirstName rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FormerWardChildWelfare
-hmisowl:FormerWardChildWelfare rdf:type owl:DatatypeProperty .
+hmisowl:FormerWardChildWelfare rdf:type owl:DatatypeProperty ;
+                               rdfs:domain hmisowl:EntryRHY ;
+                               rdfs:range hmis:noYesDoesntKnowRefused ;
+                               <http://purl.org/dc/terms/description> "Formerly a Ward of Child Welfare or Foster Care Agency"^^xsd:string ;
+                               <http://purl.org/dc/terms/identifier> "R11.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FormerWardJuvenileJustice
-hmisowl:FormerWardJuvenileJustice rdf:type owl:DatatypeProperty .
+hmisowl:FormerWardJuvenileJustice rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain hmisowl:EntryRHY ;
+                                  rdfs:range hmis:noYesDoesntKnowRefused ;
+                                  <http://purl.org/dc/terms/description> "Formerly a Ward of Juvenile Justice System"^^xsd:string ;
+                                  <http://purl.org/dc/terms/identifier> "R12.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Funder
@@ -1258,7 +1190,11 @@ hmisowl:HealthStatusID rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HoHLeasesHolder
-hmisowl:HoHLeasesHolder rdf:type owl:DatatypeProperty .
+hmisowl:HoHLeasesHolder rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmisowl:EntrySSVF ;
+                        rdfs:range hmis:noYesMissing ;
+                        <http://purl.org/dc/terms/description> "Has head of household (HoH) ever been a leaseholder?"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "V7.F"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HouseholdID
@@ -1286,11 +1222,18 @@ hmisowl:InPersonIndividual rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#IncarceratedAdult
-hmisowl:IncarceratedAdult rdf:type owl:DatatypeProperty .
+hmisowl:IncarceratedAdult rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:EntrySSVF ;
+                          rdfs:range hmis:incarceratedAdult ;
+                          <http://purl.org/dc/terms/description> "Criminal record for arson, drug dealing or manufacture, or felony offense against persons or property (adults in household)"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "V7.J"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#IncarceratedParent
-hmisowl:IncarceratedParent rdf:type owl:DatatypeProperty .
+hmisowl:IncarceratedParent rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:EntryRHY ;
+                           <http://purl.org/dc/terms/description> "Incarcerated Parent of Youth"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "R13.24"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#IncomeAndSourcesID
@@ -1316,7 +1259,11 @@ hmisowl:InformationDate rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#InsufficientIncome
-hmisowl:InsufficientIncome rdf:type owl:DatatypeProperty .
+hmisowl:InsufficientIncome rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:EntryRHY ;
+                           rdfs:range hmis:noYesMissing ;
+                           <http://purl.org/dc/terms/description> "Insufficient Income to support youth - Family member"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "R13.22"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#InsuranceFromAnySource
@@ -1352,11 +1299,19 @@ hmisowl:IraqOND rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#JuvenileJusticeMonths
-hmisowl:JuvenileJusticeMonths rdf:type owl:DatatypeProperty .
+hmisowl:JuvenileJusticeMonths rdf:type owl:DatatypeProperty ;
+                              rdfs:domain hmisowl:EntryRHY ;
+                              rdfs:range hmis:months ;
+                              <http://purl.org/dc/terms/description> "Number of Months"^^xsd:string ;
+                              <http://purl.org/dc/terms/identifier> "R12.B"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#JuvenileJusticeYears
-hmisowl:JuvenileJusticeYears rdf:type owl:DatatypeProperty .
+hmisowl:JuvenileJusticeYears rdf:type owl:DatatypeProperty ;
+                             rdfs:domain hmisowl:EntryRHY ;
+                             rdfs:range hmisowl:issuesYears ;
+                             <http://purl.org/dc/terms/description> "Number of Years"^^xsd:string ;
+                             <http://purl.org/dc/terms/identifier> "R12.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#KoreanWar
@@ -1392,19 +1347,35 @@ hmisowl:LastName rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LastPermanentCity
-hmisowl:LastPermanentCity rdf:type owl:DatatypeProperty .
+hmisowl:LastPermanentCity rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:EntrySSVF ;
+                          rdfs:range hmis:string50 ;
+                          <http://purl.org/dc/terms/description> "City"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "V5.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LastPermanentState
-hmisowl:LastPermanentState rdf:type owl:DatatypeProperty .
+hmisowl:LastPermanentState rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:EntrySSVF ;
+                           rdfs:range hmis:state ;
+                           <http://purl.org/dc/terms/description> "State"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "V5.3"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LastPermanentStreet
-hmisowl:LastPermanentStreet rdf:type owl:DatatypeProperty .
+hmisowl:LastPermanentStreet rdf:type owl:DatatypeProperty ;
+                            rdfs:domain hmisowl:EntrySSVF ;
+                            rdfs:range hmis:string100 ;
+                            <http://purl.org/dc/terms/description> "Street Address"^^xsd:string ;
+                            <http://purl.org/dc/terms/identifier> "V5.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LastPermanentZIP
-hmisowl:LastPermanentZIP rdf:type owl:DatatypeProperty .
+hmisowl:LastPermanentZIP rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:EntrySSVF ;
+                         rdfs:range hmis:zipCode ;
+                         <http://purl.org/dc/terms/description> "Zip Code"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "V5.4"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LeaseOwn60Day
@@ -1436,7 +1407,11 @@ hmisowl:LifeValue rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LiteralHomelessHistory
-hmisowl:LiteralHomelessHistory rdf:type owl:DatatypeProperty .
+hmisowl:LiteralHomelessHistory rdf:type owl:DatatypeProperty ;
+                               rdfs:domain hmisowl:EntrySSVF ;
+                               rdfs:range hmis:literalHomelessHistory ;
+                               <http://purl.org/dc/terms/description> "History of literal homelessness (street/shelter/transitional housing)"^^xsd:string ;
+                               <http://purl.org/dc/terms/identifier> "V7.D"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LivingSituation
@@ -1479,8 +1454,12 @@ hmisowl:MedicalAssistanceID rdf:type owl:DatatypeProperty .
 hmisowl:Medicare rdf:type owl:DatatypeProperty .
 
 
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MentalHealthIssuesFam
-hmisowl:MentalHealthIssuesFam rdf:type owl:DatatypeProperty .
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MentalHealthDisorderFam
+hmisowl:MentalHealthDisorderFam rdf:type owl:DatatypeProperty ;
+                                rdfs:domain hmisowl:EntryRHY ;
+                                rdfs:range hmis:noYesMissing ;
+                                <http://purl.org/dc/terms/description> "Mental Health Disorder - Family member"^^xsd:string ;
+                                <http://purl.org/dc/terms/identifier> "R13.11"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MentalHealthStatus
@@ -1708,7 +1687,11 @@ hmisowl:PensionAmount rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PercentAMI
-hmisowl:PercentAMI rdf:type owl:DatatypeProperty .
+hmisowl:PercentAMI rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hmisowl:EntrySSVF ;
+                   rdfs:range hmis:percentAMISimple ;
+                   <http://purl.org/dc/terms/description> "Household Income as a Percentage of AMI"^^xsd:string ;
+                   <http://purl.org/dc/terms/identifier> "V4.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PersonalID
@@ -1716,7 +1699,11 @@ hmisowl:PersonalID rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PhysicalDisabilityFam
-hmisowl:PhysicalDisabilityFam rdf:type owl:DatatypeProperty .
+hmisowl:PhysicalDisabilityFam rdf:type owl:DatatypeProperty ;
+                              rdfs:domain hmisowl:EntryRHY ;
+                              rdfs:range hmis:noYesMissing ;
+                              <http://purl.org/dc/terms/description> "Physical Disability – Family member"^^xsd:string ;
+                              <http://purl.org/dc/terms/identifier> "R13.15"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PosAdultConnections
@@ -1756,7 +1743,11 @@ hmisowl:PrioritizationStatus rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PrisonDischarge
-hmisowl:PrisonDischarge rdf:type owl:DatatypeProperty .
+hmisowl:PrisonDischarge rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmisowl:EntrySSVF ;
+                        rdfs:range hmis:noYesMissing ;
+                        <http://purl.org/dc/terms/description> "Discharged from jail or prison within last six months after incarceration of 90 days or more (adults)"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "V7.K"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PrivateDisability
@@ -1948,7 +1939,11 @@ hmisowl:SessionsInPlan rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SexOffender
-hmisowl:SexOffender rdf:type owl:DatatypeProperty .
+hmisowl:SexOffender rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:EntrySSVF ;
+                    rdfs:range hmis:noYesMissing ;
+                    <http://purl.org/dc/terms/description> "Registered sex offender (all household members)"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "V7.L"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SexualOrientation
@@ -2000,7 +1995,11 @@ hmisowl:SubsequentResidence rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SubsidyAtRisk
-hmisowl:SubsidyAtRisk rdf:type owl:DatatypeProperty .
+hmisowl:SubsidyAtRisk rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hmisowl:EntrySSVF ;
+                      rdfs:range hmis:noYesMissing ;
+                      <http://purl.org/dc/terms/description> "Currently at risk of losing a tenant-based housing subsidy or housing in a subsidized building or unit (household)"^^xsd:string ;
+                      <http://purl.org/dc/terms/identifier> "V7.G"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SubsidyInformation
@@ -2044,7 +2043,11 @@ hmisowl:TargetPopulation rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#TargetScreenReqd
-hmisowl:TargetScreenReqd rdf:type owl:DatatypeProperty .
+hmisowl:TargetScreenReqd rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:EntrySSVF ;
+                         rdfs:range hmis:noYesMissing ;
+                         <http://purl.org/dc/terms/description> "Is Homelessness Prevention targeting screener required?"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "V7.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Telephone
@@ -2056,7 +2059,11 @@ hmisowl:ThresholdScore rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#TimeToHousingLoss
-hmisowl:TimeToHousingLoss rdf:type owl:DatatypeProperty .
+hmisowl:TimeToHousingLoss rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:EntrySSVF ;
+                          rdfs:range hmis:timeToHousingLoss ;
+                          <http://purl.org/dc/terms/description> "Current housing loss expected within…"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "V7.B"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#TimesHomelessPastThreeYears
@@ -2093,6 +2100,9 @@ hmisowl:UnemploymentAmount rdf:type owl:DatatypeProperty .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#UnemploymentFam
 hmisowl:UnemploymentFam rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmisowl:EntryRHY ;
+                        rdfs:range hmis:noYesMissing ;
+                        <http://purl.org/dc/terms/description> "Unemployment - Family member"^^xsd:string ;
                         <http://purl.org/dc/terms/identifier> "R13.9"^^xsd:string .
 
 
@@ -2101,7 +2111,11 @@ hmisowl:UnitInventory rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#UrgentReferral
-hmisowl:UrgentReferral rdf:type owl:DatatypeProperty .
+hmisowl:UrgentReferral rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:EntrySSVF ;
+                       rdfs:range hmis:noYesMissing ;
+                       <http://purl.org/dc/terms/description> "Referred by Coordinated Entry or a homeless assistance provider to prevent the household from entering an emergency shelter or transitional housing or from staying in a place not meant for human habitation."^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "V7.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#UserFirstName
@@ -2140,7 +2154,11 @@ hmisowl:VADisabilityServiceAmount rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#VAMCStation
-hmisowl:VAMCStation rdf:type owl:DatatypeProperty .
+hmisowl:VAMCStation rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:EntrySSVF ;
+                    rdfs:range hmis:vamcStation ;
+                    <http://purl.org/dc/terms/description> "VAMC Station Number"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "V6.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#VAMedicalServices
@@ -2801,6 +2819,11 @@ hmisowl:EntryRHSP rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EntryRHY
 hmisowl:EntryRHY rdf:type owl:Class ;
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:AlcoholDrugUseDisorderFam ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange hmis:noYesMissing
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty hmisowl:DateCreated ;
                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onDataRange xsd:dateTime
@@ -2811,9 +2834,44 @@ hmisowl:EntryRHY rdf:type owl:Class ;
                                    owl:onDataRange xsd:dateTime
                                  ] ,
                                  [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:FormerWardChildWelfare ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange hmis:noYesDoesntKnowRefused
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:FormerWardJuvenileJustice ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange hmis:noYesDoesntKnowRefused
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:IncarceratedParent ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange hmis:noYesMissing
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:InsufficientIncome ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange hmis:noYesMissing
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:MentalHealthDisorderFam ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange hmis:noYesMissing
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:PhysicalDisabilityFam ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange hmis:noYesMissing
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty hmisowl:SexualOrientation ;
                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onDataRange hmisowl:sexualOrientation
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty hmisowl:UnemploymentFam ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange hmis:noYesMissing
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty hmisowl:DateDeleted ;
