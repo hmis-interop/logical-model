@@ -1,4 +1,0 @@
-
-Health Insurance
-*per issue https://github.com/hmis-interop/logical-model/issues/8 , OtherSource and OtherSourceIdentify have been removed from Health Insurance
-
