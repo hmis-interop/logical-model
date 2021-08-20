@@ -102,6 +102,10 @@ hmis:cocCode rdf:type rdfs:Datatype .
 hmis:dataCollectionStage rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#dependentUnder6
+hmis:dependentUnder6 rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#disabilityResponseBase
 hmis:disabilityResponseBase rdf:type rdfs:Datatype .
 
@@ -124,6 +128,10 @@ hmis:ethnicity rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#evictionHistory
 hmis:evictionHistory rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#hpScreeningScore
+hmis:hpScreeningScore rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#incarceratedAdult
@@ -240,6 +248,10 @@ hmisowl:issuesYears rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#sexualOrientation
 hmisowl:sexualOrientation rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#xs:positiveInteger
+hmisowl:xs:positiveInteger rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2001/XMLSchema#date
@@ -787,7 +799,11 @@ hmisowl:CoCCode rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CoCPrioritized
-hmisowl:CoCPrioritized rdf:type owl:DatatypeProperty .
+hmisowl:CoCPrioritized rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:EntrySSVF ;
+                       rdfs:range hmis:noYesMissing ;
+                       <http://purl.org/dc/terms/description> "Current/recent resident in area prioritized by the CoC"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "V7.R"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CoercedToContinueWork
@@ -841,7 +857,11 @@ hmisowl:CurrentLivingSituation rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentPregnant
-hmisowl:CurrentPregnant rdf:type owl:DatatypeProperty .
+hmisowl:CurrentPregnant rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmisowl:EntrySSVF ;
+                        rdfs:range hmis:noYesMissing ;
+                        <http://purl.org/dc/terms/description> "Currently pregnant (any household member)"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "V7.N"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentSchoolAttend
@@ -930,7 +950,11 @@ hmisowl:DentalHealthStatus rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DependentUnder6
-hmisowl:DependentUnder6 rdf:type owl:DatatypeProperty .
+hmisowl:DependentUnder6 rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmisowl:EntrySSVF ;
+                        rdfs:range hmis:dependentUnder6 ;
+                        <http://purl.org/dc/terms/description> "Household includes one or more young children (age six or under), or a child who requires significant care"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "V7.P"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DesertStorm
@@ -1054,7 +1078,11 @@ hmisowl:Event rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EventDate
-hmisowl:EventDate rdf:type owl:DatatypeProperty .
+hmisowl:EventDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain hmisowl:Event ;
+                  rdfs:range xsd:date ;
+                  <http://purl.org/dc/terms/description> "Date of event"^^xsd:string ;
+                  <http://purl.org/dc/terms/identifier> "4.20.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EvictionHistory
@@ -1166,7 +1194,11 @@ hmisowl:GroupCounseling rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HH5Plus
-hmisowl:HH5Plus rdf:type owl:DatatypeProperty .
+hmisowl:HH5Plus rdf:type owl:DatatypeProperty ;
+                rdfs:domain hmisowl:EntrySSVF ;
+                rdfs:range hmis:noYesMissing ;
+                <http://purl.org/dc/terms/description> "Household size of 5 or more requiring at least 3 bedrooms (due to age/gender mix)"^^xsd:string ;
+                <http://purl.org/dc/terms/identifier> "V7.Q"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HIVAIDSAssistance
@@ -1182,7 +1214,11 @@ hmisowl:HOPWAMedAssistedLivingFac rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HPScreeningScore
-hmisowl:HPScreeningScore rdf:type owl:DatatypeProperty .
+hmisowl:HPScreeningScore rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:EntrySSVF ;
+                         rdfs:range hmis:hpScreeningScore ;
+                         <http://purl.org/dc/terms/description> "HP applicant total points (integer)"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "V7.S"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HealthStatusID
@@ -1963,7 +1999,11 @@ hmisowl:SexualOrientationOther rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SingleParent
-hmisowl:SingleParent rdf:type owl:DatatypeProperty .
+hmisowl:SingleParent rdf:type owl:DatatypeProperty ;
+                     rdfs:domain hmisowl:EntrySSVF ;
+                     rdfs:range hmis:noYesMissing ;
+                     <http://purl.org/dc/terms/description> "Single parent household with minor child(ren)"^^xsd:string ;
+                     <http://purl.org/dc/terms/identifier> "V7.O"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SocSecRetirement
@@ -2055,7 +2095,11 @@ hmisowl:Telephone rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ThresholdScore
-hmisowl:ThresholdScore rdf:type owl:DatatypeProperty .
+hmisowl:ThresholdScore rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:EntrySSVF ;
+                       rdfs:range xsd:positiveInteger ;
+                       <http://purl.org/dc/terms/description> "Grantee targeting threshold score (integer)"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "V7.T"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#TimeToHousingLoss
@@ -2912,6 +2956,11 @@ hmisowl:Event rdf:type owl:Class ;
                                 owl:onDataRange xsd:dateTime
                               ] ,
                               [ rdf:type owl:Restriction ;
+                                owl:onProperty hmisowl:EventDate ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:date
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty hmisowl:DateDeleted ;
                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                 owl:onDataRange xsd:dateTime
@@ -3388,6 +3437,10 @@ hmisowl:ConnectionWithSOAR <http://purl.org/dc/terms/identifier> "P4.1"^^xsd:str
 
 
 hmisowl:DisabilityResponse <http://purl.org/dc/terms/description> "See FY2022 HMIS Data Dictionary v1.4, Section 4.05-4.10, Response #2.  Permissable values vary depending on which disability type is declared.  The values are contained with \"Field and Response(s) 2\" within 4.5 through 4.10. In the instance document, the xsi:type of this element must be declared, and the type depends on the value within the sibling hmis:DisabilityType element.  See the example HUD_HMIS_Instance.xml file to see how this should appear.  Either xsi:type=\"hmis:disabilityResponse[insert type]\" or xsi:type=\"hmis:disabilityResponseSubstanceUseDisorder\"can be used."^^xsd:string .
+
+
+hmisowl:Event <http://purl.org/dc/terms/identifier> "4.20.2"^^xsd:string ;
+              <http://purl.org/dc/terms/description> "Event"^^xsd:string .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
