@@ -86,6 +86,10 @@ hmis:addressDataQuality rdf:type rdfs:Datatype .
 hmis:annualPercentAMI rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#askedOrForcedToExchangeForSex
+hmis:askedOrForcedToExchangeForSex rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#assessmentLevel
 hmis:assessmentLevel rdf:type rdfs:Datatype .
 
@@ -96,6 +100,10 @@ hmis:assessmentType rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#cocCode
 hmis:cocCode rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#countOfExchangeForSex
+hmis:countOfExchangeForSex rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#dataCollectionStage
@@ -128,6 +136,10 @@ hmis:ethnicity rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#evictionHistory
 hmis:evictionHistory rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#housingAssessmentAtExit
+hmis:housingAssessmentAtExit rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#hpScreeningScore
@@ -178,12 +190,20 @@ hmis:noYesDoesntKnowRefused rdf:type rdfs:Datatype .
 hmis:noYesMissing rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesWorkerDoesntKnow
+hmis:noYesWorkerDoesntKnow rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#percentAMISimple
 hmis:percentAMISimple rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#prioritizationStatus
 hmis:prioritizationStatus rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#projectCompletionStatus
+hmis:projectCompletionStatus rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#raceGenderNone
@@ -226,6 +246,10 @@ hmis:string32 rdf:type rdfs:Datatype .
 hmis:string50 rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#subsidyInformation
+hmis:subsidyInformation rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#timeToHousingLoss
 hmis:timeToHousingLoss rdf:type rdfs:Datatype .
 
@@ -244,6 +268,10 @@ hmis:zipCode rdf:type rdfs:Datatype .
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#issuesYears
 hmisowl:issuesYears rdf:type rdfs:Datatype .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#referralResult
+hmisowl:referralResult rdf:type rdfs:Datatype .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#sexualOrientation
@@ -603,7 +631,7 @@ hmisowl:AnnualPercentAMI rdf:type owl:DatatypeProperty ;
                          rdfs:domain hmisowl:EntrySSVF ;
                          rdfs:range hmis:annualPercentAMI ;
                          <http://purl.org/dc/terms/description> "Current household income"^^xsd:string ;
-                         <http://purl.org/dc/terms/identifier> "V7.C"^^xsd:string .
+                         <http://purl.org/dc/terms/identifier> "V7.B"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AntiRetroviral
@@ -619,11 +647,19 @@ hmisowl:Asian rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AskedOrForcedToExchangeForSex
-hmisowl:AskedOrForcedToExchangeForSex rdf:type owl:DatatypeProperty .
+hmisowl:AskedOrForcedToExchangeForSex rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain hmisowl:ExitRHY ;
+                                      rdfs:range hmis:askedOrForcedToExchangeForSex ;
+                                      <http://purl.org/dc/terms/description> "Ever made/persuaded/forced to have sex in exchange for something"^^xsd:string ;
+                                      <http://purl.org/dc/terms/identifier> "R15.C"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AskedOrForcedToExchangeForSexPastThreeMonths
-hmisowl:AskedOrForcedToExchangeForSexPastThreeMonths rdf:type owl:DatatypeProperty .
+hmisowl:AskedOrForcedToExchangeForSexPastThreeMonths rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain hmisowl:ExitRHY ;
+                                                     rdfs:range hmis:noYesDoesntKnowRefused ;
+                                                     <http://purl.org/dc/terms/description> "In the last three months?"^^xsd:string ;
+                                                     <http://purl.org/dc/terms/identifier> "R15.D"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#AssessmentAnswer
@@ -788,7 +824,7 @@ hmisowl:ClientLeaseHolder rdf:type owl:DatatypeProperty ;
                           rdfs:domain hmisowl:EntrySSVF ;
                           rdfs:range hmis:noYesMissing ;
                           <http://purl.org/dc/terms/description> "Client is a current leaseholder."^^xsd:string ;
-                          <http://purl.org/dc/terms/identifier> "V7.E"^^xsd:string .
+                          <http://purl.org/dc/terms/identifier> "V7.D"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CoCCode
@@ -803,11 +839,15 @@ hmisowl:CoCPrioritized rdf:type owl:DatatypeProperty ;
                        rdfs:domain hmisowl:EntrySSVF ;
                        rdfs:range hmis:noYesMissing ;
                        <http://purl.org/dc/terms/description> "Current/recent resident in area prioritized by the CoC"^^xsd:string ;
-                       <http://purl.org/dc/terms/identifier> "V7.R"^^xsd:string .
+                       <http://purl.org/dc/terms/identifier> "V7.Q"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CoercedToContinueWork
-hmisowl:CoercedToContinueWork rdf:type owl:DatatypeProperty .
+hmisowl:CoercedToContinueWork rdf:type owl:DatatypeProperty ;
+                              rdfs:domain hmisowl:ExitRHY ;
+                              rdfs:range hmis:noYesDoesntKnowRefused ;
+                              <http://purl.org/dc/terms/description> "Felt forced, coerced, pressured, or tricked into continuing the job"^^xsd:string ;
+                              <http://purl.org/dc/terms/identifier> "R16.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ConnectionWithSOAR
@@ -821,11 +861,19 @@ hmisowl:ContinuumProject rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CounselingReceived
-hmisowl:CounselingReceived rdf:type owl:DatatypeProperty .
+hmisowl:CounselingReceived rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:ExitRHY ;
+                           rdfs:range hmis:noYesMissing ;
+                           <http://purl.org/dc/terms/description> "Counseling received by client"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "R18.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CountOfExchangeForSex
-hmisowl:CountOfExchangeForSex rdf:type owl:DatatypeProperty .
+hmisowl:CountOfExchangeForSex rdf:type owl:DatatypeProperty ;
+                              rdfs:domain hmisowl:ExitRHY ;
+                              rdfs:range hmis:countOfExchangeForSex ;
+                              <http://purl.org/dc/terms/description> "How many times"^^xsd:string ;
+                              <http://purl.org/dc/terms/identifier> "R15.B"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CountOutreachReferralApproaches
@@ -841,7 +889,7 @@ hmisowl:CriminalRecord rdf:type owl:DatatypeProperty ;
                        rdfs:domain hmisowl:EntrySSVF ;
                        rdfs:range hmis:noYesMissing ;
                        <http://purl.org/dc/terms/description> "Criminal record for arson, drug dealing or manufacture, or felony offense against persons or property (adults in household)"^^xsd:string ;
-                       <http://purl.org/dc/terms/identifier> "V7.I"^^xsd:string .
+                       <http://purl.org/dc/terms/identifier> "V7.H"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentEdStatus
@@ -861,7 +909,7 @@ hmisowl:CurrentPregnant rdf:type owl:DatatypeProperty ;
                         rdfs:domain hmisowl:EntrySSVF ;
                         rdfs:range hmis:noYesMissing ;
                         <http://purl.org/dc/terms/description> "Currently pregnant (any household member)"^^xsd:string ;
-                        <http://purl.org/dc/terms/identifier> "V7.N"^^xsd:string .
+                        <http://purl.org/dc/terms/identifier> "V7.M"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#CurrentSchoolAttend
@@ -954,7 +1002,7 @@ hmisowl:DependentUnder6 rdf:type owl:DatatypeProperty ;
                         rdfs:domain hmisowl:EntrySSVF ;
                         rdfs:range hmis:dependentUnder6 ;
                         <http://purl.org/dc/terms/description> "Household includes one or more young children (age six or under), or a child who requires significant care"^^xsd:string ;
-                        <http://purl.org/dc/terms/identifier> "V7.P"^^xsd:string .
+                        <http://purl.org/dc/terms/identifier> "V7.O"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DesertStorm
@@ -966,15 +1014,28 @@ hmisowl:DesertStorm rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Destination
-hmisowl:Destination rdf:type owl:DatatypeProperty .
+hmisowl:Destination rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:Exit ;
+                    rdfs:range hmis:livingSituation ;
+                    <http://purl.org/dc/terms/description> "Destination"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "3.12.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DestinationSafeClient
-hmisowl:DestinationSafeClient rdf:type owl:DatatypeProperty .
+hmisowl:DestinationSafeClient rdf:type owl:DatatypeProperty ;
+                              rdfs:domain hmisowl:ExitRHY ;
+                              rdfs:range hmis:noYesDoesntKnowRefused ,
+                                         hmis:noYesMissing ;
+                              <http://purl.org/dc/terms/description> "Exit destination safe – as determined by the client"^^xsd:string ;
+                              <http://purl.org/dc/terms/identifier> "R19.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DestinationSafeWorker
-hmisowl:DestinationSafeWorker rdf:type owl:DatatypeProperty .
+hmisowl:DestinationSafeWorker rdf:type owl:DatatypeProperty ;
+                              rdfs:domain hmisowl:ExitRHY ;
+                              rdfs:range hmis:noYesWorkerDoesntKnow ;
+                              <http://purl.org/dc/terms/description> "Exit destination safe – as determined by the project/caseworker"^^xsd:string ;
+                              <http://purl.org/dc/terms/identifier> "R19.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DisabilityResponse
@@ -994,7 +1055,7 @@ hmisowl:DisabledHoH rdf:type owl:DatatypeProperty ;
                     rdfs:domain hmisowl:EntrySSVF ;
                     rdfs:range hmis:noYesMissing ;
                     <http://purl.org/dc/terms/description> "Head of household with disabling condition (physical health, mental health, substance use) that directly affects ability to secure/maintain housing"^^xsd:string ;
-                    <http://purl.org/dc/terms/identifier> "V7.M"^^xsd:string .
+                    <http://purl.org/dc/terms/identifier> "V7.L"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#DisablingCondition
@@ -1090,23 +1151,39 @@ hmisowl:EvictionHistory rdf:type owl:DatatypeProperty ;
                         rdfs:domain hmisowl:EntrySSVF ;
                         rdfs:range hmis:evictionHistory ;
                         <http://purl.org/dc/terms/description> "Rental Evictions within the past 7 years"^^xsd:string ;
-                        <http://purl.org/dc/terms/identifier> "V7.H"^^xsd:string .
+                        <http://purl.org/dc/terms/identifier> "V7.G"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ExchangeForSex
-hmisowl:ExchangeForSex rdf:type owl:DatatypeProperty .
+hmisowl:ExchangeForSex rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:ExitRHY ;
+                       rdfs:range hmis:noYesDoesntKnowRefused ;
+                       <http://purl.org/dc/terms/description> "Ever received anything in exchange for sex (e.g. money, food, drugs, shelter)"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "R15.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ExchangeForSexPastThreeMonths
-hmisowl:ExchangeForSexPastThreeMonths rdf:type owl:DatatypeProperty .
+hmisowl:ExchangeForSexPastThreeMonths rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain hmisowl:ExitRHY ;
+                                      rdfs:range hmis:noYesDoesntKnowRefused ;
+                                      <http://purl.org/dc/terms/description> "In the last three months"^^xsd:string ;
+                                      <http://purl.org/dc/terms/identifier> "R15.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ExitDate
-hmisowl:ExitDate rdf:type owl:DatatypeProperty .
+hmisowl:ExitDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hmisowl:Exit ;
+                 rdfs:range xsd:date ;
+                 <http://purl.org/dc/terms/description> "Project Exit Date"^^xsd:string ;
+                 <http://purl.org/dc/terms/identifier> "3.11.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FamilyCounseling
-hmisowl:FamilyCounseling rdf:type owl:DatatypeProperty .
+hmisowl:FamilyCounseling rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:ExitRHY ;
+                         rdfs:range hmis:noYesMissing ;
+                         <http://purl.org/dc/terms/description> "Family"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "R18.A.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#FeelingFrequency
@@ -1190,7 +1267,11 @@ hmisowl:GrantID rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#GroupCounseling
-hmisowl:GroupCounseling rdf:type owl:DatatypeProperty .
+hmisowl:GroupCounseling rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmisowl:ExitRHY ;
+                        rdfs:range hmis:noYesMissing ;
+                        <http://purl.org/dc/terms/description> "Group – including peer counseling"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "R18.A.3"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HH5Plus
@@ -1198,7 +1279,7 @@ hmisowl:HH5Plus rdf:type owl:DatatypeProperty ;
                 rdfs:domain hmisowl:EntrySSVF ;
                 rdfs:range hmis:noYesMissing ;
                 <http://purl.org/dc/terms/description> "Household size of 5 or more requiring at least 3 bedrooms (due to age/gender mix)"^^xsd:string ;
-                <http://purl.org/dc/terms/identifier> "V7.Q"^^xsd:string .
+                <http://purl.org/dc/terms/identifier> "V7.P"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HIVAIDSAssistance
@@ -1218,7 +1299,7 @@ hmisowl:HPScreeningScore rdf:type owl:DatatypeProperty ;
                          rdfs:domain hmisowl:EntrySSVF ;
                          rdfs:range hmis:hpScreeningScore ;
                          <http://purl.org/dc/terms/description> "HP applicant total points (integer)"^^xsd:string ;
-                         <http://purl.org/dc/terms/identifier> "V7.S"^^xsd:string .
+                         <http://purl.org/dc/terms/identifier> "V7.R"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HealthStatusID
@@ -1230,7 +1311,7 @@ hmisowl:HoHLeasesHolder rdf:type owl:DatatypeProperty ;
                         rdfs:domain hmisowl:EntrySSVF ;
                         rdfs:range hmis:noYesMissing ;
                         <http://purl.org/dc/terms/description> "Has head of household (HoH) ever been a leaseholder?"^^xsd:string ;
-                        <http://purl.org/dc/terms/identifier> "V7.F"^^xsd:string .
+                        <http://purl.org/dc/terms/identifier> "V7.E"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HouseholdID
@@ -1242,7 +1323,11 @@ hmisowl:HouseholdType rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HousingAssessment
-hmisowl:HousingAssessment rdf:type owl:DatatypeProperty .
+hmisowl:HousingAssessment rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:ExitHousingAssessment ;
+                          rdfs:range hmis:housingAssessmentAtExit ;
+                          <http://purl.org/dc/terms/description> "Housing Assessment at Exit"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "W5.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#HousingType
@@ -1262,7 +1347,7 @@ hmisowl:IncarceratedAdult rdf:type owl:DatatypeProperty ;
                           rdfs:domain hmisowl:EntrySSVF ;
                           rdfs:range hmis:incarceratedAdult ;
                           <http://purl.org/dc/terms/description> "Criminal record for arson, drug dealing or manufacture, or felony offense against persons or property (adults in household)"^^xsd:string ;
-                          <http://purl.org/dc/terms/identifier> "V7.J"^^xsd:string .
+                          <http://purl.org/dc/terms/identifier> "V7.I"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#IncarceratedParent
@@ -1285,7 +1370,11 @@ hmisowl:IndianHealthServices rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#IndividualCounseling
-hmisowl:IndividualCounseling rdf:type owl:DatatypeProperty .
+hmisowl:IndividualCounseling rdf:type owl:DatatypeProperty ;
+                             rdfs:domain hmisowl:ExitRHY ;
+                             rdfs:range hmis:noYesMissing ;
+                             <http://purl.org/dc/terms/description> "Individual"^^xsd:string ;
+                             <http://purl.org/dc/terms/identifier> "R18.A.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#InformationDate
@@ -1367,7 +1456,11 @@ hmisowl:LOSUnderThreshold rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LaborExploitPastThreeMonths
-hmisowl:LaborExploitPastThreeMonths rdf:type owl:DatatypeProperty .
+hmisowl:LaborExploitPastThreeMonths rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain hmisowl:ExitRHY ;
+                                    rdfs:range hmis:noYesDoesntKnowRefused ;
+                                    <http://purl.org/dc/terms/description> "In the last 3 months"^^xsd:string ;
+                                    <http://purl.org/dc/terms/identifier> "R16.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LastGradeCompleted
@@ -1447,7 +1540,7 @@ hmisowl:LiteralHomelessHistory rdf:type owl:DatatypeProperty ;
                                rdfs:domain hmisowl:EntrySSVF ;
                                rdfs:range hmis:literalHomelessHistory ;
                                <http://purl.org/dc/terms/description> "History of literal homelessness (street/shelter/transitional housing)"^^xsd:string ;
-                               <http://purl.org/dc/terms/identifier> "V7.D"^^xsd:string .
+                               <http://purl.org/dc/terms/identifier> "V7.C"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LivingSituation
@@ -1459,7 +1552,11 @@ hmisowl:LivingSituation rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LocationCrisisOrPHHousing
-hmisowl:LocationCrisisOrPHHousing rdf:type owl:DatatypeProperty .
+hmisowl:LocationCrisisOrPHHousing rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain hmisowl:Event ;
+                                  rdfs:range hmis:string250 ;
+                                  <http://purl.org/dc/terms/description> "Location of Crisis Housing or Permanent Housing Referral [Project name/HMIS ID]"^^xsd:string ;
+                                  <http://purl.org/dc/terms/identifier> "4.20.C"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#LocationDetails
@@ -1663,7 +1760,11 @@ hmisowl:OtherBenefitsSourceIdentify rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#OtherDestination
-hmisowl:OtherDestination rdf:type owl:DatatypeProperty .
+hmisowl:OtherDestination rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:Exit ;
+                         rdfs:range hmis:string50 ;
+                         <http://purl.org/dc/terms/description> "If Other for “Type of Residence”, Specify Where"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "3.12.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#OtherFunder
@@ -1743,19 +1844,35 @@ hmisowl:PhysicalDisabilityFam rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PosAdultConnections
-hmisowl:PosAdultConnections rdf:type owl:DatatypeProperty .
+hmisowl:PosAdultConnections rdf:type owl:DatatypeProperty ;
+                            rdfs:domain hmisowl:ExitRHY ;
+                            rdfs:range hmis:noYesWorkerDoesntKnow ;
+                            <http://purl.org/dc/terms/description> "Client has permanent positive adult connections outside of project"^^xsd:string ;
+                            <http://purl.org/dc/terms/identifier> "R19.3"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PosCommunityConnections
-hmisowl:PosCommunityConnections rdf:type owl:DatatypeProperty .
+hmisowl:PosCommunityConnections rdf:type owl:DatatypeProperty ;
+                                rdfs:domain hmisowl:ExitRHY ;
+                                rdfs:range hmis:noYesWorkerDoesntKnow ;
+                                <http://purl.org/dc/terms/description> "Client has permanent positive community connections outside of project"^^xsd:string ;
+                                <http://purl.org/dc/terms/identifier> "R19.5"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PosPeerConnections
-hmisowl:PosPeerConnections rdf:type owl:DatatypeProperty .
+hmisowl:PosPeerConnections rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:ExitRHY ;
+                           rdfs:range hmis:noYesWorkerDoesntKnow ;
+                           <http://purl.org/dc/terms/description> "Client has permanent positive peer connections outside of project"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "R19.4"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PostExitCounselingPlan
-hmisowl:PostExitCounselingPlan rdf:type owl:DatatypeProperty .
+hmisowl:PostExitCounselingPlan rdf:type owl:DatatypeProperty ;
+                               rdfs:domain hmisowl:ExitRHY ;
+                               rdfs:range hmis:noYesMissing ;
+                               <http://purl.org/dc/terms/description> "A plan is in place to start or continue counseling after exit"^^xsd:string ;
+                               <http://purl.org/dc/terms/identifier> "R18.3"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PregnancyStatus
@@ -1783,7 +1900,7 @@ hmisowl:PrisonDischarge rdf:type owl:DatatypeProperty ;
                         rdfs:domain hmisowl:EntrySSVF ;
                         rdfs:range hmis:noYesMissing ;
                         <http://purl.org/dc/terms/description> "Discharged from jail or prison within last six months after incarceration of 90 days or more (adults)"^^xsd:string ;
-                        <http://purl.org/dc/terms/identifier> "V7.K"^^xsd:string .
+                        <http://purl.org/dc/terms/identifier> "V7.J"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PrivateDisability
@@ -1799,7 +1916,11 @@ hmisowl:PrivatePay rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ProbSolDivRRResult
-hmisowl:ProbSolDivRRResult rdf:type owl:DatatypeProperty .
+hmisowl:ProbSolDivRRResult rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:Event ;
+                           rdfs:range hmis:noYesMissing ;
+                           <http://purl.org/dc/terms/description> "Problem Solving/Diversion/Rapid Resolution intervention or service result - Client housed/re-housed in a safe alternative"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "4.20.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ProjectCommonName
@@ -1807,7 +1928,11 @@ hmisowl:ProjectCommonName rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ProjectCompletionStatus
-hmisowl:ProjectCompletionStatus rdf:type owl:DatatypeProperty .
+hmisowl:ProjectCompletionStatus rdf:type owl:DatatypeProperty ;
+                                rdfs:domain hmisowl:ExitRHY ;
+                                rdfs:range hmis:projectCompletionStatus ;
+                                <http://purl.org/dc/terms/description> "Project Completion Status"^^xsd:string ;
+                                <http://purl.org/dc/terms/identifier> "R17.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ProjectID
@@ -1855,7 +1980,11 @@ hmisowl:RecordType rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ReferralCaseManageAfter
-hmisowl:ReferralCaseManageAfter rdf:type owl:DatatypeProperty .
+hmisowl:ReferralCaseManageAfter rdf:type owl:DatatypeProperty ;
+                                rdfs:domain hmisowl:Event ;
+                                rdfs:range hmis:noYesMissing ;
+                                <http://purl.org/dc/terms/description> "Referral to post-placement/follow-up case management result - Enrolled in Aftercare project"^^xsd:string ;
+                                <http://purl.org/dc/terms/identifier> "4.20.B"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ReferralOutcome
@@ -1863,7 +1992,11 @@ hmisowl:ReferralOutcome rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ReferralResult
-hmisowl:ReferralResult rdf:type owl:DatatypeProperty .
+hmisowl:ReferralResult rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:Event ;
+                       rdfs:range hmisowl:referralResult ;
+                       <http://purl.org/dc/terms/description> "Referral Result"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "4.20.D"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ReferralSource
@@ -1902,7 +2035,11 @@ hmisowl:ResourcesToObtain rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ResultDate
-hmisowl:ResultDate rdf:type owl:DatatypeProperty .
+hmisowl:ResultDate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hmisowl:Event ;
+                   rdfs:range xsd:date ;
+                   <http://purl.org/dc/terms/description> "Date of result"^^xsd:string ;
+                   <http://purl.org/dc/terms/identifier> "4.20.E"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#RhyAfterCareID
@@ -1967,11 +2104,19 @@ hmisowl:ServiceFAReferralID rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SessionCountAtExit
-hmisowl:SessionCountAtExit rdf:type owl:DatatypeProperty .
+hmisowl:SessionCountAtExit rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:ExitRHY ;
+                           rdfs:range xsd:positiveInteger ;
+                           <http://purl.org/dc/terms/description> "Identify the number of sessions received by exit"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "R18.B"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SessionsInPlan
-hmisowl:SessionsInPlan rdf:type owl:DatatypeProperty .
+hmisowl:SessionsInPlan rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:ExitRHY ;
+                       rdfs:range xsd:positiveInteger ;
+                       <http://purl.org/dc/terms/description> "Total number of sessions planned in youth’s treatment or service plan"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "R18.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SexOffender
@@ -1979,7 +2124,7 @@ hmisowl:SexOffender rdf:type owl:DatatypeProperty ;
                     rdfs:domain hmisowl:EntrySSVF ;
                     rdfs:range hmis:noYesMissing ;
                     <http://purl.org/dc/terms/description> "Registered sex offender (all household members)"^^xsd:string ;
-                    <http://purl.org/dc/terms/identifier> "V7.L"^^xsd:string .
+                    <http://purl.org/dc/terms/identifier> "V7.K"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SexualOrientation
@@ -2003,7 +2148,7 @@ hmisowl:SingleParent rdf:type owl:DatatypeProperty ;
                      rdfs:domain hmisowl:EntrySSVF ;
                      rdfs:range hmis:noYesMissing ;
                      <http://purl.org/dc/terms/description> "Single parent household with minor child(ren)"^^xsd:string ;
-                     <http://purl.org/dc/terms/identifier> "V7.O"^^xsd:string .
+                     <http://purl.org/dc/terms/identifier> "V7.N"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SocSecRetirement
@@ -2039,11 +2184,15 @@ hmisowl:SubsidyAtRisk rdf:type owl:DatatypeProperty ;
                       rdfs:domain hmisowl:EntrySSVF ;
                       rdfs:range hmis:noYesMissing ;
                       <http://purl.org/dc/terms/description> "Currently at risk of losing a tenant-based housing subsidy or housing in a subsidized building or unit (household)"^^xsd:string ;
-                      <http://purl.org/dc/terms/identifier> "V7.G"^^xsd:string .
+                      <http://purl.org/dc/terms/identifier> "V7.F"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SubsidyInformation
-hmisowl:SubsidyInformation rdf:type owl:DatatypeProperty .
+hmisowl:SubsidyInformation rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:ExitHousingAssessment ;
+                           rdfs:range hmis:subsidyInformation ;
+                           <http://purl.org/dc/terms/description> "Subsidy information"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "W5.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SupportFromOthers
@@ -2099,7 +2248,7 @@ hmisowl:ThresholdScore rdf:type owl:DatatypeProperty ;
                        rdfs:domain hmisowl:EntrySSVF ;
                        rdfs:range xsd:positiveInteger ;
                        <http://purl.org/dc/terms/description> "Grantee targeting threshold score (integer)"^^xsd:string ;
-                       <http://purl.org/dc/terms/identifier> "V7.T"^^xsd:string .
+                       <http://purl.org/dc/terms/identifier> "V7.S"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#TimeToHousingLoss
@@ -2107,7 +2256,7 @@ hmisowl:TimeToHousingLoss rdf:type owl:DatatypeProperty ;
                           rdfs:domain hmisowl:EntrySSVF ;
                           rdfs:range hmis:timeToHousingLoss ;
                           <http://purl.org/dc/terms/description> "Current housing loss expected within…"^^xsd:string ;
-                          <http://purl.org/dc/terms/identifier> "V7.B"^^xsd:string .
+                          <http://purl.org/dc/terms/identifier> "V7.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#TimesHomelessPastThreeYears
@@ -2152,14 +2301,6 @@ hmisowl:UnemploymentFam rdf:type owl:DatatypeProperty ;
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#UnitInventory
 hmisowl:UnitInventory rdf:type owl:DatatypeProperty .
-
-
-###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#UrgentReferral
-hmisowl:UrgentReferral rdf:type owl:DatatypeProperty ;
-                       rdfs:domain hmisowl:EntrySSVF ;
-                       rdfs:range hmis:noYesMissing ;
-                       <http://purl.org/dc/terms/description> "Referred by Coordinated Entry or a homeless assistance provider to prevent the household from entering an emergency shelter or transitional housing or from staying in a place not meant for human habitation."^^xsd:string ;
-                       <http://purl.org/dc/terms/identifier> "V7.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#UserFirstName
@@ -2277,7 +2418,11 @@ hmisowl:White rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#WorkPlaceViolenceThreats
-hmisowl:WorkPlaceViolenceThreats rdf:type owl:DatatypeProperty .
+hmisowl:WorkPlaceViolenceThreats rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain hmisowl:ExitRHY ;
+                                 rdfs:range hmis:noYesDoesntKnowRefused ;
+                                 <http://purl.org/dc/terms/description> "Ever afraid to quit/leave work due to threats of violence to yourself, family, or friends"^^xsd:string ;
+                                 <http://purl.org/dc/terms/identifier> "R16.1"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#WorkersComp
@@ -2289,7 +2434,11 @@ hmisowl:WorkersCompAmount rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#WorkplacePromiseDifference
-hmisowl:WorkplacePromiseDifference rdf:type owl:DatatypeProperty .
+hmisowl:WorkplacePromiseDifference rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain hmisowl:ExitRHY ;
+                                   rdfs:range hmis:noYesDoesntKnowRefused ;
+                                   <http://purl.org/dc/terms/description> "Ever promised work where work or payment was different than you expected"^^xsd:string ;
+                                   <http://purl.org/dc/terms/identifier> "R16.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#WorldWarII
@@ -2980,6 +3129,16 @@ hmisowl:Exit rdf:type owl:Class ;
                                owl:onDataRange xsd:dateTime
                              ] ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty hmisowl:Destination ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange hmis:livingSituation
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty hmisowl:ExitDate ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:date
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty hmisowl:DateDeleted ;
                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                owl:onDataRange xsd:dateTime
@@ -2997,6 +3156,11 @@ hmisowl:ExitHousingAssessment rdf:type owl:Class ;
                                                 owl:onProperty hmisowl:DateUpdated ;
                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                 owl:onDataRange xsd:dateTime
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty hmisowl:HousingAssessment ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange hmis:housingAssessmentAtExit
                                               ] ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty hmisowl:DateDeleted ;
