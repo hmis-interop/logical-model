@@ -214,6 +214,10 @@ hmis:projectCompletionStatus rdf:type rdfs:Datatype .
 hmis:raceGenderNone rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#reasonNotInsuredOrAssisted
+hmis:reasonNotInsuredOrAssisted rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#referralSource
 hmis:referralSource rdf:type rdfs:Datatype .
 
@@ -804,7 +808,11 @@ hmisowl:CMExitReason rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#COBRA
-hmisowl:COBRA rdf:type owl:DatatypeProperty .
+hmisowl:COBRA rdf:type owl:DatatypeProperty ;
+              rdfs:domain hmisowl:HealthInsurance ;
+              rdfs:range hmis:noYesMissing ;
+              <http://purl.org/dc/terms/description> "Health Insurance obtained through COBRA"^^xsd:string ;
+              <http://purl.org/dc/terms/identifier> "4.04.8"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ChildSupport
@@ -1131,7 +1139,11 @@ hmisowl:Employed rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EmployerProvided
-hmisowl:EmployerProvided rdf:type owl:DatatypeProperty .
+hmisowl:EmployerProvided rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:HealthInsurance ;
+                         rdfs:range hmis:noYesMissing ;
+                         <http://purl.org/dc/terms/description> "Employer – Provided Health Insurance"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "4.04.7"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#EmploymentType
@@ -1392,7 +1404,11 @@ hmisowl:IncomeFromAnySource rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#IndianHealthServices
-hmisowl:IndianHealthServices rdf:type owl:DatatypeProperty .
+hmisowl:IndianHealthServices rdf:type owl:DatatypeProperty ;
+                             rdfs:domain hmisowl:HealthInsurance ;
+                             rdfs:range hmis:noYesMissing ;
+                             <http://purl.org/dc/terms/description> "Indian Health Services Program"^^xsd:string ;
+                             <http://purl.org/dc/terms/identifier> "4.04.11"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#IndividualCounseling
@@ -1418,7 +1434,11 @@ hmisowl:InsufficientIncome rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#InsuranceFromAnySource
-hmisowl:InsuranceFromAnySource rdf:type owl:DatatypeProperty .
+hmisowl:InsuranceFromAnySource rdf:type owl:DatatypeProperty ;
+                               rdfs:domain hmisowl:HealthInsurance ;
+                               rdfs:range hmis:noYesDoesntKnowRefused ;
+                               <http://purl.org/dc/terms/description> "Covered by Health Insurance"^^xsd:string ;
+                               <http://purl.org/dc/terms/identifier> "4.04.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#InventoryEndDate
@@ -1602,7 +1622,11 @@ hmisowl:Male rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Medicaid
-hmisowl:Medicaid rdf:type owl:DatatypeProperty .
+hmisowl:Medicaid rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hmisowl:HealthInsurance ;
+                 rdfs:range hmis:noYesMissing ;
+                 <http://purl.org/dc/terms/description> "MEDICAID"^^xsd:string ;
+                 <http://purl.org/dc/terms/identifier> "4.04.3"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MedicalAssistanceID
@@ -1610,7 +1634,11 @@ hmisowl:MedicalAssistanceID rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Medicare
-hmisowl:Medicare rdf:type owl:DatatypeProperty .
+hmisowl:Medicare rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hmisowl:HealthInsurance ;
+                 rdfs:range hmis:noYesMissing ;
+                 <http://purl.org/dc/terms/description> "MEDICARE"^^xsd:string ;
+                 <http://purl.org/dc/terms/identifier> "4.04.4"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#MentalHealthDisorderFam
@@ -1702,11 +1730,19 @@ hmisowl:NoADAPReason rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoCOBRAReason
-hmisowl:NoCOBRAReason rdf:type owl:DatatypeProperty .
+hmisowl:NoCOBRAReason rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hmisowl:HealthInsurance ;
+                      rdfs:range hmis:reasonNotInsuredOrAssisted ;
+                      <http://purl.org/dc/terms/description> "No Health Insurance obtained through COBRA Reason"^^xsd:string ;
+                      <http://purl.org/dc/terms/identifier> "4.04.8A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoEmployerProvidedReason
-hmisowl:NoEmployerProvidedReason rdf:type owl:DatatypeProperty .
+hmisowl:NoEmployerProvidedReason rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain hmisowl:HealthInsurance ;
+                                 rdfs:range hmis:reasonNotInsuredOrAssisted ;
+                                 <http://purl.org/dc/terms/description> "No Employer Provided Health Insurance Reason"^^xsd:string ;
+                                 <http://purl.org/dc/terms/identifier> "4.04.7A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoHIVAIDSAssistanceReason
@@ -1714,19 +1750,35 @@ hmisowl:NoHIVAIDSAssistanceReason rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoIndianHealthServicesReason
-hmisowl:NoIndianHealthServicesReason rdf:type owl:DatatypeProperty .
+hmisowl:NoIndianHealthServicesReason rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain hmisowl:HealthInsurance ;
+                                     rdfs:range hmis:reasonNotInsuredOrAssisted ;
+                                     <http://purl.org/dc/terms/description> "No Indian Health Services Program Reason"^^xsd:string ;
+                                     <http://purl.org/dc/terms/identifier> "4.04.11A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoMedicaidReason
-hmisowl:NoMedicaidReason rdf:type owl:DatatypeProperty .
+hmisowl:NoMedicaidReason rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:HealthInsurance ;
+                         rdfs:range hmis:reasonNotInsuredOrAssisted ;
+                         <http://purl.org/dc/terms/description> "No Medicaid Reason"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "4.04.3A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoMedicareReason
-hmisowl:NoMedicareReason rdf:type owl:DatatypeProperty .
+hmisowl:NoMedicareReason rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:HealthInsurance ;
+                         rdfs:range hmis:reasonNotInsuredOrAssisted ;
+                         <http://purl.org/dc/terms/description> "No Medicare Reason"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "4.04.4A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoPrivatePayReason
-hmisowl:NoPrivatePayReason rdf:type owl:DatatypeProperty .
+hmisowl:NoPrivatePayReason rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:HealthInsurance ;
+                           rdfs:range hmis:reasonNotInsuredOrAssisted ;
+                           <http://purl.org/dc/terms/description> "No Private Pay Health Insurance Reason"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "4.04.9A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoRyanWhiteReason
@@ -1734,15 +1786,27 @@ hmisowl:NoRyanWhiteReason rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoSCHIPReason
-hmisowl:NoSCHIPReason rdf:type owl:DatatypeProperty .
+hmisowl:NoSCHIPReason rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hmisowl:HealthInsurance ;
+                      rdfs:range hmis:reasonNotInsuredOrAssisted ;
+                      <http://purl.org/dc/terms/description> "No SCHIP Reason"^^xsd:string ;
+                      <http://purl.org/dc/terms/identifier> "4.04.5A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoStateHealthInsReason
-hmisowl:NoStateHealthInsReason rdf:type owl:DatatypeProperty .
+hmisowl:NoStateHealthInsReason rdf:type owl:DatatypeProperty ;
+                               rdfs:domain hmisowl:HealthInsurance ;
+                               rdfs:range hmis:reasonNotInsuredOrAssisted ;
+                               <http://purl.org/dc/terms/description> "No State Health Insurance for Adults (or use local name) Reason"^^xsd:string ;
+                               <http://purl.org/dc/terms/identifier> "4.04.10A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NoVAMedReason
-hmisowl:NoVAMedReason rdf:type owl:DatatypeProperty .
+hmisowl:NoVAMedReason rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hmisowl:HealthInsurance ;
+                      rdfs:range hmis:reasonNotInsuredOrAssisted ;
+                      <http://purl.org/dc/terms/description> "No VA Medical Reason"^^xsd:string ;
+                      <http://purl.org/dc/terms/identifier> "4.04.6A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#NonCashBenefitsID
@@ -1802,11 +1866,19 @@ hmisowl:OtherFunder rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#OtherInsurance
-hmisowl:OtherInsurance rdf:type owl:DatatypeProperty .
+hmisowl:OtherInsurance rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:HealthInsurance ;
+                       rdfs:range hmis:noYesMissing ;
+                       <http://purl.org/dc/terms/description> "Other"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "4.04.12"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#OtherInsuranceIdentify
-hmisowl:OtherInsuranceIdentify rdf:type owl:DatatypeProperty .
+hmisowl:OtherInsuranceIdentify rdf:type owl:DatatypeProperty ;
+                               rdfs:domain hmisowl:HealthInsurance ;
+                               rdfs:range hmis:string50 ;
+                               <http://purl.org/dc/terms/description> "No Other Insurance Reason"^^xsd:string ;
+                               <http://purl.org/dc/terms/identifier> "4.04.12A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#OtherSource
@@ -1942,7 +2014,11 @@ hmisowl:PrivateDisabilityAmount rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#PrivatePay
-hmisowl:PrivatePay rdf:type owl:DatatypeProperty .
+hmisowl:PrivatePay rdf:type owl:DatatypeProperty ;
+                   rdfs:domain hmisowl:HealthInsurance ;
+                   rdfs:range hmis:noYesMissing ;
+                   <http://purl.org/dc/terms/description> "Private Pay Health Insurance"^^xsd:string ;
+                   <http://purl.org/dc/terms/identifier> "4.04.9"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ProbSolDivRRResult
@@ -2085,7 +2161,11 @@ hmisowl:RyanWhiteMedDent rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SCHIP
-hmisowl:SCHIP rdf:type owl:DatatypeProperty .
+hmisowl:SCHIP rdf:type owl:DatatypeProperty ;
+              rdfs:domain hmisowl:HealthInsurance ;
+              rdfs:range hmis:noYesMissing ;
+              <http://purl.org/dc/terms/description> "State Children’s Health Insurance Program (or use local name)"^^xsd:string ;
+              <http://purl.org/dc/terms/identifier> "4.04.5"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SNAP
@@ -2194,7 +2274,11 @@ hmisowl:State rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#StateHealthIns
-hmisowl:StateHealthIns rdf:type owl:DatatypeProperty .
+hmisowl:StateHealthIns rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:HealthInsurance ;
+                       rdfs:range hmis:noYesMissing ;
+                       <http://purl.org/dc/terms/description> "State Health Insurance for Adults (or use local name)"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "4.04.10"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#SubTypeProvided
@@ -2377,7 +2461,11 @@ hmisowl:VAMCStation rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#VAMedicalServices
-hmisowl:VAMedicalServices rdf:type owl:DatatypeProperty .
+hmisowl:VAMedicalServices rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:HealthInsurance ;
+                          rdfs:range hmis:noYesMissing ;
+                          <http://purl.org/dc/terms/description> "Veteran’s Administration (VA) Medical Services"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "4.04.6"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#VashExitReasonID
