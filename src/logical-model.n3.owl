@@ -138,6 +138,10 @@ hmis:ethnicity rdf:type rdfs:Datatype .
 hmis:evictionHistory rdf:type rdfs:Datatype .
 
 
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#federalPartnerProgramsAndComponents
+hmis:federalPartnerProgramsAndComponents rdf:type rdfs:Datatype .
+
+
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#housingAssessmentAtExit
 hmis:housingAssessmentAtExit rdf:type rdfs:Datatype .
 
@@ -565,6 +569,22 @@ hmisowl:hasYouthEducationStatus rdf:type owl:ObjectProperty ;
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#EndDate
+hmis:EndDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain hmisowl:Funder ;
+             rdfs:range xsd:date ;
+             <http://purl.org/dc/terms/description> "Grant End Date"^^xsd:string ;
+             <http://purl.org/dc/terms/identifier> "2.06.4"^^xsd:string .
+
+
+###  http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#StartDate
+hmis:StartDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain hmisowl:Funder ;
+               rdfs:range xsd:date ;
+               <http://purl.org/dc/terms/description> "Grant Start Date"^^xsd:string ;
+               <http://purl.org/dc/terms/identifier> "2.06.3"^^xsd:string .
+
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#ADAP
 hmisowl:ADAP rdf:type owl:DatatypeProperty .
@@ -1223,7 +1243,9 @@ hmisowl:FormerWardJuvenileJustice rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Funder
-hmisowl:Funder rdf:type owl:DatatypeProperty .
+hmisowl:Funder rdf:type owl:DatatypeProperty ;
+               rdfs:domain hmisowl:Funder ;
+               rdfs:range hmis:federalPartnerProgramsAndComponents .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#GA
@@ -1263,7 +1285,11 @@ hmisowl:GeographyType rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#GrantID
-hmisowl:GrantID rdf:type owl:DatatypeProperty .
+hmisowl:GrantID rdf:type owl:DatatypeProperty ;
+                rdfs:domain hmisowl:Funder ;
+                rdfs:range hmis:string32 ;
+                <http://purl.org/dc/terms/description> "Grant Identifier"^^xsd:string ;
+                <http://purl.org/dc/terms/identifier> "2.06.2"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#GroupCounseling
@@ -1768,7 +1794,11 @@ hmisowl:OtherDestination rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#OtherFunder
-hmisowl:OtherFunder rdf:type owl:DatatypeProperty .
+hmisowl:OtherFunder rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:Funder ;
+                    rdfs:range hmis:string50 ;
+                    <http://purl.org/dc/terms/description> "If other specify"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "2.06.A"^^xsd:string .
 
 
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#OtherInsurance
@@ -3210,6 +3240,11 @@ hmisowl:FAAmount rdf:type owl:Class ;
 ###  http://www.hudhdx.info/Resources/Vendors/FY2022/owl#Funder
 hmisowl:Funder rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmis:StartDate ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:date
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:DateCreated ;
                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange xsd:dateTime
@@ -3218,6 +3253,16 @@ hmisowl:Funder rdf:type owl:Class ;
                                  owl:onProperty hmisowl:DateUpdated ;
                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onDataRange xsd:dateTime
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:Funder ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:federalPartnerProgramsAndComponents
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty hmisowl:GrantID ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange hmis:string32
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty hmisowl:DateDeleted ;
@@ -3605,6 +3650,10 @@ hmisowl:DisabilityResponse <http://purl.org/dc/terms/description> "See FY2022 HM
 
 hmisowl:Event <http://purl.org/dc/terms/identifier> "4.20.2"^^xsd:string ;
               <http://purl.org/dc/terms/description> "Event"^^xsd:string .
+
+
+hmisowl:Funder <http://purl.org/dc/terms/identifier> "2.06"^^xsd:string ;
+               <http://purl.org/dc/terms/description> "Funding Sources"^^xsd:string .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
