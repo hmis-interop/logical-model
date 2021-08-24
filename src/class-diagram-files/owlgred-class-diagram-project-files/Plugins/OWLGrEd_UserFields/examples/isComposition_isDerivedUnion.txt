@@ -1,0 +1,163 @@
+return {
+  [2000888863] = "AA#ContextType[id=Association/Role]",
+  [2000889083] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(example:isDerivedUnion $subject \"true\")"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000889075] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["propertyEditorTab"] = "Direct",
+      ["name"] = "isComposition"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000889076,
+        [2] = 2000889079
+      },
+      ["context"] = {
+        [1] = 2000888863
+      },
+      ["fieldType"] = {
+        [1] = 2000888873
+      }
+    }
+  },
+  [2000888929] = "AA#ElemStyleItem[itemName=startShapeCode]",
+  [2000888873] = "AA#RowType[typeName=CheckBox]",
+  [2000888901] = "AA#CompartStyleItem[itemName=prefix-outside]",
+  [2000889076] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "true"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000889077
+      },
+      ["tag"] = {
+        [1] = 2000889078
+      }
+    }
+  },
+  [2000889080] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["propertyEditorTab"] = "Direct",
+      ["name"] = "isDerivedUnion"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000889081,
+        [2] = 2000889084
+      },
+      ["context"] = {
+        [1] = 2000888863
+      },
+      ["fieldType"] = {
+        [1] = 2000888873
+      }
+    }
+  },
+  [2000889084] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "false"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000889073] = {
+    ["class"] = "AA#Profile",
+    ["properties"] = {
+      ["name"] = "isComposition_isDerivedUnion"
+    },
+    ["links"] = {
+      ["field"] = {
+        [1] = 2000889075,
+        [2] = 2000889080
+      },
+      ["tag"] = {
+        [1] = 2000889074
+      }
+    }
+  },
+  [2000889077] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "true",
+      ["value"] = "10"
+    },
+    ["links"] = {
+      ["elemStyleFeature"] = {
+        [1] = 2000888929
+      }
+    }
+  },
+  [2000889081] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "true"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000889385
+      },
+      ["tag"] = {
+        [1] = 2000889083
+      }
+    }
+  },
+  [2000889385] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["target"] = "Name",
+      ["path"] = "Role/",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "/"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000888901
+      }
+    }
+  },
+  [2000889074] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Import_Prefixes",
+      ["tagValue"] = "example:=<http://lumii.lv/ontologies/example.owl#>"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000889078] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(example:isComposition $subject \"true\")"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000889079] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "false"
+    },
+    ["links"] = {
+      
+    }
+  }
+}, 2000889073

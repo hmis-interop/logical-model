@@ -1,0 +1,231 @@
+return {
+  [2000929146] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "true",
+      ["value"] = "1",
+      ["elementTypeName"] = "Generalization"
+    },
+    ["links"] = {
+      ["elemStyleFeature"] = {
+        [1] = 2000911419
+      }
+    }
+  },
+  [2000929154] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["addMirror"] = "true",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "0",
+      ["path"] = "Role/",
+      ["elementTypeName"] = "Association",
+      ["target"] = "Annotation"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000911368
+      }
+    }
+  },
+  [2000929139] = {
+    ["class"] = "AA#Profile",
+    ["properties"] = {
+      ["name"] = "Default_Profile"
+    },
+    ["links"] = {
+      ["view"] = {
+        [1] = 2000929140,
+        [2] = 2000929145,
+        [3] = 2000929150
+      }
+    }
+  },
+  [2000929147] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "true",
+      ["value"] = "1",
+      ["elementTypeName"] = "AssocToFork"
+    },
+    ["links"] = {
+      ["elemStyleFeature"] = {
+        [1] = 2000911419
+      }
+    }
+  },
+  [2000929140] = {
+    ["class"] = "AA#View",
+    ["properties"] = {
+      ["name"] = "Horizontal",
+      ["showInToolBar"] = "true",
+      ["showInPalette"] = "true",
+      ["inActiveIcon"] = "OWLGrEd_UserFields_aaViewHorizontal.BMP",
+      ["activeIcon"] = "OWLGrEd_UserFields_aaViewHorizontalActivated.BMP"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000929141,
+        [2] = 2000929142,
+        [3] = 2000929143,
+        [4] = 2000929144
+      }
+    }
+  },
+  [2000929148] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "true",
+      ["value"] = "1",
+      ["elementTypeName"] = "GeneralizationToFork"
+    },
+    ["links"] = {
+      ["elemStyleFeature"] = {
+        [1] = 2000911419
+      }
+    }
+  },
+  [2000911419] = "AA#ElemStyleItem[itemName=lineDirection]",
+  [2000929141] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "true",
+      ["value"] = "4",
+      ["elementTypeName"] = "Generalization"
+    },
+    ["links"] = {
+      ["elemStyleFeature"] = {
+        [1] = 2000911419
+      }
+    }
+  },
+  [2000929149] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "true",
+      ["value"] = "1",
+      ["elementTypeName"] = "Dependency"
+    },
+    ["links"] = {
+      ["elemStyleFeature"] = {
+        [1] = 2000911419
+      }
+    }
+  },
+  [2000929142] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "true",
+      ["value"] = "4",
+      ["elementTypeName"] = "AssocToFork"
+    },
+    ["links"] = {
+      ["elemStyleFeature"] = {
+        [1] = 2000911419
+      }
+    }
+  },
+  [2000929150] = {
+    ["class"] = "AA#View",
+    ["properties"] = {
+      ["name"] = "HideAllAnnotations",
+      ["showInPalette"] = "true"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000929151,
+        [2] = 2000929152,
+        [3] = 2000929153,
+        [4] = 2000929154
+      }
+    }
+  },
+  [2000929143] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "true",
+      ["value"] = "4",
+      ["elementTypeName"] = "GeneralizationToFork"
+    },
+    ["links"] = {
+      ["elemStyleFeature"] = {
+        [1] = 2000911419
+      }
+    }
+  },
+  [2000929151] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "0",
+      ["elementTypeName"] = "Class",
+      ["target"] = "Annotation"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000911368
+      }
+    }
+  },
+  [2000911368] = "AA#CompartStyleItem[itemName=isVisible]",
+  [2000929144] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "true",
+      ["value"] = "4",
+      ["elementTypeName"] = "Dependency"
+    },
+    ["links"] = {
+      ["elemStyleFeature"] = {
+        [1] = 2000911419
+      }
+    }
+  },
+  [2000929152] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "0",
+      ["path"] = "Attributes/",
+      ["elementTypeName"] = "Class",
+      ["target"] = "Annotation"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000911368
+      }
+    }
+  },
+  [2000929145] = {
+    ["class"] = "AA#View",
+    ["properties"] = {
+      ["name"] = "Vertical",
+      ["showInToolBar"] = "true",
+      ["showInPalette"] = "true",
+      ["inActiveIcon"] = "OWLGrEd_UserFields_aaViewVertical.BMP",
+      ["activeIcon"] = "OWLGrEd_UserFields_aaViewVerticalActivated.BMP"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000929146,
+        [2] = 2000929147,
+        [3] = 2000929148,
+        [4] = 2000929149
+      }
+    }
+  },
+  [2000929153] = {
+    ["class"] = "AA#ViewStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "0",
+      ["elementTypeName"] = "Object",
+      ["target"] = "Annotation"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000911368
+      }
+    }
+  }
+}, 2000929139

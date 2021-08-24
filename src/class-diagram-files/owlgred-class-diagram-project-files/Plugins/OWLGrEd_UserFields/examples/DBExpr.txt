@@ -1,0 +1,268 @@
+return {
+  [2000916737] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "][a-zA-Z0-9-_ .,{}=();-<>'!?@^+*/:",
+      ["fieldType"] = "TextArea",
+      ["name"] = "DBExpr"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000916722] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Import_Prefixes",
+      ["tagValue"] = "rdb2owl:=<http://rdb2owl.lumii.lv/2012/1.0/rdb2owl#>"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000911371] = "AA#CompartStyleItem[itemName=adornment]",
+  [2000916723] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "][a-zA-Z0-9-_ .,{}=();-<>'!?@^+*/:",
+      ["displayPlaceBefore"] = "Attributes",
+      ["propertyEditorTab"] = "Main",
+      ["prefix"] = "{DB: ",
+      ["suffix"] = "}",
+      ["delimiter"] = "\
+",
+      ["fieldType"] = "TextArea+Button",
+      ["name"] = "DBExpr"
+    },
+    ["links"] = {
+      ["context"] = {
+        [1] = 2000911351
+      },
+      ["subField"] = {
+        [1] = 2000916724
+      },
+      ["selfStyleSetting"] = {
+        [1] = 2000916725,
+        [2] = 2000917089
+      },
+      ["tag"] = {
+        [1] = 2000916726
+      }
+    }
+  },
+  [2000916731] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "][a-zA-Z0-9-_ .,{}=();-<>'!?@^+*/:",
+      ["fieldType"] = "TextArea",
+      ["name"] = "DBExpr"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000916724] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "][a-zA-Z0-9-_ .,{}=();-<>'!?@^+*/:",
+      ["fieldType"] = "TextArea",
+      ["name"] = "DBExpr"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000916732] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "1"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000911375
+      }
+    }
+  },
+  [2000917089] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "3"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000911371
+      }
+    }
+  },
+  [2000916725] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "1"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000911375
+      }
+    }
+  },
+  [2000911351] = "AA#ContextType[id=Class]",
+  [2000911354] = "AA#ContextType[id=Object]",
+  [2000916726] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(rdb2owl:DBExpr $subject $value)"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000911375] = "AA#CompartStyleItem[itemName=fontStyleItalic]",
+  [2000911369] = "AA#CompartStyleItem[itemName=adjustment]",
+  [2000916735] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "][a-zA-Z0-9-_ .,{}=();-<>'!?@^+*/:",
+      ["propertyEditorTab"] = "Main",
+      ["prefix"] = "{DB: ",
+      ["suffix"] = "}",
+      ["fieldType"] = "TextArea+Button",
+      ["name"] = "DBExpr"
+    },
+    ["links"] = {
+      ["context"] = {
+        [1] = 2000911354
+      },
+      ["subField"] = {
+        [1] = 2000916737
+      },
+      ["tag"] = {
+        [1] = 2000916736
+      }
+    }
+  },
+  [2000916727] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "][a-zA-Z0-9-_ .,{}=();-<>'!?@^+*/:",
+      ["prefix"] = "{DB: ",
+      ["suffix"] = "}",
+      ["delimiter"] = ",",
+      ["fieldType"] = "TextArea+Button",
+      ["name"] = "DBExpr"
+    },
+    ["links"] = {
+      ["context"] = {
+        [1] = 2000911353
+      },
+      ["subField"] = {
+        [1] = 2000916729
+      },
+      ["tag"] = {
+        [1] = 2000916728
+      }
+    }
+  },
+  [2000911353] = "AA#ContextType[id=Class/Attributes]",
+  [2000911352] = "AA#ContextType[id=Association/Role]",
+  [2000916734] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(rdb2owl:DBExpr $subject $value)"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000916728] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(rdb2owl:DBExpr $subject $value)"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000916736] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(rdb2owl:DBExpr $subject $value)"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000916733] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "10"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000911369
+      }
+    }
+  },
+  [2000916721] = {
+    ["class"] = "AA#Profile",
+    ["properties"] = {
+      ["name"] = "DBExpr"
+    },
+    ["links"] = {
+      ["field"] = {
+        [1] = 2000916723,
+        [2] = 2000916727,
+        [3] = 2000916730,
+        [4] = 2000916735
+      },
+      ["tag"] = {
+        [1] = 2000916722
+      }
+    }
+  },
+  [2000916729] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "][a-zA-Z0-9-_ .,{}=();-<>'!?@^+*/:",
+      ["fieldType"] = "TextArea",
+      ["name"] = "DBExpr"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000916730] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "][a-zA-Z0-9-_ .,{}=();-<>'!?@^+*/:",
+      ["propertyEditorTab"] = "Direct",
+      ["prefix"] = "{DB: ",
+      ["suffix"] = "}",
+      ["delimiter"] = ",",
+      ["fieldType"] = "TextArea+Button",
+      ["name"] = "DBExpr"
+    },
+    ["links"] = {
+      ["context"] = {
+        [1] = 2000911352
+      },
+      ["subField"] = {
+        [1] = 2000916731
+      },
+      ["selfStyleSetting"] = {
+        [1] = 2000916732,
+        [2] = 2000916733
+      },
+      ["tag"] = {
+        [1] = 2000916734
+      }
+    }
+  }
+}, 2000916721

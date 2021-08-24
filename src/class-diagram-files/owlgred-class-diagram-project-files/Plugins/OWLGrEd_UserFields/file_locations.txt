@@ -1,0 +1,12 @@
+1)	Built-in examples (example profile data, etc.)
+..\<OWLGeEd>\Projects\<MyProject>\Plugins\OWLGrEd_UserFields\examples
+
+2)	Project-level user data (not affected by system updates)
+..\<OWLGeEd>\Projects\<MyProject>\Plugins\OWLGrEd_UserFields\user
+
+3)	Tool-level user data (to be available in all new projects)
+..\<OWLGeEd>\Tools\OWLGrEd\Plugins\OWLGrEd_UserFields\user
+
+4)	Tool-level auto load profile data (to be run in all new projects)
+..\<OWLGeEd>\Tools\OWLGrEd\Plugins\OWLGrEd_UserFields\user\AutoLoad
+..\<OWLGeEd>\Tools\OWLGrEd\Plugins\OWLGrEd_UserFields\user\AutoLoadConfiguration

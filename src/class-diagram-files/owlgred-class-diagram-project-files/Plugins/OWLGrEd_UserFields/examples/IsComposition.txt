@@ -1,0 +1,55 @@
+return {
+  [2000917949] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["propertyEditorTab"] = "Direct",
+      ["fieldType"] = "InputField",
+      ["name"] = "IsComposition",
+      ["isExistingField"] = "true"
+    },
+    ["links"] = {
+      ["context"] = {
+        [1] = 2000911352
+      },
+      ["tag"] = {
+        [1] = 2000918139
+      }
+    }
+  },
+  [2000917897] = {
+    ["class"] = "AA#Profile",
+    ["properties"] = {
+      ["name"] = "IsComposition"
+    },
+    ["links"] = {
+      ["field"] = {
+        [1] = 2000917949
+      },
+      ["tag"] = {
+        [1] = 2000917936
+      }
+    }
+  },
+  [2000918139] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(example:IsComposition $subject $value)"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000911352] = "AA#ContextType[id=Association/Role]",
+  [2000917936] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Import_Prefixes",
+      ["tagValue"] = "example:=<http://lumii.lv/ontologies/example.owl#>"
+    },
+    ["links"] = {
+      
+    }
+  }
+}, 2000917897

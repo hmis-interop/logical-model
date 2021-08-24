@@ -1,0 +1,767 @@
+return {
+  [2000828764] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Multiplicity",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/Attributes/Multiplicity",
+      ["mode"] = "Text",
+      ["path"] = "Attributes/",
+      ["nr"] = "5"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828768] = {
+    ["class"] = "AA#TagType",
+    ["properties"] = {
+      ["notation"] = "Import Semantics",
+      ["key"] = "owl_Fields_ImportSpec",
+      ["rowType"] = "TextArea"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828646] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "SuperProperties(<)",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/Attributes/SuperProperties/ASFictitiousSuperProperties",
+      ["mode"] = "Text",
+      ["path"] = "Attributes/SuperProperties(<)/",
+      ["nr"] = "7"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828650] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "EquivalentClasses(=)",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/ASFictitiousEquivalentClasses",
+      ["mode"] = "Group Item",
+      ["nr"] = "11"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828654] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "ClassName",
+      ["elTypeName"] = "Object",
+      ["id"] = "Object/Title/ClassName",
+      ["mode"] = "Text",
+      ["path"] = "Title/",
+      ["nr"] = "15"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828658] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Different individuals",
+      ["elTypeName"] = "Object",
+      ["id"] = "Object/Different individuals",
+      ["mode"] = "Group Item",
+      ["nr"] = "19"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828662] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "GeneralizationToFork",
+      ["id"] = "GeneralizationToFork",
+      ["mode"] = "Element",
+      ["nr"] = "23"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828666] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "DisjointProperties(<>)",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/DisjointProperties/ASFictitiousDisjointProperties",
+      ["mode"] = "Text",
+      ["path"] = "Role/DisjointProperties(<>)/",
+      ["nr"] = "27"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828670] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "InverseFunctional",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/InverseFunctional",
+      ["mode"] = "Group Item",
+      ["path"] = "Role/",
+      ["nr"] = "31"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828674] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Irreflexive",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/Irreflexive",
+      ["mode"] = "Group Item",
+      ["path"] = "Role/",
+      ["nr"] = "35"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828678] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Label",
+      ["elTypeName"] = "DifferentIndivid",
+      ["id"] = "DifferentIndivid/Label",
+      ["mode"] = "Group Item",
+      ["nr"] = "39"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828682] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Label",
+      ["elTypeName"] = "DifferentIndivids",
+      ["id"] = "DifferentIndivids/Label",
+      ["mode"] = "Group Item",
+      ["nr"] = "43"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828761] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Role",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role",
+      ["mode"] = "Group",
+      ["nr"] = "2"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828765] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Multiplicity",
+      ["elTypeName"] = "Restriction",
+      ["id"] = "Restriction/Multiplicity",
+      ["mode"] = "Group Item",
+      ["nr"] = "6"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828769] = {
+    ["class"] = "AA#TagType",
+    ["properties"] = {
+      ["notation"] = "Axiom Annotation",
+      ["key"] = "owl_Axiom_Annotation",
+      ["rowType"] = "TextArea"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828647] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "DisjointProperties(<>)",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/Attributes/DisjointProperties/ASFictitiousDisjointProperties",
+      ["mode"] = "Text",
+      ["path"] = "Attributes/DisjointProperties(<>)/",
+      ["nr"] = "8"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828651] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "SuperClasses(<)",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/ASFictitiousSuperClasses",
+      ["mode"] = "Group Item",
+      ["nr"] = "12"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828655] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "DataPropertyAssertion(=)",
+      ["elTypeName"] = "Object",
+      ["id"] = "Object/ASFictitiousDataPropertyAssertion",
+      ["mode"] = "Group Item",
+      ["nr"] = "16"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828659] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Label",
+      ["elTypeName"] = "Disjoint",
+      ["id"] = "Disjoint/Label",
+      ["mode"] = "Group Item",
+      ["nr"] = "20"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828663] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Restriction",
+      ["id"] = "Restriction",
+      ["mode"] = "Element",
+      ["nr"] = "24"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828667] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "PropertyChains",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/PropertyChains/ASFictitiousPropertyChains",
+      ["mode"] = "Text",
+      ["path"] = "Role/PropertyChains/",
+      ["nr"] = "28"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828671] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Symmetric",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/Symmetric",
+      ["mode"] = "Group Item",
+      ["path"] = "Role/",
+      ["nr"] = "32"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828675] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Transitive",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/Transitive",
+      ["mode"] = "Group Item",
+      ["path"] = "Role/",
+      ["nr"] = "36"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828679] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Label",
+      ["elTypeName"] = "SameAsIndivid",
+      ["id"] = "SameAsIndivid/Label",
+      ["mode"] = "Group Item",
+      ["nr"] = "40"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828683] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Label",
+      ["elTypeName"] = "SameAsIndivids",
+      ["id"] = "SameAsIndivids/Label",
+      ["mode"] = "Group Item",
+      ["nr"] = "44"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828762] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Attributes",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/Attributes",
+      ["mode"] = "Group Item",
+      ["nr"] = "3"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828766] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Multiplicity",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/Multiplicity",
+      ["mode"] = "Group Item",
+      ["path"] = "Role/",
+      ["nr"] = "7"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828644] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "IsFunctional",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/Attributes/IsFunctional",
+      ["mode"] = "Text",
+      ["path"] = "Attributes/",
+      ["nr"] = "5"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828648] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Name",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/Attributes/Name",
+      ["mode"] = "Text",
+      ["path"] = "Attributes/",
+      ["nr"] = "9"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828652] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "DisjointClasses(<>)",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/ASFictitiousDisjointClasses",
+      ["mode"] = "Group Item",
+      ["nr"] = "13"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828656] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "NegativeDataPropertyAssertion(<>)",
+      ["elTypeName"] = "Object",
+      ["id"] = "Object/ASFictitiousNegativeDataPropertyAssertion",
+      ["mode"] = "Group Item",
+      ["nr"] = "17"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828660] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Label",
+      ["elTypeName"] = "EquivalentClass",
+      ["id"] = "EquivalentClass/Label",
+      ["mode"] = "Group Item",
+      ["nr"] = "21"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828664] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "EquivalentProperties(=)",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/EquivalentProperties/ASFictitiousEquivalentProperties",
+      ["mode"] = "Text",
+      ["path"] = "Role/EquivalentProperties(=)/",
+      ["nr"] = "25"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828668] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Name",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/Name",
+      ["mode"] = "Group Item",
+      ["path"] = "Role/",
+      ["nr"] = "29"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828672] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Asymmetric",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/Asymmetric",
+      ["mode"] = "Group Item",
+      ["path"] = "Role/",
+      ["nr"] = "33"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828676] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Disjoint",
+      ["elTypeName"] = "HorizontalFork",
+      ["id"] = "HorizontalFork/Disjoint",
+      ["mode"] = "Group Item",
+      ["nr"] = "37"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828680] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Label",
+      ["elTypeName"] = "DisjointClasses",
+      ["id"] = "DisjointClasses/Label",
+      ["mode"] = "Group Item",
+      ["nr"] = "41"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828684] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Label",
+      ["elTypeName"] = "ComplementOf",
+      ["id"] = "ComplementOf/Label",
+      ["mode"] = "Group Item",
+      ["nr"] = "48"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828763] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Object",
+      ["id"] = "Object",
+      ["mode"] = "Element",
+      ["nr"] = "4"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828767] = {
+    ["class"] = "AA#TagType",
+    ["properties"] = {
+      ["notation"] = "Semantics",
+      ["key"] = "owl_Field_axiom",
+      ["rowType"] = "TextArea+Button"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828645] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "EquivalentProperties(=)",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/Attributes/EquivalentProperties/ASFictitiousEquivalentProperties",
+      ["mode"] = "Text",
+      ["path"] = "Attributes/EquivalentProperties(=)/",
+      ["nr"] = "6"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828649] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Type",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/Attributes/Type",
+      ["mode"] = "Text",
+      ["path"] = "Attributes/",
+      ["nr"] = "10"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828653] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Keys",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/ASFictitiousKeys",
+      ["mode"] = "Group Item",
+      ["nr"] = "14"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828657] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Same individuals",
+      ["elTypeName"] = "Object",
+      ["id"] = "Object/Same individuals",
+      ["mode"] = "Group Item",
+      ["nr"] = "18"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828661] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Generalization",
+      ["id"] = "Generalization",
+      ["mode"] = "Element",
+      ["nr"] = "22"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828665] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "SuperProperties(<)",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/SuperProperties/ASFictitiousSuperProperties",
+      ["mode"] = "Text",
+      ["path"] = "Role/SuperProperties(<)/",
+      ["nr"] = "26"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828669] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Functional",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/Functional",
+      ["mode"] = "Group Item",
+      ["path"] = "Role/",
+      ["nr"] = "30"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828673] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Reflexive",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/Reflexive",
+      ["mode"] = "Group Item",
+      ["path"] = "Role/",
+      ["nr"] = "34"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828677] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Complete",
+      ["elTypeName"] = "HorizontalFork",
+      ["id"] = "HorizontalFork/Complete",
+      ["mode"] = "Group Item",
+      ["nr"] = "38"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828681] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Label",
+      ["elTypeName"] = "EquivalentClasses",
+      ["id"] = "EquivalentClasses/Label",
+      ["mode"] = "Group Item",
+      ["nr"] = "42"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828685] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Direct",
+      ["elTypeName"] = "Link",
+      ["hasMirror"] = "1",
+      ["id"] = "Link/Direct",
+      ["mode"] = "Group Item",
+      ["nr"] = "49"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828760] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Class",
+      ["id"] = "Class",
+      ["mode"] = "Element",
+      ["nr"] = "1"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000828463] = {
+    ["class"] = "AA#Configuration",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      ["context"] = {
+        [1] = 2000828644,
+        [2] = 2000828645,
+        [3] = 2000828646,
+        [4] = 2000828647,
+        [5] = 2000828648,
+        [6] = 2000828649,
+        [7] = 2000828650,
+        [8] = 2000828651,
+        [9] = 2000828652,
+        [10] = 2000828653,
+        [11] = 2000828654,
+        [12] = 2000828655,
+        [13] = 2000828656,
+        [14] = 2000828657,
+        [15] = 2000828658,
+        [16] = 2000828659,
+        [17] = 2000828660,
+        [18] = 2000828661,
+        [19] = 2000828662,
+        [20] = 2000828663,
+        [21] = 2000828664,
+        [22] = 2000828665,
+        [23] = 2000828666,
+        [24] = 2000828667,
+        [25] = 2000828668,
+        [26] = 2000828669,
+        [27] = 2000828670,
+        [28] = 2000828671,
+        [29] = 2000828672,
+        [30] = 2000828673,
+        [31] = 2000828674,
+        [32] = 2000828675,
+        [33] = 2000828676,
+        [34] = 2000828677,
+        [35] = 2000828678,
+        [36] = 2000828679,
+        [37] = 2000828680,
+        [38] = 2000828681,
+        [39] = 2000828682,
+        [40] = 2000828683,
+        [41] = 2000828684,
+        [42] = 2000828685,
+        [43] = 2000828760,
+        [44] = 2000828761,
+        [45] = 2000828762,
+        [46] = 2000828763,
+        [47] = 2000828764,
+        [48] = 2000828765,
+        [49] = 2000828766
+      },
+      ["tagType"] = {
+        [1] = 2000828767,
+        [2] = 2000828768,
+        [3] = 2000828769
+      }
+    }
+  }
+}, 2000828463

@@ -1,0 +1,171 @@
+return {
+  [2000860342] = "AA#ContextType[id=Class/Attributes/Name]",
+  [2000860391] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Namespace",
+      ["prefix"] = "/",
+      ["suffix"] = "/",
+      ["propertyEditorPlaceBefore"] = "Namespace",
+      ["name"] = "isInferred"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000860392,
+        [2] = 2000860395
+      },
+      ["context"] = {
+        [1] = 2000860342
+      },
+      ["fieldType"] = {
+        [1] = 2000860020
+      }
+    }
+  },
+  [2000860395] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "false"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000860399] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Fields_ImportSpec",
+      ["tagValue"] = "AnnotationAssertion(\
+Annotation(owlFields:ShowAnnotation_RequireValue \"true\")\
+Annotation(owlFields:ShowAnnotation_CreateValue \"true\")\
+owlFields:ForRole_ShowAnnotation_InField\
+owlgred_s:isInferred\
+\"isInferred\")"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000860343] = "AA#ContextType[id=Association/Role/Name]",
+  [2000860392] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "true",
+      ["notation"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000860393,
+        [2] = 2000860394
+      }
+    }
+  },
+  [2000860396] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Namespace",
+      ["propertyEditorTab"] = "Direct",
+      ["prefix"] = "/",
+      ["suffix"] = "/",
+      ["propertyEditorPlaceBefore"] = "Namespace",
+      ["name"] = "isInferred"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000860397,
+        [2] = 2000860400
+      },
+      ["context"] = {
+        [1] = 2000860343
+      },
+      ["fieldType"] = {
+        [1] = 2000860020
+      }
+    }
+  },
+  [2000860400] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "false"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000860389] = {
+    ["class"] = "AA#Profile",
+    ["properties"] = {
+      ["name"] = "inferredProperties"
+    },
+    ["links"] = {
+      ["field"] = {
+        [1] = 2000860391,
+        [2] = 2000860396
+      },
+      ["tag"] = {
+        [1] = 2000860390
+      }
+    }
+  },
+  [2000860393] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(owlgred_s:isInferred $subject \"true\")"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000860397] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "true",
+      ["notation"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000860398,
+        [2] = 2000860399
+      }
+    }
+  },
+  [2000860390] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Import_Prefixes",
+      ["tagValue"] = "owlgred_s:=<http://lumii.lv/ontologies/owlgred_s.owl#>"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000860394] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Fields_ImportSpec",
+      ["tagValue"] = "AnnotationAssertion(\
+Annotation(owlFields:ShowAnnotation_RequireValue \"true\")\
+Annotation(owlFields:ShowAnnotation_CreateValue \"true\")\
+owlFields:ForRole_ShowAnnotation_InField\
+owlgred_s:isInferred\
+\"isInferred\")"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000860398] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(owlgred_s:isInferred $subject \"true\")"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000860020] = "AA#RowType[typeName=CheckBox]"
+}, 2000860389

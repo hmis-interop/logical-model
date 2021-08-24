@@ -1,0 +1,38 @@
+-- Config properties for OWLGrEd
+{
+	-- elementu kolekcijas limits
+	copy_limit = 1200,
+
+	-- vai konfigurators ir paslepts
+	is_configurator_hidden = false,
+
+	-- anotâciju valodas
+	annotation_languages = {"en", "lv", "de", "es", "fr", "pt"},
+
+	--vai vajag dzçðanas apstiprinâjuma logu
+	is_delete_confirm_msg_needed = false,
+	
+	-- configuration version
+	config_version = "1.6.9.7",
+	
+	-- required minimum plugin versions
+	DefaultOrder = "0.1",
+	GenMMD = "0.1",
+	Manchester_Syntax_AutoCompletion = "0.1",
+	MaxCardinality = "0.1",
+	OWLCNL_LanguageFields = "0.1",
+	OWLGrEd_AllValuesFrom = "0.2",
+	OWLGrEd_Container = "0.2",
+	OWLGrEd_Disjoint_to_fork = "0.1",
+	OWLGrEd_Domain = "0.1",
+	OWLGrEd_OBIS = "0.1",
+	OWLGrEd_Schema = "0.6",
+	OWLGrEd_XSchema = "0.3",
+	RDB2OWL_AutoCompletion = "0.3",
+	RefactoringDB = "0.1",
+	RefactoringServices = "0.5",
+	UML_Plus = "0.1",
+	UR = "0.1",
+	visualizeMM = "0.1",
+	OWLGrEd_UserFields = "0.6",
+}

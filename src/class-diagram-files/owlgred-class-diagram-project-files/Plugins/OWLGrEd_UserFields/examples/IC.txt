@@ -1,0 +1,3786 @@
+return {
+  [2000837664] = "AA#ContextType[id=Class/Attributes]",
+  [2000838688] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838689
+      }
+    }
+  },
+  [2000838720] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838721
+      }
+    }
+  },
+  [2000838303] = "AA#ContextType[id=Class/ASFictitiousDisjointClasses]",
+  [2000838335] = "AA#ContextType[id=ComplementOf/Label]",
+  [2000838465] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Name/Name) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838497] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838529] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838561] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838593] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838625] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838657] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838689] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838721] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838304] = "AA#ContextType[id=Class/ASFictitiousKeys]",
+  [2000838336] = "AA#ContextType[id=Link/Direct]",
+  [2000838466] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Name",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Name",
+      ["name"] = "Axiom_Domain_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838467,
+        [2] = 2000838468,
+        [3] = 2000838470
+      },
+      ["context"] = {
+        [1] = 2000837664
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838498] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Expression",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Expression",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838499,
+        [2] = 2000838500,
+        [3] = 2000838502
+      },
+      ["context"] = {
+        [1] = 2000838302
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838530] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838531
+      }
+    }
+  },
+  [2000838562] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838563
+      }
+    }
+  },
+  [2000838594] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838595
+      }
+    }
+  },
+  [2000838626] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Transitive",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838627,
+        [2] = 2000838628,
+        [3] = 2000838630
+      },
+      ["context"] = {
+        [1] = 2000838326
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838658] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838659
+      }
+    }
+  },
+  [2000838690] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "ClassName",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "ClassName",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838691,
+        [2] = 2000838692,
+        [3] = 2000838694
+      },
+      ["context"] = {
+        [1] = 2000838305
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838722] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838723
+      }
+    }
+  },
+  [2000838305] = "AA#ContextType[id=Object/Title/ClassName]",
+  [2000838467] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838499] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838531] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838563] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838595] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838627] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838659] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838691] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838723] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838306] = "AA#ContextType[id=Object/ASFictitiousDataPropertyAssertion]",
+  [2000838468] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838469
+      }
+    }
+  },
+  [2000838500] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838501
+      }
+    }
+  },
+  [2000838532] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838533
+      }
+    }
+  },
+  [2000838564] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Expression",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Expression",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838565,
+        [2] = 2000838566,
+        [3] = 2000838568
+      },
+      ["context"] = {
+        [1] = 2000838296
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838596] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "InverseFunctional",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838597,
+        [2] = 2000838598,
+        [3] = 2000838600
+      },
+      ["context"] = {
+        [1] = 2000838321
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838628] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838629
+      }
+    }
+  },
+  [2000838660] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Label",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838661,
+        [2] = 2000838662,
+        [3] = 2000838664
+      },
+      ["context"] = {
+        [1] = 2000838330
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838692] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838693
+      }
+    }
+  },
+  [2000838724] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "IsNegativeAssertion",
+      ["propertyEditorTab"] = "Direct",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "IsNegativeAssertion",
+      ["name"] = "Axiom_mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838725,
+        [2] = 2000838726,
+        [3] = 2000838728
+      },
+      ["context"] = {
+        [1] = 2000838336
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838307] = "AA#ContextType[id=Object/ASFictitiousNegativeDataPropertyAssertion]",
+  [2000838469] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838501] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Expression) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838533] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838565] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838597] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838629] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838661] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838693] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838725] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838308] = "AA#ContextType[id=Object/Same individuals]",
+  [2000838470] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838471
+      }
+    }
+  },
+  [2000838502] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838503
+      }
+    }
+  },
+  [2000838534] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "IsFunctional",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838535,
+        [2] = 2000838536,
+        [3] = 2000838538
+      },
+      ["context"] = {
+        [1] = 2000838295
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838566] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838567
+      }
+    }
+  },
+  [2000838598] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838599
+      }
+    }
+  },
+  [2000838630] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838631
+      }
+    }
+  },
+  [2000838662] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838663
+      }
+    }
+  },
+  [2000838694] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838695
+      }
+    }
+  },
+  [2000838726] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838727
+      }
+    }
+  },
+  [2000838309] = "AA#ContextType[id=Object/Different individuals]",
+  [2000838341] = "AA#ContextType[id=Class/Attributes/Multiplicity]",
+  [2000838471] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838503] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Expression) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838535] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838567] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Expression) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838599] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838631] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838663] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838695] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838727] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(IsNegativeAssertion) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838310] = "AA#ContextType[id=Disjoint/Label]",
+  [2000838342] = "AA#ContextType[id=Restriction/Multiplicity]",
+  [2000838472] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Namespace",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Namespace",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838475,
+        [2] = 2000838476,
+        [3] = 2000838479
+      },
+      ["context"] = {
+        [1] = 2000838312
+      },
+      ["selfStyleSetting"] = {
+        [1] = 2000838473,
+        [2] = 2000838474
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838504] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "ASFictitiousDisjointClass",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "DisjointClass",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838505,
+        [2] = 2000838506,
+        [3] = 2000838508
+      },
+      ["context"] = {
+        [1] = 2000838303
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838536] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838537
+      }
+    }
+  },
+  [2000838568] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838569
+      }
+    }
+  },
+  [2000838600] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838601
+      }
+    }
+  },
+  [2000838632] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Name",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Role",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838635,
+        [2] = 2000838636,
+        [3] = 2000838639
+      },
+      ["context"] = {
+        [1] = 2000838314
+      },
+      ["selfStyleSetting"] = {
+        [1] = 2000838633,
+        [2] = 2000838634
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838664] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838665
+      }
+    }
+  },
+  [2000838696] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Property",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Property",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838697,
+        [2] = 2000838698,
+        [3] = 2000838700
+      },
+      ["context"] = {
+        [1] = 2000838306
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838728] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838729
+      }
+    }
+  },
+  [2000838311] = "AA#ContextType[id=EquivalentClass/Label]",
+  [2000838343] = "AA#ContextType[id=Association/Role/Multiplicity]",
+  [2000838473] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "1"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837685
+      }
+    }
+  },
+  [2000838505] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838537] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838569] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Expression) :isConstrein \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838601] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838633] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "1"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837685
+      }
+    }
+  },
+  [2000837673] = "AA#RowType[typeName=CheckBox]",
+  [2000838697] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838729] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(IsNegativeAssertion) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838312] = "AA#ContextType[id=Generalization]",
+  [2000838474] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "5"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837680
+      }
+    }
+  },
+  [2000838506] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838507
+      }
+    }
+  },
+  [2000838538] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838539
+      }
+    }
+  },
+  [2000838570] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Expression",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Expression",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838571,
+        [2] = 2000838572,
+        [3] = 2000838574
+      },
+      ["context"] = {
+        [1] = 2000838297
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838602] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Symmetric",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838603,
+        [2] = 2000838604,
+        [3] = 2000838606
+      },
+      ["context"] = {
+        [1] = 2000838322
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838634] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "5"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837680
+      }
+    }
+  },
+  [2000837674] = "AA#RowType[typeName=ComboBox]",
+  [2000838698] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838699
+      }
+    }
+  },
+  [2000838730] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["prefix"] = "(",
+      ["suffix"] = ")",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838731,
+        [2] = 2000838733
+      },
+      ["context"] = {
+        [1] = 2000838341
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838313] = "AA#ContextType[id=GeneralizationToFork]",
+  [2000838475] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838507] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838539] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838571] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838603] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838635] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838667] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838699] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Property) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838731] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838732
+      }
+    }
+  },
+  [2000838314] = "AA#ContextType[id=Restriction]",
+  [2000838476] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000838477
+      },
+      ["tag"] = {
+        [1] = 2000838478
+      }
+    }
+  },
+  [2000838508] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838509
+      }
+    }
+  },
+  [2000838540] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Label",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838541,
+        [2] = 2000838542,
+        [3] = 2000838544
+      },
+      ["context"] = {
+        [1] = 2000838310
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838572] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838573
+      }
+    }
+  },
+  [2000838604] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838605
+      }
+    }
+  },
+  [2000838636] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000838637
+      },
+      ["tag"] = {
+        [1] = 2000838638
+      }
+    }
+  },
+  [2000838668] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838669
+      }
+    }
+  },
+  [2000838700] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838701
+      }
+    }
+  },
+  [2000838732] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838315] = "AA#ContextType[id=Association/Role/EquivalentProperties/ASFictitiousEquivalentProperties]",
+  [2000838477] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["target"] = "Axiom_Mode",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "16711680"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837690
+      }
+    }
+  },
+  [2000838509] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838541] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838573] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Expression) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838605] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838637] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["target"] = "Axiom_Mode",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "16711680"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837690
+      }
+    }
+  },
+  [2000838669] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838701] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Property) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838733] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838734
+      }
+    }
+  },
+  [2000838316] = "AA#ContextType[id=Association/Role/SuperProperties/ASFictitiousSuperProperties]",
+  [2000838478] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838510] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "ASFictitiousEquivalentProperty",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "EquivalentProperty",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838511,
+        [2] = 2000838512,
+        [3] = 2000838514
+      },
+      ["context"] = {
+        [1] = 2000838315
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838542] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838543
+      }
+    }
+  },
+  [2000838574] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838575
+      }
+    }
+  },
+  [2000838606] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838607
+      }
+    }
+  },
+  [2000838638] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Name/Role) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838670] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838671
+      }
+    }
+  },
+  [2000838702] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Property",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Property",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838703,
+        [2] = 2000838704,
+        [3] = 2000838706
+      },
+      ["context"] = {
+        [1] = 2000838307
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838734] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838317] = "AA#ContextType[id=Association/Role/DisjointProperties/ASFictitiousDisjointProperties]",
+  [2000838479] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000838480
+      },
+      ["tag"] = {
+        [1] = 2000838481
+      }
+    }
+  },
+  [2000838511] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838543] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838575] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Expression) :isConstrein \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838607] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838639] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000838640
+      },
+      ["tag"] = {
+        [1] = 2000838641
+      }
+    }
+  },
+  [2000838671] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838703] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838735] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838736,
+        [2] = 2000838738
+      },
+      ["context"] = {
+        [1] = 2000838342
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838318] = "AA#ContextType[id=Association/Role/PropertyChains/ASFictitiousPropertyChains]",
+  [2000838480] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["target"] = "Axiom_Mode",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "255"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837690
+      }
+    }
+  },
+  [2000838512] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838513
+      }
+    }
+  },
+  [2000838544] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838545
+      }
+    }
+  },
+  [2000838576] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Expression",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Expression",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838577,
+        [2] = 2000838578,
+        [3] = 2000838580
+      },
+      ["context"] = {
+        [1] = 2000838298
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838608] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Asymmetric",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838609,
+        [2] = 2000838610,
+        [3] = 2000838612
+      },
+      ["context"] = {
+        [1] = 2000838323
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838640] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["target"] = "Axiom_Mode",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "255"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837690
+      }
+    }
+  },
+  [2000837680] = "AA#CompartStyleItem[itemName=adjustment]",
+  [2000838704] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838705
+      }
+    }
+  },
+  [2000838736] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838737
+      }
+    }
+  },
+  [2000838319] = "AA#ContextType[id=Association/Role/Name]",
+  [2000838481] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838513] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838545] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838577] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838609] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838641] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Name/Role) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838673] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838705] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Property) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838737] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838320] = "AA#ContextType[id=Association/Role/Functional]",
+  [2000838482] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838485,
+        [2] = 2000838486,
+        [3] = 2000838489
+      },
+      ["context"] = {
+        [1] = 2000838313
+      },
+      ["selfStyleSetting"] = {
+        [1] = 2000838483,
+        [2] = 2000838484
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838514] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838515
+      }
+    }
+  },
+  [2000838546] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Label",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838547,
+        [2] = 2000838548,
+        [3] = 2000838550
+      },
+      ["context"] = {
+        [1] = 2000838311
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838578] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838579
+      }
+    }
+  },
+  [2000838610] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838611
+      }
+    }
+  },
+  [2000838642] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "ASFictitiousKey",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Key",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838643,
+        [2] = 2000838644,
+        [3] = 2000838646
+      },
+      ["context"] = {
+        [1] = 2000838304
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838674] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838675
+      }
+    }
+  },
+  [2000838706] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838707
+      }
+    }
+  },
+  [2000838738] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838739
+      }
+    }
+  },
+  [2000838321] = "AA#ContextType[id=Association/Role/InverseFunctional]",
+  [2000838483] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "1"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837685
+      }
+    }
+  },
+  [2000838515] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838547] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838579] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Expression) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838611] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838643] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838675] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838707] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Property) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838739] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConsteint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838322] = "AA#ContextType[id=Association/Role/Symmetric]",
+  [2000838452] = {
+    ["class"] = "AA#Profile",
+    ["properties"] = {
+      ["name"] = "IC"
+    },
+    ["links"] = {
+      ["field"] = {
+        [1] = 2000838454,
+        [2] = 2000838466,
+        [3] = 2000838472,
+        [4] = 2000838482,
+        [5] = 2000838492,
+        [6] = 2000838498,
+        [7] = 2000838504,
+        [8] = 2000838510,
+        [9] = 2000838516,
+        [10] = 2000838522,
+        [11] = 2000838528,
+        [12] = 2000838534,
+        [13] = 2000838540,
+        [14] = 2000838546,
+        [15] = 2000838552,
+        [16] = 2000838558,
+        [17] = 2000838564,
+        [18] = 2000838570,
+        [19] = 2000838576,
+        [20] = 2000838582,
+        [21] = 2000838586,
+        [22] = 2000838590,
+        [23] = 2000838596,
+        [24] = 2000838602,
+        [25] = 2000838608,
+        [26] = 2000838614,
+        [27] = 2000838620,
+        [28] = 2000838626,
+        [29] = 2000838632,
+        [30] = 2000838642,
+        [31] = 2000838648,
+        [32] = 2000838654,
+        [33] = 2000838660,
+        [34] = 2000838666,
+        [35] = 2000838672,
+        [36] = 2000838678,
+        [37] = 2000838684,
+        [38] = 2000838690,
+        [39] = 2000838696,
+        [40] = 2000838702,
+        [41] = 2000838708,
+        [42] = 2000838712,
+        [43] = 2000838718,
+        [44] = 2000838724,
+        [45] = 2000838730,
+        [46] = 2000838735,
+        [47] = 2000838740
+      }
+    }
+  },
+  [2000838484] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "5"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837680
+      }
+    }
+  },
+  [2000838516] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Expression",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Expression",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838517,
+        [2] = 2000838518,
+        [3] = 2000838520
+      },
+      ["context"] = {
+        [1] = 2000838316
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838548] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838549
+      }
+    }
+  },
+  [2000838580] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838581
+      }
+    }
+  },
+  [2000838612] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838613
+      }
+    }
+  },
+  [2000838644] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838645
+      }
+    }
+  },
+  [2000838676] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838677
+      }
+    }
+  },
+  [2000838708] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Same individuals",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Same individuals",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838709,
+        [2] = 2000838710,
+        [3] = 2000838711
+      },
+      ["context"] = {
+        [1] = 2000838308
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838740] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["prefix"] = "(",
+      ["suffix"] = ")",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838741,
+        [2] = 2000838743
+      },
+      ["context"] = {
+        [1] = 2000838343
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838323] = "AA#ContextType[id=Association/Role/Asymmetric]",
+  [2000838485] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838517] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838549] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838581] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Expression) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838613] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838645] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000837685] = "AA#CompartStyleItem[itemName=fontStyleBold]",
+  [2000838709] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838741] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838742
+      }
+    }
+  },
+  [2000838324] = "AA#ContextType[id=Association/Role/Reflexive]",
+  [2000838454] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Name",
+      ["propertyEditorTab"] = "Direct",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Name",
+      ["name"] = "Axiom_Domain_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838457,
+        [2] = 2000838458,
+        [3] = 2000838462
+      },
+      ["context"] = {
+        [1] = 2000837663
+      },
+      ["selfStyleSetting"] = {
+        [1] = 2000838455,
+        [2] = 2000838456
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838486] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000838487
+      },
+      ["tag"] = {
+        [1] = 2000838488
+      }
+    }
+  },
+  [2000838518] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838519
+      }
+    }
+  },
+  [2000838550] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838551
+      }
+    }
+  },
+  [2000838582] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Namespace",
+      ["prefix"] = "/",
+      ["suffix"] = "/",
+      ["propertyEditorPlaceBefore"] = "Namespace",
+      ["name"] = "IsInferred"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838583,
+        [2] = 2000838585
+      },
+      ["context"] = {
+        [1] = 2000838299
+      },
+      ["fieldType"] = {
+        [1] = 2000837673
+      }
+    }
+  },
+  [2000838614] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Reflexive",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838615,
+        [2] = 2000838616,
+        [3] = 2000838618
+      },
+      ["context"] = {
+        [1] = 2000838324
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838646] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838647
+      }
+    }
+  },
+  [2000838678] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Label",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838679,
+        [2] = 2000838680,
+        [3] = 2000838682
+      },
+      ["context"] = {
+        [1] = 2000838333
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838710] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838742] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838325] = "AA#ContextType[id=Association/Role/Irreflexive]",
+  [2000838455] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "9"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837680
+      }
+    }
+  },
+  [2000838487] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["target"] = "Axiom_Mode",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "16711680"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837690
+      }
+    }
+  },
+  [2000838519] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Expression) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838551] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838583] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "true",
+      ["notation"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838584
+      }
+    }
+  },
+  [2000838615] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838647] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838679] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838711] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838743] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838744
+      }
+    }
+  },
+  [2000838326] = "AA#ContextType[id=Association/Role/Transitive]",
+  [2000838456] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "1"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837685
+      }
+    }
+  },
+  [2000838488] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838520] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838521
+      }
+    }
+  },
+  [2000838552] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Disjoint",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Disjoint",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838553,
+        [2] = 2000838554,
+        [3] = 2000838556
+      },
+      ["context"] = {
+        [1] = 2000838327
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838584] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(owlFields:IsInferred $subject \"true\")"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838616] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838617
+      }
+    }
+  },
+  [2000838648] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Type",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Type",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838649,
+        [2] = 2000838650,
+        [3] = 2000838652
+      },
+      ["context"] = {
+        [1] = 2000838300
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838680] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838681
+      }
+    }
+  },
+  [2000838712] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Different individuals",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Different individuals",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838713,
+        [2] = 2000838714,
+        [3] = 2000838716
+      },
+      ["context"] = {
+        [1] = 2000838309
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838744] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838295] = "AA#ContextType[id=Class/Attributes/IsFunctional]",
+  [2000838327] = "AA#ContextType[id=HorizontalFork/Disjoint]",
+  [2000838457] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838489] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000838490
+      },
+      ["tag"] = {
+        [1] = 2000838491
+      }
+    }
+  },
+  [2000838521] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Expression) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838553] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838585] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "false"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838617] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838649] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838681] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838713] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838296] = "AA#ContextType[id=Class/Attributes/EquivalentProperties/ASFictitiousEquivalentProperties]",
+  [2000838328] = "AA#ContextType[id=HorizontalFork/Complete]",
+  [2000838458] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000838459,
+        [2] = 2000838460
+      },
+      ["tag"] = {
+        [1] = 2000838461
+      }
+    }
+  },
+  [2000838490] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["target"] = "Axiom_Mode",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "255"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837690
+      }
+    }
+  },
+  [2000838522] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "ASFictitiousDisjointProperty",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "DisjointProperty",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838523,
+        [2] = 2000838524,
+        [3] = 2000838526
+      },
+      ["context"] = {
+        [1] = 2000838317
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838554] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838555
+      }
+    }
+  },
+  [2000838586] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Namespace",
+      ["propertyEditorTab"] = "Direct",
+      ["prefix"] = "/",
+      ["suffix"] = "/",
+      ["propertyEditorPlaceBefore"] = "Namespace",
+      ["name"] = "isInferred"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838587,
+        [2] = 2000838589
+      },
+      ["context"] = {
+        [1] = 2000838319
+      },
+      ["fieldType"] = {
+        [1] = 2000837673
+      }
+    }
+  },
+  [2000838618] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838619
+      }
+    }
+  },
+  [2000838650] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838651
+      }
+    }
+  },
+  [2000837690] = "AA#CompartStyleItem[itemName=fontColor]",
+  [2000838714] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838715
+      }
+    }
+  },
+  [2000838297] = "AA#ContextType[id=Class/Attributes/SuperProperties/ASFictitiousSuperProperties]",
+  [2000838329] = "AA#ContextType[id=DifferentIndivid/Label]",
+  [2000838459] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["target"] = "Axiom_Domain_Mode",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "16711680"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837690
+      }
+    }
+  },
+  [2000838491] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838523] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838555] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838587] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "true",
+      ["notation"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838588
+      }
+    }
+  },
+  [2000838619] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838651] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838683] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838715] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838298] = "AA#ContextType[id=Class/Attributes/DisjointProperties/ASFictitiousDisjointProperties]",
+  [2000838330] = "AA#ContextType[id=SameAsIndivid/Label]",
+  [2000838460] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["target"] = "Axiom_Domain_Mode",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "1"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837685
+      }
+    }
+  },
+  [2000838492] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "ASFictitiousEquivalentClass",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "EquivalentClass",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838493,
+        [2] = 2000838494,
+        [3] = 2000838496
+      },
+      ["context"] = {
+        [1] = 2000838301
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838524] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838525
+      }
+    }
+  },
+  [2000838556] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838557
+      }
+    }
+  },
+  [2000838588] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(owlFields:IsInferred $subject \"true\")"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838620] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Irreflexive",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838621,
+        [2] = 2000838622,
+        [3] = 2000838624
+      },
+      ["context"] = {
+        [1] = 2000838325
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838652] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838653
+      }
+    }
+  },
+  [2000838684] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Label",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838685,
+        [2] = 2000838686,
+        [3] = 2000838688
+      },
+      ["context"] = {
+        [1] = 2000838334
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838716] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838717
+      }
+    }
+  },
+  [2000838299] = "AA#ContextType[id=Class/Attributes/Name]",
+  [2000838331] = "AA#ContextType[id=DisjointClasses/Label]",
+  [2000838461] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(Name/Name) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838493] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838525] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838557] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838589] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "false"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838621] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838653] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838685] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838717] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838300] = "AA#ContextType[id=Class/Attributes/Type]",
+  [2000838332] = "AA#ContextType[id=EquivalentClasses/Label]",
+  [2000838462] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000838463,
+        [2] = 2000838464
+      },
+      ["tag"] = {
+        [1] = 2000838465
+      }
+    }
+  },
+  [2000838494] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838495
+      }
+    }
+  },
+  [2000838526] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838527
+      }
+    }
+  },
+  [2000838558] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Complete",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "Complete",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838559,
+        [2] = 2000838560,
+        [3] = 2000838562
+      },
+      ["context"] = {
+        [1] = 2000838328
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838590] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Functional",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838591,
+        [2] = 2000838592,
+        [3] = 2000838594
+      },
+      ["context"] = {
+        [1] = 2000838320
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838622] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838623
+      }
+    }
+  },
+  [2000838654] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Label",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838655,
+        [2] = 2000838656,
+        [3] = 2000838658
+      },
+      ["context"] = {
+        [1] = 2000838329
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838686] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838687
+      }
+    }
+  },
+  [2000838718] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Label",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838719,
+        [2] = 2000838720,
+        [3] = 2000838722
+      },
+      ["context"] = {
+        [1] = 2000838335
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838301] = "AA#ContextType[id=Class/ASFictitiousEquivalentClasses]",
+  [2000838333] = "AA#ContextType[id=DifferentIndivids/Label]",
+  [2000838463] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["target"] = "Axiom_Domain_Mode",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "255"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837690
+      }
+    }
+  },
+  [2000838495] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838527] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838559] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838591] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838623] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838655] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000837663] = "AA#ContextType[id=Association/Role]",
+  [2000838687] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isInferred \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838719] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838682] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838683
+      }
+    }
+  },
+  [2000838302] = "AA#ContextType[id=Class/ASFictitiousSuperClasses]",
+  [2000838334] = "AA#ContextType[id=SameAsIndivids/Label]",
+  [2000838677] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000838672] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Label",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838673,
+        [2] = 2000838674,
+        [3] = 2000838676
+      },
+      ["context"] = {
+        [1] = 2000838332
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838666] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "Label",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838667,
+        [2] = 2000838668,
+        [3] = 2000838670
+      },
+      ["context"] = {
+        [1] = 2000838331
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838464] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["target"] = "Axiom_Domain_Mode",
+      ["isElementStyleSetting"] = "false",
+      ["value"] = "1"
+    },
+    ["links"] = {
+      ["fieldStyleFeature"] = {
+        [1] = 2000837685
+      }
+    }
+  },
+  [2000838496] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838497
+      }
+    }
+  },
+  [2000838528] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["displayPlaceBefore"] = "ASFictitiousPropertyChain",
+      ["prefix"] = "(",
+      ["suffix"] = ") ",
+      ["propertyEditorPlaceBefore"] = "PropertyChain",
+      ["name"] = "Axiom_Mode"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000838529,
+        [2] = 2000838530,
+        [3] = 2000838532
+      },
+      ["context"] = {
+        [1] = 2000838318
+      },
+      ["fieldType"] = {
+        [1] = 2000837674
+      }
+    }
+  },
+  [2000838560] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838561
+      }
+    }
+  },
+  [2000838592] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838593
+      }
+    }
+  },
+  [2000838624] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "c"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838625
+      }
+    }
+  },
+  [2000838656] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "i"
+    },
+    ["links"] = {
+      ["tag"] = {
+        [1] = 2000838657
+      }
+    }
+  },
+  [2000838665] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Axiom_Annotation",
+      ["tagValue"] = "Path(..) :isConstreint \"true\""
+    },
+    ["links"] = {
+      
+    }
+  }
+}, 2000838452

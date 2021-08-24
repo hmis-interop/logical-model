@@ -1,0 +1,108 @@
+return {
+  [2000864235] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "true"
+    },
+    ["links"] = {
+      ["styleSetting"] = {
+        [1] = 2000864236,
+        [2] = 2000864237
+      },
+      ["tag"] = {
+        [1] = 2000865123
+      }
+    }
+  },
+  [2000864236] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "true",
+      ["value"] = "33023"
+    },
+    ["links"] = {
+      ["elemStyleFeature"] = {
+        [1] = 2000864062
+      }
+    }
+  },
+  [2000864024] = "AA#RowType[typeName=CheckBox]",
+  [2000864064] = "AA#ElemStyleItem[itemName=shapeStyle3D]",
+  [2000864233] = {
+    ["class"] = "AA#Profile",
+    ["properties"] = {
+      ["name"] = "isImportantClass"
+    },
+    ["links"] = {
+      ["field"] = {
+        [1] = 2000864234
+      },
+      ["tag"] = {
+        [1] = 2000864739
+      }
+    }
+  },
+  [2000864237] = {
+    ["class"] = "AA#FieldStyleSetting",
+    ["properties"] = {
+      ["isElementStyleSetting"] = "true",
+      ["value"] = "1"
+    },
+    ["links"] = {
+      ["elemStyleFeature"] = {
+        [1] = 2000864064
+      }
+    }
+  },
+  [2000864013] = "AA#ContextType[id=Class]",
+  [2000864238] = {
+    ["class"] = "AA#ChoiceItem",
+    ["properties"] = {
+      ["caption"] = "false"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000864234] = {
+    ["class"] = "AA#Field",
+    ["properties"] = {
+      ["pattern"] = "a-zA-Z0-9-_",
+      ["propertyEditorTab"] = "Main",
+      ["name"] = "isImportant"
+    },
+    ["links"] = {
+      ["choiceItem"] = {
+        [1] = 2000864235,
+        [2] = 2000864238
+      },
+      ["context"] = {
+        [1] = 2000864013
+      },
+      ["fieldType"] = {
+        [1] = 2000864024
+      }
+    }
+  },
+  [2000865123] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Field_axiom",
+      ["tagValue"] = "AnnotationAssertion(example:isImportant $subject \"true\")"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000864062] = "AA#ElemStyleItem[itemName=bkgColor]",
+  [2000864739] = {
+    ["class"] = "AA#Tag",
+    ["properties"] = {
+      ["tagKey"] = "owl_Import_Prefixes",
+      ["tagValue"] = "example:=<http://lumii.lv/ontologies/example.owl#>"
+    },
+    ["links"] = {
+      
+    }
+  }
+}, 2000864233

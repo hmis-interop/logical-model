@@ -1,0 +1,136 @@
+return {
+  [2000819917] = {
+    ["class"] = "AA#TagType",
+    ["properties"] = {
+      ["notation"] = "Semantics",
+      ["key"] = "owl_Field_axiom",
+      ["rowType"] = "TextArea+Button"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000820555] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Name",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/Attributes/Name",
+      ["mode"] = "Text",
+      ["path"] = "Attributes/",
+      ["nr"] = "5"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000819918] = {
+    ["class"] = "AA#TagType",
+    ["properties"] = {
+      ["notation"] = "Import Semantics",
+      ["key"] = "owl_Fields_ImportSpec",
+      ["rowType"] = "TextArea"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000819832] = {
+    ["class"] = "AA#Configuration",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      ["context"] = {
+        [1] = 2000819833,
+        [2] = 2000819834,
+        [3] = 2000819835,
+        [4] = 2000819836,
+        [5] = 2000820555,
+        [6] = 2000820680
+      },
+      ["tagType"] = {
+        [1] = 2000819917,
+        [2] = 2000819918,
+        [3] = 2000819919
+      }
+    }
+  },
+  [2000819836] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Object",
+      ["id"] = "Object",
+      ["mode"] = "Element",
+      ["nr"] = "4"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000820680] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Name",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role/Name",
+      ["mode"] = "Group Item",
+      ["path"] = "Role/",
+      ["nr"] = "6"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000819919] = {
+    ["class"] = "AA#TagType",
+    ["properties"] = {
+      ["notation"] = "Axiom Annotation",
+      ["key"] = "owl_Axiom_Annotation",
+      ["rowType"] = "TextArea"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000819833] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Class",
+      ["id"] = "Class",
+      ["mode"] = "Element",
+      ["nr"] = "1"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000819834] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Role",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role",
+      ["mode"] = "Group",
+      ["nr"] = "2"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000819835] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Attributes",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/Attributes",
+      ["mode"] = "Group Item",
+      ["nr"] = "3"
+    },
+    ["links"] = {
+      
+    }
+  }
+}, 2000819832
