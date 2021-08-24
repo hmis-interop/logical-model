@@ -1,0 +1,3337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   xml:space="preserve"
+   width="1500"
+   height="1616.5"
+   viewBox="0 0 1500 1616.5"
+   id="svg1562"
+   sodipodi:docname="hmis.svg"
+   inkscape:export-filename="/home/eric/Desktop/hmis.png"
+   inkscape:export-xdpi="127.855"
+   inkscape:export-ydpi="127.855"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"><metadata
+   id="metadata1566"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1080"
+   id="namedview1564"
+   showgrid="false"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:zoom="0.33366045"
+   inkscape:cx="1412.7032"
+   inkscape:cy="451.86765"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg1562" />
+ onmousemove=&quot;movetip(evt)&quot; onmouseup=&quot;endmove()&quot;&gt;
+
+<script
+   type="application/ecmascript"
+   id="script4"> <![CDATA[
+var dragtipid = null; var dragcase = false; function init(evt){
+if (window.svgDocument==null) svgDocument = evt.target.ownerDocument;
+}
+function movetip(evt){if (dragtipid!=null){ dragcase = true;
+var tip=svgDocument.getElementById(dragtipid);
+tip.setAttributeNS(null,"x",evt.clientX-2);
+tip.setAttributeNS(null,"y",evt.clientY-2);
+}}
+function endmove(){dragtipid = null;}
+function startmove(evt,id){dragtipid = id; dragcase = false;
+var tip=svgDocument.getElementById(dragtipid);
+tip.setAttributeNS(null,"x",evt.clientX-2);
+tip.setAttributeNS(null,"y",evt.clientY-2);
+}
+function Showtip(evt,id){ dragtipid = null;
+var tip=svgDocument.getElementById(id);
+var vis=tip.getAttributeNS(null,"visibility");
+if (vis=="hidden"){
+tip.setAttributeNS(null,"x",evt.clientX-2);
+tip.setAttributeNS(null,"y",evt.clientY-2);
+tip.setAttributeNS(null,"visibility","visible");
+}}
+function Hidetip(id){ dragtipid = null; if (dragcase==false){
+var tip=svgDocument.getElementById(id);
+tip.setAttributeNS(null,"visibility","hidden");
+}}
+]]></script>
+<defs
+   id="defs11"><clipPath
+     clipPathUnits="userSpaceOnUse"
+     id="clipPath3193"><rect
+       style="opacity:0.98000004;fill:#283a5a;fill-opacity:0.49000017;fill-rule:nonzero;stroke:#1ce33a;stroke-width:4.0999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4.1, 4.1;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3195"
+       width="1513.5146"
+       height="1618.4117"
+       x="0"
+       y="1.0852941" /></clipPath></defs>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<g
+   id="g3189"
+   clip-path="url(#clipPath3193)"><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963439"><polygon
+   id="polygon13"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2258,922 2192,922 2192,899 2258,899 " />
+<line
+   id="line15"
+   style="stroke:#000000;stroke-width:1"
+   y2="906"
+   x2="2257"
+   y1="906"
+   x1="2194" />
+<text
+   id="text19"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan17"
+   y="906"
+   x="2211">FAAmount</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963878"><polygon
+   id="polygon22"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2326,914 2260,914 2260,906 2326,906 " />
+<line
+   id="line24"
+   style="stroke:#000000;stroke-width:1"
+   y2="914"
+   x2="2326"
+   y1="914"
+   x1="2262" />
+<text
+   id="text28"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan26"
+   y="913"
+   x="2281">Education</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963895"><polygon
+   id="polygon31"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3100,785 2841,785 2841,669 3100,669 " />
+<line
+   id="line33"
+   style="stroke:#000000;stroke-width:1"
+   y2="676"
+   x2="3100"
+   y1="676"
+   x1="2843" />
+<text
+   id="text37"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan35"
+   y="676"
+   x="2957">Enrollment</tspan></text>
+
+<line
+   id="line39"
+   style="stroke:#000000;stroke-width:1"
+   y2="676"
+   x2="3100"
+   y1="676"
+   x1="2843" />
+<text
+   id="text61"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan41"
+   y="681"
+   x="2843">MonthsHomelessPastThreeYears:monthsHomelessPastThreeYears{hmis}</tspan> <tspan
+   id="tspan43"
+   y="687"
+   x="2843">PreviousStreetESSH:noYesMissing{hmis}</tspan> <tspan
+   id="tspan45"
+   y="693"
+   x="2843">LOSUnderThreshold:noYesMissing{hmis}</tspan> <tspan
+   id="tspan47"
+   y="699"
+   x="2843">DisablingCondition:noYesDoesntKnowRefused{hmis}[1]</tspan> <tspan
+   id="tspan49"
+   y="705"
+   x="2843">TimesHomelessPastThreeYears:timesHomelessPastThreeYears{hmis}</tspan> <tspan
+   id="tspan51"
+   y="711"
+   x="2843">DateToStreetESSH:date</tspan> <tspan
+   id="tspan53"
+   y="717"
+   x="2843">RelationshipToHoH:relationshipToHoH{hmis}[1]</tspan> <tspan
+   id="tspan55"
+   y="723"
+   x="2843">LivingSituation:livingSituation{hmis}</tspan> <tspan
+   id="tspan57"
+   y="729"
+   x="2843">LengthOfStay:lengthOfStay{hmis}</tspan> <tspan
+   id="tspan59"
+   y="735"
+   x="2843">EntryDate:date[1]</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000964219"><polygon
+   id="polygon64"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2974,610 2908,610 2908,328 2974,328 " />
+<line
+   id="line66"
+   style="stroke:#000000;stroke-width:1"
+   y2="335"
+   x2="2973"
+   y1="335"
+   x1="2909" />
+<text
+   id="text70"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan68"
+   y="334"
+   x="2933">Client</tspan></text>
+
+<line
+   id="line72"
+   style="stroke:#000000;stroke-width:1"
+   y2="335"
+   x2="2973"
+   y1="335"
+   x1="2909" />
+<text
+   id="text160"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan74"
+   y="340"
+   x="2909">SSN:ssnHashingOption</tspan> <tspan
+   id="tspan76"
+   y="346"
+   x="2909">{hmis}</tspan> <tspan
+   id="tspan78"
+   y="352"
+   x="2909">White:noYesMissing{hmis}</tspan> <tspan
+   id="tspan80"
+   y="358"
+   x="2909">[1]</tspan> <tspan
+   id="tspan82"
+   y="364"
+   x="2909">LastName:</tspan> <tspan
+   id="tspan84"
+   y="370"
+   x="2909">nameHashingOption{hmis}</tspan> <tspan
+   id="tspan86"
+   y="376"
+   x="2909">BlackAfAmerican:</tspan> <tspan
+   id="tspan88"
+   y="382"
+   x="2909">noYesMissing{hmis}[1]</tspan> <tspan
+   id="tspan90"
+   y="388"
+   x="2909">GenderNone:</tspan> <tspan
+   id="tspan92"
+   y="394"
+   x="2909">raceGenderNone{hmis}</tspan> <tspan
+   id="tspan94"
+   y="400"
+   x="2909">Male:noYesMissing{hmis}[1]</tspan> <tspan
+   id="tspan96"
+   y="406"
+   x="2909">FirstName:</tspan> <tspan
+   id="tspan98"
+   y="412"
+   x="2909">nameHashingOption{hmis}</tspan> <tspan
+   id="tspan100"
+   y="418"
+   x="2909">DOB:date</tspan> <tspan
+   id="tspan102"
+   y="424"
+   x="2909">NativeHIOtherPacific:</tspan> <tspan
+   id="tspan104"
+   y="430"
+   x="2909">noYesMissing{hmis}[1]</tspan> <tspan
+   id="tspan106"
+   y="436"
+   x="2909">Transgender:noYesMissing</tspan> <tspan
+   id="tspan108"
+   y="442"
+   x="2909">{hmis}[1]</tspan> <tspan
+   id="tspan110"
+   y="448"
+   x="2909">NameSuffix:string50{hmis}</tspan> <tspan
+   id="tspan112"
+   y="454"
+   x="2909">Female:noYesMissing{hmis}</tspan> <tspan
+   id="tspan114"
+   y="460"
+   x="2909">[1]</tspan> <tspan
+   id="tspan116"
+   y="466"
+   x="2909">DOBDataQuality:</tspan> <tspan
+   id="tspan118"
+   y="472"
+   x="2909">dobDataQuality{hmis}[1]</tspan> <tspan
+   id="tspan120"
+   y="478"
+   x="2909">MiddleName:</tspan> <tspan
+   id="tspan122"
+   y="484"
+   x="2909">nameHashingOption{hmis}</tspan> <tspan
+   id="tspan124"
+   y="490"
+   x="2909">SSNDataQuality:</tspan> <tspan
+   id="tspan126"
+   y="496"
+   x="2909">ssnDataQuality{hmis}[1]</tspan> <tspan
+   id="tspan128"
+   y="502"
+   x="2909">GenderOther:noYesMissing</tspan> <tspan
+   id="tspan130"
+   y="508"
+   x="2909">{hmis}[1]</tspan> <tspan
+   id="tspan132"
+   y="514"
+   x="2909">NameDataQuality:</tspan> <tspan
+   id="tspan134"
+   y="520"
+   x="2909">nameDataQuaility{hmis}[1]</tspan> <tspan
+   id="tspan136"
+   y="526"
+   x="2909">AmIndAKNative:</tspan> <tspan
+   id="tspan138"
+   y="532"
+   x="2909">noYesMissing{hmis}[1]</tspan> <tspan
+   id="tspan140"
+   y="538"
+   x="2909">VeteranStatus:</tspan> <tspan
+   id="tspan142"
+   y="544"
+   x="2909">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan144"
+   y="550"
+   x="2909">[1]</tspan> <tspan
+   id="tspan146"
+   y="556"
+   x="2909">RaceNone:raceGenderNone</tspan> <tspan
+   id="tspan148"
+   y="562"
+   x="2909">{hmis}</tspan> <tspan
+   id="tspan150"
+   y="568"
+   x="2909">Ethnicity:ethnicity{hmis}[1]</tspan> <tspan
+   id="tspan152"
+   y="574"
+   x="2909">Questioning:noYesMissing</tspan> <tspan
+   id="tspan154"
+   y="580"
+   x="2909">{hmis}[1]</tspan> <tspan
+   id="tspan156"
+   y="586"
+   x="2909">Asian:noYesMissing{hmis}</tspan> <tspan
+   id="tspan158"
+   y="592"
+   x="2909">[1]</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965410"><polygon
+   id="polygon163"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3108,473 3042,473 3042,465 3108,465 " />
+<line
+   id="line165"
+   style="stroke:#000000;stroke-width:1"
+   y2="472"
+   x2="3107"
+   y1="472"
+   x1="3043" />
+<text
+   id="text169"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan167"
+   y="472"
+   x="3061">Household</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965606"><polygon
+   id="polygon172"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2395,914 2329,914 2329,906 2395,906 " />
+<line
+   id="line174"
+   style="stroke:#000000;stroke-width:1"
+   y2="914"
+   x2="2394"
+   y1="914"
+   x1="2330" />
+<text
+   id="text178"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan176"
+   y="913"
+   x="2356">User</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000966216"><polygon
+   id="polygon181"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2463,914 2397,914 2397,906 2463,906 " />
+<line
+   id="line183"
+   style="stroke:#000000;stroke-width:1"
+   y2="914"
+   x2="2462"
+   y1="914"
+   x1="2399" />
+<text
+   id="text187"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan185"
+   y="913"
+   x="2408">VashExitReason</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965851"><polygon
+   id="polygon190"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2830,688 2764,688 2764,484 2830,484 " />
+<line
+   id="line192"
+   style="stroke:#000000;stroke-width:1"
+   y2="491"
+   x2="2830"
+   y1="491"
+   x1="2766" />
+<text
+   id="text196"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan194"
+   y="490"
+   x="2776">ClientVeteranInfo</tspan></text>
+
+<line
+   id="line198"
+   style="stroke:#000000;stroke-width:1"
+   y2="491"
+   x2="2830"
+   y1="491"
+   x1="2766" />
+<text
+   id="text262"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan200"
+   y="496"
+   x="2766">YearSeparated:gYear{xsd}</tspan> <tspan
+   id="tspan202"
+   y="502"
+   x="2766">OtherTheater:</tspan> <tspan
+   id="tspan204"
+   y="508"
+   x="2766">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan206"
+   y="514"
+   x="2766">{hmis}</tspan> <tspan
+   id="tspan208"
+   y="520"
+   x="2766">IraqOIF:</tspan> <tspan
+   id="tspan210"
+   y="526"
+   x="2766">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan212"
+   y="532"
+   x="2766">{hmis}</tspan> <tspan
+   id="tspan214"
+   y="538"
+   x="2766">IraqOND:</tspan> <tspan
+   id="tspan216"
+   y="544"
+   x="2766">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan218"
+   y="550"
+   x="2766">{hmis}</tspan> <tspan
+   id="tspan220"
+   y="556"
+   x="2766">YearEnteredService:gYear</tspan> <tspan
+   id="tspan222"
+   y="562"
+   x="2766">{xsd}</tspan> <tspan
+   id="tspan224"
+   y="568"
+   x="2766">MilitaryBranch:militaryBranch</tspan> <tspan
+   id="tspan226"
+   y="574"
+   x="2766">{hmis}</tspan> <tspan
+   id="tspan228"
+   y="580"
+   x="2766">VietnamWar:</tspan> <tspan
+   id="tspan230"
+   y="586"
+   x="2766">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan232"
+   y="592"
+   x="2766">{hmis}</tspan> <tspan
+   id="tspan234"
+   y="598"
+   x="2766">AfghanistanOEF:</tspan> <tspan
+   id="tspan236"
+   y="604"
+   x="2766">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan238"
+   y="610"
+   x="2766">{hmis}</tspan> <tspan
+   id="tspan240"
+   y="616"
+   x="2766">WorldWarII:</tspan> <tspan
+   id="tspan242"
+   y="622"
+   x="2766">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan244"
+   y="628"
+   x="2766">{hmis}</tspan> <tspan
+   id="tspan246"
+   y="634"
+   x="2766">DesertStorm:</tspan> <tspan
+   id="tspan248"
+   y="640"
+   x="2766">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan250"
+   y="646"
+   x="2766">{hmis}</tspan> <tspan
+   id="tspan252"
+   y="652"
+   x="2766">DischargeStatus:</tspan> <tspan
+   id="tspan254"
+   y="658"
+   x="2766">dischargeStatus{hmis}</tspan> <tspan
+   id="tspan256"
+   y="664"
+   x="2766">KoreanWar:</tspan> <tspan
+   id="tspan258"
+   y="670"
+   x="2766">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan260"
+   y="676"
+   x="2766">{hmis}</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000969712"><polygon
+   id="polygon265"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3330,576 3264,576 3264,567 3330,567 " />
+<line
+   id="line267"
+   style="stroke:#000000;stroke-width:1"
+   y2="574"
+   x2="3330"
+   y1="574"
+   x1="3266" />
+<text
+   id="text271"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan269"
+   y="574"
+   x="3289">Project</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000966233"><polygon
+   id="polygon274"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3328,404 3262,404 3262,396 3328,396 " />
+<line
+   id="line276"
+   style="stroke:#000000;stroke-width:1"
+   y2="403"
+   x2="3327"
+   y1="403"
+   x1="3264" />
+<text
+   id="text280"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan278"
+   y="402"
+   x="3278">Organization</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963647"><polygon
+   id="polygon283"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3432,495 3366,495 3366,475 3432,475 " />
+<line
+   id="line285"
+   style="stroke:#000000;stroke-width:1"
+   y2="483"
+   x2="3431"
+   y1="483"
+   x1="3368" />
+<text
+   id="text289"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan287"
+   y="482"
+   x="3387">Affiliation</tspan></text>
+
+<line
+   id="line291"
+   style="stroke:#000000;stroke-width:1"
+   y2="483"
+   x2="3431"
+   y1="483"
+   x1="3368" />
+<text
+   id="text295"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan293"
+   y="488"
+   x="3368">ResProjectID:string32{hmis}</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963473"><polygon
+   id="polygon298"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3542,737 3394,737 3394,621 3542,621 " />
+<line
+   id="line300"
+   style="stroke:#000000;stroke-width:1"
+   y2="628"
+   x2="3542"
+   y1="628"
+   x1="3396" />
+<text
+   id="text304"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan302"
+   y="628"
+   x="3460">Funder</tspan></text>
+
+<line
+   id="line306"
+   style="stroke:#000000;stroke-width:1"
+   y2="628"
+   x2="3542"
+   y1="628"
+   x1="3396" />
+<text
+   id="text318"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan308"
+   y="633"
+   x="3396">StartDate{hmis}:date[1]</tspan> <tspan
+   id="tspan310"
+   y="639"
+   x="3396">Funder:federalPartnerProgramsAndComponents{hmis}[1]</tspan> <tspan
+   id="tspan312"
+   y="645"
+   x="3396">EndDate{hmis}:date</tspan> <tspan
+   id="tspan314"
+   y="651"
+   x="3396">GrantID:string32{hmis}[1]</tspan> <tspan
+   id="tspan316"
+   y="657"
+   x="3396">OtherFunder:string50{hmis}</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965393"><polygon
+   id="polygon321"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3435,547 3369,547 3369,538 3435,538 " />
+<line
+   id="line323"
+   style="stroke:#000000;stroke-width:1"
+   y2="546"
+   x2="3434"
+   y1="546"
+   x1="3370" />
+<text
+   id="text327"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan325"
+   y="545"
+   x="3387">ProjectCoC</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963710"><polygon
+   id="polygon330"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3566,562 3500,562 3500,535 3566,535 " />
+<line
+   id="line332"
+   style="stroke:#000000;stroke-width:1"
+   y2="542"
+   x2="3565"
+   y1="542"
+   x1="3501" />
+<text
+   id="text336"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan334"
+   y="542"
+   x="3521">Inventory</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000962599"><polygon
+   id="polygon339"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2207,1330 2140,1330 2140,1268 2207,1268 " />
+<line
+   id="line341"
+   style="stroke:#000000;stroke-width:1"
+   y2="1276"
+   x2="2206"
+   y1="1276"
+   x1="2141" />
+<text
+   id="text345"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan343"
+   y="1275"
+   x="2156">Assessment</tspan></text>
+
+<line
+   id="line347"
+   style="stroke:#000000;stroke-width:1"
+   y2="1276"
+   x2="2206"
+   y1="1276"
+   x1="2141" />
+<text
+   id="text367"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan349"
+   y="1281"
+   x="2141">AssessmentLocation:</tspan> <tspan
+   id="tspan351"
+   y="1287"
+   x="2141">string250{hmis}[1]</tspan> <tspan
+   id="tspan353"
+   y="1293"
+   x="2141">AssessmentDate:date[1]</tspan> <tspan
+   id="tspan355"
+   y="1299"
+   x="2141">AssessmentType:</tspan> <tspan
+   id="tspan357"
+   y="1305"
+   x="2141">assessmentType{hmis}[1]</tspan> <tspan
+   id="tspan359"
+   y="1311"
+   x="2141">PrioritizationStatus:</tspan> <tspan
+   id="tspan361"
+   y="1317"
+   x="2141">prioritizationStatus{hmis}[1]</tspan> <tspan
+   id="tspan363"
+   y="1323"
+   x="2141">AssessmentLevel:</tspan> <tspan
+   id="tspan365"
+   y="1329"
+   x="2141">assessmentLevel{hmis}[1]</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000964202"><polygon
+   id="polygon370"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2401,1416 2335,1416 2335,1406 2401,1406 " />
+<line
+   id="line372"
+   style="stroke:#000000;stroke-width:1"
+   y2="1414"
+   x2="2400"
+   y1="1414"
+   x1="2336" />
+<text
+   id="text376"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan374"
+   y="1413"
+   x="2348">RhyBCPStatus</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965142"><polygon
+   id="polygon379"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2504,1535 2430,1535 2430,1400 2504,1400 " />
+<line
+   id="line381"
+   style="stroke:#000000;stroke-width:1"
+   y2="1408"
+   x2="2504"
+   y1="1408"
+   x1="2432" />
+<text
+   id="text385"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan383"
+   y="1407"
+   x="2432">CurrentLivingSituationClass</tspan></text>
+
+<line
+   id="line387"
+   style="stroke:#000000;stroke-width:1"
+   y2="1408"
+   x2="2504"
+   y1="1408"
+   x1="2432" />
+<text
+   id="text427"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan389"
+   y="1413"
+   x="2432">LeaseOwn60Day:</tspan> <tspan
+   id="tspan391"
+   y="1419"
+   x="2432">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan393"
+   y="1425"
+   x="2432">{hmis}</tspan> <tspan
+   id="tspan395"
+   y="1431"
+   x="2432">MovedTwoOrMore:</tspan> <tspan
+   id="tspan397"
+   y="1437"
+   x="2432">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan399"
+   y="1443"
+   x="2432">{hmis}</tspan> <tspan
+   id="tspan401"
+   y="1449"
+   x="2432">CurrentLivingSituation:boolean</tspan> <tspan
+   id="tspan403"
+   y="1455"
+   x="2432">[1]</tspan> <tspan
+   id="tspan405"
+   y="1461"
+   x="2432">LocationDetails:string250{hmis}</tspan> <tspan
+   id="tspan407"
+   y="1467"
+   x="2432">SubsequentResidence:</tspan> <tspan
+   id="tspan409"
+   y="1473"
+   x="2432">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan411"
+   y="1479"
+   x="2432">{hmis}</tspan> <tspan
+   id="tspan413"
+   y="1485"
+   x="2432">LeaveSituation14Days:</tspan> <tspan
+   id="tspan415"
+   y="1491"
+   x="2432">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan417"
+   y="1497"
+   x="2432">{hmis}</tspan> <tspan
+   id="tspan419"
+   y="1503"
+   x="2432">VerifiedBy:string50{hmis}</tspan> <tspan
+   id="tspan421"
+   y="1509"
+   x="2432">ResourcesToObtain:</tspan> <tspan
+   id="tspan423"
+   y="1515"
+   x="2432">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan425"
+   y="1521"
+   x="2432">{hmis}</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970389"><polygon
+   id="polygon430"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2581,1472 2515,1472 2515,1444 2581,1444 " />
+<line
+   id="line432"
+   style="stroke:#000000;stroke-width:1"
+   y2="1451"
+   x2="2580"
+   y1="1451"
+   x1="2516" />
+<text
+   id="text436"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan434"
+   y="1450"
+   x="2528">EnrollmentCoC</tspan></text>
+
+<line
+   id="line438"
+   style="stroke:#000000;stroke-width:1"
+   y2="1451"
+   x2="2580"
+   y1="1451"
+   x1="2516" />
+<text
+   id="text442"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan440"
+   y="1456"
+   x="2516">CoCCode:cocCode[1]</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963422"><polygon
+   id="polygon445"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2624,1525 2558,1525 2558,1516 2624,1516 " />
+<line
+   id="line447"
+   style="stroke:#000000;stroke-width:1"
+   y2="1524"
+   x2="2623"
+   y1="1524"
+   x1="2560" />
+<text
+   id="text451"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan449"
+   y="1523"
+   x="2568">NonCashBenefits</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963769"><polygon
+   id="polygon454"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2715,1539 2649,1539 2649,1530 2715,1530 " />
+<line
+   id="line456"
+   style="stroke:#000000;stroke-width:1"
+   y2="1537"
+   x2="2714"
+   y1="1537"
+   x1="2651" />
+<text
+   id="text460"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan458"
+   y="1536"
+   x="2666">PATHStatus</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965623"><polygon
+   id="polygon463"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2798,1518 2732,1518 2732,1509 2798,1509 " />
+<line
+   id="line465"
+   style="stroke:#000000;stroke-width:1"
+   y2="1516"
+   x2="2797"
+   y1="1516"
+   x1="2734" />
+<text
+   id="text469"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan467"
+   y="1516"
+   x="2741">MedicalAssistance</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000969666"><polygon
+   id="polygon472"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2806,1370 2732,1370 2732,1350 2806,1350 " />
+<line
+   id="line474"
+   style="stroke:#000000;stroke-width:1"
+   y2="1358"
+   x2="2805"
+   y1="1358"
+   x1="2733" />
+<text
+   id="text478"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan476"
+   y="1357"
+   x="2735">DateOfEngagementClass</tspan></text>
+
+<line
+   id="line480"
+   style="stroke:#000000;stroke-width:1"
+   y2="1358"
+   x2="2805"
+   y1="1358"
+   x1="2733" />
+<text
+   id="text484"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan482"
+   y="1363"
+   x="2733">DateOfEngagement:date[1]</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965640"><polygon
+   id="polygon487"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2820,1270 2754,1270 2754,1260 2820,1260 " />
+<line
+   id="line489"
+   style="stroke:#000000;stroke-width:1"
+   y2="1268"
+   x2="2819"
+   y1="1268"
+   x1="2756" />
+<text
+   id="text493"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan491"
+   y="1267"
+   x="2763">ServiceFAReferral</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965127"><polygon
+   id="polygon496"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2853,1285 2787,1285 2787,1277 2853,1277 " />
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965772"><polygon
+   id="polygon499"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2948,1264 2882,1264 2882,1256 2948,1256 " />
+<line
+   id="line501"
+   style="stroke:#000000;stroke-width:1"
+   y2="1263"
+   x2="2947"
+   y1="1263"
+   x1="2884" />
+<text
+   id="text505"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan503"
+   y="1262"
+   x="2898">Employment</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965789"><polygon
+   id="polygon508"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2997,1315 2931,1315 2931,1278 2997,1278 " />
+<line
+   id="line510"
+   style="stroke:#000000;stroke-width:1"
+   y2="1285"
+   x2="2996"
+   y1="1285"
+   x1="2933" />
+<text
+   id="text514"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan512"
+   y="1284"
+   x="2935">ConnectionWithSOAR</tspan></text>
+
+<line
+   id="line516"
+   style="stroke:#000000;stroke-width:1"
+   y2="1285"
+   x2="2996"
+   y1="1285"
+   x1="2933" />
+<text
+   id="text524"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan518"
+   y="1290"
+   x="2933">ConnectionWithSOAR:</tspan> <tspan
+   id="tspan520"
+   y="1296"
+   x="2933">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan522"
+   y="1302"
+   x="2933">{hmis}[1]</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000964924"><polygon
+   id="polygon527"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3045,1404 2979,1404 2979,1328 3045,1328 " />
+<line
+   id="line529"
+   style="stroke:#000000;stroke-width:1"
+   y2="1336"
+   x2="3044"
+   y1="1336"
+   x1="2980" />
+<text
+   id="text533"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan531"
+   y="1335"
+   x="3004">Event</tspan></text>
+
+<line
+   id="line535"
+   style="stroke:#000000;stroke-width:1"
+   y2="1336"
+   x2="3044"
+   y1="1336"
+   x1="2980" />
+<text
+   id="text557"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan537"
+   y="1341"
+   x="2980">EventDate:date[1]</tspan> <tspan
+   id="tspan539"
+   y="1347"
+   x="2980">ReferralCaseManageAfter:</tspan> <tspan
+   id="tspan541"
+   y="1353"
+   x="2980">noYesMissing{hmis}</tspan> <tspan
+   id="tspan543"
+   y="1359"
+   x="2980">ResultDate:date</tspan> <tspan
+   id="tspan545"
+   y="1365"
+   x="2980">LocationCrisisOrPHHousing:</tspan> <tspan
+   id="tspan547"
+   y="1371"
+   x="2980">string250{hmis}</tspan> <tspan
+   id="tspan549"
+   y="1377"
+   x="2980">ProbSolDivRRResult:</tspan> <tspan
+   id="tspan551"
+   y="1383"
+   x="2980">noYesMissing{hmis}</tspan> <tspan
+   id="tspan553"
+   y="1389"
+   x="2980">ReferralResult:referralResult</tspan> <tspan
+   id="tspan555"
+   y="1395"
+   x="2980">{hmisowl}</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000961782"><polygon
+   id="polygon560"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2943,1511 2877,1511 2877,1502 2943,1502 " />
+<line
+   id="line562"
+   style="stroke:#000000;stroke-width:1"
+   y2="1509"
+   x2="2942"
+   y1="1509"
+   x1="2879" />
+<text
+   id="text566"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan564"
+   y="1508"
+   x="2884">IncomeAndSources</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963727"><polygon
+   id="polygon569"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2711,826 2645,826 2645,805 2711,805 " />
+<line
+   id="line571"
+   style="stroke:#000000;stroke-width:1"
+   y2="813"
+   x2="2710"
+   y1="813"
+   x1="2646" />
+<text
+   id="text575"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan573"
+   y="812"
+   x="2664">Disabilities</tspan></text>
+
+<line
+   id="line577"
+   style="stroke:#000000;stroke-width:1"
+   y2="813"
+   x2="2710"
+   y1="813"
+   x1="2646" />
+<text
+   id="text583"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan579"
+   y="818"
+   x="2646">DisabilityType:disabilityType</tspan> <tspan
+   id="tspan581"
+   y="824"
+   x="2646">{hmis}[1]</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000969763"><polygon
+   id="polygon586"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2588,866 2514,866 2514,555 2588,555 " />
+<line
+   id="line588"
+   style="stroke:#000000;stroke-width:1"
+   y2="563"
+   x2="2588"
+   y1="563"
+   x1="2515" />
+<text
+   id="text592"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan590"
+   y="562"
+   x="2530">HealthInsurance</tspan></text>
+
+<line
+   id="line594"
+   style="stroke:#000000;stroke-width:1"
+   y2="563"
+   x2="2588"
+   y1="563"
+   x1="2515" />
+<text
+   id="text690"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan596"
+   y="568"
+   x="2515">OtherInsuranceIdentify:string50</tspan> <tspan
+   id="tspan598"
+   y="574"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan600"
+   y="580"
+   x="2515">VAMedicalServices:</tspan> <tspan
+   id="tspan602"
+   y="586"
+   x="2515">noYesMissing{hmis}</tspan> <tspan
+   id="tspan604"
+   y="592"
+   x="2515">OtherInsurance:noYesMissing</tspan> <tspan
+   id="tspan606"
+   y="598"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan608"
+   y="604"
+   x="2515">InsuranceFromAnySource:</tspan> <tspan
+   id="tspan610"
+   y="610"
+   x="2515">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan612"
+   y="616"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan614"
+   y="622"
+   x="2515">NoVAMedReason:</tspan> <tspan
+   id="tspan616"
+   y="628"
+   x="2515">reasonNotInsuredOrAssisted</tspan> <tspan
+   id="tspan618"
+   y="634"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan620"
+   y="640"
+   x="2515">NoPrivatePayReason:</tspan> <tspan
+   id="tspan622"
+   y="646"
+   x="2515">reasonNotInsuredOrAssisted</tspan> <tspan
+   id="tspan624"
+   y="652"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan626"
+   y="658"
+   x="2515">NoSCHIPReason:</tspan> <tspan
+   id="tspan628"
+   y="664"
+   x="2515">reasonNotInsuredOrAssisted</tspan> <tspan
+   id="tspan630"
+   y="670"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan632"
+   y="676"
+   x="2515">Medicaid:noYesMissing{hmis}</tspan> <tspan
+   id="tspan634"
+   y="682"
+   x="2515">EmployerProvided:noYesMissing</tspan> <tspan
+   id="tspan636"
+   y="688"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan638"
+   y="694"
+   x="2515">NoEmployerProvidedReason:</tspan> <tspan
+   id="tspan640"
+   y="700"
+   x="2515">reasonNotInsuredOrAssisted</tspan> <tspan
+   id="tspan642"
+   y="706"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan644"
+   y="712"
+   x="2515">NoCOBRAReason:</tspan> <tspan
+   id="tspan646"
+   y="718"
+   x="2515">reasonNotInsuredOrAssisted</tspan> <tspan
+   id="tspan648"
+   y="724"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan650"
+   y="730"
+   x="2515">NoMedicareReason:</tspan> <tspan
+   id="tspan652"
+   y="736"
+   x="2515">reasonNotInsuredOrAssisted</tspan> <tspan
+   id="tspan654"
+   y="742"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan656"
+   y="748"
+   x="2515">SCHIP:noYesMissing{hmis}</tspan> <tspan
+   id="tspan658"
+   y="754"
+   x="2515">COBRA:noYesMissing{hmis}</tspan> <tspan
+   id="tspan660"
+   y="760"
+   x="2515">NoStateHealthInsReason:</tspan> <tspan
+   id="tspan662"
+   y="766"
+   x="2515">reasonNotInsuredOrAssisted</tspan> <tspan
+   id="tspan664"
+   y="772"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan666"
+   y="778"
+   x="2515">IndianHealthServices:</tspan> <tspan
+   id="tspan668"
+   y="784"
+   x="2515">noYesMissing{hmis}</tspan> <tspan
+   id="tspan670"
+   y="790"
+   x="2515">NoMedicaidReason:</tspan> <tspan
+   id="tspan672"
+   y="796"
+   x="2515">reasonNotInsuredOrAssisted</tspan> <tspan
+   id="tspan674"
+   y="802"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan676"
+   y="808"
+   x="2515">PrivatePay:noYesMissing{hmis}</tspan> <tspan
+   id="tspan678"
+   y="814"
+   x="2515">NoIndianHealthServicesReason:</tspan> <tspan
+   id="tspan680"
+   y="820"
+   x="2515">reasonNotInsuredOrAssisted</tspan> <tspan
+   id="tspan682"
+   y="826"
+   x="2515">{hmis}</tspan> <tspan
+   id="tspan684"
+   y="832"
+   x="2515">Medicare:noYesMissing{hmis}</tspan> <tspan
+   id="tspan686"
+   y="838"
+   x="2515">StateHealthIns:noYesMissing</tspan> <tspan
+   id="tspan688"
+   y="844"
+   x="2515">{hmis}</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000969746"><polygon
+   id="polygon693"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2567,983 2501,983 2501,974 2567,974 " />
+<line
+   id="line695"
+   style="stroke:#000000;stroke-width:1"
+   y2="982"
+   x2="2566"
+   y1="982"
+   x1="2502" />
+<text
+   id="text699"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan697"
+   y="981"
+   x="2521">Wellbeing</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000966729"><polygon
+   id="polygon702"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2557,1028 2491,1028 2491,1001 2557,1001 " />
+<line
+   id="line704"
+   style="stroke:#000000;stroke-width:1"
+   y2="1009"
+   x2="2556"
+   y1="1009"
+   x1="2492" />
+<text
+   id="text708"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan706"
+   y="1008"
+   x="2509">EntryRHSP</tspan></text>
+
+<line
+   id="line710"
+   style="stroke:#000000;stroke-width:1"
+   y2="1009"
+   x2="2556"
+   y1="1009"
+   x1="2492" />
+<text
+   id="text718"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan712"
+   y="1014"
+   x="2492">WorstHousingSituation:</tspan> <tspan
+   id="tspan714"
+   y="1020"
+   x="2492">noYesDoesntKnowRefused</tspan> <tspan
+   id="tspan716"
+   y="1026"
+   x="2492">{hmis}[1]</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000969729"><polygon
+   id="polygon721"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2571,1057 2505,1057 2505,1048 2571,1048 " />
+<line
+   id="line723"
+   style="stroke:#000000;stroke-width:1"
+   y2="1055"
+   x2="2570"
+   y1="1055"
+   x1="2507" />
+<text
+   id="text727"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan725"
+   y="1054"
+   x="2521">HealthStatus</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963693"><polygon
+   id="polygon730"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2571,1110 2505,1110 2505,1101 2571,1101 " />
+<line
+   id="line732"
+   style="stroke:#000000;stroke-width:1"
+   y2="1109"
+   x2="2570"
+   y1="1109"
+   x1="2506" />
+<text
+   id="text736"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan734"
+   y="1108"
+   x="2514">DomesticViolence</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963786"><polygon
+   id="polygon739"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2578,1146 2512,1146 2512,1136 2578,1136 " />
+<line
+   id="line741"
+   style="stroke:#000000;stroke-width:1"
+   y2="1144"
+   x2="2577"
+   y1="1144"
+   x1="2514" />
+<text
+   id="text745"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan743"
+   y="1143"
+   x="2516">YouthEducationStatus</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965657"><polygon
+   id="polygon748"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2185,1438 2076,1438 2076,1382 2185,1382 " />
+<line
+   id="line750"
+   style="stroke:#000000;stroke-width:1"
+   y2="1390"
+   x2="2184"
+   y1="1390"
+   x1="2078" />
+<text
+   id="text754"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan752"
+   y="1389"
+   x="2095">AssessmentQuestionClass</tspan></text>
+
+<line
+   id="line756"
+   style="stroke:#000000;stroke-width:1"
+   y2="1390"
+   x2="2184"
+   y1="1390"
+   x1="2078" />
+<text
+   id="text766"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan758"
+   y="1395"
+   x="2078">AssessmentQuestion:string250{hmis}[1]</tspan> <tspan
+   id="tspan760"
+   y="1401"
+   x="2078">AssessmentQuestionOrder:integer</tspan> <tspan
+   id="tspan762"
+   y="1407"
+   x="2078">AssessmentQuestionGroup:string250{hmis}</tspan> <tspan
+   id="tspan764"
+   y="1413"
+   x="2078">AssessmentAnswer:string250{hmis}[1]</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963803"><polygon
+   id="polygon769"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2305,1412 2202,1412 2202,1380 2305,1380 " />
+<line
+   id="line771"
+   style="stroke:#000000;stroke-width:1"
+   y2="1387"
+   x2="2304"
+   y1="1387"
+   x1="2204" />
+<text
+   id="text775"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan773"
+   y="1386"
+   x="2221">AssessmentResultClass</tspan></text>
+
+<line
+   id="line777"
+   style="stroke:#000000;stroke-width:1"
+   y2="1387"
+   x2="2304"
+   y1="1387"
+   x1="2204" />
+<text
+   id="text783"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan779"
+   y="1392"
+   x="2204">AssessmentResult:string250{hmis}[1]</tspan> <tspan
+   id="tspan781"
+   y="1398"
+   x="2204">AssessmentResultType:string250{hmis}</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000964907"><polygon
+   id="polygon786"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="2953,1233 2887,1233 2887,1224 2953,1224 " />
+<line
+   id="line788"
+   style="stroke:#000000;stroke-width:1"
+   y2="1232"
+   x2="2952"
+   y1="1232"
+   x1="2888" />
+<text
+   id="text792"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan790"
+   y="1231"
+   x="2905">MoveInDate</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000966250"><polygon
+   id="polygon795"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3110,1616 3028,1616 3028,1408 3110,1408 " />
+<line
+   id="line797"
+   style="stroke:#000000;stroke-width:1"
+   y2="1416"
+   x2="3109"
+   y1="1416"
+   x1="3030" />
+<text
+   id="text801"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan799"
+   y="1415"
+   x="3056">EntryRHY</tspan></text>
+
+<line
+   id="line803"
+   style="stroke:#000000;stroke-width:1"
+   y2="1416"
+   x2="3109"
+   y1="1416"
+   x1="3030" />
+<text
+   id="text867"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan805"
+   y="1421"
+   x="3030">FormerWardJuvenileJustice:</tspan> <tspan
+   id="tspan807"
+   y="1427"
+   x="3030">noYesDoesntKnowRefused{hmis}</tspan> <tspan
+   id="tspan809"
+   y="1433"
+   x="3030">[1]</tspan> <tspan
+   id="tspan811"
+   y="1439"
+   x="3030">ChildWelfareYears:issuesYears</tspan> <tspan
+   id="tspan813"
+   y="1445"
+   x="3030">{hmisowl}</tspan> <tspan
+   id="tspan815"
+   y="1451"
+   x="3030">SexualOrientationOther:string100</tspan> <tspan
+   id="tspan817"
+   y="1457"
+   x="3030">{hmis}</tspan> <tspan
+   id="tspan819"
+   y="1463"
+   x="3030">PhysicalDisabilityFam:</tspan> <tspan
+   id="tspan821"
+   y="1469"
+   x="3030">noYesMissing{hmis}[1]</tspan> <tspan
+   id="tspan823"
+   y="1475"
+   x="3030">MentalHealthDisorderFam:</tspan> <tspan
+   id="tspan825"
+   y="1481"
+   x="3030">noYesMissing{hmis}[1]</tspan> <tspan
+   id="tspan827"
+   y="1487"
+   x="3030">AlcoholDrugUseDisorderFam:</tspan> <tspan
+   id="tspan829"
+   y="1493"
+   x="3030">noYesMissing{hmis}[1]</tspan> <tspan
+   id="tspan831"
+   y="1499"
+   x="3030">UnemploymentFam:noYesMissing</tspan> <tspan
+   id="tspan833"
+   y="1505"
+   x="3030">{hmis}[1]</tspan> <tspan
+   id="tspan835"
+   y="1511"
+   x="3030">JuvenileJusticeYears:issuesYears</tspan> <tspan
+   id="tspan837"
+   y="1517"
+   x="3030">{hmisowl}</tspan> <tspan
+   id="tspan839"
+   y="1523"
+   x="3030">ReferralSource</tspan> <tspan
+   id="tspan841"
+   y="1529"
+   x="3030">FormerWardChildWelfare:</tspan> <tspan
+   id="tspan843"
+   y="1535"
+   x="3030">noYesDoesntKnowRefused{hmis}</tspan> <tspan
+   id="tspan845"
+   y="1541"
+   x="3030">[1]</tspan> <tspan
+   id="tspan847"
+   y="1547"
+   x="3030">JuvenileJusticeMonths:months</tspan> <tspan
+   id="tspan849"
+   y="1553"
+   x="3030">{hmis}</tspan> <tspan
+   id="tspan851"
+   y="1559"
+   x="3030">IncarceratedParent:noYesMissing[1]</tspan> <tspan
+   id="tspan853"
+   y="1565"
+   x="3030">SexualOrientation:sexualOrientation</tspan> <tspan
+   id="tspan855"
+   y="1571"
+   x="3030">{hmisowl}[1]</tspan> <tspan
+   id="tspan857"
+   y="1577"
+   x="3030">InsufficientIncome:noYesMissing</tspan> <tspan
+   id="tspan859"
+   y="1583"
+   x="3030">{hmis}[1]</tspan> <tspan
+   id="tspan861"
+   y="1589"
+   x="3030">CountOutreachReferralApproaches:</tspan> <tspan
+   id="tspan863"
+   y="1595"
+   x="3030">unsignedInt</tspan> <tspan
+   id="tspan865"
+   y="1601"
+   x="3030">ChildWelfareMonths:months{hmis}</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000961799"><polygon
+   id="polygon870"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3171,1384 3093,1384 3093,1086 3171,1086 " />
+<line
+   id="line872"
+   style="stroke:#000000;stroke-width:1"
+   y2="1094"
+   x2="3170"
+   y1="1094"
+   x1="3095" />
+<text
+   id="text876"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan874"
+   y="1093"
+   x="3117">EntrySSVF</tspan></text>
+
+<line
+   id="line878"
+   style="stroke:#000000;stroke-width:1"
+   y2="1094"
+   x2="3170"
+   y1="1094"
+   x1="3095" />
+<text
+   id="text972"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan880"
+   y="1099"
+   x="3095">DependentUnder6:</tspan> <tspan
+   id="tspan882"
+   y="1105"
+   x="3095">dependentUnder6{hmis}</tspan> <tspan
+   id="tspan884"
+   y="1111"
+   x="3095">AddressDataQuality:</tspan> <tspan
+   id="tspan886"
+   y="1117"
+   x="3095">addressDataQuality{hmis}</tspan> <tspan
+   id="tspan888"
+   y="1123"
+   x="3095">HPScreeningScore:</tspan> <tspan
+   id="tspan890"
+   y="1129"
+   x="3095">hpScreeningScore{hmis}</tspan> <tspan
+   id="tspan892"
+   y="1135"
+   x="3095">HoHLeasesHolder:noYesMissing</tspan> <tspan
+   id="tspan894"
+   y="1141"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan896"
+   y="1147"
+   x="3095">AnnualPercentAMI:</tspan> <tspan
+   id="tspan898"
+   y="1153"
+   x="3095">annualPercentAMI{hmis}</tspan> <tspan
+   id="tspan900"
+   y="1159"
+   x="3095">SexOffender:noYesMissing{hmis}</tspan> <tspan
+   id="tspan902"
+   y="1165"
+   x="3095">CriminalRecord:noYesMissing</tspan> <tspan
+   id="tspan904"
+   y="1171"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan906"
+   y="1177"
+   x="3095">LastPermanentCity:string50{hmis}</tspan> <tspan
+   id="tspan908"
+   y="1183"
+   x="3095">CurrentPregnant:noYesMissing</tspan> <tspan
+   id="tspan910"
+   y="1189"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan912"
+   y="1195"
+   x="3095">PercentAMI:percentAMISimple</tspan> <tspan
+   id="tspan914"
+   y="1201"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan916"
+   y="1207"
+   x="3095">ThresholdScore:positiveInteger</tspan> <tspan
+   id="tspan918"
+   y="1213"
+   x="3095">VAMCStation:vamcStation{hmis}</tspan> <tspan
+   id="tspan920"
+   y="1219"
+   x="3095">SingleParent:noYesMissing{hmis}</tspan> <tspan
+   id="tspan922"
+   y="1225"
+   x="3095">LastPermanentZIP:zipCode{hmis}</tspan> <tspan
+   id="tspan924"
+   y="1231"
+   x="3095">LiteralHomelessHistory:</tspan> <tspan
+   id="tspan926"
+   y="1237"
+   x="3095">literalHomelessHistory{hmis}</tspan> <tspan
+   id="tspan928"
+   y="1243"
+   x="3095">ClientLeaseHolder:noYesMissing</tspan> <tspan
+   id="tspan930"
+   y="1249"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan932"
+   y="1255"
+   x="3095">HH5Plus:noYesMissing{hmis}</tspan> <tspan
+   id="tspan934"
+   y="1261"
+   x="3095">PrisonDischarge:noYesMissing</tspan> <tspan
+   id="tspan936"
+   y="1267"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan938"
+   y="1273"
+   x="3095">LastPermanentStreet:string100</tspan> <tspan
+   id="tspan940"
+   y="1279"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan942"
+   y="1285"
+   x="3095">IncarceratedAdult:</tspan> <tspan
+   id="tspan944"
+   y="1291"
+   x="3095">incarceratedAdult{hmis}</tspan> <tspan
+   id="tspan946"
+   y="1297"
+   x="3095">CoCPrioritized:noYesMissing</tspan> <tspan
+   id="tspan948"
+   y="1303"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan950"
+   y="1309"
+   x="3095">DisabledHoH:noYesMissing</tspan> <tspan
+   id="tspan952"
+   y="1315"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan954"
+   y="1321"
+   x="3095">SubsidyAtRisk:noYesMissing</tspan> <tspan
+   id="tspan956"
+   y="1327"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan958"
+   y="1333"
+   x="3095">EvictionHistory:evictionHistory</tspan> <tspan
+   id="tspan960"
+   y="1339"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan962"
+   y="1345"
+   x="3095">TimeToHousingLoss:</tspan> <tspan
+   id="tspan964"
+   y="1351"
+   x="3095">timeToHousingLoss{hmis}</tspan> <tspan
+   id="tspan966"
+   y="1357"
+   x="3095">TargetScreenReqd:noYesMissing</tspan> <tspan
+   id="tspan968"
+   y="1363"
+   x="3095">{hmis}</tspan> <tspan
+   id="tspan970"
+   y="1369"
+   x="3095">LastPermanentState:state{hmis}</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965427"><polygon
+   id="polygon975"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3332,949 3266,949 3266,895 3332,895 " />
+<line
+   id="line977"
+   style="stroke:#000000;stroke-width:1"
+   y2="902"
+   x2="3331"
+   y1="902"
+   x1="3267" />
+<text
+   id="text981"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan979"
+   y="902"
+   x="3294">Exit</tspan></text>
+
+<line
+   id="line983"
+   style="stroke:#000000;stroke-width:1"
+   y2="902"
+   x2="3331"
+   y1="902"
+   x1="3267" />
+<text
+   id="text995"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan985"
+   y="907"
+   x="3267">Destination:livingSituation</tspan> <tspan
+   id="tspan987"
+   y="913"
+   x="3267">{hmis}[1]</tspan> <tspan
+   id="tspan989"
+   y="919"
+   x="3267">OtherDestination:string50</tspan> <tspan
+   id="tspan991"
+   y="925"
+   x="3267">{hmis}</tspan> <tspan
+   id="tspan993"
+   y="931"
+   x="3267">ExitDate:date[1]</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000963456"><polygon
+   id="polygon998"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3458,1014 3392,1014 3392,1005 3458,1005 " />
+<line
+   id="line1000"
+   style="stroke:#000000;stroke-width:1"
+   y2="1013"
+   x2="3458"
+   y1="1013"
+   x1="3394" />
+<text
+   id="text1004"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1002"
+   y="1012"
+   x="3409">RhyAftercare</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000965531"><polygon
+   id="polygon1007"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3460,993 3394,993 3394,955 3460,955 " />
+<line
+   id="line1009"
+   style="stroke:#000000;stroke-width:1"
+   y2="962"
+   x2="3459"
+   y1="962"
+   x1="3395" />
+<text
+   id="text1013"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1011"
+   y="962"
+   x="3395">ExitHousingAssessment</tspan></text>
+
+<line
+   id="line1015"
+   style="stroke:#000000;stroke-width:1"
+   y2="962"
+   x2="3459"
+   y1="962"
+   x1="3395" />
+<text
+   id="text1027"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1017"
+   y="967"
+   x="3395">SubsidyInformation:</tspan> <tspan
+   id="tspan1019"
+   y="973"
+   x="3395">subsidyInformation{hmis}</tspan> <tspan
+   id="tspan1021"
+   y="979"
+   x="3395">HousingAssessment:</tspan> <tspan
+   id="tspan1023"
+   y="985"
+   x="3395">housingAssessmentAtExit</tspan> <tspan
+   id="tspan1025"
+   y="991"
+   x="3395">{hmis}[1]</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000962767"><polygon
+   id="polygon1030"
+   style="fill:#f2f1cc;stroke:#000000;stroke-width:1"
+   points="3362,1269 3243,1269 3243,1033 3362,1033 " />
+<line
+   id="line1032"
+   style="stroke:#000000;stroke-width:1"
+   y2="1041"
+   x2="3361"
+   y1="1041"
+   x1="3244" />
+<text
+   id="text1036"
+   style="font-weight:bold;font-size:6px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1034"
+   y="1040"
+   x="3291">ExitRHY</tspan></text>
+
+<line
+   id="line1038"
+   style="stroke:#000000;stroke-width:1"
+   y2="1041"
+   x2="3361"
+   y1="1041"
+   x1="3244" />
+<text
+   id="text1110"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1040"
+   y="1046"
+   x="3244">CountOfExchangeForSex:countOfExchangeForSex</tspan> <tspan
+   id="tspan1042"
+   y="1052"
+   x="3244">{hmis}</tspan> <tspan
+   id="tspan1044"
+   y="1058"
+   x="3244">DestinationSafeWorker:noYesWorkerDoesntKnow</tspan> <tspan
+   id="tspan1046"
+   y="1064"
+   x="3244">{hmis}</tspan> <tspan
+   id="tspan1048"
+   y="1070"
+   x="3244">PosAdultConnections:noYesWorkerDoesntKnow</tspan> <tspan
+   id="tspan1050"
+   y="1076"
+   x="3244">{hmis}</tspan> <tspan
+   id="tspan1052"
+   y="1082"
+   x="3244">FamilyCounseling:noYesMissing{hmis}</tspan> <tspan
+   id="tspan1054"
+   y="1088"
+   x="3244">CoercedToContinueWork:</tspan> <tspan
+   id="tspan1056"
+   y="1094"
+   x="3244">noYesDoesntKnowRefused{hmis}</tspan> <tspan
+   id="tspan1058"
+   y="1100"
+   x="3244">ProjectCompletionStatus:projectCompletionStatus</tspan> <tspan
+   id="tspan1060"
+   y="1106"
+   x="3244">{hmis}</tspan> <tspan
+   id="tspan1062"
+   y="1112"
+   x="3244">PostExitCounselingPlan:noYesMissing{hmis}</tspan> <tspan
+   id="tspan1064"
+   y="1118"
+   x="3244">SessionsInPlan:positiveInteger</tspan> <tspan
+   id="tspan1066"
+   y="1124"
+   x="3244">PosPeerConnections:noYesWorkerDoesntKnow</tspan> <tspan
+   id="tspan1068"
+   y="1130"
+   x="3244">{hmis}</tspan> <tspan
+   id="tspan1070"
+   y="1136"
+   x="3244">AskedOrForcedToExchangeForSex:</tspan> <tspan
+   id="tspan1072"
+   y="1142"
+   x="3244">askedOrForcedToExchangeForSex{hmis}</tspan> <tspan
+   id="tspan1074"
+   y="1148"
+   x="3244">LaborExploitPastThreeMonths:</tspan> <tspan
+   id="tspan1076"
+   y="1154"
+   x="3244">noYesDoesntKnowRefused{hmis}</tspan> <tspan
+   id="tspan1078"
+   y="1160"
+   x="3244">WorkPlaceViolenceThreats:</tspan> <tspan
+   id="tspan1080"
+   y="1166"
+   x="3244">noYesDoesntKnowRefused{hmis}</tspan> <tspan
+   id="tspan1082"
+   y="1172"
+   x="3244">AskedOrForcedToExchangeForSexPastThreeMonths:</tspan> <tspan
+   id="tspan1084"
+   y="1178"
+   x="3244">noYesDoesntKnowRefused{hmis}</tspan> <tspan
+   id="tspan1086"
+   y="1184"
+   x="3244">SessionCountAtExit:positiveInteger</tspan> <tspan
+   id="tspan1088"
+   y="1190"
+   x="3244">ExchangeForSexPastThreeMonths:</tspan> <tspan
+   id="tspan1090"
+   y="1196"
+   x="3244">noYesDoesntKnowRefused{hmis}</tspan> <tspan
+   id="tspan1092"
+   y="1202"
+   x="3244">IndividualCounseling:noYesMissing{hmis}</tspan> <tspan
+   id="tspan1094"
+   y="1208"
+   x="3244">DestinationSafeClient:noYesMissing{hmis}</tspan> <tspan
+   id="tspan1096"
+   y="1214"
+   x="3244">CounselingReceived:noYesMissing{hmis}</tspan> <tspan
+   id="tspan1098"
+   y="1220"
+   x="3244">GroupCounseling:noYesMissing{hmis}</tspan> <tspan
+   id="tspan1100"
+   y="1226"
+   x="3244">WorkplacePromiseDifference:</tspan> <tspan
+   id="tspan1102"
+   y="1232"
+   x="3244">noYesDoesntKnowRefused{hmis}</tspan> <tspan
+   id="tspan1104"
+   y="1238"
+   x="3244">ExchangeForSex:noYesDoesntKnowRefused{hmis}</tspan> <tspan
+   id="tspan1106"
+   y="1244"
+   x="3244">PosCommunityConnections:</tspan> <tspan
+   id="tspan1108"
+   y="1250"
+   x="3244">noYesWorkerDoesntKnow{hmis}</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970467"><path
+   inkscape:connector-curvature="0"
+   id="path1113"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="M 2841,736 H 2588" />
+<line
+   id="line1115"
+   style="stroke:#000000;stroke-width:1"
+   y2="736"
+   x2="2588"
+   y1="735"
+   x1="2591" />
+<line
+   id="line1117"
+   style="stroke:#000000;stroke-width:1"
+   y2="736"
+   x2="2588"
+   y1="737"
+   x1="2591" />
+<text
+   id="text1121"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1119"
+   y="741"
+   x="2591">hasHealthInsurance</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970923"><path
+   inkscape:connector-curvature="0"
+   id="path1124"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2908,547 h -78" />
+<line
+   id="line1126"
+   style="stroke:#000000;stroke-width:1"
+   y2="547"
+   x2="2830"
+   y1="546"
+   x1="2833" />
+<line
+   id="line1128"
+   style="stroke:#000000;stroke-width:1"
+   y2="547"
+   x2="2830"
+   y1="548"
+   x1="2833" />
+<text
+   id="text1132"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1130"
+   y="552"
+   x="2833">hasClientVeteranInfo</tspan></text>
+
+<text
+   id="text1136"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1134"
+   y="552"
+   x="2881">0..1</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971148"><path
+   inkscape:connector-curvature="0"
+   id="path1139"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="M 3072,473 V 669" />
+<line
+   id="line1141"
+   style="stroke:#000000;stroke-width:1"
+   y2="669"
+   x2="3072"
+   y1="666"
+   x1="3070" />
+<line
+   id="line1143"
+   style="stroke:#000000;stroke-width:1"
+   y2="669"
+   x2="3072"
+   y1="666"
+   x1="3073" />
+<text
+   id="text1147"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1145"
+   y="661"
+   x="3073">hasHouseholdEnrollment</tspan></text>
+
+<text
+   id="text1151"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1149"
+   y="667"
+   x="3073">1..*</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971238"><path
+   inkscape:connector-curvature="0"
+   id="path1154"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3297,576 v 148 l -1,2 -1,1 h -195" />
+<line
+   id="line1156"
+   style="stroke:#000000;stroke-width:1"
+   y2="727"
+   x2="3100"
+   y1="726"
+   x1="3103" />
+<line
+   id="line1158"
+   style="stroke:#000000;stroke-width:1"
+   y2="727"
+   x2="3100"
+   y1="728"
+   x1="3103" />
+<text
+   id="text1162"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1160"
+   y="732"
+   x="3103">hasProjectEnrollment</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971328"><path
+   inkscape:connector-curvature="0"
+   id="path1165"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2974,469 h 46 l 2,1 v 1 198" />
+<line
+   id="line1167"
+   style="stroke:#000000;stroke-width:1"
+   y2="669"
+   x2="3022"
+   y1="666"
+   x1="3021" />
+<line
+   id="line1169"
+   style="stroke:#000000;stroke-width:1"
+   y2="669"
+   x2="3022"
+   y1="666"
+   x1="3024" />
+<text
+   id="text1173"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1171"
+   y="667"
+   x="3024">hasClientEnrollment</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971373"><path
+   inkscape:connector-curvature="0"
+   id="path1176"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2142,1330 v 52" />
+<line
+   id="line1178"
+   style="stroke:#000000;stroke-width:1"
+   y2="1382"
+   x2="2142"
+   y1="1380"
+   x1="2141" />
+<line
+   id="line1180"
+   style="stroke:#000000;stroke-width:1"
+   y2="1382"
+   x2="2142"
+   y1="1380"
+   x1="2143" />
+<text
+   id="text1184"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1182"
+   y="1374"
+   x="2143">hasAssessmentQuestion</tspan></text>
+
+<text
+   id="text1188"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1186"
+   y="1381"
+   x="2143">1..*</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971463"><path
+   inkscape:connector-curvature="0"
+   id="path1191"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2918,785 v 439" />
+<line
+   id="line1193"
+   style="stroke:#000000;stroke-width:1"
+   y2="1224"
+   x2="2918"
+   y1="1222"
+   x1="2917" />
+<line
+   id="line1195"
+   style="stroke:#000000;stroke-width:1"
+   y2="1224"
+   x2="2918"
+   y1="1222"
+   x1="2919" />
+<text
+   id="text1199"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1197"
+   y="1223"
+   x="2919">hasMoveInDate</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971508"><path
+   inkscape:connector-curvature="0"
+   id="path1202"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2978,785 v 493" />
+<line
+   id="line1204"
+   style="stroke:#000000;stroke-width:1"
+   y2="1278"
+   x2="2978"
+   y1="1275"
+   x1="2977" />
+<line
+   id="line1206"
+   style="stroke:#000000;stroke-width:1"
+   y2="1278"
+   x2="2978"
+   y1="1275"
+   x1="2979" />
+<text
+   id="text1210"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1208"
+   y="1276"
+   x="2979">hasConnectionWithSOAR</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971733"><path
+   inkscape:connector-curvature="0"
+   id="path1213"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="M 3276,404 V 567" />
+<line
+   id="line1215"
+   style="stroke:#000000;stroke-width:1"
+   y2="567"
+   x2="3276"
+   y1="564"
+   x1="3274" />
+<line
+   id="line1217"
+   style="stroke:#000000;stroke-width:1"
+   y2="567"
+   x2="3276"
+   y1="564"
+   x1="3277" />
+<text
+   id="text1221"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1219"
+   y="565"
+   x="3277">hasProject</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000972003"><path
+   inkscape:connector-curvature="0"
+   id="path1224"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3296,949 v 84" />
+<line
+   id="line1226"
+   style="stroke:#000000;stroke-width:1"
+   y2="1033"
+   x2="3296"
+   y1="1031"
+   x1="3295" />
+<line
+   id="line1228"
+   style="stroke:#000000;stroke-width:1"
+   y2="1033"
+   x2="3296"
+   y1="1031"
+   x1="3298" />
+<text
+   id="text1232"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1230"
+   y="1032"
+   x="3298">hasExitRHY</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000972048"><path
+   inkscape:connector-curvature="0"
+   id="path1235"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2205,1330 v 50" />
+<line
+   id="line1237"
+   style="stroke:#000000;stroke-width:1"
+   y2="1380"
+   x2="2205"
+   y1="1377"
+   x1="2204" />
+<line
+   id="line1239"
+   style="stroke:#000000;stroke-width:1"
+   y2="1380"
+   x2="2205"
+   y1="1377"
+   x1="2206" />
+<text
+   id="text1243"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1241"
+   y="1371"
+   x="2206">hasAssessmentResult</tspan></text>
+
+<text
+   id="text1247"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1245"
+   y="1378"
+   x="2206">1..*</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970968"><path
+   inkscape:connector-curvature="0"
+   id="path1250"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2818,1270 v 7" />
+<line
+   id="line1252"
+   style="stroke:#000000;stroke-width:1"
+   y2="1277"
+   x2="2818"
+   y1="1275"
+   x1="2816" />
+<line
+   id="line1254"
+   style="stroke:#000000;stroke-width:1"
+   y2="1277"
+   x2="2818"
+   y1="1275"
+   x1="2819" />
+<text
+   id="text1258"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1256"
+   y="1276"
+   x="2819">hasFAAmount</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971553"><path
+   inkscape:connector-curvature="0"
+   id="path1261"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3301,949 v 13 l 1,2 h 2 90" />
+<line
+   id="line1263"
+   style="stroke:#000000;stroke-width:1"
+   y2="964"
+   x2="3394"
+   y1="963"
+   x1="3391" />
+<line
+   id="line1265"
+   style="stroke:#000000;stroke-width:1"
+   y2="964"
+   x2="3394"
+   y1="966"
+   x1="3391" />
+<text
+   id="text1269"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1267"
+   y="964"
+   x="3330">hasExitHousingAssessment</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971688"><path
+   inkscape:connector-curvature="0"
+   id="path1272"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3098,785 v 114 l 1,2 1,1 h 166" />
+<line
+   id="line1274"
+   style="stroke:#000000;stroke-width:1"
+   y2="902"
+   x2="3266"
+   y1="900"
+   x1="3263" />
+<line
+   id="line1276"
+   style="stroke:#000000;stroke-width:1"
+   y2="902"
+   x2="3266"
+   y1="903"
+   x1="3263" />
+<text
+   id="text1280"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1278"
+   y="901"
+   x="3238">hasExit</tspan></text>
+
+<text
+   id="text1284"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1282"
+   y="901"
+   x="3257">0..1</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000972093"><path
+   inkscape:connector-curvature="0"
+   id="path1287"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3299,949 v 61 l 1,1 1,1 h 91" />
+<line
+   id="line1289"
+   style="stroke:#000000;stroke-width:1"
+   y2="1012"
+   x2="3392"
+   y1="1011"
+   x1="3390" />
+<line
+   id="line1291"
+   style="stroke:#000000;stroke-width:1"
+   y2="1012"
+   x2="3392"
+   y1="1013"
+   x1="3390" />
+<text
+   id="text1295"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1293"
+   y="1011"
+   x="3355">hasRhyAftercare</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971778"><path
+   inkscape:connector-curvature="0"
+   id="path1298"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3435,542 h 65" />
+<line
+   id="line1300"
+   style="stroke:#000000;stroke-width:1"
+   y2="542"
+   x2="3500"
+   y1="541"
+   x1="3497" />
+<line
+   id="line1302"
+   style="stroke:#000000;stroke-width:1"
+   y2="542"
+   x2="3500"
+   y1="544"
+   x1="3497" />
+<text
+   id="text1306"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1304"
+   y="542"
+   x="3471">hasInventory</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971103"><path
+   inkscape:connector-curvature="0"
+   id="path1309"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3303,567 v -80 l 1,-1 2,-1 h 60" />
+<line
+   id="line1311"
+   style="stroke:#000000;stroke-width:1"
+   y2="485"
+   x2="3366"
+   y1="484"
+   x1="3364" />
+<line
+   id="line1313"
+   style="stroke:#000000;stroke-width:1"
+   y2="485"
+   x2="3366"
+   y1="486"
+   x1="3364" />
+<text
+   id="text1317"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1315"
+   y="484"
+   x="3337">hasAfilliation</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971283"><path
+   inkscape:connector-curvature="0"
+   id="path1320"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3306,567 v -20 -1 l 2,-1 h 61" />
+<line
+   id="line1322"
+   style="stroke:#000000;stroke-width:1"
+   y2="545"
+   x2="3369"
+   y1="544"
+   x1="3366" />
+<line
+   id="line1324"
+   style="stroke:#000000;stroke-width:1"
+   y2="545"
+   x2="3369"
+   y1="546"
+   x1="3366" />
+<text
+   id="text1328"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1326"
+   y="544"
+   x="3334">hasProjectCoC</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000972318"><path
+   inkscape:connector-curvature="0"
+   id="path1331"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3330,572 h 136 l 2,1 v 2 46" />
+<line
+   id="line1333"
+   style="stroke:#000000;stroke-width:1"
+   y2="621"
+   x2="3468"
+   y1="618"
+   x1="3467" />
+<line
+   id="line1335"
+   style="stroke:#000000;stroke-width:1"
+   y2="621"
+   x2="3468"
+   y1="618"
+   x1="3470" />
+<text
+   id="text1339"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1337"
+   y="619"
+   x="3470">hasFunder</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970512"><path
+   inkscape:connector-curvature="0"
+   id="path1342"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2841,738 h -161 l -2,1 v 2 64" />
+<line
+   id="line1344"
+   style="stroke:#000000;stroke-width:1"
+   y2="805"
+   x2="2678"
+   y1="803"
+   x1="2676" />
+<line
+   id="line1346"
+   style="stroke:#000000;stroke-width:1"
+   y2="805"
+   x2="2678"
+   y1="803"
+   x1="2679" />
+<text
+   id="text1350"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1348"
+   y="804"
+   x="2679">hasDisabilities</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970743"><path
+   inkscape:connector-curvature="0"
+   id="path1353"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2851,785 v 316 l -1,2 -2,1 h -277" />
+<line
+   id="line1355"
+   style="stroke:#000000;stroke-width:1"
+   y2="1104"
+   x2="2571"
+   y1="1102"
+   x1="2573" />
+<line
+   id="line1357"
+   style="stroke:#000000;stroke-width:1"
+   y2="1104"
+   x2="2571"
+   y1="1105"
+   x1="2573" />
+<text
+   id="text1361"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1359"
+   y="1109"
+   x="2573">hasDomesticViolence</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970647"><path
+   inkscape:connector-curvature="0"
+   id="path1364"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2848,785 v 263 1 l -2,1 h -275" />
+<line
+   id="line1366"
+   style="stroke:#000000;stroke-width:1"
+   y2="1050"
+   x2="2571"
+   y1="1049"
+   x1="2574" />
+<line
+   id="line1368"
+   style="stroke:#000000;stroke-width:1"
+   y2="1050"
+   x2="2571"
+   y1="1051"
+   x1="2574" />
+<text
+   id="text1372"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1370"
+   y="1055"
+   x="2573">hasHealthStatus</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970602"><path
+   inkscape:connector-curvature="0"
+   id="path1375"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2846,785 v 227 l -1,2 h -1 -287" />
+<line
+   id="line1377"
+   style="stroke:#000000;stroke-width:1"
+   y2="1014"
+   x2="2557"
+   y1="1013"
+   x1="2559" />
+<line
+   id="line1379"
+   style="stroke:#000000;stroke-width:1"
+   y2="1014"
+   x2="2557"
+   y1="1016"
+   x1="2559" />
+<text
+   id="text1383"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1381"
+   y="1020"
+   x="2559">hasEntryRHSP</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970788"><path
+   inkscape:connector-curvature="0"
+   id="path1386"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2853,785 v 351 l -1,2 -1,1 h -273" />
+<line
+   id="line1388"
+   style="stroke:#000000;stroke-width:1"
+   y2="1139"
+   x2="2578"
+   y1="1138"
+   x1="2580" />
+<line
+   id="line1390"
+   style="stroke:#000000;stroke-width:1"
+   y2="1139"
+   x2="2578"
+   y1="1140"
+   x1="2580" />
+<text
+   id="text1394"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1392"
+   y="1144"
+   x="2580">hasYouthEducationStatus</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970833"><path
+   inkscape:connector-curvature="0"
+   id="path1397"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2856,785 v 446 l -1,1 -2,1 h -652 l -2,1 -1,2 v 32" />
+<line
+   id="line1399"
+   style="stroke:#000000;stroke-width:1"
+   y2="1268"
+   x2="2198"
+   y1="1266"
+   x1="2197" />
+<line
+   id="line1401"
+   style="stroke:#000000;stroke-width:1"
+   y2="1268"
+   x2="2198"
+   y1="1266"
+   x1="2200" />
+<text
+   id="text1405"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1403"
+   y="1267"
+   x="2200">hasAssessment</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970878"><path
+   inkscape:connector-curvature="0"
+   id="path1408"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2858,785 v 451 l -1,2 h -1 -470 l -2,1 v 2 165" />
+<line
+   id="line1410"
+   style="stroke:#000000;stroke-width:1"
+   y2="1406"
+   x2="2384"
+   y1="1404"
+   x1="2382" />
+<line
+   id="line1412"
+   style="stroke:#000000;stroke-width:1"
+   y2="1406"
+   x2="2384"
+   y1="1404"
+   x1="2385" />
+<text
+   id="text1416"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1414"
+   y="1405"
+   x="2385">hasRHYBCPStatus</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971013"><path
+   inkscape:connector-curvature="0"
+   id="path1419"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2860,785 v 453 2 l -2,1 h -389 l -2,1 -1,1 v 157" />
+<line
+   id="line1421"
+   style="stroke:#000000;stroke-width:1"
+   y2="1400"
+   x2="2466"
+   y1="1398"
+   x1="2465" />
+<line
+   id="line1423"
+   style="stroke:#000000;stroke-width:1"
+   y2="1400"
+   x2="2466"
+   y1="1398"
+   x1="2468" />
+<text
+   id="text1427"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1425"
+   y="1399"
+   x="2468">hasCurrentLivingSituation</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971193"><path
+   inkscape:connector-curvature="0"
+   id="path1430"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2863,785 v 456 l -1,1 -2,1 h -310 l -2,1 v 2 198" />
+<line
+   id="line1432"
+   style="stroke:#000000;stroke-width:1"
+   y2="1444"
+   x2="2548"
+   y1="1441"
+   x1="2546" />
+<line
+   id="line1434"
+   style="stroke:#000000;stroke-width:1"
+   y2="1444"
+   x2="2548"
+   y1="1441"
+   x1="2549" />
+<text
+   id="text1438"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1436"
+   y="1442"
+   x="2549">hasEnrollmentCoC</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000972138"><path
+   inkscape:connector-curvature="0"
+   id="path1441"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2865,785 v 458 l -1,2 -1,1 h -258 -2 l -1,2 v 268" />
+<line
+   id="line1443"
+   style="stroke:#000000;stroke-width:1"
+   y2="1516"
+   x2="2602"
+   y1="1514"
+   x1="2601" />
+<line
+   id="line1445"
+   style="stroke:#000000;stroke-width:1"
+   y2="1516"
+   x2="2602"
+   y1="1514"
+   x1="2604" />
+<text
+   id="text1449"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1447"
+   y="1515"
+   x="2604">hasNonCashBenefits</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000972183"><path
+   inkscape:connector-curvature="0"
+   id="path1452"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2868,785 v 461 l -1,1 -2,1 h -181 l -1,1 -1,1 v 280" />
+<line
+   id="line1454"
+   style="stroke:#000000;stroke-width:1"
+   y2="1530"
+   x2="2682"
+   y1="1527"
+   x1="2681" />
+<line
+   id="line1456"
+   style="stroke:#000000;stroke-width:1"
+   y2="1530"
+   x2="2682"
+   y1="1527"
+   x1="2683" />
+<text
+   id="text1460"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1458"
+   y="1528"
+   x="2683">hasPATHStatus</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971823"><path
+   inkscape:connector-curvature="0"
+   id="path1463"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2870,785 v 463 l -1,2 h -1 -114 l -2,1 v 2 97" />
+<line
+   id="line1465"
+   style="stroke:#000000;stroke-width:1"
+   y2="1350"
+   x2="2752"
+   y1="1348"
+   x1="2750" />
+<line
+   id="line1467"
+   style="stroke:#000000;stroke-width:1"
+   y2="1350"
+   x2="2752"
+   y1="1348"
+   x1="2753" />
+<text
+   id="text1471"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1469"
+   y="1349"
+   x="2753">hasDateOfEngagement</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000970557"><path
+   inkscape:connector-curvature="0"
+   id="path1474"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2844,785 v 189 l -1,2 h -2 -274" />
+<line
+   id="line1476"
+   style="stroke:#000000;stroke-width:1"
+   y2="976"
+   x2="2567"
+   y1="975"
+   x1="2569" />
+<line
+   id="line1478"
+   style="stroke:#000000;stroke-width:1"
+   y2="976"
+   x2="2567"
+   y1="978"
+   x1="2569" />
+<text
+   id="text1482"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1480"
+   y="982"
+   x="2569">hasWellBeing</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000972273"><path
+   inkscape:connector-curvature="0"
+   id="path1485"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2880,785 v 717" />
+<line
+   id="line1487"
+   style="stroke:#000000;stroke-width:1"
+   y2="1502"
+   x2="2880"
+   y1="1499"
+   x1="2878" />
+<line
+   id="line1489"
+   style="stroke:#000000;stroke-width:1"
+   y2="1502"
+   x2="2880"
+   y1="1499"
+   x1="2881" />
+<text
+   id="text1493"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1491"
+   y="1500"
+   x="2881">hasIncomeAndSources</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971418"><path
+   inkscape:connector-curvature="0"
+   id="path1496"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2872,785 v 475 2 l -2,1 h -50" />
+<line
+   id="line1498"
+   style="stroke:#000000;stroke-width:1"
+   y2="1263"
+   x2="2820"
+   y1="1262"
+   x1="2822" />
+<line
+   id="line1500"
+   style="stroke:#000000;stroke-width:1"
+   y2="1263"
+   x2="2820"
+   y1="1264"
+   x1="2822" />
+<text
+   id="text1504"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1502"
+   y="1268"
+   x="2822">hasServiceFAReferral</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000972228"><path
+   inkscape:connector-curvature="0"
+   id="path1507"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2875,785 v 724 l -1,1 -2,1 h -74" />
+<line
+   id="line1509"
+   style="stroke:#000000;stroke-width:1"
+   y2="1511"
+   x2="2798"
+   y1="1510"
+   x1="2800" />
+<line
+   id="line1511"
+   style="stroke:#000000;stroke-width:1"
+   y2="1511"
+   x2="2798"
+   y1="1512"
+   x1="2800" />
+<text
+   id="text1515"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1513"
+   y="1517"
+   x="2800">hasMedicalAssistance</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971643"><path
+   inkscape:connector-curvature="0"
+   id="path1518"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 2884,785 v 471" />
+<line
+   id="line1520"
+   style="stroke:#000000;stroke-width:1"
+   y2="1256"
+   x2="2884"
+   y1="1253"
+   x1="2883" />
+<line
+   id="line1522"
+   style="stroke:#000000;stroke-width:1"
+   y2="1256"
+   x2="2884"
+   y1="1253"
+   x1="2886" />
+<text
+   id="text1526"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1524"
+   y="1254"
+   x="2886">hasEmployment</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971913"><path
+   inkscape:connector-curvature="0"
+   id="path1529"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3038,785 v 543" />
+<line
+   id="line1531"
+   style="stroke:#000000;stroke-width:1"
+   y2="1328"
+   x2="3038"
+   y1="1326"
+   x1="3037" />
+<line
+   id="line1533"
+   style="stroke:#000000;stroke-width:1"
+   y2="1328"
+   x2="3038"
+   y1="1326"
+   x1="3040" />
+<text
+   id="text1537"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1535"
+   y="1327"
+   x="3040">hasEvent</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971868"><path
+   inkscape:connector-curvature="0"
+   id="path1540"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3070,785 v 623" />
+<line
+   id="line1542"
+   style="stroke:#000000;stroke-width:1"
+   y2="1408"
+   x2="3070"
+   y1="1406"
+   x1="3069" />
+<line
+   id="line1544"
+   style="stroke:#000000;stroke-width:1"
+   y2="1408"
+   x2="3070"
+   y1="1406"
+   x1="3072" />
+<text
+   id="text1548"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1546"
+   y="1407"
+   x="3072">hasEntryRHY</tspan></text>
+
+</g><g
+     transform="translate(-2067.9706,-134.86764)"
+     id="2000971958"><path
+   inkscape:connector-curvature="0"
+   id="path1551"
+   style="fill:none;stroke:#000000;stroke-width:1"
+   d="m 3096,785 v 301" />
+<line
+   id="line1553"
+   style="stroke:#000000;stroke-width:1"
+   y2="1086"
+   x2="3096"
+   y1="1084"
+   x1="3094" />
+<line
+   id="line1555"
+   style="stroke:#000000;stroke-width:1"
+   y2="1086"
+   x2="3096"
+   y1="1084"
+   x1="3097" />
+<text
+   id="text1559"
+   style="font-size:5px;font-family:Arial;word-spacing:-1px;fill:#000000"> <tspan
+   id="tspan1557"
+   y="1085"
+   x="3097">hasEntrySSVF</tspan></text>
+
+</g></g>
+</svg>
