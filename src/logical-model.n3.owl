@@ -334,8 +334,20 @@ xsd:id rdf:type rdfs:Datatype .
 xsd:short rdf:type rdfs:Datatype .
 
 
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#availability
+hmis-xsd:availability rdf:type rdfs:Datatype .
+
+
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#bedType
+hmis-xsd:bedType rdf:type rdfs:Datatype .
+
+
 ###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#healthStatusType
 hmis-xsd:healthStatusType rdf:type rdfs:Datatype .
+
+
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#householdType
+hmis-xsd:householdType rdf:type rdfs:Datatype .
 
 
 ###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money
@@ -820,11 +832,19 @@ hmisowl:AssessmentType rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#Availability
-hmisowl:Availability rdf:type owl:DatatypeProperty .
+hmisowl:Availability rdf:type owl:DatatypeProperty ;
+                     rdfs:domain hmisowl:Inventory ;
+                     rdfs:range hmis-xsd:availability ;
+                     <http://purl.org/dc/terms/description> "Availability"^^xsd:string ;
+                     <http://purl.org/dc/terms/identifier> "2.07.6"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#BedInventory
-hmisowl:BedInventory rdf:type owl:DatatypeProperty .
+hmisowl:BedInventory rdf:type owl:DatatypeProperty ;
+                     rdfs:domain hmisowl:Inventory ;
+                     rdfs:range xsd:nonNegativeInteger ;
+                     <http://purl.org/dc/terms/description> "Total bed inventory"^^xsd:string ;
+                     <http://purl.org/dc/terms/identifier> "2.07.14"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#BenefitsFromAnySource
@@ -844,15 +864,27 @@ hmisowl:BounceBack rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#CHBedInventory
-hmisowl:CHBedInventory rdf:type owl:DatatypeProperty .
+hmisowl:CHBedInventory rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:Inventory ;
+                       rdfs:range xsd:nonNegativeInteger ;
+                       <http://purl.org/dc/terms/description> "Beds dedicated to any other CH"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "2.07.12"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#CHVetBedInventory
-hmisowl:CHVetBedInventory rdf:type owl:DatatypeProperty .
+hmisowl:CHVetBedInventory rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:Inventory ;
+                          rdfs:range xsd:nonNegativeInteger ;
+                          <http://purl.org/dc/terms/description> "Beds dedicated to chronically homeless veterans"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "2.07.7"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#CHYouthBedInventory
-hmisowl:CHYouthBedInventory rdf:type owl:DatatypeProperty .
+hmisowl:CHYouthBedInventory rdf:type owl:DatatypeProperty ;
+                            rdfs:domain hmisowl:Inventory ;
+                            rdfs:range xsd:nonNegativeInteger ;
+                            <http://purl.org/dc/terms/description> "Beds dedicated to chronically homeless youth"^^xsd:string ;
+                            <http://purl.org/dc/terms/identifier> "2.07.10"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#CMExitReason
@@ -917,9 +949,12 @@ hmisowl:ClientLeaseHolder rdf:type owl:DatatypeProperty ;
 
 ###  urn:hud:hmis:owl#CoCCode
 hmisowl:CoCCode rdf:type owl:DatatypeProperty ;
-                rdfs:domain hmisowl:EnrollmentCoC ;
+                rdfs:domain hmisowl:EnrollmentCoC ,
+                            hmisowl:Inventory ,
+                            hmisowl:ProjectCoC ;
+                rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#cocCode> ;
                 <http://purl.org/dc/terms/description> "HUD assigned CoC code for the client’s location"^^xsd:string ;
-                <http://purl.org/dc/terms/identifier> "3.16.2"^^xsd:string .
+                <http://purl.org/dc/terms/identifier> "2.03.1"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#CoCPrioritized
@@ -1179,7 +1214,11 @@ hmisowl:DueDate rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#ESBedType
-hmisowl:ESBedType rdf:type owl:DatatypeProperty .
+hmisowl:ESBedType rdf:type owl:DatatypeProperty ;
+                  rdfs:domain hmisowl:Inventory ;
+                  rdfs:range hmis-xsd:bedType ;
+                  <http://purl.org/dc/terms/description> "Bed Type"^^xsd:string ;
+                  <http://purl.org/dc/terms/identifier> "2.07.5"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#EarlyExitReason
@@ -1445,7 +1484,11 @@ hmisowl:HouseholdID rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#HouseholdType
-hmisowl:HouseholdType rdf:type owl:DatatypeProperty .
+hmisowl:HouseholdType rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hmisowl:Inventory ;
+                      rdfs:range hmis-xsd:householdType ;
+                      <http://purl.org/dc/terms/description> "Household type"^^xsd:string ;
+                      <http://purl.org/dc/terms/identifier> "2.07.4"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#HousingAssessment
@@ -1534,7 +1577,11 @@ hmisowl:InsuranceFromAnySource rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#InventoryEndDate
-hmisowl:InventoryEndDate rdf:type owl:DatatypeProperty .
+hmisowl:InventoryEndDate rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:Inventory ;
+                         rdfs:range xsd:date ;
+                         <http://purl.org/dc/terms/description> "Inventory end date"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "2.07.2"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#InventoryID
@@ -1542,7 +1589,11 @@ hmisowl:InventoryID rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#InventoryStartDate
-hmisowl:InventoryStartDate rdf:type owl:DatatypeProperty .
+hmisowl:InventoryStartDate rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:Inventory ;
+                           rdfs:range xsd:date ;
+                           <http://purl.org/dc/terms/description> "Inventory start date"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "2.07.1"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#IraqOIF
@@ -1934,7 +1985,11 @@ hmisowl:OrganizationName rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#OtherBedInventory
-hmisowl:OtherBedInventory rdf:type owl:DatatypeProperty .
+hmisowl:OtherBedInventory rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:Inventory ;
+                          rdfs:range xsd:nonNegativeInteger ;
+                          <http://purl.org/dc/terms/description> "Non-dedicated beds"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "2.07.13"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#OtherBenefitsSource
@@ -2586,7 +2641,11 @@ hmisowl:UnemploymentFam rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#UnitInventory
-hmisowl:UnitInventory rdf:type owl:DatatypeProperty .
+hmisowl:UnitInventory rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hmisowl:Inventory ;
+                      rdfs:range xsd:nonNegativeInteger ;
+                      <http://purl.org/dc/terms/description> "Total unit inventory"^^xsd:string ;
+                      <http://purl.org/dc/terms/identifier> "2.07.15"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#UserFirstName
@@ -2669,7 +2728,11 @@ hmisowl:VerifiedBy rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#VetBedInventory
-hmisowl:VetBedInventory rdf:type owl:DatatypeProperty .
+hmisowl:VetBedInventory rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmisowl:Inventory ;
+                        rdfs:range xsd:nonNegativeInteger ;
+                        <http://purl.org/dc/terms/description> "Beds dedicated to any other veteran"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "2.07.9"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#VeteranStatus
@@ -2788,11 +2851,19 @@ hmisowl:YearSeparated rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#YouthBedInventory
-hmisowl:YouthBedInventory rdf:type owl:DatatypeProperty .
+hmisowl:YouthBedInventory rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:Inventory ;
+                          rdfs:range xsd:nonNegativeInteger ;
+                          <http://purl.org/dc/terms/description> "Beds dedicated to youth-veterans"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "2.07.8"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#YouthVetBedInventory
-hmisowl:YouthVetBedInventory rdf:type owl:DatatypeProperty .
+hmisowl:YouthVetBedInventory rdf:type owl:DatatypeProperty ;
+                             rdfs:domain hmisowl:Inventory ;
+                             rdfs:range xsd:nonNegativeInteger ;
+                             <http://purl.org/dc/terms/description> "Beds dedicated to youth-veterans"^^xsd:string ;
+                             <http://purl.org/dc/terms/identifier> "2.07.8" .
 
 
 ###  urn:hud:hmis:owl#ZIP
@@ -2801,10 +2872,6 @@ hmisowl:ZIP rdf:type owl:DatatypeProperty .
 
 ###  urn:hud:hmis:owl#hashStatus
 hmisowl:hashStatus rdf:type owl:DatatypeProperty .
-
-
-###  urn:hud:hmis:owl#textContent
-hmisowl:textContent rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -3719,6 +3786,16 @@ hmisowl:IncomeAndSources rdf:type owl:Class ;
 ###  urn:hud:hmis:owl#Inventory
 hmisowl:Inventory rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:BedInventory ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:CoCCode ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#cocCode>
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:DateCreated ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange xsd:dateTime
@@ -3727,6 +3804,21 @@ hmisowl:Inventory rdf:type owl:Class ;
                                     owl:onProperty hmisowl:DateUpdated ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange xsd:dateTime
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:HouseholdType ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange hmis-xsd:householdType
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:InventoryStartDate ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:date
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty hmisowl:UnitInventory ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:nonNegativeInteger
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:DateDeleted ;
@@ -4022,13 +4114,13 @@ dc:coverage <http://purl.org/dc/terms/description> "Spatial topic and spatial ap
             <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
             rdfs:isDefinedBy dc: ;
             rdfs:comment "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."@en ;
-            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
-            rdfs:label "Coverage"@en .
+            rdfs:label "Coverage"@en ;
+            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date .
 
 
 dc:date <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
-        <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
         rdfs:isDefinedBy dc: ;
+        <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
         rdfs:comment "A point or period of time associated with an event in the lifecycle of the resource."@en ;
         <http://purl.org/dc/terms/description> "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing."@en ;
         rdfs:label "Date"@en .
@@ -4042,8 +4134,8 @@ dc:description <http://purl.org/dc/terms/description> "Description may include b
                rdfs:label "Description"@en .
 
 
-dc:format <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."@en ;
-          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+dc:format <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+          <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."@en ;
           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
           rdfs:label "Format"@en ;
           rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
@@ -4052,8 +4144,8 @@ dc:format <http://purl.org/dc/terms/description> "Recommended practice is to use
 
 dc:identifier <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
               rdfs:isDefinedBy dc: ;
-              rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
               <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
+              rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
               rdfs:label "Identifier"@en .
 
@@ -4075,18 +4167,18 @@ dc:relation <http://www.w3.org/2004/02/skos/core#note> "A [second property](/spe
 
 
 dc:rights rdfs:isDefinedBy dc: ;
-          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
           <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
-          rdfs:label "Rights"@en ;
+          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
+          rdfs:label "Rights"@en ;
           rdfs:comment "Information about rights held in and over the resource."@en .
 
 
 dc:source <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
           rdfs:isDefinedBy dc: ;
           rdfs:comment "A related resource from which the described resource is derived."@en ;
-          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
           <http://purl.org/dc/terms/description> "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
+          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
           rdfs:label "Source"@en .
 
 
@@ -4100,8 +4192,8 @@ dc:subject <http://www.w3.org/2004/02/skos/core#note> "A [second property](/spec
 
 dc:type rdfs:comment "The nature or genre of the resource."@en ;
         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
-        rdfs:label "Type"@en ;
         rdfs:isDefinedBy dc: ;
+        rdfs:label "Type"@en ;
         <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
         <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date .
 
