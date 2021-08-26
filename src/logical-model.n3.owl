@@ -647,7 +647,11 @@ hmisowl:hasYouthEducationStatus rdf:type owl:ObjectProperty ;
 
 
 ###  urn:hud:hmis:owl#ADAP
-hmisowl:ADAP rdf:type owl:DatatypeProperty .
+hmisowl:ADAP rdf:type owl:DatatypeProperty ;
+             rdfs:domain hmisowl:MedicalAssistance ;
+             rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesDoesntKnowRefused> ;
+             <http://purl.org/dc/terms/description> "Receiving AIDS Drug Assistance Program (ADAP)"^^xsd:string ;
+             <http://purl.org/dc/terms/identifier> "W3.3"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#Address1
@@ -1448,7 +1452,11 @@ hmisowl:HH5Plus rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#HIVAIDSAssistance
-hmisowl:HIVAIDSAssistance rdf:type owl:DatatypeProperty .
+hmisowl:HIVAIDSAssistance rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:MedicalAssistance ;
+                          rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesDoesntKnowRefused> ;
+                          <http://purl.org/dc/terms/description> "Receiving Public HIV/AIDS Medical Assistance"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "W3.2"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#HMISParticipatingProject
@@ -1873,7 +1881,11 @@ hmisowl:NativeHIOtherPacific rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#NoADAPReason
-hmisowl:NoADAPReason rdf:type owl:DatatypeProperty .
+hmisowl:NoADAPReason rdf:type owl:DatatypeProperty ;
+                     rdfs:domain hmisowl:MedicalAssistance ;
+                     rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#reasonNotInsuredOrAssisted> ;
+                     <http://purl.org/dc/terms/description> "Reason"^^xsd:string ;
+                     <http://purl.org/dc/terms/identifier> "W3.B"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#NoCOBRAReason
@@ -1893,7 +1905,11 @@ hmisowl:NoEmployerProvidedReason rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#NoHIVAIDSAssistanceReason
-hmisowl:NoHIVAIDSAssistanceReason rdf:type owl:DatatypeProperty .
+hmisowl:NoHIVAIDSAssistanceReason rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain hmisowl:MedicalAssistance ;
+                                  rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#reasonNotInsuredOrAssisted> ;
+                                  <http://purl.org/dc/terms/description> "Reason"^^xsd:string ;
+                                  <http://purl.org/dc/terms/identifier> "W3.A"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#NoIndianHealthServicesReason
@@ -1929,7 +1945,11 @@ hmisowl:NoPrivatePayReason rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#NoRyanWhiteReason
-hmisowl:NoRyanWhiteReason rdf:type owl:DatatypeProperty .
+hmisowl:NoRyanWhiteReason rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:MedicalAssistance ;
+                          rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#reasonNotInsuredOrAssisted> ;
+                          <http://purl.org/dc/terms/description> "Receiving Ryan White-funded Medical or Dental Assistance"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "W3.C"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#NoSCHIPReason
@@ -2340,7 +2360,11 @@ hmisowl:RunawayYouth rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#RyanWhiteMedDent
-hmisowl:RyanWhiteMedDent rdf:type owl:DatatypeProperty .
+hmisowl:RyanWhiteMedDent rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:MedicalAssistance ;
+                         rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesDoesntKnowRefused> ;
+                         <http://purl.org/dc/terms/description> "Receiving Ryan White-funded Medical or Dental Assistance"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "W3.4"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#SCHIP
@@ -3830,6 +3854,11 @@ hmisowl:Inventory rdf:type owl:Class ;
 ###  urn:hud:hmis:owl#MedicalAssistance
 hmisowl:MedicalAssistance rdf:type owl:Class ;
                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:ADAP ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesDoesntKnowRefused>
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:DateCreated ;
                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                             owl:onDataRange xsd:dateTime
@@ -3838,6 +3867,11 @@ hmisowl:MedicalAssistance rdf:type owl:Class ;
                                             owl:onProperty hmisowl:DateUpdated ;
                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                             owl:onDataRange xsd:dateTime
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty hmisowl:HIVAIDSAssistance ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesDoesntKnowRefused>
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmisowl:DateDeleted ;
@@ -4114,8 +4148,8 @@ dc:coverage <http://purl.org/dc/terms/description> "Spatial topic and spatial ap
             <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
             rdfs:isDefinedBy dc: ;
             rdfs:comment "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."@en ;
-            rdfs:label "Coverage"@en ;
-            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date .
+            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+            rdfs:label "Coverage"@en .
 
 
 dc:date <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
@@ -4144,8 +4178,8 @@ dc:format <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
 
 dc:identifier <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
               rdfs:isDefinedBy dc: ;
-              <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
               rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+              <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
               rdfs:label "Identifier"@en .
 
@@ -4153,8 +4187,8 @@ dc:identifier <http://www.w3.org/2004/02/skos/core#note> "A [second property](/s
 dc:publisher <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
              <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
              rdfs:label "Publisher"@en ;
-             <http://purl.org/dc/terms/description> "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."@en ;
              rdfs:isDefinedBy dc: ;
+             <http://purl.org/dc/terms/description> "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."@en ;
              rdfs:comment "An entity responsible for making the resource available."@en .
 
 
@@ -4167,16 +4201,16 @@ dc:relation <http://www.w3.org/2004/02/skos/core#note> "A [second property](/spe
 
 
 dc:rights rdfs:isDefinedBy dc: ;
-          <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+          <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
           rdfs:label "Rights"@en ;
           rdfs:comment "Information about rights held in and over the resource."@en .
 
 
 dc:source <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
-          rdfs:isDefinedBy dc: ;
           rdfs:comment "A related resource from which the described resource is derived."@en ;
+          rdfs:isDefinedBy dc: ;
           <http://purl.org/dc/terms/description> "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
           rdfs:label "Source"@en .
