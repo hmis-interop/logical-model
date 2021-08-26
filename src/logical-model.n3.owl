@@ -354,6 +354,10 @@ hmis-xsd:householdType rdf:type rdfs:Datatype .
 hmis-xsd:money rdf:type rdfs:Datatype .
 
 
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#reasonNotEnrolled
+hmis-xsd:reasonNotEnrolled rdf:type rdfs:Datatype .
+
+
 ###  urn:hud:hmis:owl#issuesYears
 hmisowl:issuesYears rdf:type rdfs:Datatype .
 
@@ -944,7 +948,11 @@ hmisowl:City rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#ClientEnrolledInPATH
-hmisowl:ClientEnrolledInPATH rdf:type owl:DatatypeProperty .
+hmisowl:ClientEnrolledInPATH rdf:type owl:DatatypeProperty ;
+                             rdfs:domain hmisowl:PATHStatus ;
+                             rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+                             <http://purl.org/dc/terms/description> "Client Became Enrolled in PATH"^^xsd:string ;
+                             <http://purl.org/dc/terms/identifier> "P3.2"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#ClientLeaseHolder
@@ -1101,7 +1109,11 @@ hmisowl:DateOfEngagement rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#DateOfStatus
-hmisowl:DateOfStatus rdf:type owl:DatatypeProperty .
+hmisowl:DateOfStatus rdf:type owl:DatatypeProperty ;
+                     rdfs:domain hmisowl:PATHStatus ;
+                     rdfs:range xsd:date ;
+                     <http://purl.org/dc/terms/description> "Date of Status Determination"^^xsd:string ;
+                     <http://purl.org/dc/terms/identifier> "P3.1"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#DateProvided
@@ -2109,10 +2121,6 @@ hmisowl:OtherTheater rdf:type owl:DatatypeProperty ;
 hmisowl:OtherTypeProvided rdf:type owl:DatatypeProperty .
 
 
-###  urn:hud:hmis:owl#PATHStatusID
-hmisowl:PATHStatusID rdf:type owl:DatatypeProperty .
-
-
 ###  urn:hud:hmis:owl#PITCount
 hmisowl:PITCount rdf:type owl:DatatypeProperty .
 
@@ -2298,7 +2306,11 @@ hmisowl:ReasonNoServices rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#ReasonNotEnrolled
-hmisowl:ReasonNotEnrolled rdf:type owl:DatatypeProperty .
+hmisowl:ReasonNotEnrolled rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:PATHStatus ;
+                          rdfs:range hmis-xsd:reasonNotEnrolled ;
+                          <http://purl.org/dc/terms/description> "Reason not enrolled"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "P3.A"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#RecordType
@@ -4021,9 +4033,19 @@ hmisowl:Organization rdf:type owl:Class ;
 ###  urn:hud:hmis:owl#PATHStatus
 hmisowl:PATHStatus rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:ClientEnrolledInPATH ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing>
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:DateCreated ;
                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onDataRange xsd:dateTime
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty hmisowl:DateOfStatus ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:date
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmisowl:DateUpdated ;
