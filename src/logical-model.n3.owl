@@ -346,16 +346,36 @@ hmis-xsd:bedType rdf:type rdfs:Datatype .
 hmis-xsd:healthStatusType rdf:type rdfs:Datatype .
 
 
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#hopwaMedAssistedLivingFac
+hmis-xsd:hopwaMedAssistedLivingFac rdf:type rdfs:Datatype .
+
+
 ###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#householdType
 hmis-xsd:householdType rdf:type rdfs:Datatype .
+
+
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#housingType
+hmis-xsd:housingType rdf:type rdfs:Datatype .
 
 
 ###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money
 hmis-xsd:money rdf:type rdfs:Datatype .
 
 
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#projectType
+hmis-xsd:projectType rdf:type rdfs:Datatype .
+
+
 ###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#reasonNotEnrolled
 hmis-xsd:reasonNotEnrolled rdf:type rdfs:Datatype .
+
+
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#targetPopulation
+hmis-xsd:targetPopulation rdf:type rdfs:Datatype .
+
+
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#trackingMethod
+hmis-xsd:trackingMethod rdf:type rdfs:Datatype .
 
 
 ###  urn:hud:hmis:owl#issuesYears
@@ -996,7 +1016,11 @@ hmisowl:ConnectionWithSOAR rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#ContinuumProject
-hmisowl:ContinuumProject rdf:type owl:DatatypeProperty .
+hmisowl:ContinuumProject rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:Project ;
+                         rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+                         <http://purl.org/dc/terms/description> "Continuum Project"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "2.02.5"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#CounselingReceived
@@ -1476,11 +1500,19 @@ hmisowl:HIVAIDSAssistance rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#HMISParticipatingProject
-hmisowl:HMISParticipatingProject rdf:type owl:DatatypeProperty .
+hmisowl:HMISParticipatingProject rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain hmisowl:Project ;
+                                 rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+                                 <http://purl.org/dc/terms/description> "HMIS Participating Project"^^xsd:string ;
+                                 <http://purl.org/dc/terms/identifier> "2.02.7"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#HOPWAMedAssistedLivingFac
-hmisowl:HOPWAMedAssistedLivingFac rdf:type owl:DatatypeProperty .
+hmisowl:HOPWAMedAssistedLivingFac rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain hmisowl:Project ;
+                                  rdfs:range hmis-xsd:hopwaMedAssistedLivingFac ;
+                                  <http://purl.org/dc/terms/description> "HOPWA-funded Medically Assisted Living Facility"^^xsd:string ;
+                                  <http://purl.org/dc/terms/identifier> "2.02.9"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#HPScreeningScore
@@ -1524,7 +1556,11 @@ hmisowl:HousingAssessment rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#HousingType
-hmisowl:HousingType rdf:type owl:DatatypeProperty .
+hmisowl:HousingType rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:Project ;
+                    rdfs:range hmis-xsd:housingType ;
+                    <http://purl.org/dc/terms/description> "Housing Type"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "2.02.D"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#InPersonGroup
@@ -1997,11 +2033,19 @@ hmisowl:NotEmployedReason rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#OperatingEndDate
-hmisowl:OperatingEndDate rdf:type owl:DatatypeProperty .
+hmisowl:OperatingEndDate rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:Project ;
+                         rdfs:range xsd:date ;
+                         <http://purl.org/dc/terms/description> "Operating End Date"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "2.02.4"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#OperatingStartDate
-hmisowl:OperatingStartDate rdf:type owl:DatatypeProperty .
+hmisowl:OperatingStartDate rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:Project ;
+                           rdfs:range xsd:date ;
+                           <http://purl.org/dc/terms/description> "Operating Start Date"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "2.02.3"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#OrganizationCommonName
@@ -2122,7 +2166,10 @@ hmisowl:OtherTypeProvided rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#PITCount
-hmisowl:PITCount rdf:type owl:DatatypeProperty .
+hmisowl:PITCount rdf:type owl:DatatypeProperty ;
+                 rdfs:domain hmisowl:Project ;
+                 rdfs:range xsd:nonNegativeInteger ;
+                 <http://purl.org/dc/terms/description> "Not in the FY2022 HMIS Data Dictionary v1.1.  Used for the HIC; a count of active clients on the date of the PIT Count."^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#Pension
@@ -2258,7 +2305,10 @@ hmisowl:ProbSolDivRRResult rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#ProjectCommonName
-hmisowl:ProjectCommonName rdf:type owl:DatatypeProperty .
+hmisowl:ProjectCommonName rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmisowl:Project ;
+                          rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#string50> ;
+                          <http://purl.org/dc/terms/description> "A local or commonly used name for a project.  This is not referenced in the FY2022 HMIS Data Dictionary, and is optional per the FY2022 Data Standard."^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#ProjectCompletionStatus
@@ -2269,16 +2319,20 @@ hmisowl:ProjectCompletionStatus rdf:type owl:DatatypeProperty ;
                                 <http://purl.org/dc/terms/identifier> "R17.1"^^xsd:string .
 
 
-###  urn:hud:hmis:owl#ProjectID
-hmisowl:ProjectID rdf:type owl:DatatypeProperty .
-
-
 ###  urn:hud:hmis:owl#ProjectName
-hmisowl:ProjectName rdf:type owl:DatatypeProperty .
+hmisowl:ProjectName rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:Project ;
+                    rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#string100> ;
+                    <http://purl.org/dc/terms/description> "Project Name"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "2.02.2"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#ProjectType
-hmisowl:ProjectType rdf:type owl:DatatypeProperty .
+hmisowl:ProjectType rdf:type owl:DatatypeProperty ;
+                    rdfs:domain hmisowl:Project ;
+                    rdfs:range hmis-xsd:projectType ;
+                    <http://purl.org/dc/terms/description> "Project Type"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "2.02.6"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#Questioning
@@ -2361,7 +2415,11 @@ hmisowl:ResProjectID rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#ResidentialAffiliation
-hmisowl:ResidentialAffiliation rdf:type owl:DatatypeProperty .
+hmisowl:ResidentialAffiliation rdf:type owl:DatatypeProperty ;
+                               rdfs:domain hmisowl:Project ;
+                               rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+                               <http://purl.org/dc/terms/description> "Affiliated with a residential project"^^xsd:string ;
+                               <http://purl.org/dc/terms/identifier> "2.02.A"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#ResourcesToObtain
@@ -2622,7 +2680,11 @@ hmisowl:TCellSource rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#TargetPopulation
-hmisowl:TargetPopulation rdf:type owl:DatatypeProperty .
+hmisowl:TargetPopulation rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:Project ;
+                         rdfs:range hmis-xsd:targetPopulation ;
+                         <http://purl.org/dc/terms/description> "Target Population"^^xsd:string ;
+                         <http://purl.org/dc/terms/identifier> "2.02.8"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#TargetScreenReqd
@@ -2670,7 +2732,16 @@ hmisowl:TotalMonthlyIncome rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#TrackingMethod
-hmisowl:TrackingMethod rdf:type owl:DatatypeProperty .
+hmisowl:TrackingMethod rdf:type owl:DatatypeProperty ;
+                       rdfs:domain hmisowl:Project ;
+                       rdfs:range hmis-xsd:trackingMethod ;
+                       <http://purl.org/dc/terms/description> "Emergency Shelter Tracking Method"^^xsd:string ;
+                       <http://purl.org/dc/terms/identifier> "2.02.C"^^xsd:string .
+
+[ rdf:type owl:AllDisjointProperties ;
+   owl:members ( hmisowl:TrackingMethod
+               )
+ ] .
 
 
 ###  urn:hud:hmis:owl#Transgender
@@ -4062,6 +4133,11 @@ hmisowl:PATHStatus rdf:type owl:Class ;
 ###  urn:hud:hmis:owl#Project
 hmisowl:Project rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:ContinuumProject ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:DateCreated ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:dateTime
@@ -4070,6 +4146,21 @@ hmisowl:Project rdf:type owl:Class ;
                                   owl:onProperty hmisowl:DateUpdated ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:dateTime
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:HMISParticipatingProject ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:OperatingStartDate ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:date
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmisowl:ProjectName ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#string100>
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmisowl:DateDeleted ;
@@ -4251,8 +4342,8 @@ dc:coverage <http://purl.org/dc/terms/description> "Spatial topic and spatial ap
             <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
             rdfs:isDefinedBy dc: ;
             rdfs:comment "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."@en ;
-            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
-            rdfs:label "Coverage"@en .
+            rdfs:label "Coverage"@en ;
+            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date .
 
 
 dc:date <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
@@ -4281,8 +4372,8 @@ dc:format <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
 
 dc:identifier <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
               rdfs:isDefinedBy dc: ;
-              rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
               <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
+              rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
               rdfs:label "Identifier"@en .
 
@@ -4304,10 +4395,10 @@ dc:relation <http://www.w3.org/2004/02/skos/core#note> "A [second property](/spe
 
 
 dc:rights rdfs:isDefinedBy dc: ;
-          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
           <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
-          <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
+          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
           rdfs:label "Rights"@en ;
+          <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
           rdfs:comment "Information about rights held in and over the resource."@en .
 
 
