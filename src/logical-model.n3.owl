@@ -3934,11 +3934,6 @@ hmisowl:Inventory rdf:type owl:Class ;
                                     owl:onDataRange xsd:nonNegativeInteger
                                   ] ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty hmisowl:CoCCode ;
-                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#cocCode>
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty hmisowl:DateCreated ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange xsd:dateTime
