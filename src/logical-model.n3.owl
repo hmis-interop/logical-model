@@ -1993,7 +1993,9 @@ hmisowl:OperatingStartDate rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#OrganizationCommonName
-hmisowl:OrganizationCommonName rdf:type owl:DatatypeProperty .
+hmisowl:OrganizationCommonName rdf:type owl:DatatypeProperty ;
+                               rdfs:domain hmisowl:Organization ;
+                               rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#string50> .
 
 
 ###  urn:hud:hmis:owl#OrganizationID
@@ -2001,7 +2003,10 @@ hmisowl:OrganizationID rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#OrganizationName
-hmisowl:OrganizationName rdf:type owl:DatatypeProperty .
+hmisowl:OrganizationName rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hmisowl:Organization ;
+                         rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#string50> ;
+                         <http://purl.org/dc/terms/identifier> "2.01.2"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#OtherBedInventory
@@ -2791,7 +2796,10 @@ hmisowl:VeteranStatus rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#VictimServiceProvider
-hmisowl:VictimServiceProvider rdf:type owl:DatatypeProperty .
+hmisowl:VictimServiceProvider rdf:type owl:DatatypeProperty ;
+                              rdfs:domain hmisowl:Organization ;
+                              rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+                              <http://purl.org/dc/terms/identifier> "2.01.3"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#VietnamWar
@@ -3992,6 +4000,16 @@ hmisowl:Organization rdf:type owl:Class ;
                                        owl:onProperty hmisowl:DateUpdated ;
                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                        owl:onDataRange xsd:dateTime
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:OrganizationName ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#string50>
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty hmisowl:VictimServiceProvider ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing>
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty hmisowl:DateDeleted ;
