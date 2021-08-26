@@ -852,7 +852,11 @@ hmisowl:BedInventory rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#BenefitsFromAnySource
-hmisowl:BenefitsFromAnySource rdf:type owl:DatatypeProperty .
+hmisowl:BenefitsFromAnySource rdf:type owl:DatatypeProperty ;
+                              rdfs:domain hmisowl:NonCashBenefits ;
+                              rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesDoesntKnowRefused> ;
+                              <http://purl.org/dc/terms/description> "Non-Cash Benefits from Any Source"^^xsd:string ;
+                              <http://purl.org/dc/terms/identifier> "4.03.2"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#BlackAfAmerican
@@ -1976,10 +1980,6 @@ hmisowl:NoVAMedReason rdf:type owl:DatatypeProperty ;
                       <http://purl.org/dc/terms/identifier> "4.04.6A"^^xsd:string .
 
 
-###  urn:hud:hmis:owl#NonCashBenefitsID
-hmisowl:NonCashBenefitsID rdf:type owl:DatatypeProperty .
-
-
 ###  urn:hud:hmis:owl#NotEmployedReason
 hmisowl:NotEmployedReason rdf:type owl:DatatypeProperty .
 
@@ -2013,11 +2013,19 @@ hmisowl:OtherBedInventory rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#OtherBenefitsSource
-hmisowl:OtherBenefitsSource rdf:type owl:DatatypeProperty .
+hmisowl:OtherBenefitsSource rdf:type owl:DatatypeProperty ;
+                            rdfs:domain hmisowl:NonCashBenefits ;
+                            rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+                            <http://purl.org/dc/terms/description> "Other source"^^xsd:string ;
+                            <http://purl.org/dc/terms/identifier> "4.03.8"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#OtherBenefitsSourceIdentify
-hmisowl:OtherBenefitsSourceIdentify rdf:type owl:DatatypeProperty .
+hmisowl:OtherBenefitsSourceIdentify rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain hmisowl:NonCashBenefits ;
+                                    rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#string50> ;
+                                    <http://purl.org/dc/terms/description> "Specify Source"^^xsd:string ;
+                                    <http://purl.org/dc/terms/identifier> "4.03.A"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#OtherDestination
@@ -2077,7 +2085,11 @@ hmisowl:OtherInsuranceIdentify rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#OtherTANF
-hmisowl:OtherTANF rdf:type owl:DatatypeProperty .
+hmisowl:OtherTANF rdf:type owl:DatatypeProperty ;
+                  rdfs:domain hmisowl:NonCashBenefits ;
+                  rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+                  <http://purl.org/dc/terms/description> "Other TANF-funded services"^^xsd:string ;
+                  <http://purl.org/dc/terms/identifier> "4.03.7"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#OtherTheater
@@ -2376,7 +2388,11 @@ hmisowl:SCHIP rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#SNAP
-hmisowl:SNAP rdf:type owl:DatatypeProperty .
+hmisowl:SNAP rdf:type owl:DatatypeProperty ;
+             rdfs:domain hmisowl:NonCashBenefits ;
+             rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+             <http://purl.org/dc/terms/description> "Supplemental Nutrition Assistance Program (SNAP) (Previously known as Food Stamps)"^^xsd:string ;
+             <http://purl.org/dc/terms/identifier> "4.03.3"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#SSDI
@@ -2561,11 +2577,19 @@ hmisowl:TANFAmount rdf:type owl:DatatypeProperty ;
 
 
 ###  urn:hud:hmis:owl#TANFChildCare
-hmisowl:TANFChildCare rdf:type owl:DatatypeProperty .
+hmisowl:TANFChildCare rdf:type owl:DatatypeProperty ;
+                      rdfs:domain hmisowl:NonCashBenefits ;
+                      rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+                      <http://purl.org/dc/terms/description> "TANF Child Care services"^^xsd:string ;
+                      <http://purl.org/dc/terms/identifier> "4.03.5"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#TANFTransportation
-hmisowl:TANFTransportation rdf:type owl:DatatypeProperty .
+hmisowl:TANFTransportation rdf:type owl:DatatypeProperty ;
+                           rdfs:domain hmisowl:NonCashBenefits ;
+                           rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+                           <http://purl.org/dc/terms/description> "TANF transportation services"^^xsd:string ;
+                           <http://purl.org/dc/terms/identifier> "4.03.6"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#TCellCount
@@ -2791,7 +2815,11 @@ hmisowl:ViralLoadSource rdf:type owl:DatatypeProperty .
 
 
 ###  urn:hud:hmis:owl#WIC
-hmisowl:WIC rdf:type owl:DatatypeProperty .
+hmisowl:WIC rdf:type owl:DatatypeProperty ;
+            rdfs:domain hmisowl:NonCashBenefits ;
+            rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+            <http://purl.org/dc/terms/description> "Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)"^^xsd:string ;
+            <http://purl.org/dc/terms/identifier> "4.03.4"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#WellbeingID
@@ -3902,6 +3930,11 @@ hmisowl:MoveInDate rdf:type owl:Class ;
 ###  urn:hud:hmis:owl#NonCashBenefits
 hmisowl:NonCashBenefits rdf:type owl:Class ;
                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:BenefitsFromAnySource ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesDoesntKnowRefused>
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
                                           owl:onProperty hmisowl:DateCreated ;
                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                           owl:onDataRange xsd:dateTime
@@ -3910,6 +3943,36 @@ hmisowl:NonCashBenefits rdf:type owl:Class ;
                                           owl:onProperty hmisowl:DateUpdated ;
                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                           owl:onDataRange xsd:dateTime
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:OtherBenefitsSource ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing>
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:OtherTANF ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing>
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:SNAP ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing>
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:TANFChildCare ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing>
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:TANFTransportation ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing>
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty hmisowl:WIC ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing>
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty hmisowl:DateDeleted ;
