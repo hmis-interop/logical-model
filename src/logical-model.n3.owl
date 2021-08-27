@@ -986,7 +986,6 @@ hmisowl:ClientLeaseHolder rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#CoCCode
 hmisowl:CoCCode rdf:type owl:DatatypeProperty ;
                 rdfs:domain hmisowl:EnrollmentCoC ,
-                            hmisowl:Inventory ,
                             hmisowl:ProjectCoC ;
                 rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#cocCode> ;
                 <http://purl.org/dc/terms/description> "HUD assigned CoC code for the client’s location"^^xsd:string ;
@@ -1195,8 +1194,7 @@ hmisowl:Destination rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#DestinationSafeClient
 hmisowl:DestinationSafeClient rdf:type owl:DatatypeProperty ;
                               rdfs:domain hmisowl:ExitRHY ;
-                              rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesDoesntKnowRefused> ,
-                                         <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesMissing> ;
+                              rdfs:range <http://www.hudhdx.info/Resources/Vendors/FY2022/HUD_HMIS.xsd#noYesDoesntKnowRefused> ;
                               <http://purl.org/dc/terms/description> "Exit destination safe – as determined by the client"^^xsd:string ;
                               <http://purl.org/dc/terms/identifier> "R19.1"^^xsd:string .
 
