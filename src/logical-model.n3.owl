@@ -1616,14 +1616,6 @@ hmis-owl:GenderNone rdf:type owl:DatatypeProperty ;
                     <http://purl.org/dc/terms/identifier> "3.06.1.6"^^xsd:string .
 
 
-###  urn:hud:hmis:owl#GenderOther
-hmis-owl:GenderOther rdf:type owl:DatatypeProperty ;
-                     rdfs:domain hmis-owl:Client ;
-                     rdfs:range hmis-xsd:noYesMissing ;
-                     <http://purl.org/dc/terms/description> "A gender other than singularly female or male (e.g., non-binary, genderfluid, agender, culturally specific gender)"^^xsd:string ;
-                     <http://purl.org/dc/terms/identifier> "3.06.1.3"^^xsd:string .
-
-
 ###  urn:hud:hmis:owl#GeneralHealthStatus
 hmis-owl:GeneralHealthStatus rdf:type owl:DatatypeProperty ;
                              rdfs:domain hmis-owl:Enrollment ;
@@ -2192,6 +2184,14 @@ hmis-owl:NoSCHIPReason rdf:type owl:DatatypeProperty ;
                        rdfs:range hmis-xsd:reasonNotInsuredOrAssisted ;
                        <http://purl.org/dc/terms/description> "No SCHIP Reason"^^xsd:string ;
                        <http://purl.org/dc/terms/identifier> "4.04.5A"^^xsd:string .
+
+
+###  urn:hud:hmis:owl#NoSingleGender
+hmis-owl:NoSingleGender rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmis-owl:Client ;
+                        rdfs:range hmis-xsd:noYesMissing ;
+                        <http://purl.org/dc/terms/description> "A gender other than singularly female or male (e.g., non-binary, genderfluid, agender, culturally specific gender)"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "3.06.1.3"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#NoStateHealthInsReason
@@ -3463,11 +3463,6 @@ hmis-owl:Client rdf:type owl:Class ;
                                   owl:onDataRange hmis-xsd:noYesMissing
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty hmis-owl:GenderOther ;
-                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                  owl:onDataRange hmis-xsd:noYesMissing
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty hmis-owl:Male ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange hmis-xsd:noYesMissing
@@ -3479,6 +3474,11 @@ hmis-owl:Client rdf:type owl:Class ;
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmis-owl:NativeHIOtherPacific ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange hmis-xsd:noYesMissing
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmis-owl:NoSingleGender ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange hmis-xsd:noYesMissing
                                 ] ,
@@ -4900,8 +4900,8 @@ dc:coverage <http://purl.org/dc/terms/description> "Spatial topic and spatial ap
             <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
             rdfs:isDefinedBy dc: ;
             rdfs:comment "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."@en ;
-            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
-            rdfs:label "Coverage"@en .
+            rdfs:label "Coverage"@en ;
+            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date .
 
 
 dc:date <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
@@ -4920,18 +4920,18 @@ dc:description <http://purl.org/dc/terms/description> "Description may include b
                rdfs:label "Description"@en .
 
 
-dc:format <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."@en ;
-          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+dc:format <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+          <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."@en ;
           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
           rdfs:label "Format"@en ;
           rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
           rdfs:isDefinedBy dc: .
 
 
-dc:identifier rdfs:isDefinedBy dc: ;
-              <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
-              <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
+dc:identifier <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
+              rdfs:isDefinedBy dc: ;
               rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+              <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
               rdfs:label "Identifier"@en .
 
@@ -4963,8 +4963,8 @@ dc:rights rdfs:isDefinedBy dc: ;
 dc:source <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
           rdfs:comment "A related resource from which the described resource is derived."@en ;
           rdfs:isDefinedBy dc: ;
-          <http://purl.org/dc/terms/description> "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+          <http://purl.org/dc/terms/description> "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
           rdfs:label "Source"@en .
 
 
@@ -4978,8 +4978,8 @@ dc:subject <http://www.w3.org/2004/02/skos/core#note> "A [second property](/spec
 
 dc:type rdfs:comment "The nature or genre of the resource."@en ;
         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
-        rdfs:isDefinedBy dc: ;
         rdfs:label "Type"@en ;
+        rdfs:isDefinedBy dc: ;
         <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
         <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date .
 
