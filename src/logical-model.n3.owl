@@ -422,68 +422,68 @@ hmis-xsd:wellbeingAgreement rdf:type rdfs:Datatype .
 hmis-xsd:whenOccurred rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#availability
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#availability> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#availability
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#availability> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#bedType
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#bedType> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#bedType
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#bedType> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#healthStatusType
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#healthStatusType> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#healthStatusType
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#healthStatusType> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#hopwaMedAssistedLivingFac
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#hopwaMedAssistedLivingFac> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#hopwaMedAssistedLivingFac
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#hopwaMedAssistedLivingFac> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#householdType
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#householdType> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#householdType
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#householdType> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#housingType
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#housingType> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#housingType
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#housingType> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#noYesRefused
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#noYesRefused> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#noYesRefused
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#noYesRefused> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#projectType
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#projectType> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#projectType
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#projectType> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#reasonNotEnrolled
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#reasonNotEnrolled> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#reasonNotEnrolled
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#reasonNotEnrolled> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#recordType
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#recordType> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#recordType
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#recordType> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#rhyReasonNoServices
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#rhyReasonNoServices> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#rhyReasonNoServices
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#rhyReasonNoServices> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#subTypeProvided
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#subTypeProvided> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#subTypeProvided
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#subTypeProvided> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#targetPopulation
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#targetPopulation> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#targetPopulation
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#targetPopulation> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#trackingMethod
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#trackingMethod> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#trackingMethod
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#trackingMethod> rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#typeProvidedBase
-<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#typeProvidedBase> rdf:type rdfs:Datatype .
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#typeProvidedBase
+<https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#typeProvidedBase> rdf:type rdfs:Datatype .
 
 
 ###  urn:hud:hmis:owl#issuesYears
@@ -829,7 +829,7 @@ hmis-owl:AftercareDate rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#AftercareProvided
 hmis-owl:AftercareProvided rdf:type owl:DatatypeProperty ;
                            rdfs:domain hmis-owl:RHYAftercare ;
-                           rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#noYesRefused> ;
+                           rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#noYesRefused> ;
                            <http://purl.org/dc/terms/description> "Aftercare was provided"^^xsd:string ;
                            <http://purl.org/dc/terms/identifier> "R20.2"^^xsd:string .
 
@@ -853,7 +853,7 @@ hmis-owl:Alimony rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#AlimonyAmount
 hmis-owl:AlimonyAmount rdf:type owl:DatatypeProperty ;
                        rdfs:domain hmis-owl:IncomeAndSources ;
-                       rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                       rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                        <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                        <http://purl.org/dc/terms/identifier> "4.02.N"^^xsd:string .
 
@@ -986,7 +986,7 @@ hmis-owl:AssessmentType rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#Availability
 hmis-owl:Availability rdf:type owl:DatatypeProperty ;
                       rdfs:domain hmis-owl:Inventory ;
-                      rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#availability> ;
+                      rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#availability> ;
                       <http://purl.org/dc/terms/description> "Availability"^^xsd:string ;
                       <http://purl.org/dc/terms/identifier> "2.07.6"^^xsd:string .
 
@@ -1074,7 +1074,7 @@ hmis-owl:ChildSupport rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#ChildSupportAmount
 hmis-owl:ChildSupportAmount rdf:type owl:DatatypeProperty ;
                             rdfs:domain hmis-owl:IncomeAndSources ;
-                            rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                            rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                             <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                             <http://purl.org/dc/terms/identifier> "4.02.M"^^xsd:string .
 
@@ -1317,7 +1317,7 @@ hmis-owl:DateUpdated rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#DentalHealthStatus
 hmis-owl:DentalHealthStatus rdf:type owl:DatatypeProperty ;
                             rdfs:domain hmis-owl:Enrollment ;
-                            rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#healthStatusType> ;
+                            rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#healthStatusType> ;
                             <http://purl.org/dc/terms/description> "Dental Health Status"^^xsd:string ;
                             <http://purl.org/dc/terms/identifier> "R8.1"^^xsd:string .
 
@@ -1417,7 +1417,7 @@ hmis-owl:DueDate rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#ESBedType
 hmis-owl:ESBedType rdf:type owl:DatatypeProperty ;
                    rdfs:domain hmis-owl:Inventory ;
-                   rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#bedType> ;
+                   rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#bedType> ;
                    <http://purl.org/dc/terms/description> "Bed Type"^^xsd:string ;
                    <http://purl.org/dc/terms/identifier> "2.07.5"^^xsd:string .
 
@@ -1441,7 +1441,7 @@ hmis-owl:Earned rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#EarnedAmount
 hmis-owl:EarnedAmount rdf:type owl:DatatypeProperty ;
                       rdfs:domain hmis-owl:IncomeAndSources ;
-                      rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                      rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                       <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                       <http://purl.org/dc/terms/identifier> "4.02.A"^^xsd:string .
 
@@ -1617,7 +1617,7 @@ hmis-owl:GA rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#GAAmount
 hmis-owl:GAAmount rdf:type owl:DatatypeProperty ;
                   rdfs:domain hmis-owl:IncomeAndSources ;
-                  rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                  rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                   <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                   <http://purl.org/dc/terms/identifier> "4.02.J"^^xsd:string .
 
@@ -1641,7 +1641,7 @@ hmis-owl:GenderOther rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#GeneralHealthStatus
 hmis-owl:GeneralHealthStatus rdf:type owl:DatatypeProperty ;
                              rdfs:domain hmis-owl:Enrollment ;
-                             rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#healthStatusType> ;
+                             rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#healthStatusType> ;
                              <http://purl.org/dc/terms/description> "General Health Status"^^xsd:string ;
                              <http://purl.org/dc/terms/identifier> "R7.1"^^xsd:string .
 
@@ -1705,7 +1705,7 @@ hmis-owl:HMISParticipatingProject rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#HOPWAMedAssistedLivingFac
 hmis-owl:HOPWAMedAssistedLivingFac rdf:type owl:DatatypeProperty ;
                                    rdfs:domain hmis-owl:Project ;
-                                   rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#hopwaMedAssistedLivingFac> ;
+                                   rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#hopwaMedAssistedLivingFac> ;
                                    <http://purl.org/dc/terms/description> "HOPWA-funded Medically Assisted Living Facility"^^xsd:string ;
                                    <http://purl.org/dc/terms/identifier> "2.02.9"^^xsd:string .
 
@@ -1729,7 +1729,7 @@ hmis-owl:HoHLeasesHolder rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#HouseholdType
 hmis-owl:HouseholdType rdf:type owl:DatatypeProperty ;
                        rdfs:domain hmis-owl:Inventory ;
-                       rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#householdType> ;
+                       rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#householdType> ;
                        <http://purl.org/dc/terms/description> "Household type"^^xsd:string ;
                        <http://purl.org/dc/terms/identifier> "2.07.4"^^xsd:string .
 
@@ -1745,7 +1745,7 @@ hmis-owl:HousingAssessment rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#HousingType
 hmis-owl:HousingType rdf:type owl:DatatypeProperty ;
                      rdfs:domain hmis-owl:Project ;
-                     rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#housingType> ;
+                     rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#housingType> ;
                      <http://purl.org/dc/terms/description> "Housing Type"^^xsd:string ;
                      <http://purl.org/dc/terms/identifier> "2.02.D"^^xsd:string .
 
@@ -2045,7 +2045,7 @@ hmis-owl:MentalHealthDisorderFam rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#MentalHealthStatus
 hmis-owl:MentalHealthStatus rdf:type owl:DatatypeProperty ;
                             rdfs:domain hmis-owl:Enrollment ;
-                            rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#healthStatusType> ;
+                            rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#healthStatusType> ;
                             <http://purl.org/dc/terms/description> "Mental Health Status"^^xsd:string ;
                             <http://purl.org/dc/terms/identifier> "R9.1"^^xsd:string .
 
@@ -2304,7 +2304,7 @@ hmis-owl:OtherFunder rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#OtherIncomeAmount
 hmis-owl:OtherIncomeAmount rdf:type owl:DatatypeProperty ;
                            rdfs:domain hmis-owl:IncomeAndSources ;
-                           rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                           rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                            <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                            <http://purl.org/dc/terms/identifier> "4.02.O"^^xsd:string .
 
@@ -2381,7 +2381,7 @@ hmis-owl:Pension rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#PensionAmount
 hmis-owl:PensionAmount rdf:type owl:DatatypeProperty ;
                        rdfs:domain hmis-owl:IncomeAndSources ;
-                       rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                       rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                        <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                        <http://purl.org/dc/terms/identifier> "4.02.L"^^xsd:string .
 
@@ -2477,7 +2477,7 @@ hmis-owl:PrivateDisability rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#PrivateDisabilityAmount
 hmis-owl:PrivateDisabilityAmount rdf:type owl:DatatypeProperty ;
                                  rdfs:domain hmis-owl:IncomeAndSources ;
-                                 rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                                 rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                                  <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                                  <http://purl.org/dc/terms/identifier> "4.02.G"^^xsd:string .
 
@@ -2524,7 +2524,7 @@ hmis-owl:ProjectName rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#ProjectType
 hmis-owl:ProjectType rdf:type owl:DatatypeProperty ;
                      rdfs:domain hmis-owl:Project ;
-                     rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#projectType> ;
+                     rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#projectType> ;
                      <http://purl.org/dc/terms/description> "Project Type"^^xsd:string ;
                      <http://purl.org/dc/terms/identifier> "2.02.6"^^xsd:string .
 
@@ -2548,7 +2548,7 @@ hmis-owl:RaceNone rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#ReasonNoServices
 hmis-owl:ReasonNoServices rdf:type owl:DatatypeProperty ;
                           rdfs:domain hmis-owl:RHYBCPStatus ;
-                          rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#rhyReasonNoServices> ;
+                          rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#rhyReasonNoServices> ;
                           <http://purl.org/dc/terms/description> "Reason why services are not funded by BCP grant"^^xsd:string ;
                           <http://purl.org/dc/terms/identifier> "R2.A"^^xsd:string .
 
@@ -2556,7 +2556,7 @@ hmis-owl:ReasonNoServices rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#ReasonNotEnrolled
 hmis-owl:ReasonNotEnrolled rdf:type owl:DatatypeProperty ;
                            rdfs:domain hmis-owl:PATHStatus ;
-                           rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#reasonNotEnrolled> ;
+                           rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#reasonNotEnrolled> ;
                            <http://purl.org/dc/terms/description> "Reason not enrolled"^^xsd:string ;
                            <http://purl.org/dc/terms/identifier> "P3.A"^^xsd:string .
 
@@ -2564,7 +2564,7 @@ hmis-owl:ReasonNotEnrolled rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#RecordType
 hmis-owl:RecordType rdf:type owl:DatatypeProperty ;
                     rdfs:domain hmis-owl:ServiceFAReferral ;
-                    rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#recordType> .
+                    rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#recordType> .
 
 
 ###  urn:hud:hmis:owl#ReferralCaseManageAfter
@@ -2681,7 +2681,7 @@ hmis-owl:SSDI rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#SSDIAmount
 hmis-owl:SSDIAmount rdf:type owl:DatatypeProperty ;
                     rdfs:domain hmis-owl:IncomeAndSources ;
-                    rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                    rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                     <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                     <http://purl.org/dc/terms/identifier> "4.02.D"^^xsd:string .
 
@@ -2697,7 +2697,7 @@ hmis-owl:SSI rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#SSIAmount
 hmis-owl:SSIAmount rdf:type owl:DatatypeProperty ;
                    rdfs:domain hmis-owl:IncomeAndSources ;
-                   rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                   rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                    <http://purl.org/dc/terms/description> "Monthly Amount" ;
                    <http://purl.org/dc/terms/identifier> "4.02.C" .
 
@@ -2786,7 +2786,7 @@ hmis-owl:SocSecRetirement rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#SocSecRetirementAmount
 hmis-owl:SocSecRetirementAmount rdf:type owl:DatatypeProperty ;
                                 rdfs:domain hmis-owl:IncomeAndSources ;
-                                rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                                rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                                 <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                                 <http://purl.org/dc/terms/identifier> "4.02.K"^^xsd:string .
 
@@ -2810,7 +2810,7 @@ hmis-owl:StateHealthIns rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#SubTypeProvided
 hmis-owl:SubTypeProvided rdf:type owl:DatatypeProperty ;
                          rdfs:domain hmis-owl:ServiceFAReferral ;
-                         rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#subTypeProvided> .
+                         rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#subTypeProvided> .
 
 
 ###  urn:hud:hmis:owl#SubsequentResidence
@@ -2856,7 +2856,7 @@ hmis-owl:TANF rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#TANFAmount
 hmis-owl:TANFAmount rdf:type owl:DatatypeProperty ;
                     rdfs:domain hmis-owl:IncomeAndSources ;
-                    rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                    rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                     <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                     <http://purl.org/dc/terms/identifier> "4.02.I"^^xsd:string .
 
@@ -2904,7 +2904,7 @@ hmis-owl:TCellSource rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#TargetPopulation
 hmis-owl:TargetPopulation rdf:type owl:DatatypeProperty ;
                           rdfs:domain hmis-owl:Project ;
-                          rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#targetPopulation> ;
+                          rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#targetPopulation> ;
                           <http://purl.org/dc/terms/description> "Target Population"^^xsd:string ;
                           <http://purl.org/dc/terms/identifier> "2.02.8"^^xsd:string .
 
@@ -2952,7 +2952,7 @@ hmis-owl:TimesHomelessPastThreeYears rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#TotalMonthlyIncome
 hmis-owl:TotalMonthlyIncome rdf:type owl:DatatypeProperty ;
                             rdfs:domain hmis-owl:IncomeAndSources ;
-                            rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                            rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                             <http://purl.org/dc/terms/description> "Total Monthly Income"^^xsd:string ;
                             <http://purl.org/dc/terms/identifier> "4.02.18"^^xsd:string .
 
@@ -2960,7 +2960,7 @@ hmis-owl:TotalMonthlyIncome rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#TrackingMethod
 hmis-owl:TrackingMethod rdf:type owl:DatatypeProperty ;
                         rdfs:domain hmis-owl:Project ;
-                        rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#trackingMethod> ;
+                        rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#trackingMethod> ;
                         <http://purl.org/dc/terms/description> "Emergency Shelter Tracking Method"^^xsd:string ;
                         <http://purl.org/dc/terms/identifier> "2.02.C"^^xsd:string .
 
@@ -2981,7 +2981,7 @@ hmis-owl:Transgender rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#TypeProvided
 hmis-owl:TypeProvided rdf:type owl:DatatypeProperty ;
                       rdfs:domain hmis-owl:ServiceFAReferral ;
-                      rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#typeProvidedBase> .
+                      rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#typeProvidedBase> .
 
 
 ###  urn:hud:hmis:owl#Unemployment
@@ -2995,7 +2995,7 @@ hmis-owl:Unemployment rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#UnemploymentAmount
 hmis-owl:UnemploymentAmount rdf:type owl:DatatypeProperty ;
                             rdfs:domain hmis-owl:IncomeAndSources ;
-                            rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                            rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                             <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                             <http://purl.org/dc/terms/identifier> "4.02.B"^^xsd:string .
 
@@ -3069,7 +3069,7 @@ hmis-owl:VADisabilityNonService rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#VADisabilityNonServiceAmount
 hmis-owl:VADisabilityNonServiceAmount rdf:type owl:DatatypeProperty ;
                                       rdfs:domain hmis-owl:IncomeAndSources ;
-                                      rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                                      rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                                       <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                                       <http://purl.org/dc/terms/identifier> "4.02.F"^^xsd:string .
 
@@ -3085,7 +3085,7 @@ hmis-owl:VADisabilityService rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#VADisabilityServiceAmount
 hmis-owl:VADisabilityServiceAmount rdf:type owl:DatatypeProperty ;
                                    rdfs:domain hmis-owl:IncomeAndSources ;
-                                   rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                                   rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                                    <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                                    <http://purl.org/dc/terms/identifier> "4.02.E"^^xsd:string .
 
@@ -3211,7 +3211,7 @@ hmis-owl:WorkersComp rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#WorkersCompAmount
 hmis-owl:WorkersCompAmount rdf:type owl:DatatypeProperty ;
                            rdfs:domain hmis-owl:IncomeAndSources ;
-                           rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money> ;
+                           rdfs:range <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money> ;
                            <http://purl.org/dc/terms/description> "Monthly Amount"^^xsd:string ;
                            <http://purl.org/dc/terms/identifier> "4.02.H"^^xsd:string .
 
@@ -4333,7 +4333,7 @@ hmis-owl:IncomeAndSources rdf:type owl:Class ;
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmis-owl:TotalMonthlyIncome ;
                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                            owl:onDataRange <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#money>
+                                            owl:onDataRange <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#money>
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty hmis-owl:Unemployment ;
@@ -4387,7 +4387,7 @@ hmis-owl:Inventory rdf:type owl:Class ;
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmis-owl:HouseholdType ;
                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onDataRange <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#householdType>
+                                     owl:onDataRange <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#householdType>
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty hmis-owl:InventoryStartDate ;
@@ -4689,7 +4689,7 @@ hmis-owl:RHYAftercare rdf:type owl:Class ;
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty hmis-owl:AftercareProvided ;
                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                        owl:onDataRange <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#noYesRefused>
+                                        owl:onDataRange <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#noYesRefused>
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty hmis-owl:DateCreated ;
@@ -4767,12 +4767,12 @@ hmis-owl:ServiceFAReferral rdf:type owl:Class ;
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty hmis-owl:RecordType ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                             owl:onDataRange <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#recordType>
+                                             owl:onDataRange <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#recordType>
                                            ] ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty hmis-owl:TypeProvided ;
                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                             owl:onDataRange <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-v1.0.0-rc.3/src/HUD_HMIS.xsd#typeProvidedBase>
+                                             owl:onDataRange <https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#typeProvidedBase>
                                            ] ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty hmis-owl:UserID ;
