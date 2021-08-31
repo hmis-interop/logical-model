@@ -3297,11 +3297,13 @@ hmis-owl:Affiliation rdf:type owl:Class ;
 hmis-owl:Assessment rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty hmis-owl:hasAssessmentQuestion ;
-                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass hmis-owl:AssessmentQuestionClass
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty hmis-owl:hasAssessmentResult ;
-                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass hmis-owl:AssessmentResultClass
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty hmis-owl:AssessmentDate ;
@@ -3417,7 +3419,8 @@ hmis-owl:AssessmentResultClass rdf:type owl:Class ;
 hmis-owl:Client rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty hmis-owl:hasClientVeteranInfo ;
-                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass hmis-owl:ClientVeteranInfo
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmis-owl:AmIndAKNative ;
@@ -3777,7 +3780,8 @@ hmis-owl:Employment rdf:type owl:Class ;
 hmis-owl:Enrollment rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty hmis-owl:hasExit ;
-                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass hmis-owl:Exit
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty hmis-owl:DateCreated ;
