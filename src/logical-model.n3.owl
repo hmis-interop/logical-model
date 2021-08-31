@@ -572,6 +572,12 @@ hmis-owl:hasDomesticViolence rdf:type owl:ObjectProperty ;
                              rdfs:range hmis-owl:DomesticViolence .
 
 
+###  urn:hud:hmis:owl#hasEducation
+hmis-owl:hasEducation rdf:type owl:ObjectProperty ;
+                      rdfs:domain hmis-owl:Enrollment ;
+                      rdfs:range hmis-owl:Education .
+
+
 ###  urn:hud:hmis:owl#hasEmployment
 hmis-owl:hasEmployment rdf:type owl:ObjectProperty ;
                        rdfs:domain hmis-owl:Enrollment ;
