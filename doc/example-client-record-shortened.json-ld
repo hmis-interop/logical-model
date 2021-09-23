@@ -1,0 +1,41 @@
+[
+
+  {
+    "@context": "urn:hud:hmis:owl",
+    
+    "@id": "#OWLNamedIndividual_80bd5ffc_acde_41b6_bcce_80be5b3d888c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "client1"
+      }
+    ],
+    "DOB": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2014-11-18"
+      }
+    ],
+    "Ethnicity": [
+      {
+        "@type": "https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#ethnicity",
+        "@value": "2"
+      }
+    ],
+    "FirstName": [
+      {
+        "@type": "https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#nameHashingOption",
+        "@value": "Bill"
+      }
+    ],
+    "LastName": [
+      {
+        "@type": "https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#nameHashingOption",
+        "@value": "Smith"
+      }
+    ]
+  }
+]
