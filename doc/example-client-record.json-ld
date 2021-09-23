@@ -1,26 +1,38 @@
-{
-  "@id" : "urn:hud:hmis:owl#OWLNamedIndividual_80bd5ffc_acde_41b6_bcce_80be5b3d888c",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "client1"
-  } ],
-  "urn:hud:hmis:owl#FirstName" : [ {
-    "@type" : "https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#nameHashingOption",
-    "@value" : "
-    Bill"
-  } ],
-  "urn:hud:hmis:owl#LastName" : [ {
-    "@type" : "https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#nameHashingOption",
-    "@value" : "Smith"
-  } ],
-  "urn:hud:hmis:owl#DOB" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2014-11-18"
-  } ],
-  "urn:hud:hmis:owl#Ethnicity" : [ {
-    "@type" : "https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#ethnicity",
-    "@value" : "2"
-  } ]
-  
-}
+[
+  {
+    "@id": "urn:hud:hmis:owl#OWLNamedIndividual_80bd5ffc_acde_41b6_bcce_80be5b3d888c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "client1"
+      }
+    ],
+    "urn:hud:hmis:owl#DOB": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2014-11-18"
+      }
+    ],
+    "urn:hud:hmis:owl#Ethnicity": [
+      {
+        "@type": "https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#ethnicity",
+        "@value": "2"
+      }
+    ],
+    "urn:hud:hmis:owl#FirstName": [
+      {
+        "@type": "https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#nameHashingOption",
+        "@value": "Bill"
+      }
+    ],
+    "urn:hud:hmis:owl#LastName": [
+      {
+        "@type": "https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#nameHashingOption",
+        "@value": "Smith"
+      }
+    ]
+  }
+]
