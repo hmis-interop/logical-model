@@ -15,7 +15,7 @@
                     dc:language "en-US"@en ;
                     dc:title "HUD HMIS Logical Model"@en ;
                     <http://purl.org/dc/terms/description> "The logical model for the US Department of Housing and Urban Development Homeless Management Information System FY2022 Data Standard"@en ;
-                    owl:versionInfo "FY2022v0.0.1"@en .
+                    owl:versionInfo "FY2022v1.0.0"@en .
 
 #################################################################
 #    Annotation properties
@@ -262,10 +262,6 @@ hmis-xsd:housingAssessmentAtExit rdf:type rdfs:Datatype .
 hmis-xsd:housingType rdf:type rdfs:Datatype .
 
 
-###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#hpScreeningScore
-hmis-xsd:hpScreeningScore rdf:type rdfs:Datatype .
-
-
 ###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#incarceratedAdult
 hmis-xsd:incarceratedAdult rdf:type rdfs:Datatype .
 
@@ -424,6 +420,10 @@ hmis-xsd:string5 rdf:type rdfs:Datatype .
 
 ###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#string50
 hmis-xsd:string50 rdf:type rdfs:Datatype .
+
+
+###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#string500
+hmis-xsd:string500 rdf:type rdfs:Datatype .
 
 
 ###  https://raw.githubusercontent.com/hmis-interop/xml/FY2022-latest/src/HUD_HMIS.xsd#subTypeProvided
@@ -897,7 +897,7 @@ hmis-owl:AskedOrForcedToExchangeForSexPastThreeMonths rdf:type owl:DatatypePrope
 ###  urn:hud:hmis:owl#AssessmentAnswer
 hmis-owl:AssessmentAnswer rdf:type owl:DatatypeProperty ;
                           rdfs:domain hmis-owl:AssessmentQuestionClass ;
-                          rdfs:range hmis-xsd:string250 ;
+                          rdfs:range hmis-xsd:string500 ;
                           <http://purl.org/dc/terms/description> "Assessment answers - Local determination – responses to questions defined by community"^^xsd:string ;
                           <http://purl.org/dc/terms/identifier> "4.19.A"^^xsd:string .
 
@@ -1099,8 +1099,8 @@ hmis-owl:ClientEnrolledInPATH rdf:type owl:DatatypeProperty ;
                               <http://purl.org/dc/terms/identifier> "P3.2"^^xsd:string .
 
 
-###  urn:hud:hmis:owl#ClientLeaseHolder
-hmis-owl:ClientLeaseHolder rdf:type owl:DatatypeProperty ;
+###  urn:hud:hmis:owl#ClientLeaseholder
+hmis-owl:ClientLeaseholder rdf:type owl:DatatypeProperty ;
                            rdfs:domain hmis-owl:EntrySSVF ;
                            rdfs:range hmis-xsd:noYesMissing ;
                            <http://purl.org/dc/terms/description> "Client is a current leaseholder."^^xsd:string ;
@@ -1269,12 +1269,12 @@ hmis-owl:DateOfEngagement rdf:type owl:DatatypeProperty ;
                           <http://purl.org/dc/terms/identifier> "4.13.1"^^xsd:string .
 
 
-###  urn:hud:hmis:owl#DateOfStatus
-hmis-owl:DateOfStatus rdf:type owl:DatatypeProperty ;
-                      rdfs:domain hmis-owl:PATHStatus ;
-                      rdfs:range xsd:date ;
-                      <http://purl.org/dc/terms/description> "Date of Status Determination"^^xsd:string ;
-                      <http://purl.org/dc/terms/identifier> "P3.1"^^xsd:string .
+###  urn:hud:hmis:owl#DateOfPATHStatus
+hmis-owl:DateOfPATHStatus rdf:type owl:DatatypeProperty ;
+                          rdfs:domain hmis-owl:PATHStatus ;
+                          rdfs:range xsd:date ;
+                          <http://purl.org/dc/terms/description> "Date of Status Determination"^^xsd:string ;
+                          <http://purl.org/dc/terms/identifier> "P3.1"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#DateProvided
@@ -1611,9 +1611,12 @@ hmis-owl:GAAmount rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#GenderNone
 hmis-owl:GenderNone rdf:type owl:DatatypeProperty ;
                     rdfs:domain hmis-owl:Client ;
-                    rdfs:range hmis-xsd:raceGenderNone ;
-                    <http://purl.org/dc/terms/description> "Gender None"^^xsd:string ;
-                    <http://purl.org/dc/terms/identifier> "3.06.1.6"^^xsd:string .
+                    rdfs:range hmis-xsd:noYesMissing ,
+                               hmis-xsd:raceGenderNone ;
+                    <http://purl.org/dc/terms/description> "A gender other than singularly female or male (e.g., non-binary, genderfluid, agender, culturally specific gender)"^^xsd:string ,
+                                                           "Gender None"^^xsd:string ;
+                    <http://purl.org/dc/terms/identifier> "3.06.1.3"^^xsd:string ,
+                                                          "3.06.1.6"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#GeneralHealthStatus
@@ -1680,6 +1683,14 @@ hmis-owl:HMISParticipatingProject rdf:type owl:DatatypeProperty ;
                                   <http://purl.org/dc/terms/identifier> "2.02.7"^^xsd:string .
 
 
+###  urn:hud:hmis:owl#HOHLeaseHolder
+hmis-owl:HOHLeaseHolder rdf:type owl:DatatypeProperty ;
+                        rdfs:domain hmis-owl:EntrySSVF ;
+                        rdfs:range hmis-xsd:noYesMissing ;
+                        <http://purl.org/dc/terms/description> "Has head of household (HoH) ever been a leaseholder?"^^xsd:string ;
+                        <http://purl.org/dc/terms/identifier> "V7.E"^^xsd:string .
+
+
 ###  urn:hud:hmis:owl#HOPWAMedAssistedLivingFac
 hmis-owl:HOPWAMedAssistedLivingFac rdf:type owl:DatatypeProperty ;
                                    rdfs:domain hmis-owl:Project ;
@@ -1691,17 +1702,9 @@ hmis-owl:HOPWAMedAssistedLivingFac rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#HPScreeningScore
 hmis-owl:HPScreeningScore rdf:type owl:DatatypeProperty ;
                           rdfs:domain hmis-owl:EntrySSVF ;
-                          rdfs:range hmis-xsd:hpScreeningScore ;
+                          rdfs:range xsd:unsignedInt ;
                           <http://purl.org/dc/terms/description> "HP applicant total points (integer)"^^xsd:string ;
                           <http://purl.org/dc/terms/identifier> "V7.R"^^xsd:string .
-
-
-###  urn:hud:hmis:owl#HoHLeasesHolder
-hmis-owl:HoHLeasesHolder rdf:type owl:DatatypeProperty ;
-                         rdfs:domain hmis-owl:EntrySSVF ;
-                         rdfs:range hmis-xsd:noYesMissing ;
-                         <http://purl.org/dc/terms/description> "Has head of household (HoH) ever been a leaseholder?"^^xsd:string ;
-                         <http://purl.org/dc/terms/identifier> "V7.E"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#HouseholdType
@@ -2184,14 +2187,6 @@ hmis-owl:NoSCHIPReason rdf:type owl:DatatypeProperty ;
                        rdfs:range hmis-xsd:reasonNotInsuredOrAssisted ;
                        <http://purl.org/dc/terms/description> "No SCHIP Reason"^^xsd:string ;
                        <http://purl.org/dc/terms/identifier> "4.04.5A"^^xsd:string .
-
-
-###  urn:hud:hmis:owl#NoSingleGender
-hmis-owl:NoSingleGender rdf:type owl:DatatypeProperty ;
-                        rdfs:domain hmis-owl:Client ;
-                        rdfs:range hmis-xsd:noYesMissing ;
-                        <http://purl.org/dc/terms/description> "A gender other than singularly female or male (e.g., non-binary, genderfluid, agender, culturally specific gender)"^^xsd:string ;
-                        <http://purl.org/dc/terms/identifier> "3.06.1.3"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#NoStateHealthInsReason
@@ -3177,14 +3172,6 @@ hmis-owl:White rdf:type owl:DatatypeProperty ;
                <http://purl.org/dc/terms/identifier> "3.04.5"^^xsd:string .
 
 
-###  urn:hud:hmis:owl#WorkPlaceViolenceThreats
-hmis-owl:WorkPlaceViolenceThreats rdf:type owl:DatatypeProperty ;
-                                  rdfs:domain hmis-owl:ExitRHY ;
-                                  rdfs:range hmis-xsd:noYesDoesntKnowRefused ;
-                                  <http://purl.org/dc/terms/description> "Ever afraid to quit/leave work due to threats of violence to yourself, family, or friends"^^xsd:string ;
-                                  <http://purl.org/dc/terms/identifier> "R16.1"^^xsd:string .
-
-
 ###  urn:hud:hmis:owl#WorkersComp
 hmis-owl:WorkersComp rdf:type owl:DatatypeProperty ;
                      rdfs:domain hmis-owl:IncomeAndSources ;
@@ -3207,6 +3194,14 @@ hmis-owl:WorkplacePromiseDifference rdf:type owl:DatatypeProperty ;
                                     rdfs:range hmis-xsd:noYesDoesntKnowRefused ;
                                     <http://purl.org/dc/terms/description> "Ever promised work where work or payment was different than you expected"^^xsd:string ;
                                     <http://purl.org/dc/terms/identifier> "R16.2"^^xsd:string .
+
+
+###  urn:hud:hmis:owl#WorkplaceViolenceThreats
+hmis-owl:WorkplaceViolenceThreats rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain hmis-owl:ExitRHY ;
+                                  rdfs:range hmis-xsd:noYesDoesntKnowRefused ;
+                                  <http://purl.org/dc/terms/description> "Ever afraid to quit/leave work due to threats of violence to yourself, family, or friends"^^xsd:string ;
+                                  <http://purl.org/dc/terms/identifier> "R16.1"^^xsd:string .
 
 
 ###  urn:hud:hmis:owl#WorldWarII
@@ -3345,11 +3340,6 @@ hmis-owl:Assessment rdf:type owl:Class ;
 ###  urn:hud:hmis:owl#AssessmentQuestionClass
 hmis-owl:AssessmentQuestionClass rdf:type owl:Class ;
                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                   owl:onProperty hmis-owl:AssessmentAnswer ;
-                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                   owl:onDataRange hmis-xsd:string250
-                                                 ] ,
-                                                 [ rdf:type owl:Restriction ;
                                                    owl:onProperty hmis-owl:AssessmentQuestion ;
                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                    owl:onDataRange hmis-xsd:string250
@@ -3379,11 +3369,6 @@ hmis-owl:AssessmentQuestionClass rdf:type owl:Class ;
 ###  urn:hud:hmis:owl#AssessmentResultClass
 hmis-owl:AssessmentResultClass rdf:type owl:Class ;
                                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                 owl:onProperty hmis-owl:AssessmentResult ;
-                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange hmis-xsd:string250
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
                                                  owl:onProperty hmis-owl:AssessmentResultType ;
                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                  owl:onDataRange hmis-xsd:string250
@@ -3458,6 +3443,11 @@ hmis-owl:Client rdf:type owl:Class ;
                                   owl:onDataRange hmis-xsd:noYesMissing
                                 ] ,
                                 [ rdf:type owl:Restriction ;
+                                  owl:onProperty hmis-owl:GenderNone ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange hmis-xsd:noYesMissing
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty hmis-owl:Male ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange hmis-xsd:noYesMissing
@@ -3469,11 +3459,6 @@ hmis-owl:Client rdf:type owl:Class ;
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty hmis-owl:NativeHIOtherPacific ;
-                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                  owl:onDataRange hmis-xsd:noYesMissing
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty hmis-owl:NoSingleGender ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange hmis-xsd:noYesMissing
                                 ] ,
@@ -3929,11 +3914,6 @@ hmis-owl:EntryRHY rdf:type owl:Class ;
                                     owl:onProperty hmis-owl:PhysicalDisabilityFam ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange hmis-xsd:noYesMissing
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty hmis-owl:SexualOrientation ;
-                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onDataRange hmis-owl:sexualOrientation
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty hmis-owl:UnemploymentFam ;
@@ -4464,39 +4444,9 @@ hmis-owl:NonCashBenefits rdf:type owl:Class ;
                                            owl:onDataRange xsd:dateTime
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmis-owl:OtherBenefitsSource ;
-                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                           owl:onDataRange hmis-xsd:noYesMissing
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmis-owl:OtherTANF ;
-                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                           owl:onDataRange hmis-xsd:noYesMissing
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmis-owl:SNAP ;
-                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                           owl:onDataRange hmis-xsd:noYesMissing
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmis-owl:TANFChildCare ;
-                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                           owl:onDataRange hmis-xsd:noYesMissing
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmis-owl:TANFTransportation ;
-                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                           owl:onDataRange hmis-xsd:noYesMissing
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty hmis-owl:UserID ;
                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                            owl:onDataRange hmis-xsd:string32
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty hmis-owl:WIC ;
-                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                           owl:onDataRange hmis-xsd:noYesMissing
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty hmis-owl:DateDeleted ;
@@ -4552,7 +4502,7 @@ hmis-owl:PATHStatus rdf:type owl:Class ;
                                       owl:onDataRange xsd:dateTime
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty hmis-owl:DateOfStatus ;
+                                      owl:onProperty hmis-owl:DateOfPATHStatus ;
                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                       owl:onDataRange xsd:date
                                     ] ,
@@ -4620,6 +4570,11 @@ hmis-owl:Project rdf:type owl:Class ;
 ###  urn:hud:hmis:owl#ProjectCoC
 hmis-owl:ProjectCoC rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty hmis-owl:Geocode ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange hmis-xsd:geocode
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty hmis-owl:CoCCode ;
                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                       owl:onDataRange hmis-xsd:cocCode
@@ -4895,8 +4850,8 @@ dc:coverage <http://purl.org/dc/terms/description> "Spatial topic and spatial ap
             <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
             rdfs:isDefinedBy dc: ;
             rdfs:comment "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."@en ;
-            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
-            rdfs:label "Coverage"@en .
+            rdfs:label "Coverage"@en ;
+            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date .
 
 
 dc:date <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
@@ -4915,8 +4870,8 @@ dc:description <http://purl.org/dc/terms/description> "Description may include b
                rdfs:label "Description"@en .
 
 
-dc:format <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."@en ;
-          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+dc:format <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+          <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."@en ;
           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
           rdfs:label "Format"@en ;
           rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
@@ -4925,8 +4880,8 @@ dc:format <http://purl.org/dc/terms/description> "Recommended practice is to use
 
 dc:identifier <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
               rdfs:isDefinedBy dc: ;
-              <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
               rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+              <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
               rdfs:label "Identifier"@en .
 
@@ -4950,16 +4905,16 @@ dc:relation <http://www.w3.org/2004/02/skos/core#note> "A [second property](/spe
 dc:rights rdfs:isDefinedBy dc: ;
           <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
-          <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
           rdfs:label "Rights"@en ;
+          <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
           rdfs:comment "Information about rights held in and over the resource."@en .
 
 
 dc:source <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
-          rdfs:isDefinedBy dc: ;
           rdfs:comment "A related resource from which the described resource is derived."@en ;
-          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+          rdfs:isDefinedBy dc: ;
           <http://purl.org/dc/terms/description> "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
+          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
           rdfs:label "Source"@en .
 
 
@@ -4973,8 +4928,8 @@ dc:subject <http://www.w3.org/2004/02/skos/core#note> "A [second property](/spec
 
 dc:type rdfs:comment "The nature or genre of the resource."@en ;
         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
-        rdfs:label "Type"@en ;
         rdfs:isDefinedBy dc: ;
+        rdfs:label "Type"@en ;
         <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
         <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date .
 
