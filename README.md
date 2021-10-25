@@ -9,6 +9,8 @@ Visualization at: https://tinyurl.com/24bt6m32
 
 Source file: https://github.com/hmis-interop/logical-model/blob/FY2022-latest/src/logical-model.n3.owl
 
+Presentation Overview: https://docs.google.com/presentation/d/1rZckQT-yHLT0eyJLyF-p-_rhkHYCAqftqG0DHzrnoJo/edit?usp=sharing
+
 Sample data in the JSON-LD playground: https://tinyurl.com/yzuwtl88
 
 [HMIS Data Standard Versions](HMIS-Data-Standard-Versions)
