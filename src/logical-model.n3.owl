@@ -10,7 +10,7 @@
 @base <urn:hud:hmis:owl> .
 
 <urn:hud:hmis:owl> rdf:type owl:Ontology ;
-                    owl:versionIRI <https://github.com/hmis-interop/logical-model/blob/FY2022-v0.0.1/src/logical-model.n3.owl> ;
+                    owl:versionIRI <https://github.com/hmis-interop/logical-model/blob/FY2022-v1.0.0/src/logical-model.n3.owl> ;
                     dc:creator "Jahn, Eric"@en ;
                     dc:language "en-US"@en ;
                     dc:title "HUD HMIS Logical Model"@en ;
@@ -4864,8 +4864,8 @@ dc:description <http://purl.org/dc/terms/description> "Description may include b
                rdfs:label "Description"@en .
 
 
-dc:format <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
-          <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."@en ;
+dc:format <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."@en ;
+          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
           rdfs:label "Format"@en ;
           rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
@@ -4874,8 +4874,8 @@ dc:format <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
 
 dc:identifier rdfs:isDefinedBy dc: ;
               <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
-              <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
               rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+              <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
               rdfs:label "Identifier"@en .
 
@@ -4899,14 +4899,14 @@ dc:relation <http://www.w3.org/2004/02/skos/core#note> "A [second property](/spe
 dc:rights rdfs:isDefinedBy dc: ;
           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
           <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
-          rdfs:label "Rights"@en ;
           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
+          rdfs:label "Rights"@en ;
           rdfs:comment "Information about rights held in and over the resource."@en .
 
 
 dc:source <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
-          rdfs:comment "A related resource from which the described resource is derived."@en ;
           rdfs:isDefinedBy dc: ;
+          rdfs:comment "A related resource from which the described resource is derived."@en ;
           <http://purl.org/dc/terms/description> "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
           rdfs:label "Source"@en .
@@ -4922,8 +4922,8 @@ dc:subject <http://www.w3.org/2004/02/skos/core#note> "A [second property](/spec
 
 dc:type rdfs:comment "The nature or genre of the resource."@en ;
         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en ;
-        rdfs:isDefinedBy dc: ;
         rdfs:label "Type"@en ;
+        rdfs:isDefinedBy dc: ;
         <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
         <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date .
 
