@@ -1,0 +1,119 @@
+return {
+  [2000911350] = {
+    ["class"] = "AA#Configuration",
+    ["properties"] = {
+      
+    },
+    ["links"] = {
+      ["context"] = {
+        [1] = 2000929257,
+        [2] = 2000929258,
+        [3] = 2000929259,
+        [4] = 2000929260,
+        [5] = 2000929261,
+        [6] = 2000985585
+      },
+      ["tagType"] = {
+        [1] = 2000929262,
+        [2] = 2000929263
+      }
+    }
+  },
+  [2000929260] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Object",
+      ["id"] = "Object",
+      ["mode"] = "Element",
+      ["nr"] = "4"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000929257] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Class",
+      ["id"] = "Class",
+      ["mode"] = "Element",
+      ["nr"] = "1"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000929261] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "OWL",
+      ["id"] = "OWL",
+      ["mode"] = "Element",
+      ["nr"] = "5"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000929258] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Role",
+      ["elTypeName"] = "Association",
+      ["hasMirror"] = "1",
+      ["id"] = "Association/Role",
+      ["mode"] = "Group",
+      ["nr"] = "2"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000929262] = {
+    ["class"] = "AA#TagType",
+    ["properties"] = {
+      ["notation"] = "Semantics",
+      ["key"] = "owl_Field_axiom",
+      ["rowType"] = "TextArea+Button"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000929259] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Attributes",
+      ["elTypeName"] = "Class",
+      ["id"] = "Class/Attributes",
+      ["mode"] = "Group Item",
+      ["nr"] = "3"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000929263] = {
+    ["class"] = "AA#TagType",
+    ["properties"] = {
+      ["notation"] = "Axiom Annotation",
+      ["key"] = "owl_Axiom_Annotation",
+      ["rowType"] = "TextArea"
+    },
+    ["links"] = {
+      
+    }
+  },
+  [2000985585] = {
+    ["class"] = "AA#ContextType",
+    ["properties"] = {
+      ["type"] = "Attribute",
+      ["id"] = "Attribute",
+      ["mode"] = "Element",
+      ["nr"] = "6"
+    },
+    ["links"] = {
+      
+    }
+  }
+}, 2000911350
