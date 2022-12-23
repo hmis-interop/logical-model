@@ -1189,7 +1189,7 @@ hmis-owl:CurrentEdStatus rdf:type owl:DatatypeProperty ;
 ###  urn:hud:hmis:owl#CurrentLivingSituation
 hmis-owl:CurrentLivingSituation rdf:type owl:DatatypeProperty ;
                                 rdfs:domain hmis-owl:CurrentLivingSituationClass ;
-                                rdfs:range xsd:boolean ;
+                                rdfs:range hmis-xsd:livingSituation ;
                                 <http://purl.org/dc/terms/description> "Current Living Situation"^^xsd:string ;
                                 <http://purl.org/dc/terms/identifier> "4.12.2"^^xsd:string .
 
