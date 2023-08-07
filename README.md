@@ -3,7 +3,7 @@ logical-model
 
 HMIS Logical Model overview file at: https://github.com/hmis-interop/logical-model/blob/FY2022-latest/doc/HMIS-logical-model-overview.pdf
 
-Visualization at: https://tinyurl.com/24bt6m32
+Visualization at: [[https://tinyurl.com/24bt6m32](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/hmis-interop/logical-model/FY2022-latest/src/logical-model.n3.owl)](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/hmis-interop/logical-model/FY2022-latest/src/logical-model.n3.owl)
 
 "Boxes and Lines" (Class Diagram) of the FY2022 HMIS Logical Model at: https://github.com/hmis-interop/logical-model/blob/FY2022/doc/logical-model-class-diagram.pdf
 
